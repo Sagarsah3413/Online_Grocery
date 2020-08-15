@@ -1,0 +1,62 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'lato' ,sans-serif ;
+}
+
+body div#product
+{
+    padding: 5%;
+}
+
+div#product h3
+{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+    text-align: center;
+    padding: 1%;
+} 
+
+div#product h2
+{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 25px;
+    text-align: left;
+    padding: 1%;
+} 
+
+
+body div#product div#grid 
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 2px;
+    grid-gap: 40px;
+    grid-auto-rows: 200px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+div#product div#grid div#items
+{
+    margin: 1%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: blueviolet;
+}
+
+div#product div#grid div#items:hover
+{
+    transform: scale(1.2);
+    transition: all 300ms;
+    overflow: hidden;
+}
+
+div#product div#grid div#items p
+{
+    letter-spacing: 1px;
+}
