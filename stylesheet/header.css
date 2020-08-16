@@ -1,0 +1,13 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0px;
+    background-image: linear-gradient(to right, rgb(151, 208, 235), rgb(77, 77, 224));
+}
+
+header div {
+    text-transform: capitalize;
+    font-size: 25px;
+}
