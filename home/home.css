@@ -74,7 +74,8 @@ body div#product div#grid {
 }
 
 div#grid div#items {
-    margin: 2%;
+    padding: 2%;
+    background-color: bisque;
 }
 
 div#grid div#items h4 {

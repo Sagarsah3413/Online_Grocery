@@ -29,7 +29,12 @@
                                 </div>
                                 <h4>product</h4>
                                 <p>Rs 130 <span>140</span></p>
+                                <div id='cart'>
+                                    <img src='images/cart.png' alt='cart'>
+                                    <p> Add To Cart</p> 
+                                </div>
                             </div>";
+                            
                 }
                 ?>
             </div>
@@ -44,6 +49,10 @@
                                 </div>
                                 <h4>product</h4>
                                 <p>Rs 130 <span>140</span></p>
+                                <div id='cart'>
+                                    <img src='images/cart.png' alt='cart'>
+                                    <p> Add To Cart</p> 
+                                </div>
                             </div>";
                 }
                 ?>
@@ -59,6 +68,10 @@
                                 </div>
                                 <h4>product</h4>
                                 <p>Rs 130 <span>140</span></p>
+                                <div id='cart'>
+                                    <img src='images/cart.png' alt='cart'>
+                                    <p> Add To Cart</p> 
+                                </div>
                             </div>";
                 }
                 ?>
