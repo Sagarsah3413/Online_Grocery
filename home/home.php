@@ -7,146 +7,55 @@
     <title>homepage</title>
 </head>
 <body>
-    
-
     <div id="product">
         <h3>products</h3>
         <h2>groceries</h2>
         <div id="grid">
-            <div id="items">    
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-
-            <div id="items">    
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
+            <?php
+            for ($i=0; $i < 5; $i++) { 
+                echo "<div id='items'> 
+                            <div>
+                            <img src='images/down.png' alt='product pic'>
+                            </div>
+                            <h4>product</h4>
+                            <p>Rs 130 <span>140</span></p>
+                        </div>";
+            }
+            ?>
         </div>
 
         <h2>fruits</h2>
         <div id="grid">
-            <div id="items">    
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-
-            <div id="items">    
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
+            <?php
+            for ($i=0; $i < 5; $i++) { 
+                echo "<div id='items'> 
+                            <div>
+                            <img src='images/down.png' alt='product pic'>
+                            </div>
+                            <h4>product</h4>
+                            <p>Rs 130 <span>140</span></p>
+                        </div>";
+            }
+            ?>
         </div>
 
         <h2>vegetables</h2>
         <div id="grid">
-            <div id="items">    
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-
-            <div id="items">    
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
-            <div id="items">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laudantium error. Dolor explicabo ipsum sit, provident laborum incidunt delectus amet. Ut facere quis vero hic explicabo, ex unde neque accusantium!</p>
-            
-            </div>
+            <?php
+            for ($i=0; $i < 5; $i++) { 
+                echo "<div id='items'> 
+                            <div>
+                            <img src='images/down.png' alt='product pic'>
+                            </div>
+                            <h4>product</h4>
+                            <p>Rs 130 <span>140</span></p>
+                        </div>";
+            }
+            ?>
         </div>
     </div>
-
-
 </body>
+
 </html>
+        
+        
