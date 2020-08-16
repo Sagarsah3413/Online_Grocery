@@ -9,7 +9,7 @@ for(let i=0;i<cart.length;i++){
         // .appendChild(cart);
         console.log(cart[i]);
         console.log(ch);
-        send+='<div id="items">'+cart[i]+'</div>';
+        send+='<div id="items">'+cart[i].innerHTML+'</div>';
         console.log(send);
         localStorage.setItem("favoriteMovie", send);
     })
