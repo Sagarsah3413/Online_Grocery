@@ -62,55 +62,6 @@ container.addEventListener('transitionend', () => {
     }
 });
 
-// //slider setting end
-
-// console.log(document.getElementById('cart'));
-// var send=[];
-// // var x=[];
-// // var price=[];
-// let cart= document.querySelectorAll('div.items');
-// let price=document.querySelectorAll('p');
-// for(let i=0;i<cart.length;i++){
-//     let ch=cart[i].lastElementChild;
-    
-//     ch.addEventListener('click', function() {
-//         if(ch.lastElementChild.innerHTML==="Add To Cart")
-//         {
-//             ch.lastElementChild.innerHTML="Remove From Cart"
-//             send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].id,price[i*2].innerHTML.split[]]);
-//             console.log(send);
-//         }
-//         else
-//         {
-//             ch.lastElementChild.innerHTML="Add To Cart";
-//             delete send[i];
-//             console.log(send);
-
-//variable list start
-var send = "";
-var sen = "";
-//variable list end
-//cart globalvariable storage
-let cart = document.querySelectorAll('div.items');
-for (let i = 0; i < cart.length; i++) {
-    cart[i].addEventListener('click', () => {
-        if (cart[i].innerHTML == "Add To Cart") {
-            send += '<span class="addcart">' + cart[i].innerHTML + '</span>';
-            console.log(send);
-            // ch.lastElementChild.innerHTML = "Remove From Cart"
-        }
-        if (cart[i].innerHTML == "Remove From Cart") {
-            sen += '<span class="additem">' + cart[i].innerHTML + '</span>';
-            // ch.lastElementChild.innerHTML = "Add to Cart";
-        }
-        localStorage.setItem("favoriteMovie", send);
-    })
-}
-localStorage.setItem("sendd", send);
-localStorage.setItem("senn", sen);
-//cart globalvariable storage
-
-
 //quantity addition
 let buy = document.querySelectorAll("div.grid div.items div.cart");
 let quantity = '';
@@ -127,3 +78,47 @@ for (let i = 0; i < buy.length; i++) {
         }
     });
 }
+
+function arrayRemove(arr, value)
+{
+    return arr.filter(
+        function(ele)
+        {
+            return ele[1] != value;
+        }
+    );
+}
+
+console.log(document.getElementById('cart'));
+var send=[];
+// var x=[];
+// var price=[];
+let cart= document.querySelectorAll('div.items');
+let price=document.querySelectorAll('p');
+for(let i=0;i<cart.length;i++){
+    let ch=cart[i].lastElementChild.lastElementChild.lastElementChild;
+    console.log(ch);
+    ch.addEventListener('click', function() {
+        console.log(ch);
+        if(ch.innerText==="Add To Cart")
+        {
+            ch.innerText="Remove From Cart"
+            send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].lastElementChild.id,price[i*2].innerText]);
+            console.log(send);
+        }
+        else
+        {
+            ch.innerText="Add To Cart";
+            sen=arrayRemove(send,cart[i].lastElementChild.id);console.log(cart[i].id);
+            send=sen;
+            console.log(send);
+        }
+        localStorage.setItem("favoriteMovie", send);
+    })
+}
+console.log(send);
+
+
+
+
+

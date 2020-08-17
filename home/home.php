@@ -76,7 +76,7 @@
                     <p>Rs <?php echo $row['price'] ?> <span class="cross">Rs <?php echo $row['mprice'] ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>Quantity <span>0</span></article>
-                        <p><img src='images/cart.png' alt='cart'> Add To Cart</p> 
+                        <p><img src='images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p> 
                     </div>
                 </div>
                 <?php } ?>
@@ -98,7 +98,7 @@
                     <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>Quantity <span>0</span></article>
-                        <p><img src='images/cart.png' alt='cart'> Add To Cart</p> 
+                        <p><img src='images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p> 
                     </div>
                 </div>
                 <?php } ?>
