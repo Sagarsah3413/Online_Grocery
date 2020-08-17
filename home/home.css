@@ -15,6 +15,50 @@ body {
 * h5 {
     font-weight: normal;
 }
+div#image {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider {
+    height: 250px;
+    display: flex;
+    padding: 0px;
+    transition: 0.3s;
+    position: relative;
+}
+
+#slider img {
+    min-width: 100%;
+}
+
+#prev {
+    position: absolute;
+    z-index: 4;
+    left: 0px;
+    top: 40%;
+    opacity: 0.4;
+}
+
+#next {
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    right: 0px;
+    opacity: 0.4;
+}
+
+#next:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#prev:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
 
 div.container {
     display: grid;
