@@ -89,36 +89,23 @@ function arrayRemove(arr, value)
     );
 }
 
-console.log(document.getElementById('cart'));
 var send=[];
-// var x=[];
-// var price=[];
 let cart= document.querySelectorAll('div.items');
 let price=document.querySelectorAll('p');
 for(let i=0;i<cart.length;i++){
     let ch=cart[i].lastElementChild.lastElementChild.lastElementChild;
-    console.log(ch);
     ch.addEventListener('click', function() {
-        console.log(ch);
         if(ch.innerText==="Add To Cart")
         {
             ch.innerText="Remove From Cart"
             send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].lastElementChild.id,price[i*2].innerText,]);
-            console.log(send);
         }
         else
         {
             ch.innerText="Add To Cart";
-            sen=arrayRemove(send,cart[i].lastElementChild.id);console.log(cart[i].id);
+            sen=arrayRemove(send,cart[i].lastElementChild.id);
             send=sen;
-            console.log(send);
         }
         localStorage.setItem("favoriteMovie", send);
     })
 }
-console.log(send);
-
-
-
-
-
