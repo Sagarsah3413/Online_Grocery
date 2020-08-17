@@ -1,5 +1,6 @@
 header {
     width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -8,6 +9,8 @@ header {
 }
 
 header div {
+    font-family: inherit;
     text-transform: capitalize;
     font-size: 25px;
+    position: relative;
 }

@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +86,9 @@
     </div>
     
 </body>
+<script>
+    var integer = 3;
+</script>
 
 </html>
         
