@@ -75,7 +75,7 @@
                     <h4><?php echo $row['product name'] ?></h4>
                     <p>Rs <?php echo $row['price'] ?> <span class="cross">Rs <?php echo $row['mprice'] ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article>Quantity <span>0</span></article>
+                        <article><span class="control"><img src="images/plus.png" alt=""></span> Quantity <span>0</span><span class="control"><img src="images/minus.png" alt=""></span></article>
                         <p><img src='images/cart.png' alt='cart'> Add To Cart</p> 
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article>Quantity <span>0</span></article>
+                        <article><span class="control"><img src="images/plus.png" alt=""></span> Quantity <span>0</span><span class="control"><img src="images/minus.png" alt=""></span></article>
                         <p><img src='images/cart.png' alt='cart'> Add To Cart</p> 
                     </div>
                 </div>
