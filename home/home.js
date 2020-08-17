@@ -62,47 +62,65 @@ container.addEventListener('transitionend', () => {
     }
 });
 
+//quantity addition
 
-//variable list start
-var send = "";
-var sen = "";
-//variable list end
-//cart globalvariable storage
-let cart = document.querySelectorAll('div.items');
-for (let i = 0; i < cart.length; i++) {
-    cart[i].addEventListener('click', () => {
-        if (cart[i].innerHTML == "Add To Cart") {
-            send += '<span class="addcart">' + cart[i].innerHTML + '</span>';
-            console.log(send);
-            // ch.lastElementChild.innerHTML = "Remove From Cart"
+function arrayRemove(arr, value) {
+    return arr.filter(
+        function(ele) {
+            return ele[1] != value;
         }
-        if (cart[i].innerHTML == "Remove From Cart") {
-            sen += '<span class="additem">' + cart[i].innerHTML + '</span>';
-            // ch.lastElementChild.innerHTML = "Add to Cart";
+    );
+}
+
+// console.log(document.getElementById('cart'));
+var send = [];
+
+let cart = document.querySelectorAll('div.items');
+let price = document.querySelectorAll('p');
+for (let i = 0; i < cart.length; i++) {
+    let ch = cart[i].lastElementChild.lastElementChild.lastElementChild;
+
+    ch.addEventListener('click', function() {
+        if (ch.innerText === "Add To Cart") {
+            ch.innerText = "Remove From Cart";
+            send.push(['<div class="items">' + cart[i].innerHTML + '</div>', cart[i].lastElementChild.id, price[i * 2].innerText, ]);
+            console.log(send);
+        } else {
+            ch.innerText = "Add To Cart";
+            sen = arrayRemove(send, cart[i].lastElementChild.id);
+            console.log(cart[i].id);
+            send = sen;
+            console.log(send);
         }
         localStorage.setItem("favoriteMovie", send);
     })
 }
-localStorage.setItem("sendd", send);
-localStorage.setItem("senn", sen);
-//cart globalvariable storage
+
+
+
 
 
 //quantity addition
 
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
-let quantity = '';
-let plus, minus;
+let plus, minus, quantity;
 let xml = new XMLHttpRequest();
 for (let i = 0; i < buy.length; i++) {
-    min = buy[i].lastElementChild;
+    plus = buy[i].lastElementChild;
+    minus = buy[i].firstElementChild;
+    // console.log(plus, minus);
 
-    basket.addEventListener('click', () => {
-        quantity = buy[i].firstElementChild.lastElementChild;
+    plus.addEventListener('click', () => {
+        quantity = buy[i].children[1];
+        quantity.innerHTML++;
+    });
 
-        if (quantity.innerHTML >= 0) {
-            quantity.innerHTML++;
-            // console.log(quantity.innerHTML);
+    minus.addEventListener('click', () => {
+        quantity = buy[i].children[1];
+        if (quantity.innerHTML > 0) {
+            quantity.innerHTML--;
         }
     });
+
+
 }
