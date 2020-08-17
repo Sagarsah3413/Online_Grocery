@@ -39,14 +39,14 @@
             </section>
             <h3>products</h3>
             <h2>groceries</h2>
-            <div id="grid">
+            <div class="grid">
                 <?php
                 $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[0] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
                 $data = $dbconnection -> query($query);
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div id='items'> 
+                <div class='items'> 
                     <div>
                         <img src='images/down.png' alt='product pic'>
                     </div>
@@ -61,14 +61,14 @@
             </div>
 
             <h2>fruits</h2>
-            <div id="grid">
+            <div class="grid">
                 <?php
                 $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[1] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
                 $data = $dbconnection -> query($query);
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div id='items'> 
+                <div class='items'> 
                     <div>
                         <img src='images/down.png' alt='product pic'>
                     </div>
@@ -83,14 +83,14 @@
             </div>
 
             <h2>vegetables</h2>
-            <div id="grid">
+            <div class="grid">
                 <?php
                 $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[2] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
                 $data = $dbconnection -> query($query);
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div id='items'> 
+                <div class='items'> 
                     <div>
                         <img src='images/down.png' alt='product pic'>
                     </div>

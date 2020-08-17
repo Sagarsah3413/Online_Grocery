@@ -62,7 +62,7 @@ container.addEventListener('transitionend', () => {
 
 var send="";
 var sen="";
-let cart= document.querySelectorAll('div#items');
+let cart= document.querySelectorAll('div.items');
 for(let i=0;i<cart.length;i++){
     let ch=cart[i].lastElementChild;
     
