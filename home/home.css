@@ -183,3 +183,8 @@ div.grid div.items div.cart article span.control {
     display: inline-block;
     margin: 0px 8px;
 }
+
+div.grid div.items div.cart article span.control:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
