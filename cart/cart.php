@@ -21,7 +21,7 @@
             <h3>products</h3>
             <h2>groceries</h2>
             <div id="grid">                
-                }
+                
             </div>
 
               
