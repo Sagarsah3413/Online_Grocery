@@ -1,3 +1,4 @@
+//variable list
 let container = document.querySelector('#slider');
 let images = document.querySelectorAll('#slider img');
 
@@ -6,25 +7,29 @@ let next = document.getElementById('next');
 
 let count = 1;
 let width = images[0].clientWidth;
+//vaiablelist end
+
+
+//slider setting
 window.addEventListener('resize', () => {
     width = images[0].clientWidth;
-    container.style.transition="none";
+    container.style.transition = "none";
     console.log(width);
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
 
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
-function fwd() 
-{
+
+function fwd() {
     if (count >= images.length - 1)
-    return;
+        return;
     container.style.transition = "transform 0.3s ease-in-out";
     count++;
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 }
-function pre()
-{
+
+function pre() {
     if (count <= 0)
         return;
     container.style.transition = "transform 0.3s ease-in-out";
@@ -57,31 +62,68 @@ container.addEventListener('transitionend', () => {
     }
 });
 
+// //slider setting end
 
-console.log(document.getElementById('cart'));
-var send=[];
-// var x=[];
-// var price=[];
-let cart= document.querySelectorAll('div.items');
-let price=document.querySelectorAll('p');
-for(let i=0;i<cart.length;i++){
-    let ch=cart[i].lastElementChild;
+// console.log(document.getElementById('cart'));
+// var send=[];
+// // var x=[];
+// // var price=[];
+// let cart= document.querySelectorAll('div.items');
+// let price=document.querySelectorAll('p');
+// for(let i=0;i<cart.length;i++){
+//     let ch=cart[i].lastElementChild;
     
-    ch.addEventListener('click', function() {
-        if(ch.lastElementChild.innerHTML==="Add To Cart")
-        {
-            ch.lastElementChild.innerHTML="Remove From Cart"
-            send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].id,price[i*2].innerHTML.split[]]);
+//     ch.addEventListener('click', function() {
+//         if(ch.lastElementChild.innerHTML==="Add To Cart")
+//         {
+//             ch.lastElementChild.innerHTML="Remove From Cart"
+//             send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].id,price[i*2].innerHTML.split[]]);
+//             console.log(send);
+//         }
+//         else
+//         {
+//             ch.lastElementChild.innerHTML="Add To Cart";
+//             delete send[i];
+//             console.log(send);
+
+//variable list start
+var send = "";
+var sen = "";
+//variable list end
+//cart globalvariable storage
+let cart = document.querySelectorAll('div.items');
+for (let i = 0; i < cart.length; i++) {
+    cart[i].addEventListener('click', () => {
+        if (cart[i].innerHTML == "Add To Cart") {
+            send += '<span class="addcart">' + cart[i].innerHTML + '</span>';
             console.log(send);
+            // ch.lastElementChild.innerHTML = "Remove From Cart"
         }
-        else
-        {
-            ch.lastElementChild.innerHTML="Add To Cart";
-            delete send[i];
-            console.log(send);
+        if (cart[i].innerHTML == "Remove From Cart") {
+            sen += '<span class="additem">' + cart[i].innerHTML + '</span>';
+            // ch.lastElementChild.innerHTML = "Add to Cart";
         }
         localStorage.setItem("favoriteMovie", send);
     })
 }
-console.log(send);
+localStorage.setItem("sendd", send);
+localStorage.setItem("senn", sen);
+//cart globalvariable storage
 
+
+//quantity addition
+let buy = document.querySelectorAll("div.grid div.items div.cart");
+let quantity = '';
+let basket = '';
+for (let i = 0; i < buy.length; i++) {
+    basket = buy[i].lastElementChild;
+
+    basket.addEventListener('click', () => {
+        quantity = buy[i].firstElementChild.lastElementChild;
+
+        if (quantity.innerHTML >= 0) {
+            quantity.innerHTML++;
+            // console.log(quantity.innerHTML);
+        }
+    });
+}

@@ -46,15 +46,15 @@
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div class='items' id="<?php echo $row['productid'] ?>"> 
-                    <div>
-                        <img src='images/down.png' alt='product pic'>
+                <div class='items'> 
+                    <div class="img">
+                        <img src='images/down.png' alt='product pic' >
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span><?php echo $row['mprice']; ?></span></p>
-                    <div class='cart'>
-                        <img src='images/cart.png' alt='cart'>
-                        <p> Add To Cart</p> 
+                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <div class='cart' id="<?php echo $row['productid'] ?>">
+                        <article>Quantity <span>0</span></article>
+                        <p><img src='images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
                     </div>
                 </div>
                 <?php } ?>
@@ -68,15 +68,15 @@
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div class='items' id="<?php echo $row['productid'] ?>"> 
-                    <div>
+                <div class='items'> 
+                    <div class="img">
                         <img src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name'] ?></h4>
-                    <p>Rs <?php echo $row['price'] ?> <span><?php echo $row['mprice'] ?></span></p>
-                    <div class='cart'>
-                        <img src='images/cart.png' alt='cart'>
-                        <p> Add To Cart</p> 
+                    <p>Rs <?php echo $row['price'] ?> <span class="cross">Rs <?php echo $row['mprice'] ?></span></p>
+                    <div class='cart' id="<?php echo $row['productid'] ?>">
+                        <article>Quantity <span>0</span></article>
+                        <p><img src='images/cart.png' alt='cart'> Add To Cart</p> 
                     </div>
                 </div>
                 <?php } ?>
@@ -90,15 +90,15 @@
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div class='items' id="<?php echo $row['productid'] ?>"> 
-                    <div>
+                <div class='items'>
+                    <div class="img">
                         <img src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span><?php echo $row['mprice']; ?></span></p>
-                    <div class='cart'>
-                        <img src='images/cart.png' alt='cart'>
-                        <p> Add To Cart</p> 
+                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <div class='cart' id="<?php echo $row['productid'] ?>">
+                        <article>Quantity <span>0</span></article>
+                        <p><img src='images/cart.png' alt='cart'> Add To Cart</p> 
                     </div>
                 </div>
                 <?php } ?>
