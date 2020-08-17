@@ -19,20 +19,7 @@ body {
 div.container {
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 100%;
-}
-
-div.container nav {
-    background-color: beige;
-}
-
-div.container nav div {
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 15px 0px;
-    font-family: cursive;
-    cursor: pointer;
+    grid-template-rows: minmax(100vh, 100%);
 }
 
 div.container div#product section {

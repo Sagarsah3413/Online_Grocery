@@ -1,0 +1,17 @@
+div.container div#sidemenu {
+    background-color: beige;
+}
+
+div.container nav {
+    position: sticky;
+    top: 0px;
+}
+
+div.container nav div {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 7px 0px;
+    font-family: cursive;
+    cursor: pointer;
+}
