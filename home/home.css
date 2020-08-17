@@ -123,6 +123,7 @@ div.grid div.items p {
 
 div#product div.grid div.items p {
     letter-spacing: 1px;
+    user-select: none;
 }
 
 div.grid div.items p span.cross {

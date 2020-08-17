@@ -90,18 +90,3 @@ localStorage.setItem("senn", sen);
 
 
 //quantity addition
-let buy = document.querySelectorAll("div.grid div.items div.cart");
-let quantity = '';
-let basket = '';
-for (let i = 0; i < buy.length; i++) {
-    basket = buy[i].lastElementChild;
-
-    basket.addEventListener('click', () => {
-        quantity = buy[i].firstElementChild.lastElementChild;
-
-        if (quantity.innerHTML >= 0) {
-            quantity.innerHTML++;
-            // console.log(quantity.innerHTML);
-        }
-    });
-}
