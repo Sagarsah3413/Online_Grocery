@@ -1,17 +1,21 @@
-console.log(document.getElementById('cart'));
 var send="";
+var sen="";
 let cart= document.querySelectorAll('div#items');
 for(let i=0;i<cart.length;i++){
     let ch=cart[i].lastElementChild;
     
     ch.addEventListener('click', ()=>{
-        // document.getElementById('crt');
-        // .appendChild(cart);
-        console.log(cart[i]);
-        console.log(ch);
-        send+='<div id="items">'+cart[i].innerHTML+'</div>';
-        console.log(send);
-        localStorage.setItem("favoriteMovie", send);
+        if(ch.lastElementChild.innerHTML="Add To Cart")
+        {
+            send+='<div id="items">'+cart[i].innerHTML+'</div>';
+           ch.lastElementChild.innerHTML="Remove From Cart"
+        }
+        if(ch.lastElementChild.innerHTML="Remove From Cart")
+        {
+            sen+='<div id="items">'+cart[i].innerHTML+'</div>';
+            ch.lastElementChild.innerHTML="Add to Cart"
+        }
     })
 }
-console.log(send);
+localStorage.setItem("sendd", send);
+localStorage.setItem("senn", sen);
