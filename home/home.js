@@ -1,3 +1,4 @@
+//variable list
 let container = document.querySelector('#slider');
 let images = document.querySelectorAll('#slider img');
 
@@ -6,25 +7,29 @@ let next = document.getElementById('next');
 
 let count = 1;
 let width = images[0].clientWidth;
+//vaiablelist end
+
+
+//slider setting
 window.addEventListener('resize', () => {
     width = images[0].clientWidth;
-    container.style.transition="none";
+    container.style.transition = "none";
     console.log(width);
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
 
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
-function fwd() 
-{
+
+function fwd() {
     if (count >= images.length - 1)
-    return;
+        return;
     container.style.transition = "transform 0.3s ease-in-out";
     count++;
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 }
-function pre()
-{
+
+function pre() {
     if (count <= 0)
         return;
     container.style.transition = "transform 0.3s ease-in-out";
@@ -57,25 +62,26 @@ container.addEventListener('transitionend', () => {
     }
 });
 
+//slider setting end
 
 
+//variable list start
+var send = "";
+var sen = "";
+//variable list end
+//cart anniamation start
+let cart = document.querySelectorAll('div#items');
+for (let i = 0; i < cart.length; i++) {
+    let ch = cart[i].lastElementChild;
 
-var send="";
-var sen="";
-let cart= document.querySelectorAll('div#items');
-for(let i=0;i<cart.length;i++){
-    let ch=cart[i].lastElementChild;
-    
-    ch.addEventListener('click', ()=>{
-        if(ch.lastElementChild.innerHTML="Add To Cart")
-        {
-            send+='<div id="items">'+cart[i].innerHTML+'</div>';
-           ch.lastElementChild.innerHTML="Remove From Cart"
+    ch.addEventListener('click', () => {
+        if (ch.lastElementChild.innerHTML = "Add To Cart") {
+            send += '<div id="items">' + cart[i].innerHTML + '</div>';
+            ch.lastElementChild.innerHTML = "Remove From Cart"
         }
-        if(ch.lastElementChild.innerHTML="Remove From Cart")
-        {
-            sen+='<div id="items">'+cart[i].innerHTML+'</div>';
-            ch.lastElementChild.innerHTML="Add to Cart"
+        if (ch.lastElementChild.innerHTML = "Remove From Cart") {
+            sen += '<div id="items">' + cart[i].innerHTML + '</div>';
+            ch.lastElementChild.innerHTML = "Add to Cart"
         }
     })
 }
