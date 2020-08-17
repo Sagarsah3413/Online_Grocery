@@ -62,8 +62,29 @@ container.addEventListener('transitionend', () => {
     }
 });
 
-//slider setting end
+// //slider setting end
 
+// console.log(document.getElementById('cart'));
+// var send=[];
+// // var x=[];
+// // var price=[];
+// let cart= document.querySelectorAll('div.items');
+// let price=document.querySelectorAll('p');
+// for(let i=0;i<cart.length;i++){
+//     let ch=cart[i].lastElementChild;
+    
+//     ch.addEventListener('click', function() {
+//         if(ch.lastElementChild.innerHTML==="Add To Cart")
+//         {
+//             ch.lastElementChild.innerHTML="Remove From Cart"
+//             send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].id,price[i*2].innerHTML.split[]]);
+//             console.log(send);
+//         }
+//         else
+//         {
+//             ch.lastElementChild.innerHTML="Add To Cart";
+//             delete send[i];
+//             console.log(send);
 
 //variable list start
 var send = "";
@@ -82,6 +103,7 @@ for (let i = 0; i < cart.length; i++) {
             sen += '<span class="additem">' + cart[i].innerHTML + '</span>';
             // ch.lastElementChild.innerHTML = "Add to Cart";
         }
+        localStorage.setItem("favoriteMovie", send);
     })
 }
 localStorage.setItem("sendd", send);
