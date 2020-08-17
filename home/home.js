@@ -63,27 +63,10 @@ container.addEventListener('transitionend', () => {
 });
 
 //quantity addition
-let buy = document.querySelectorAll("div.grid div.items div.cart");
-let quantity = '';
-let basket = '';
-for (let i = 0; i < buy.length; i++) {
-    basket = buy[i].lastElementChild;
 
-    basket.addEventListener('click', () => {
-        quantity = buy[i].firstElementChild.lastElementChild;
-
-        if (quantity.innerHTML >= 0) {
-            quantity.innerHTML++;
-            // console.log(quantity.innerHTML);
-        }
-    });
-}
-
-function arrayRemove(arr, value)
-{
+function arrayRemove(arr, value) {
     return arr.filter(
-        function(ele)
-        {
+        function(ele) {
             return ele[1] != value;
         }
     );
@@ -108,4 +91,26 @@ for(let i=0;i<cart.length;i++){
         }
         localStorage.setItem("favoriteMovie", send);
     })
+}
+//quantity addition
+
+let buy = document.querySelectorAll("div.grid div.items div.cart article");
+let plus, minus, quantity;
+let xml = new XMLHttpRequest();
+for (let i = 0; i < buy.length; i++) {
+    plus = buy[i].lastElementChild;
+    minus = buy[i].firstElementChild;
+    // console.log(plus, minus);
+
+    plus.addEventListener('click', () => {
+        quantity = buy[i].children[1];
+        quantity.innerHTML++;
+    });
+
+    minus.addEventListener('click', () => {
+        quantity = buy[i].children[1];
+        if (quantity.innerHTML > 0) {
+            quantity.innerHTML--;
+        }
+    });
 }
