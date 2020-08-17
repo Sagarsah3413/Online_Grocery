@@ -103,7 +103,7 @@ for(let i=0;i<cart.length;i++){
         if(ch.innerText==="Add To Cart")
         {
             ch.innerText="Remove From Cart"
-            send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].lastElementChild.id,price[i*2].innerText]);
+            send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].lastElementChild.id,price[i*2].innerText,]);
             console.log(send);
         }
         else
