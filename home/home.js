@@ -89,3 +89,20 @@ localStorage.setItem("senn", sen);
 
 
 //quantity addition
+
+let buy = document.querySelectorAll("div.grid div.items div.cart article");
+let quantity = '';
+let plus, minus;
+let xml = new XMLHttpRequest();
+for (let i = 0; i < buy.length; i++) {
+    min = buy[i].lastElementChild;
+
+    basket.addEventListener('click', () => {
+        quantity = buy[i].firstElementChild.lastElementChild;
+
+        if (quantity.innerHTML >= 0) {
+            quantity.innerHTML++;
+            // console.log(quantity.innerHTML);
+        }
+    });
+}
