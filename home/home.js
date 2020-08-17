@@ -69,21 +69,39 @@ container.addEventListener('transitionend', () => {
 var send = "";
 var sen = "";
 //variable list end
-//cart anniamation start
-let cart = document.querySelectorAll('div#items');
+//cart globalvariable storage
+let cart = document.querySelectorAll('div.items');
 for (let i = 0; i < cart.length; i++) {
-    let ch = cart[i].lastElementChild;
-
-    ch.addEventListener('click', () => {
-        if (ch.lastElementChild.innerHTML = "Add To Cart") {
-            send += '<div id="items">' + cart[i].innerHTML + '</div>';
-            ch.lastElementChild.innerHTML = "Remove From Cart"
+    cart[i].addEventListener('click', () => {
+        if (cart[i].innerHTML == "Add To Cart") {
+            send += '<span class="addcart">' + cart[i].innerHTML + '</span>';
+            console.log(send);
+            // ch.lastElementChild.innerHTML = "Remove From Cart"
         }
-        if (ch.lastElementChild.innerHTML = "Remove From Cart") {
-            sen += '<div id="items">' + cart[i].innerHTML + '</div>';
-            ch.lastElementChild.innerHTML = "Add to Cart"
+        if (cart[i].innerHTML == "Remove From Cart") {
+            sen += '<span class="additem">' + cart[i].innerHTML + '</span>';
+            // ch.lastElementChild.innerHTML = "Add to Cart";
         }
     })
 }
 localStorage.setItem("sendd", send);
 localStorage.setItem("senn", sen);
+//cart globalvariable storage
+
+
+//quantity addition
+let buy = document.querySelectorAll("div.grid div.items div.cart");
+let quantity = '';
+let basket = '';
+for (let i = 0; i < buy.length; i++) {
+    basket = buy[i].lastElementChild;
+
+    basket.addEventListener('click', () => {
+        quantity = buy[i].firstElementChild.lastElementChild;
+
+        if (quantity.innerHTML >= 0) {
+            quantity.innerHTML++;
+            // console.log(quantity.innerHTML);
+        }
+    });
+}
