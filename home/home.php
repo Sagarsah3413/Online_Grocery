@@ -96,6 +96,7 @@
     </div>
     
 </body>
+<script src="home.js"></script>
 <script>
     var integer = 3;
 </script>
