@@ -14,10 +14,8 @@
     <div class="container">
         <?php require_once '../shared/sidemenu.php' ?>
         <div id="product">
-            <section></section>
             <h3>products</h3>
-            <h2>groceries</h2>
-            <div id="grid">                
+            <div class="grid">                
                 
             </div>
 

@@ -62,8 +62,6 @@ container.addEventListener('transitionend', () => {
     }
 });
 
-//slider setting end
-
 
 //variable list start
 var send = "";
@@ -82,6 +80,7 @@ for (let i = 0; i < cart.length; i++) {
             sen += '<span class="additem">' + cart[i].innerHTML + '</span>';
             // ch.lastElementChild.innerHTML = "Add to Cart";
         }
+        localStorage.setItem("favoriteMovie", send);
     })
 }
 localStorage.setItem("sendd", send);
