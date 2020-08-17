@@ -22,8 +22,15 @@ div.container {
     grid-template-rows: minmax(100vh, 100%);
 }
 
+
+
 body div#product {
     padding: 5%;
+}
+
+
+div#product h2 {
+    margin-bottom: 3%;
 }
 
 h2 {
@@ -33,7 +40,7 @@ h2 {
     padding: 1%;
 }
 
-body div#product div#grid {
+body div#product div.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin: 7px;
@@ -42,49 +49,46 @@ body div#product div#grid {
     text-align: center;
 }
 
-div#grid div#items {
+div.grid div.items {
     padding: 2%;
     background-color: bisque;
 }
 
-div#grid div#items h4 {
+div.grid div.items h4 {
     padding: 2%;
     font-size: 20px;
     /* text-transform: uppercase; */
     overflow-wrap: break-word;
 }
 
-div#grid div#items p {
+div.grid div.items p {
     font-weight: bolder;
     margin: 1% 2%;
 }
 
-div#product div#grid div#items p {
+div#product div.grid div.items p {
     letter-spacing: 1px;
 }
 
-div#grid div#items p span {
+div.grid div.items p span.cross {
     font-weight: normal;
     text-decoration-line: line-through;
     text-decoration-color: red;
     margin-left: 5%;
 }
 
-div#grid div#items div#img {
+div.grid div.items div.img {
     cursor: pointer;
 }
 
-div#grid div#items div#img:hover {
+div.grid div.items div.img:hover {
     transform: scale(1.1);
     transition: 300ms;
     overflow: hidden;
 }
 
-div#grid div#items div#details {
-    background-color: #eeeeee;
-}
 
-div#grid div#items div#details div.cart {
+div.grid div.items div.cart p {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -92,12 +96,12 @@ div#grid div#items div#details div.cart {
     cursor: pointer;
 }
 
-div#grid div#items div.cart img {
+div.grid div.items div.cart img {
     height: 30px;
     width: 30px;
 }
 
-div#grid div#items div.cart:hover {
+div.grid div.items div.cart p:hover {
     transform: scale(1.1);
     transition: 300ms;
     cursor: pointer;
