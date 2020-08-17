@@ -33,10 +33,10 @@
                         <img src='../home/images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span><?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <img src='../home/images/cart.png' alt='cart'>
-                        <p> Add To Cart</p> 
+                        <article>Quantity <span>0</span></article>
+                        <p><img src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
                     </div>
                 </div>
                 <?php } ?>
@@ -46,5 +46,5 @@
 
 </body>
 
-<script src="home.js"></script>
+<script src="../home/home.js"></script>
 </html>
