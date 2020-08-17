@@ -123,6 +123,12 @@ div.grid div.items p {
 
 div#product div.grid div.items p {
     letter-spacing: 1px;
+    user-select: none;
+}
+
+div.grid div.items article span {
+    display: inline-block;
+    margin-left: 6px;
 }
 
 div.grid div.items p span.cross {
@@ -163,4 +169,17 @@ div.grid div.items div.cart p:hover {
     transform: scale(1.1);
     transition: 300ms;
     cursor: pointer;
+}
+
+div.grid div.items div.cart article {
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.grid div.items div.cart article span.control {
+    display: inline-block;
+    margin: 0px 8px;
 }

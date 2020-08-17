@@ -67,7 +67,7 @@ div#product div.grid div.items p {
     letter-spacing: 1px;
 }
 
-div.grid div.items p span {
+div.grid div.items p span.cross {
     font-weight: normal;
     text-decoration-line: line-through;
     text-decoration-color: red;
