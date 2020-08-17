@@ -21,14 +21,14 @@
         <?php require_once '../shared/sidemenu.php' ?>
         <div id="product">
             <h2>vegetables</h2>
-            <div id="grid">
+            <div class="grid">
                 <?php
                 $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[2] . "' ORDER BY `productid` DESC LIMIT $offset,7) sub ORDER BY `productid` ASC;";
                 $data = $dbconnection -> query($query);
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div id='items'> 
+                <div class='items'> 
                     <div>
                         <img src='../home/images/down.png' alt='product pic'>
                     </div>
