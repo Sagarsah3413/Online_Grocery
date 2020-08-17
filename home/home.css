@@ -81,7 +81,8 @@ div#grid div#items {
 div#grid div#items h4 {
     padding: 2%;
     font-size: 20px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    overflow-wrap: break-word;
 }
 
 div#grid div#items p {
