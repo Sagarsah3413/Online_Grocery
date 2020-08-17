@@ -89,7 +89,7 @@
             <h2>vegetables</h2>
             <div id="grid">
                 <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[0] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
+                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[2] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
                 $data = $dbconnection -> query($query);
         
                 while($row = $data -> fetch_assoc()) {
