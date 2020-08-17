@@ -22,7 +22,23 @@
             <div>vegetables</div>
         </nav>
         <div id="product">
-            <section></section>
+            <section>
+                <div id="image">
+                    <i id="prev">
+                        <img src="images/img4.png" width="50px" alt="">
+                    </i>
+                    <i id="next">
+                        <img src="images/img5.png" width="50px" alt="">
+                    </i>
+                    <div id="slider">
+                        <img src="images/img1.jfif">
+                        <img src="images/img2.jfif">
+                        <img src="images/img3.jfif">
+                        <img src="images/img1.jfif">
+                        <img src="images/img2.jfif">
+                    </div>
+                </div>
+            </section>
             <h3>products</h3>
             <h2>groceries</h2>
             <div id="grid">
