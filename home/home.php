@@ -46,13 +46,13 @@
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div class='items'> 
+                <div class='items' id="<?php echo $row['productid'] ?>"> 
                     <div>
                         <img src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <?php echo $row['price']; ?> <span><?php echo $row['mprice']; ?></span></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <div class='cart'>
                         <img src='images/cart.png' alt='cart'>
                         <p> Add To Cart</p> 
                     </div>
@@ -68,13 +68,13 @@
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div class='items'> 
+                <div class='items' id="<?php echo $row['productid'] ?>"> 
                     <div>
                         <img src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name'] ?></h4>
                     <p>Rs <?php echo $row['price'] ?> <span><?php echo $row['mprice'] ?></span></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <div class='cart'>
                         <img src='images/cart.png' alt='cart'>
                         <p> Add To Cart</p> 
                     </div>
@@ -90,13 +90,13 @@
         
                 while($row = $data -> fetch_assoc()) {
                     ?>
-                <div class='items'> 
+                <div class='items' id="<?php echo $row['productid'] ?>"> 
                     <div>
                         <img src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <?php echo $row['price']; ?> <span><?php echo $row['mprice']; ?></span></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <div class='cart'>
                         <img src='images/cart.png' alt='cart'>
                         <p> Add To Cart</p> 
                     </div>

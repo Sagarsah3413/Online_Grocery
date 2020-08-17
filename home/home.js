@@ -58,26 +58,30 @@ container.addEventListener('transitionend', () => {
 });
 
 
-
-
-var send="";
-var sen="";
+console.log(document.getElementById('cart'));
+var send=[];
+// var x=[];
+// var price=[];
 let cart= document.querySelectorAll('div.items');
+let price=document.querySelectorAll('p');
 for(let i=0;i<cart.length;i++){
     let ch=cart[i].lastElementChild;
     
-    ch.addEventListener('click', ()=>{
-        if(ch.lastElementChild.innerHTML="Add To Cart")
+    ch.addEventListener('click', function() {
+        if(ch.lastElementChild.innerHTML==="Add To Cart")
         {
-            send+='<div id="items">'+cart[i].innerHTML+'</div>';
-           ch.lastElementChild.innerHTML="Remove From Cart"
+            ch.lastElementChild.innerHTML="Remove From Cart"
+            send.push(['<div class="items">'+cart[i].innerHTML+'</div>',cart[i].id,price[i*2].innerHTML.split[]]);
+            console.log(send);
         }
-        if(ch.lastElementChild.innerHTML="Remove From Cart")
+        else
         {
-            sen+='<div id="items">'+cart[i].innerHTML+'</div>';
-            ch.lastElementChild.innerHTML="Add to Cart"
+            ch.lastElementChild.innerHTML="Add To Cart";
+            delete send[i];
+            console.log(send);
         }
+        localStorage.setItem("favoriteMovie", send);
     })
 }
-localStorage.setItem("sendd", send);
-localStorage.setItem("senn", sen);
+console.log(send);
+
