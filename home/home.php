@@ -29,11 +29,21 @@
                         <img src="images/img5.png" width="50px" alt="">
                     </i>
                     <div id="slider">
-                        <img src="images/img1.jfif">
-                        <img src="images/img2.jfif">
-                        <img src="images/img3.jfif">
-                        <img src="images/img1.jfif">
-                        <img src="images/img2.jfif">
+                        <div class="img1">
+                            <p><a href="../groceries/groceries.php">vykkhvck</a></p>
+                        </div>
+                        <div class="img2">
+                            <p><a href="../fruits/fruits.php">vbdkulvbx</a></p>
+                        </div>
+                        <div id="img3">
+                            <p><a href="../vegetables/vegetables.php">oudfdulvbx</a></p>
+                        </div>
+                        <div class="img1">
+                            <p><a href="../groceries/groceries.php">vykkhvck</a></p>
+                        </div>
+                        <div class="img2">
+                            <p><a href="../fruits/fruits.php">vbdkulvbx</a></p>
+                        </div>
                     </div>
                 </div>
             </section>

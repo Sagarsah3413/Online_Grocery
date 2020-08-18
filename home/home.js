@@ -1,6 +1,6 @@
 //variable list
 let container = document.querySelector('#slider');
-let images = document.querySelectorAll('#slider img');
+let images = document.querySelectorAll('#slider div');
 
 let prev = document.getElementById('prev');
 let next = document.getElementById('next');
@@ -71,8 +71,7 @@ function arrayRemove(arr, value) {
         }
     );
 }
-
-var send=[];
+var send=localStorage.getItem("favouriteMovie");
 let cart= document.querySelectorAll('div.items');
 let price=document.querySelectorAll('p');
 for(let i=0;i<cart.length;i++){
