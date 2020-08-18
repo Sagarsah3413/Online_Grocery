@@ -95,118 +95,39 @@ div.container div#product section {
     margin: auto;
 }
 
-body div#product {
-    padding: 5%;
-}
-
-h3 {
+div#product h3
+{
     text-transform: uppercase;
     font-size: 40px;
     text-align: center;
-    padding: 1%;
+    padding-top: 7% ;
 }
 
-div#product h2 {
-    margin-bottom: 3%;
-}
-
-h2 {
-    text-transform: capitalize;
-    font-size: 30px;
+div#product div.groceries div.mainsub, div.fruits div.all
+{
+    padding: 4%;
     text-align: center;
-    padding: 1%;
 }
 
-body div#product div.grid {
+div#product div.groceries div.mainsub img, div.fruits div.all img
+{
+    border-radius: 10px;
+}
+
+div#product div.groceries div.foursub, div.fruits div.two
+{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin: 7px;
-    grid-gap: 40px;
-    margin-bottom: 30px;
+    grid-template-columns:  auto auto;
+    grid-gap: 20px;
     text-align: center;
 }
 
-div.grid div.items {
-    padding: 2%;
-    background-color: bisque;
+div#product div.groceries div.foursub img, div.fruits div.two img
+{
+    border-radius: 10px;
 }
 
-div.grid div.items h4 {
-    padding: 2%;
-    font-size: 20px;
-    /* text-transform: uppercase; */
-    overflow-wrap: break-word;
-}
-
-div.grid div.items p {
-    font-weight: bolder;
-    margin: 1% 2%;
-}
-
-div#product div.grid div.items p {
-    letter-spacing: 1px;
-    user-select: none;
-}
-
-div.grid div.items article span {
-    display: inline-block;
-    margin-left: 6px;
-}
-
-div.grid div.items p span.cross {
-    font-weight: normal;
-    text-decoration-line: line-through;
-    text-decoration-color: red;
-    margin-left: 5%;
-}
-
-div.grid div.items div.img {
-    cursor: pointer;
-}
-
-div.grid div.items div.img:hover {
-    transform: scale(1.1);
-    transition: 300ms;
-    overflow: hidden;
-}
-
-div.grid div.items {
-    background-color: #eeeeee;
-}
-
-div.grid div.items div.cart p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-div.grid div.items div.cart img {
-    height: 30px;
-    width: 30px;
-}
-
-div.grid div.items div.cart p:hover {
-    transform: scale(1.1);
-    transition: 300ms;
-    cursor: pointer;
-}
-
-div.grid div.items div.cart article {
-    user-select: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-div.grid div.items div.cart article span.control {
-    display: inline-block;
-    margin: 0px 8px;
-}
-
-div.grid div.items div.cart article span.control:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+div#product div.vegetable div.vege img
+{
+    padding: 4%;
 }

@@ -47,76 +47,38 @@
                     </div>
                 </div>
             </section>
-            <h3>products</h3>
-            <h2>groceries</h2>
-            <div class="grid">
-                <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[0] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
-                $data = $dbconnection -> query($query);
         
-                while($row = $data -> fetch_assoc()) {
-                    ?>
-                <div class='items'> 
-                    <div class="img">
-                        <img src='images/down.png' alt='product pic' >
+            <h3>groceries</h3>
+            <div class="groceries">
+                
+                    <div class="mainsub"> <img src="images/snacks2.jpg" width="90%" alt="rice"></div>
+                    <div class="foursub">
+                        <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
+                        <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
+                        <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
+                        <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
                     </div>
-                    <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img src="images/minus.png" alt=""></span> Quantity <span class="quantity">0</span><span class="control"><img src="images/plus.png" alt=""></span></article>
-                        <p><img src='images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
-                    </div>
-                </div>
-                <?php } ?>
+                    
             </div>
 
-            <h2>fruits</h2>
-            <div class="grid">
-                <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[1] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
-                $data = $dbconnection -> query($query);
-        
-                while($row = $data -> fetch_assoc()) {
-                    ?>
-                <div class='items'> 
-                    <div class="img">
-                        <img src='images/down.png' alt='product pic'>
-                    </div>
-                    <h4><?php echo $row['product name'] ?></h4>
-                    <p>Rs <?php echo $row['price'] ?> <span class="cross">Rs <?php echo $row['mprice'] ?></span></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img src="images/minus.png" alt=""></span> Quantity <span class="quantity">0</span><span class="control"><img src="images/plus.png" alt=""></span></article>
-                        <p><img src='images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p> 
-                    </div>
+            <h3>fruits</h3>
+            <div class="fruits">
+
+                <div class="all"> <img src="images/fruit1.jpg" width="90%" alt="fruits"></div>
+                <div class="two">
+                    <div class="fruit1"><img src="images/fruit2.jpg" width="90%" alt="fruits"></div>
+                    <div class="fruit1"><img src="images/dryfruit.jpg" width="90%" alt="fruits"></div>
                 </div>
-                <?php } ?>
             </div>
 
-            <h2>vegetables</h2>
-            <div class="grid">
-                <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[2] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
-                $data = $dbconnection -> query($query);
-        
-                while($row = $data -> fetch_assoc()) {
-                    ?>
-                <div class='items'>
-                    <div class="img">
-                        <img src='images/down.png' alt='product pic'>
-                    </div>
-                    <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img src="images/minus.png" alt=""></span> Quantity <span class="quantity">0</span><span class="control"><img src="images/plus.png" alt=""></span></article>
-                        <p><img src='images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p> 
-                    </div>
-                </div>
-                <?php } ?>
+            <h3>vegetables</h3>
+            <div class="vegetable">
+                <div class="vege"><img src="images/vege1.jpg" width="90%" alt="fruits"></div>
+                <div class="vege"><img src="images/vege2.jpg" width="90%" alt="fruits"></div>
             </div>
         </div>
-
     </div>
-    
+
 </body>
 <script src="home.js"></script>
 </html>
