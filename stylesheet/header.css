@@ -108,7 +108,7 @@ header div.fill span#open:hover span {
 
 header div.fill nav#menu span#close {
     right: 0px;
-    top: 0px;
+    top: 3px;
     font-size: 0px;
 }
 

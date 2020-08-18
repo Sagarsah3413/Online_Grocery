@@ -16,7 +16,18 @@ body {
 }
 
 div#image {
+    /* overflow: hidden;
+    position: relative;
+    z-index: 0;
+    width: 70%;
+    height: 350px;
     margin: auto;
+    */
+}
+
+div#image {
+    margin: auto;
+    margin-top: 4%;
     overflow: hidden;
     position: relative;
     z-index: 0;
@@ -48,7 +59,7 @@ div#image {
 }
 
 #slider div p {
-    margin: 25% 38%;
+    margin: 20% 40%;
     font-size: 30px;
     color: blue;
     text-transform: uppercase;
