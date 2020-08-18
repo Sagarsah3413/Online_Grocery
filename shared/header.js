@@ -1,10 +1,19 @@
 let navigation = document.getElementById('menu');
 navigation.style.width = '0%';
-navigation.style.height = '100%';
+navigation.style.height = document.body.clientHeight + 'px';
 
 let cartmenu = document.getElementById('cartmenu');
 cartmenu.style.height = '100%';
 cartmenu.style.width = '00%';
+
+var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max(body.scrollHeight, body.offsetHeight,
+    html.clientHeight, html.scrollHeight, html.offsetHeight);
+console.log(height);
+
+
 
 document.getElementById('open').addEventListener('click', () => {
     if (navigation.style.width == '0%') {
