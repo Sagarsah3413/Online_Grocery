@@ -46,5 +46,5 @@
 
 </body>
 
-<script src="../home/home.js"></script>
+<script src="../fruits/fruits.js"></script>
 </html>
