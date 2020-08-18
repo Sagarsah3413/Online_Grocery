@@ -7,6 +7,7 @@ let next = document.getElementById('next');
 
 let count = 1;
 let width = images[0].clientWidth;
+let height = images[0].clientHeight;
 //vaiablelist end
 
 
@@ -16,7 +17,8 @@ window.addEventListener('resize', () => {
     container.style.transition = "none";
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
-
+container.style.height = height + 'px';
+console.log(height);
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
 

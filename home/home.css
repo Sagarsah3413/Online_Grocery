@@ -87,7 +87,6 @@ div#image {
 }
 
 div.container {
-    display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 100%;
 }
@@ -97,7 +96,7 @@ div.container div#product section {
     height: 350px;
     background-color: aqua;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 div#product h3 {
