@@ -93,6 +93,7 @@ for (let i = 0; i < cart.length; i++) {
             console.log(send);
         }
         localStorage.setItem("favoriteMovie", send);
+        // console.log(localStorage.getItem('favouriteMovie'));
     })
 }
 
