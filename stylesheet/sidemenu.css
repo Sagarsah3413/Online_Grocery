@@ -1,8 +1,3 @@
-*
-{
-    font-family: cursive;
-}
-
 div.container div#sidemenu {
     background-color: beige;
 }
@@ -17,6 +12,5 @@ div.container nav div {
     text-transform: uppercase;
     text-align: center;
     padding: 7px 0px;
-   
     cursor: pointer;
 }

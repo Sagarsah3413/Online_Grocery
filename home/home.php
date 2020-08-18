@@ -1,5 +1,6 @@
 <?php
     require_once '../shared/database.php';
+    $sharedfolder='../shared/';
     session_start();
     $offset = 0;
     $type = ['grocer','fruit','vegetable'];
@@ -18,8 +19,7 @@
 <body>
     <?php require_once'../shared/header.php'; ?>
     <div class="container">
-        <?php require_once '../shared/sidemenu.php' ?>
-        <div id="product">
+        <!-- <div id="product">
             <section>
                 <div id="image">
                     <i id="prev">
@@ -38,7 +38,7 @@
                 </div>
             </section>
             
-        </div>
+        </div> -->
 
     </div>
     
