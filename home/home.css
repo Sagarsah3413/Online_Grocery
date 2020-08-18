@@ -19,6 +19,7 @@ div#image {
     margin: auto;
     overflow: hidden;
     position: relative;
+    z-index: 0;
 }
 
 #slider {
@@ -69,7 +70,7 @@ div#image {
 
 #next {
     position: absolute;
-    z-index: 4;
+    z-index: 2;
     top: 45%;
     right: 0px;
     opacity: 0.4;
