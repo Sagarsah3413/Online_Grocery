@@ -93,6 +93,7 @@ div.container div#product section {
     height: 350px;
     background-color: aqua;
     margin: auto;
+    margin-top: 10%;
 }
 
 div#product h3
