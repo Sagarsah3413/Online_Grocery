@@ -72,7 +72,8 @@ function arrayRemove(arr, value) {
         }
     );
 };
-var send = localStorage.getItem("favouriteMovie");
+var send = [];
+console.log(send);
 let cart = document.querySelectorAll('div.items');
 console.log(cart[0].innerHTML);
 let price = document.querySelectorAll('p');
@@ -87,7 +88,8 @@ for (let i = 0; i < cart.length; i++) {
             sen = arrayRemove(send, cart[i].lastElementChild.id);
             send = sen;
         }
-        localStorage.setItem("favoriteMovie", send);
+        sessionStorage.setItem("fav", send);
+        console.log(send);
     })
 };
 localStorage.setItem('localvar', JSON.stringify(document.getElementById('image')));
@@ -96,11 +98,26 @@ console.log(JSON.parse(localStorage.getItem('localvar')));
 
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
-
+let add = document.querySelectorAll("div.grid div.items div.cart p");
+let xml = new XMLHttpRequest();
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
+    quantity = buy[i].children[1];
 
+    function hide(x, val1, val2) {
+        x.style.height = val1;
+        x.style.overflow = val2;
+        x.style.transition = 'display 0.3s linear ';
+    }
+    hide(buy[i], "0px", "hidden");
+    add[i].addEventListener('click', () => {
+        quantity.innerHTML++;
+        if (quantity.innerHTML > 0) {
+            hide(add[i], "0px", "hidden");
+            hide(buy[i], "30px", "");
+        }
+    });
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
@@ -108,8 +125,12 @@ for (let i = 0; i < buy.length; i++) {
 
     minus.addEventListener('click', () => {
         quantity = buy[i].children[1];
-        if (quantity.innerHTML > 0) {
+        if (quantity.innerHTML > 1) {
             quantity.innerHTML--;
+        } else {
+            quantity.innerHTML--;
+            hide(buy[i], "0px", "hidden");
+            hide(add[i], "auto", "");
         }
     });
 }
