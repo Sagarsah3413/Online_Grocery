@@ -28,19 +28,19 @@
                     </i>
                     <div id="slider">
                         <div class="img1">
-                            <p><a href="../groceries/groceries.php">vykkhvck</a></p>
+                            <p><a href="../groceries/groceries.php">add to cart</a></p>
                         </div>
                         <div class="img2">
-                            <p><a href="../fruits/fruits.php">vbdkulvbx</a></p>
+                            <p><a href="../fruits/fruits.php">buy now</a></p>
                         </div>
                         <div id="img3">
-                            <p><a href="../vegetables/vegetables.php">oudfdulvbx</a></p>
+                            <p><a href="../vegetables/vegetables.php"></a>free home delievery</p>
                         </div>
                         <div class="img1">
-                            <p><a href="../groceries/groceries.php">vykkhvck</a></p>
+                            <p><a href="../groceries/groceries.php">add to cart</a></p>
                         </div>
                         <div class="img2">
-                            <p><a href="../fruits/fruits.php">vbdkulvbx</a></p>
+                            <p><a href="../fruits/fruits.php">buy now</a></p>
                         </div>
                     </div>
                 </div>
