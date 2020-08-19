@@ -34,7 +34,7 @@
                             <p><a href="../fruits/fruits.php">buy now</a></p>
                         </div>
                         <div id="img3">
-                            <p><a href="../vegetables/vegetables.php"></a>free home delievery</p>
+                            <p><a href="../vegetables/vegetables.php">free home delievery</a></p>
                         </div>
                         <div class="img1">
                             <p><a href="../groceries/groceries.php">add to cart</a></p>
@@ -48,31 +48,49 @@
             
             <h3>groceries</h3>
             <div class="groceries">
-                
-                    <div class="mainsub"> <img src="images/snacks2.jpg" width="90%" alt="rice"></div>
-                    <div class="foursub">
-                        <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
-                    </div>
-                    
+                <div class="allsub">
+                    <div class="sub"><img src="images/snacks2.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/rice.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/snacks1.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/snacks1.jpg" alt="rice"></div>
+                    <div class="sub"><img src="images/snacks2.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/rice.jpg" alt="rice"></div>
                 </div>
+                <h3>our popular items</h3>
+                <div class="grid">
+                    <?php
+                    $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[0] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
+                    $data = $dbconnection -> query($query);
+            
+                    while($row = $data -> fetch_assoc()) {
+                        ?>
+                    <div class='items'> 
+                        <div>
+                            <img class="plus"src='../home/images/down.png' alt='product pic'>
+                        </div>
+                        <h4><?php echo $row['product name']; ?></h4>
+                        <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                        <div class='cart' id="<?php echo $row['productid'] ?>">
+                            <article><span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">0</span><span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span></article>
+                            <p><img class="plus" src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
 
-                <h3>fruits</h3>
+            <h3>fruits</h3>
             <div class="fruits">
-                
-                <div class="all"> <img src="images/fruit1.jpg" width="90%" alt="fruits"></div>
-                <div class="two">
-                    <div class="fruit1"><img src="images/fruit2.jpg" width="90%" alt="fruits"></div>
-                    <div class="fruit1"><img src="images/dryfruit.jpg" width="90%" alt="fruits"></div>
+                <div class="all">
+                    <div class="fruit1"><img src="images/fruit1.jpg"  alt="fruits"></div>
+                    <div class="fruit1"><img src="images/fruit2.jpg"  alt="fruits"></div>
+                    <div class="fruit1"><img src="images/dryfruit.jpg"  alt="fruits"></div>
                 </div>
             </div>
             
             <h3>vegetables</h3>
             <div class="vegetables">
-                <div class="vege"><img src="images/vege1.jpg" width="90%" alt="fruits"></div>
-                <div class="vege"><img src="images/vege2.jpg" width="90%" alt="fruits"></div>
+                <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div>
             </div>
         </div>
 
