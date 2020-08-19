@@ -93,13 +93,8 @@ div#image {
     opacity: 1;
 }
 
-<<<<<<< HEAD
-div#product div.groceries img,
-div.fruits img {
-=======
  div#product div.groceries img, div.fruits img
 {
->>>>>>> 3c88f002356ee04637d3be47dd51017e5b306d49
     height: 90%;
     width: 90%;
 }
