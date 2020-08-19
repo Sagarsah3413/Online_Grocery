@@ -34,7 +34,7 @@
                             <p><a href="../fruits/fruits.php">buy now</a></p>
                         </div>
                         <div id="img3">
-                            <p><a href="../vegetables/vegetables.php"></a>free home delievery</p>
+                            <p><a href="../vegetables/vegetables.php">free home delievery</a></p>
                         </div>
                         <div class="img1">
                             <p><a href="../groceries/groceries.php">add to cart</a></p>
