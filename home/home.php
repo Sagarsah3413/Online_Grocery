@@ -48,12 +48,12 @@
             
             <h3>groceries</h3>
             <div class="groceries">
-                
-                    <div class="mainsub"> <img src="images/snacks2.jpg" width="90%" alt="rice"></div>
-                    <div class="foursub">
+                <div class="allsub">
+                        <div class="sub"><img src="images/snacks2.jpg" width="90%" alt="rice"></div>
                         <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
                         <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
                         <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
+                        <div class="sub"><img src="images/snacks2.jpg" width="90%" alt="rice"></div>
                         <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
                     </div>
                     <h3>our popular items</h3>
@@ -79,12 +79,12 @@
                     </div>
                     
                 </div>
+            </div>
 
-                <h3>fruits</h3>
+            <h3>fruits</h3>
             <div class="fruits">
-                
-                <div class="all"> <img src="images/fruit1.jpg" width="90%" alt="fruits"></div>
-                <div class="two">
+                <div class="all">
+                    <div class="fruit1"><img src="images/fruit1.jpg" width="90%" alt="fruits"></div>
                     <div class="fruit1"><img src="images/fruit2.jpg" width="90%" alt="fruits"></div>
                     <div class="fruit1"><img src="images/dryfruit.jpg" width="90%" alt="fruits"></div>
                 </div>
