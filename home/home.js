@@ -18,7 +18,7 @@ window.addEventListener('resize', () => {
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
 container.style.height = height + 'px';
-console.log(height);
+
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
 
@@ -71,15 +71,16 @@ function arrayRemove(arr, value) {
             return ele[1] != value;
         }
     );
-}
+};
 var send = localStorage.getItem("favouriteMovie");
 let cart = document.querySelectorAll('div.items');
+console.log(cart[0].innerHTML);
 let price = document.querySelectorAll('p');
 for (let i = 0; i < cart.length; i++) {
     let ch = cart[i].lastElementChild.lastElementChild.lastElementChild;
     ch.addEventListener('click', function() {
         if (ch.innerText === "Add To Cart") {
-            ch.innerText = "Remove From Cart"
+            ch.innerText = "Remove From Cart";
             send.push(['<div class="items">' + cart[i].innerHTML + '</div>', cart[i].lastElementChild.id, price[i * 2].innerText, ]);
         } else {
             ch.innerText = "Add To Cart";
@@ -88,12 +89,14 @@ for (let i = 0; i < cart.length; i++) {
         }
         localStorage.setItem("favoriteMovie", send);
     })
-}
+};
+localStorage.setItem('localvar', JSON.stringify(document.getElementById('image')));
+console.log(JSON.parse(localStorage.getItem('localvar')));
 //quantity addition
 
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
-let xml = new XMLHttpRequest();
+
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
