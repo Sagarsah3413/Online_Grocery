@@ -15,13 +15,28 @@ cartmenustyle.width = '0%';
 
 
 window.addEventListener('resize', () => {
-    console.log(document.documentElement.clientHeight);
     navigationstyle.transition = 'none';
     cartmenustyle.transition = 'none';
     navigationstyle.height = '100vh';
     cartmenustyle.height = '100vh';
 });
 
+
+let dropdown = document.getElementsByClassName('dropdown');
+let unorder, liheight;
+for (let i = 0; i < dropdown.length; i++) {
+    dropdown[i].parentElement.lastElementChild.style.height = '0px';
+
+    dropdown[i].addEventListener('click', () => {
+        unorder = dropdown[i].parentElement.lastElementChild;
+        liheight = unorder.children.length * unorder.firstElementChild.clientHeight;
+        if (unorder.style.height === '0px') {
+            unorder.style.height = `${liheight}px`;
+        } else {
+            unorder.style.height = '0px';
+        }
+    });
+}
 
 
 document.getElementById('open').addEventListener('click', () => {
@@ -90,7 +105,6 @@ cartmenu.addEventListener('click', (event) => {
 })
 
 cartmenu.addEventListener('transitionend', () => {
-    console.log('here');
     if (cartmenustyle.width == '100%') {
         document.getElementById('closecart').style.display = 'inline-block';
     };

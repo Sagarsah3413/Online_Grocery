@@ -167,6 +167,38 @@ header div.cart nav#cartmenu section {
     white-space: nowrap;
 }
 
+span.sidemenu {
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+header div.fill nav#menu section div ul {
+    overflow: hidden;
+    transition: 0.4s ease-in-out all;
+}
+
+header div.fill nav#menu section div ul li {
+    font-size: 1em;
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    text-transform: capitalize;
+    white-space: nowrap;
+    color: rgba(129, 33, 27, 0.877);
+}
+
+header div.fill nav#menu section div ul li a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+header div.fill nav#menu section div ul li:hover {
+    color: rgba(129, 33, 27, 1);
+}
+
 header div.cart nav#cartmenu section {
     right: 0px;
     position: absolute;

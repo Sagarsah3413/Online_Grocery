@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="groceries.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
-    <link rel="stylesheet" href="../stylesheet/sidemenu.css">
     <title>Groceries</title>
 </head>
 <body>
@@ -45,5 +44,4 @@
 
 </body>
 
-<script src="../shared/header.js"></script>
 </html>

@@ -9,10 +9,27 @@
         </span>
         <nav class="content" id="menu">
             <section class="relative">
-                <div class="hits"><a href="<?php echo $sharedfolder; ?>../home/home.php">Home</a> <span id="close"><span class="one"></span><span class="two"></span> </span></div>
-                <div><a href="../groceries/groceries.php">Grocery</a></div>
-                <div><a href="../fruits/fruits.php">Fruits</a></div>
-                <div><a href="../vegetables/vegetables.php">Vegetables</a></div>
+                <div class="hits"><span class="sidemenu"><a href="<?php echo $sharedfolder; ?>../home/home.php">home</a></span> <span id="close"><span class="one"></span><span class="two"></span> </span></div>
+                <div><span class="sidemenu dropdown">grocery</span>
+                    <ul>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">pulses</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">rice</a></li>
+                    </ul>
+                </div>
+                <div><span class="sidemenu dropdown">fruits</span>
+                    <ul>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">citrus fruits</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">non citrus fruit</a></li>
+                    </ul>
+                </div>
+                <div><span class="sidemenu dropdown">vegetables</span>
+                    <ul>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">pulses</a></li>
+                    </ul>
+                </div>
             </section>
         </nav>
     </div>
