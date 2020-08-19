@@ -42,6 +42,11 @@ header div.cart span#carticon {
     box-sizing: border-box;
 }
 
+header div.cart span#carticon img {
+    width: 90%;
+    height: 90%;
+}
+
 header div.cart span#carticon:hover {
     background-color: aliceblue;
 }
