@@ -17,13 +17,6 @@ body {
 }
 
 
-div.container {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: minmax(100vh, 100%);
-}
-
-
 body div#product {
     padding: 5%;
 }

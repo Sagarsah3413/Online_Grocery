@@ -10,9 +10,9 @@
         <nav class="content" id="menu">
             <section class="relative">
                 <div class="hits"><a href="<?php echo $sharedfolder; ?>../home/home.php">Home</a> <span id="close"><span class="one"></span><span class="two"></span> </span></div>
-                <div><a href="#">Grocery</a></div>
-                <div><a href="#">Fruits</a></div>
-                <div><a href="">Vegetables</a></div>
+                <div><a href="../groceries/groceries.php">Grocery</a></div>
+                <div><a href="../fruits/fruits.php">Fruits</a></div>
+                <div><a href="../vegetables/vegetables.php">Vegetables</a></div>
             </section>
         </nav>
     </div>
