@@ -100,10 +100,10 @@ div#image {
     opacity: 1;
 }
 
- div#product div.groceries img, div.fruits img, div.vegetables img
+ div#product div.groceries img, div.fruits img
 {
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 90%;
 }
 
  div#product section 
@@ -127,7 +127,7 @@ div#product h3
 div#product div.groceries div.allsub,
 div.fruits div.all 
 {
-    padding: 4%;
+    padding: 2%;
     text-align: center;
 }
 
@@ -135,6 +135,7 @@ div#product div.groceries div.allsub img,
 div.fruits div.all img 
 {
     border-radius: 10px;
+    cursor: pointer;
 }
 
 div#product div.groceries div.allsub
@@ -155,24 +156,16 @@ div#product div.fruits div.all
     text-align: center;
 }
 
-div#product div.groceries div.allsub img,
-div.fruits div.two img {
-    border-radius: 10px;
+ div#product div.vegetables div
+{
+   text-align: center ;
+   padding: 3%;
 }
 
-
- div#product div.vegetables
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 5%;
-}
-
- div#product div.vegetables img
+div#product div.vegetables img
 {
     border-radius: 10px;
+    width: 70%;
 }
 
 div#product div.groceries h3,div#product div.fruits h3,
