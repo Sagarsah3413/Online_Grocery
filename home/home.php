@@ -73,7 +73,7 @@
             </div>
             
             <h3>vegetables</h3>
-            <div class="vegetable">
+            <div class="vegetables">
                 <div class="vege"><img src="images/vege1.jpg" width="90%" alt="fruits"></div>
                 <div class="vege"><img src="images/vege2.jpg" width="90%" alt="fruits"></div>
             </div>
