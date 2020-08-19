@@ -1,5 +1,6 @@
 <?php
     require_once '../shared/database.php';
+    $sharedfolder='../shared/';
     session_start();
     $offset = 0;
     $type = ['grocer','fruit','vegetable'];

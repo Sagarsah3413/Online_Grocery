@@ -1,5 +1,6 @@
 <?php
     require_once '../shared/database.php';
+    $sharedfolder='../shared/';
     session_start();
     $offset = 0;
     $type = ['grocer','fruit','vegetable'];
@@ -12,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vegetables.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
-    <link rel="stylesheet" href="../stylesheet/sidemenu.css">
     <title>vegetables</title>
 </head>
 <body>
