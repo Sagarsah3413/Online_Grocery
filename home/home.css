@@ -51,16 +51,17 @@ div#image {
 
 #slider div p 
 {
-    width: 30%;
     display: flex;
     justify-content: center;
-    margin: 15% auto;
+    align-items: center;
+    height: 100%;
     font-size: 50px;
     font-weight: bolder;
     letter-spacing: 2px;
     color: rgb(8, 8, 8);
     text-transform: uppercase;
 }
+
 
 #slider div p:hover
 {
