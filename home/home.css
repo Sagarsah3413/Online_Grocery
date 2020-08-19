@@ -51,10 +51,11 @@ div#image {
 
 #slider div p 
 {
-    width: 30%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 15% auto;
+    height: 100%;
+    align-items: center;
     font-size: 50px;
     font-weight: bolder;
     letter-spacing: 2px;
