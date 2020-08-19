@@ -175,8 +175,8 @@ div.fruits div.two img {
     border-radius: 10px;
 }
 
-div#product div.groceries h3{
-    
+div#product div.groceries h3,div#product div.fruits h3,
+div#product div.vegetables h3{
     text-transform: capitalize;
     font-size: 30px;
     text-align: center;
