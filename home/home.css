@@ -58,7 +58,6 @@ div#image {
     letter-spacing: 2px;
     color: rgb(8, 8, 8);
     text-transform: uppercase;
-    text-align: center;
 }
 
 #slider div p:hover {
@@ -93,8 +92,13 @@ div#image {
     opacity: 1;
 }
 
+<<<<<<< HEAD
  div#product div.groceries img, div.fruits img
 {
+=======
+div#product div.groceries img,
+div.fruits img {
+>>>>>>> e1f2017daff871682e2159e03ad0431ede7407c5
     height: 90%;
     width: 90%;
 }
@@ -130,7 +134,7 @@ div#product div.groceries div.allsub {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
-    /* grid-auto-rows: 400px; */
+    grid-auto-rows: 400px;
     text-align: center;
 }
 

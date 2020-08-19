@@ -41,7 +41,7 @@ for (let i = 0; i < dropdown.length; i++) {
 
 document.getElementById('open').addEventListener('click', () => {
     if (navigationstyle.width == '0%') {
-        navigationstyle.transition = '0.7s ease-in-out all';
+        navigationstyle.transition = '0.5s ease-in-out all';
         navigationstyle.width = '100%';
     };
 
@@ -49,7 +49,7 @@ document.getElementById('open').addEventListener('click', () => {
 
 function sidemenuclose() {
     if (navigationstyle.width == '100%') {
-        navigationstyle.transition = '0.7s ease-in-out all';
+        navigationstyle.transition = '0.5s ease-in-out all';
 
         navigationstyle.width = '0%';
     };
@@ -81,7 +81,7 @@ navigation.addEventListener('transitionstart', () => {
 
 document.getElementById('carticon').addEventListener('click', () => {
     if (cartmenustyle.width == '0%') {
-        cartmenustyle.transition = '0.7s ease-in-out all';
+        cartmenustyle.transition = '0.5s ease-in-out all';
 
         cartmenustyle.width = '100%';
     };
@@ -89,7 +89,7 @@ document.getElementById('carticon').addEventListener('click', () => {
 
 function cartclose() {
     if (cartmenustyle.width == '100%') {
-        cartmenustyle.transition = '0.7s ease-in-out all';
+        cartmenustyle.transition = '0.5s ease-in-out all';
         cartmenustyle.width = '0%';
     };
 }
