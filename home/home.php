@@ -139,7 +139,6 @@
             </div>
         </div>
     </div>
-    <div>ssbjdk</div>
 </body>
 <script src="home.js"></script>
 </html>
