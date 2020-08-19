@@ -79,9 +79,9 @@
         <h3>fruits</h3>
         <div class="fruits">
             <div class="all">
-                <div class="fruit1"><img src="images/fruit1.jpg" width="90%" alt="fruits"></div>
-                <div class="fruit1"><img src="images/fruit2.jpg" width="90%" alt="fruits"></div>
-                <div class="fruit1"><img src="images/dryfruit.jpg" width="90%" alt="fruits"></div>
+                <div class="fruit1"><img src="images/fruit1.jpg"  alt="fruits"></div>
+                <div class="fruit1"><img src="images/fruit2.jpg"  alt="fruits"></div>
+                <div class="fruit1"><img src="images/dryfruit.jpg"  alt="fruits"></div>
             </div>
             <h3>our popular items</h3>
             <div class="grid">
