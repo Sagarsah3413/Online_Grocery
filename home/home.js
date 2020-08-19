@@ -65,39 +65,52 @@ container.addEventListener('transitionend', () => {
 
 //quantity addition
 
-function arrayRemove(arr, value) {
-    return arr.filter(
-        function(ele) {
-            return ele[1] != value;
-        }
-    );
-}
-var send = localStorage.getItem("favouriteMovie");
-let cart = document.querySelectorAll('div.items');
-let price = document.querySelectorAll('p');
-for (let i = 0; i < cart.length; i++) {
-    let ch = cart[i].lastElementChild.lastElementChild.lastElementChild;
-    ch.addEventListener('click', function() {
-        if (ch.innerText === "Add To Cart") {
-            ch.innerText = "Remove From Cart"
-            send.push(['<div class="items">' + cart[i].innerHTML + '</div>', cart[i].lastElementChild.id, price[i * 2].innerText, ]);
-        } else {
-            ch.innerText = "Add To Cart";
-            sen = arrayRemove(send, cart[i].lastElementChild.id);
-            send = sen;
-        }
-        localStorage.setItem("favoriteMovie", send);
-    })
-}
+// function arrayRemove(arr, value) {
+//     return arr.filter(
+//         function(ele) {
+//             return ele[1] != value;
+//         }
+//     );
+// }
+// var send = localStorage.getItem("favouriteMovie");
+// let cart = document.querySelectorAll('div.items');
+// let price = document.querySelectorAll('p');
+// for (let i = 0; i < cart.length; i++) {
+//     let ch = cart[i].lastElementChild.lastElementChild.lastElementChild;
+//     ch.addEventListener('click', function() {
+//         if (ch.innerText === "Add To Cart") {
+//             ch.innerText = "Remove From Cart"
+//             send.push(['<div class="items">' + cart[i].innerHTML + '</div>', cart[i].lastElementChild.id, price[i * 2].innerText, ]);
+//         } else {
+//             ch.innerText = "Add To Cart";
+//             sen = arrayRemove(send, cart[i].lastElementChild.id);
+//             send = sen;
+//         }
+//         localStorage.setItem("favoriteMovie", send);
+//     })
+// }
 //quantity addition
 
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
+let add = document.querySelectorAll("div.grid div.items div.cart p");
 let xml = new XMLHttpRequest();
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
-
+    quantity = buy[i].children[1];
+    buy[i].style.height="0px";
+    buy[i].style.overflow="hidden";
+    add[i].addEventListener('click',()=>{
+        quantity.innerHTML++;
+        if (quantity.innerHTML>0)
+        {
+            add[i].style.height="0px";
+            add[i].style.overflow="hidden";
+            buy[i].style.height="";
+            buy[i].style.overflow="";
+        }
+    });
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
@@ -105,8 +118,16 @@ for (let i = 0; i < buy.length; i++) {
 
     minus.addEventListener('click', () => {
         quantity = buy[i].children[1];
-        if (quantity.innerHTML > 0) {
+        if (quantity.innerHTML > 1) {
             quantity.innerHTML--;
+        }
+        else 
+        {
+            quantity.innerHTML--;
+            buy[i].style.height="0px";
+            buy[i].style.overflow="hidden";
+            add[i].style.height="";
+            add[i].style.overflow="";
         }
     });
 }
