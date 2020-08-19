@@ -171,7 +171,6 @@ header div.cart nav#cartmenu section {
     right: 0px;
     position: absolute;
     overflow: auto;
-    /* text-align: right; */
 }
 
 header div.cart nav#cartmenu section div,
@@ -183,7 +182,6 @@ header div.fill nav#menu section div {
 header div.cart nav#cartmenu section article {
     margin: 20px 0px;
     overflow: auto;
-    /* background-color: #decc3c; */
 }
 
 header div.cart nav#cartmenu section article div {
@@ -196,7 +194,7 @@ header div.cart nav#cartmenu section article div {
     background-image: linear-gradient(to right, #3e4ed5, #1c65ec, #decc3c);
     font-weight: 600;
     color: aliceblue;
-    marg
+    /* marg */
 }
 
 header div.cart nav#cartmenu section div#closecartcont {
