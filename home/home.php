@@ -67,9 +67,9 @@
                         <img class="plus"src='../home/images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">1</span><span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span></article>
+                        <article><span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">0</span><span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span></article>
                         <p><img class="plus" src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
                     </div>
                 </div>
@@ -96,12 +96,12 @@
                         <img class="plus" src='../home/images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span> 
                             Quantity 
-                            <span class="quantity"> 1</span>
+                            <span class="quantity">0</span>
                             <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
                         </article>
                         <p>
@@ -129,9 +129,9 @@
                         <img src='../home/images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">1</span><span class="control"><img src="../home/images/plus.png" alt=""></span></article>
+                        <article><span class="control"><img src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">0</span><span class="control"><img src="../home/images/plus.png" alt=""></span></article>
                         <p><img src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
                     </div>
                 </div>
