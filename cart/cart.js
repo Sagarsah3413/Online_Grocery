@@ -10,5 +10,4 @@ for (let i = 0; i < img.length; i++) {
     str.splice(4, 0, "../home");
     img[i].src = str.join('/');
 }
-
 sessionStorage.setItem("fav",fav);
