@@ -49,28 +49,27 @@
             <h3>groceries</h3>
             <div class="groceries">
                 <div class="allsub">
-                        <div class="sub"><img src="images/snacks2.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"> <img src="images/snacks1.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"><img src="images/snacks2.jpg" width="90%" alt="rice"></div>
-                        <div class="sub"> <img src="images/rice.jpg" width="90%" alt="rice"></div>
+                        <div class="sub"><img src="images/snacks2.jpg"  alt="rice"></div>
+                        <div class="sub"> <img src="images/rice.jpg"  alt="rice"></div>
+                        <div class="sub"> <img src="images/snacks1.jpg"  alt="rice"></div>
+                        <div class="sub"> <img src="images/snacks1.jpg"  alt="rice"></div>
+                        <div class="sub"><img src="images/snacks2.jpg"  alt="rice"></div>
+                        <div class="sub"> <img src="images/rice.jpg"  alt="rice"></div>
                 </div>
             </div>
 
             <h3>fruits</h3>
             <div class="fruits">
                 <div class="all">
-                    <div class="fruit1"><img src="images/fruit1.jpg" width="90%" alt="fruits"></div>
-                    <div class="fruit1"><img src="images/fruit2.jpg" width="90%" alt="fruits"></div>
-                    <div class="fruit1"><img src="images/dryfruit.jpg" width="90%" alt="fruits"></div>
+                    <div class="fruit1"><img src="images/fruit1.jpg"  alt="fruits"></div>
+                    <div class="fruit1"><img src="images/fruit2.jpg"  alt="fruits"></div>
+                    <div class="fruit1"><img src="images/dryfruit.jpg"  alt="fruits"></div>
                 </div>
             </div>
             
             <h3>vegetables</h3>
             <div class="vegetables">
-                <div class="vege"><img src="images/vege1.jpg" width="90%" alt="fruits"></div>
-                <div class="vege"><img src="images/vege2.jpg" width="90%" alt="fruits"></div>
+                <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div>
             </div>
         </div>
 
