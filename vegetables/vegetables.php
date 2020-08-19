@@ -13,12 +13,10 @@
     <link rel="stylesheet" href="vegetables.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/sidemenu.css">
-    <title>Groceries</title>
+    <title>vegetables</title>
 </head>
 <body>
     <?php require_once '../shared/header.php'; ?>
-    <div class="container">
-        <?php require_once '../shared/sidemenu.php' ?>
         <div id="product">
             <h2>vegetables</h2>
             <div class="grid">
@@ -46,5 +44,5 @@
 
 </body>
 
-<script src="../fruits/fruits.js"></script>
+<script src="../shared/header.js"></script>
 </html>
