@@ -18,9 +18,7 @@
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
-    <div class="container">
         <div id="product">
-            <section>
                 <div id="image">
                     <i id="prev">
                         <img src="images/img4.png" width="50px" alt="">
@@ -46,7 +44,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
             
             
             <h3>groceries</h3>
@@ -78,8 +75,6 @@
                 <div class="vege"><img src="images/vege2.jpg" width="90%" alt="fruits"></div>
             </div>
         </div>
-            
-    </div>
 
 </body>
 <script src="home.js"></script>

@@ -27,6 +27,10 @@
         <nav id="cartmenu">
             <section>
                 <div id="closecartcont" class="hits"><span id="closecart"> <span class="one"></span><span class="two"></span> </span></div>
+                <article>
+                    <div><a href="<?php echo $sharedfolder; ?>../cart/cart.php">view cart</a></div>
+                    <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">buy now</a></div>
+                </article>
             </section>
         </nav>
     </div>

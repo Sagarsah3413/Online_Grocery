@@ -16,6 +16,9 @@ header {
     box-sizing: border-box;
     align-items: center;
     background-image: linear-gradient(to right, rgb(151, 208, 235), rgb(77, 77, 224));
+    position: sticky;
+    top: 0px;
+    z-index: 4;
 }
 
 .relative {
@@ -105,7 +108,7 @@ header div.fill span#open:hover span {
 
 header div.fill nav#menu span#close {
     right: 0px;
-    top: 0px;
+    top: 3px;
     font-size: 0px;
 }
 
@@ -113,6 +116,12 @@ header div.fill nav#menu span#close,
 header div.cart nav#cartmenu section div#closecartcont span#closecart {
     width: 40px;
     height: 40px;
+    position: absolute;
+}
+
+header div.cart nav#cartmenu section div#closecartcont span#closecart {
+    top: 10px;
+    left: 0px;
 }
 
 header div.cart nav#cartmenu section div#closecartcont span#closecart span.one,
@@ -133,6 +142,7 @@ header div.fill nav#menu span#close span.one {
     z-index: 4;
     transform: translateY(20px) rotate(45deg);
     top: 0px;
+    left: 0px;
 }
 
 header div.cart nav#cartmenu section div#closecartcont span#closecart span.two,
@@ -140,23 +150,47 @@ header div.fill nav#menu span#close span.two {
     z-index: 5;
     top: 0px;
     transform: translateY(20px) rotate(-45deg);
+    left: 0px;
 }
 
 header div.fill nav#menu section,
 header div.cart nav#cartmenu section {
     background-color: antiquewhite;
-    /* height: 100%; */
+    height: 100vh;
     width: 20%;
+    overflow-x: hidden;
+    white-space: nowrap;
 }
 
 header div.cart nav#cartmenu section {
     right: 0px;
     position: absolute;
+    overflow: auto;
+    /* text-align: right; */
 }
 
 header div.cart nav#cartmenu section div,
 header div.fill nav#menu section div {
     padding: 10px 5px;
+    overflow-x: hidden;
+}
+
+header div.cart nav#cartmenu section article {
+    margin: 20px 0px;
+    overflow: auto;
+}
+
+header div.cart nav#cartmenu section article div {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 40px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #3e4ed5, #1c65ec, #decc3c);
+    font-weight: 600;
+    color: aliceblue;
+    marg
 }
 
 header div.cart nav#cartmenu section div#closecartcont {

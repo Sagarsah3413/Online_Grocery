@@ -7,6 +7,7 @@ let next = document.getElementById('next');
 
 let count = 1;
 let width = images[0].clientWidth;
+let height = images[0].clientHeight;
 //vaiablelist end
 
 
@@ -14,10 +15,10 @@ let width = images[0].clientWidth;
 window.addEventListener('resize', () => {
     width = images[0].clientWidth;
     container.style.transition = "none";
-    console.log(width);
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
-
+container.style.height = height + 'px';
+console.log(height);
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
 
@@ -96,7 +97,6 @@ let xml = new XMLHttpRequest();
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
-    // console.log(plus, minus);
 
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
