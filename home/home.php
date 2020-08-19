@@ -49,12 +49,33 @@
             <h3>groceries</h3>
             <div class="groceries">
                 <div class="allsub">
-                        <div class="sub"><img src="images/snacks2.jpg"  alt="rice"></div>
-                        <div class="sub"> <img src="images/rice.jpg"  alt="rice"></div>
-                        <div class="sub"> <img src="images/snacks1.jpg"  alt="rice"></div>
-                        <div class="sub"> <img src="images/snacks1.jpg"  alt="rice"></div>
-                        <div class="sub"><img src="images/snacks2.jpg"  alt="rice"></div>
-                        <div class="sub"> <img src="images/rice.jpg"  alt="rice"></div>
+                    <div class="sub"><img src="images/snacks2.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/rice.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/snacks1.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/snacks1.jpg" alt="rice"></div>
+                    <div class="sub"><img src="images/snacks2.jpg" alt="rice"></div>
+                    <div class="sub"> <img src="images/rice.jpg" alt="rice"></div>
+                </div>
+                <h3>our popular items</h3>
+                <div class="grid">
+                    <?php
+                    $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[0] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
+                    $data = $dbconnection -> query($query);
+            
+                    while($row = $data -> fetch_assoc()) {
+                        ?>
+                    <div class='items'> 
+                        <div>
+                            <img class="plus"src='../home/images/down.png' alt='product pic'>
+                        </div>
+                        <h4><?php echo $row['product name']; ?></h4>
+                        <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                        <div class='cart' id="<?php echo $row['productid'] ?>">
+                            <article><span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">0</span><span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span></article>
+                            <p><img class="plus" src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
+                        </div>
+                    </div>
+                    <?php } ?>
                 </div>
             </div>
 
