@@ -14,13 +14,8 @@
 <body>
     <?php require_once'../shared/header.php'; ?>
         <h3>kindly enter your details</h3>
-<<<<<<< HEAD
-        <section>
-            <form id="form" onsubmit="return verify();" action="#" method="POST">
-=======
         <section id="body">
             <form onsubmit="return verify();" action="bought.php" method="POST" id="form">
->>>>>>> b7cf54bae970ec3f025fe6a828c89b26feca9cb5
                 <p>
                     <label for="name">Name :</label>
                     <input class="escape" type="text" name="name" onclick="choose(this.id);" id="uname" autocomplete="off" />
@@ -53,11 +48,7 @@
             </form>  
         </section>
         <div class="order">
-<<<<<<< HEAD
-            <button form="form">place your order</button>
-=======
             <button form="form" value="submit" name="submit">place your order</button>
->>>>>>> b7cf54bae970ec3f025fe6a828c89b26feca9cb5
         </div>
 
         <div class="rbj">
