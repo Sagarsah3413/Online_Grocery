@@ -2,14 +2,19 @@ sessionStorage.setItem('index', 'value');
 sessionStorage.setItem('index1', 'value1');
 
 for (let i = 0; i < sessionStorage.length; i++) {
-    console.log(sessionStorage.getItem(sessionStorage.key(i)));
-
+    // console.log(sessionStorage.getItem(sessionStorage.key(i)));
 }
+let content = JSON.parse(sessionStorage.getItem('fav'));
+let array = Object.getOwnPropertyNames(content);
+for (let i = 0; i < array.length; i++) {
+    console.log(content[array[i]]);
+
+};
+
 
 let plus = document.querySelectorAll('.plus');
 let minus = document.querySelectorAll('.minus');
 let input;
-// console.log(minus);
 
 for (let i = 0; i < plus.length; i++) {
 
@@ -23,9 +28,7 @@ for (let i = 0; i < plus.length; i++) {
         if (input.value > 0)
             input.value--;
     });
-}
-
-console.log(sessionStorage.key);
+};
 
 let xhr = new XMLHttpRequest();
 
