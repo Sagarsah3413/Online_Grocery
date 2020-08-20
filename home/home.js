@@ -89,7 +89,8 @@ function Person(productid, name, quantity, rate) {
 let send = new Object;
 console.log(send);
 if (sessionStorage.getItem('fav') != null)
-    send = sessionStorage.getItem('fav');
+    send = JSON.parse(sessionStorage.getItem('fav'));
+
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
