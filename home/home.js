@@ -84,7 +84,8 @@ function Person(productid,name,quantity,rate)
     this.quantity=quantity;
     this.rate=rate;
 }
-let send=[];
+let send=new Object;
+console.log(send);
 if(sessionStorage.getItem('fav')!=null)
 send=sessionStorage.getItem('fav');
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
@@ -92,6 +93,10 @@ let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
 let xml = new XMLHttpRequest();
+// for(let j=0;j<send.length;j++){
+//     quantity = buy[i].children[1];
+//     q
+// }
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
@@ -112,17 +117,17 @@ for (let i = 0; i < buy.length; i++) {
             hide(add[i], "0px", "hidden");
             hide(buy[i], "30px", "");
         }
-        send.push(new Person(productid,name,quantity.innerHTML,rate));
+        send[`${productid}`]=new Person(productid,name,quantity.innerHTML,rate);
         console.log(send);
         sessionStorage.setItem("fav",JSON.stringify(send));
     });
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
-        sen = find(send,productid);
-        console.log(sen);
-        console.log(productid);
-        send[sen].quantity++;
+        // sen = find(send,productid);
+        // console.log(sen);
+        // console.log(productid);
+        send[`${productid}`].quantity++;
         sessionStorage.setItem("fav",JSON.stringify(send));
     });
 
@@ -130,21 +135,22 @@ for (let i = 0; i < buy.length; i++) {
         quantity = buy[i].children[1];
         if (quantity.innerHTML > 1) {
             quantity.innerHTML--;
-            sen = find(send,productid);
-            send[sen].quantity--;
+            // sen = find(send,productid);
+            send[`${productid}`].quantity--;
         } else {
             quantity.innerHTML--;
             hide(buy[i], "0px", "hidden");
             hide(add[i], "auto", "");
-            sen = arrayRemove(send);
-            send = sen;
+            // sen = arrayRemove(send);
+            // send = sen;
+            delete send[`${productid}`];
         }
         sessionStorage.setItem("fav",JSON.stringify(send));
         console.log(send);
     });
 }
-console.log(JSON.stringify(send));
+// console.log(JSON.stringify(send));
 
 
-console.log(JSON.parse(sessionStorage.getItem('fav')));
-console.log(send);
+// console.log(JSON.parse(sessionStorage.getItem('fav')));
+// console.log(send);

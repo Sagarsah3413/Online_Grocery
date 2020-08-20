@@ -11,4 +11,7 @@
 //     img[i].src = str.join('/');
 // }
 // sessionStorage.setItem("fav",fav);
-console.log(JSON.parse(sessionStorage.getItem('fav')));
+// console.log(JSON.parse(sessionStorage.getItem('fav')));
+// sessionStorage.setItem("fav","bsdk");
+// sessionStorage.setItem("fav","djkj");
+// console.log(sessionStorage.getItem('fav'));
