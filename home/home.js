@@ -63,20 +63,20 @@ container.addEventListener('transitionend', () => {
     }
 });
 
-function arrayRemove(arr) {
-    return arr.filter(
-        function(ele) {
-            return ele.quantity >0;
-        }
-    );
-};  
-function find(arr,val) {
-    return arr.findIndex(
-        function(ele) {
-            return ele.productid ==val;
-        }
-    );
-}; 
+// function arrayRemove(arr) {
+//     return arr.filter(
+//         function(ele) {
+//             return ele.quantity >0;
+//         }
+//     );
+// };  
+// function find(arr,val) {
+//     return arr.findIndex(
+//         function(ele) {
+//             return ele.productid ==val;
+//         }
+//     );
+// }; 
 function Person(productid,name,quantity,rate)
 {
     this.productid=productid;
