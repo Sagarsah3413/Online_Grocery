@@ -213,6 +213,8 @@ div.grid div.items div.cart p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
+    height: auto;
 }
 
 div#product div.grid div.items div.cart img {
@@ -232,6 +234,9 @@ div.grid div.items div.cart article {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    height: auto;
+    box-sizing: border-box;
 }
 
 div.grid div.items div.cart article span.control {

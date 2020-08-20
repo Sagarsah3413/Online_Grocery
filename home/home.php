@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
-    <link rel="stylesheet" href="../stylesheet/sidemenu.css">
     <title>homepage</title>
 </head>
 <body>
@@ -115,8 +114,8 @@
         </div>
         <h3>vegetables</h3>
         <div class="vegetables">
-            <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div>
-            <h3>our popular items</h3>
+            <!-- <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div> -->
+            <!-- <h3>our popular items</h3> -->
             <div class="grid">
                 <?php
                 $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[2] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";

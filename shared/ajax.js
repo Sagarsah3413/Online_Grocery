@@ -27,4 +27,4 @@ observer.observe(view[0], {
     // subtree: true,
 });
 
-// observer.disconnect();
+observer.disconnect();

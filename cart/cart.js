@@ -9,6 +9,11 @@
 sessionStorage.setItem('index', 'value');
 sessionStorage.setItem('index1', 'value1');
 
+for (let i = 0; i < sessionStorage.length; i++) {
+    console.log(sessionStorage.getItem(sessionStorage.key(i)));
+
+}
+
 // for (let i = 0; i < img.length; i++) {
 //     // let str = img[i].src.split('/');
 //     // str.splice(4, 0, "../home");
