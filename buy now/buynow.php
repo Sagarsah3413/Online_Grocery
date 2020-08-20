@@ -15,7 +15,7 @@
     <?php require_once'../shared/header.php'; ?>
         <h3>kindly enter your details</h3>
         <section id="body">
-            <form onsubmit="return verify();" action="#" method="POST">
+            <form onsubmit="return verify();" action="bought.php" method="POST" id="form">
                 <p>
                     <label for="name">Name :</label>
                     <input class="escape" type="text" name="name" onclick="choose(this.id);" id="name" autocomplete="off" />
@@ -43,7 +43,7 @@
             </form>  
         </section>
         <div class="order">
-            <button>place your order</button>
+            <button form="form" value="submit" name="submit">place your order</button>
         </div>
 
         <div class="rbj">
