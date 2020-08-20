@@ -25,7 +25,6 @@
     </article>
     
 </body>
-<script src="cart.js"></script>
+<script src="cart.js" defer></script>
+<script src="../shared/ajax.js" defer></script>
 </html>
-        
-        
