@@ -13,6 +13,37 @@
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
+        <h3>kindly enter your details</h3>
+        <section>
+            <form onsubmit="return verify();" action="#" method="POST">
+                <p>
+                    <label for="name">Name :</label>
+                    <input class="escape" type="text" name="name" onclick="choose(this.id);" id="name" autocomplete="off" />
+                    <span id="Username" class="under"></span>
+
+                </p>
+                <p>
+                    <label for="number">Contact No. :</label>
+                    <input class="escape" name="contact" onclick="choose(this.id);" id="pass" autocomplete="off" />
+                    <span id="Password" class="under"></span>
+                </p>
+                <p>
+                    <label for="email">Email :</label>
+                    <input class="escape" name="email" onclick="choose(this.id);" id="text" autocomplete="off" />
+                    <span id="email" class="under"></span>
+                </p>
+
+                <p>
+                    <label for="address">Address :</label>
+                    <input class="escape" type="text" name="address" onclick="choose(this.id);" id="pass" autocomplete="off" />
+                    <span id="Password" class="under"></span>
+                </p>
+                <p>
+                    <button class="click" value="submit" type="submit">Submit</button>
+                </p>
+
+            </form>
+        </section>
 
 </body>
 </html>

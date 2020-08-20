@@ -19,7 +19,6 @@ window.addEventListener('resize', () => {
 container.style.height = height + 'px';
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
-
 function fwd() {
     if (count >= images.length - 1)
         return;
@@ -27,7 +26,6 @@ function fwd() {
     count++;
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 }
-
 function pre() {
     if (count <= 0)
         return;

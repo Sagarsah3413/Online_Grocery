@@ -224,6 +224,10 @@ header div.cart nav#cartmenu section div {
     border: 1px solid black;
 }
 
+header div.cart nav#cartmenu section div.extr {
+    border:none;
+    padding: 0px;
+}
 header div.cart nav#cartmenu section div h2 {
     font-size: 22px;
 }
