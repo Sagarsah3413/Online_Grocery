@@ -22,7 +22,6 @@ let input, each;
 str = document.querySelectorAll('tr');
 
 function up(i) {
-    input = plus[i].parentElement.children[1];
     each = str[i].lastElementChild.lastElementChild;
     each.innerHTML = Number(each.innerHTML) - ((Number(fav[prop[i]].quantity) - Number(input.value)) * Number(fav[prop[i]].rate));
     tot.innerHTML = Number(tot.innerHTML) - ((Number(fav[prop[i]].quantity) - Number(input.value)) * Number(fav[prop[i]].rate));
@@ -31,11 +30,13 @@ function up(i) {
 for (let i = 0; i < plus.length; i++) {
     input = plus[i].parentElement.children[1];
     input.addEventListener('input', () => {
+        input = plus[i].parentElement.children[1];
         up(i);
         sessionStorage.setItem("fav", JSON.stringify(fav));
 
     });
     input.addEventListener('blur', () => {
+
         input = plus[i].parentElement.children[1];
         if (input.value < 1) {
             delete fav[prop[i]];
@@ -45,14 +46,25 @@ for (let i = 0; i < plus.length; i++) {
 
     });
     plus[i].addEventListener('click', () => {
-        input.value++;
-        up(i, );
+        input = plus[i].parentElement.children[1];
+        input.value++; <<
+        << << < HEAD
+        up(i, ); ===
+        === =
+        up(i); >>>
+        >>> > 2145 c107991f8984ad31fdee9481a1d880caa67e
         sessionStorage.setItem("fav", JSON.stringify(fav));
     });
 
-    minus[i].addEventListener('click', () => {
+    minus[i].addEventListener('click', () => { <<
+        << << < HEAD
         if (input.value > 0)
-            input.value--;
+            input.value--; ===
+        === =
+        input = plus[i].parentElement.children[1];
+        if (input.value > 0)
+            input.value--; >>>
+        >>> > 2145 c107991f8984ad31fdee9481a1d880caa67e
         up(i);
         if (input.value < 1) {
             delete fav[prop[i]];
