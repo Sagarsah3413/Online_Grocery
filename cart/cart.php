@@ -28,5 +28,3 @@
 <script src="cart.js" defer></script>
 <script src="../shared/ajax.js" defer></script>
 </html>
-        
-        

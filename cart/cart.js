@@ -47,24 +47,15 @@ for (let i = 0; i < plus.length; i++) {
     });
     plus[i].addEventListener('click', () => {
         input = plus[i].parentElement.children[1];
-        input.value++; <<
-        << << < HEAD
-        up(i, ); ===
-        === =
-        up(i); >>>
-        >>> > 2145 c107991f8984ad31fdee9481a1d880caa67e
+        input.value++;
+        up(i);
         sessionStorage.setItem("fav", JSON.stringify(fav));
     });
 
-    minus[i].addEventListener('click', () => { <<
-        << << < HEAD
-        if (input.value > 0)
-            input.value--; ===
-        === =
+    minus[i].addEventListener('click', () => {
         input = plus[i].parentElement.children[1];
         if (input.value > 0)
-            input.value--; >>>
-        >>> > 2145 c107991f8984ad31fdee9481a1d880caa67e
+            input.value--;
         up(i);
         if (input.value < 1) {
             delete fav[prop[i]];
