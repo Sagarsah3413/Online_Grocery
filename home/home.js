@@ -66,43 +66,39 @@ container.addEventListener('transitionend', () => {
     }
 });
 
-//quantity addition
-
-function arrayRemove(arr, value) {
-    return arr.filter(
-        function(ele) {
-            return ele[1] != value;
-        }
-    );
-};
-var send = [];
-let cart = document.querySelectorAll('div.items');
-
-let price = document.querySelectorAll('p');
-for (let i = 0; i < cart.length; i++) {
-    let ch = cart[i].lastElementChild.lastElementChild.lastElementChild;
-    console.log(ch);
-    ch.addEventListener('click', function() {
-        if (ch.innerText === "Add To Cart") {
-            ch.innerText = "Remove From Cart";
-            send.push(['<div class="items">' + cart[i].innerHTML + '</div>', cart[i].lastElementChild.id, price[i * 2].innerText, ]);
-        } else {
-            ch.innerText = "Add To Cart";
-            sen = arrayRemove(send, cart[i].lastElementChild.id);
-            send = sen;
-        }
-        sessionStorage.setItem("fav", send);
-        // console.log(send);
-    })
-};
-localStorage.setItem('localvar', JSON.stringify(document.getElementById('image')));
-// console.log(JSON.parse(localStorage.getItem('localvar')));
-//quantity addition
-
+// function arrayRemove(arr) {
+//     return arr.filter(
+//         function(ele) {
+//             return ele.quantity >0;
+//         }
+//     );
+// };  
+// function find(arr,val) {
+//     return arr.findIndex(
+//         function(ele) {
+//             return ele.productid ==val;
+//         }
+//     );
+// }; 
+function Person(productid, name, quantity, rate) {
+    this.productid = productid;
+    this.name = name;
+    this.quantity = quantity;
+    this.rate = rate;
+}
+let send = new Object;
+console.log(send);
+if (sessionStorage.getItem('fav') != null)
+    send = sessionStorage.getItem('fav');
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
+let cart = document.querySelectorAll("div.items");
 let xml = new XMLHttpRequest();
+
+let name = cart[i].children[1].innerText;
+let rate = cart[i].children[2].firstElementChild.innerHTML;
+let productid = cart[i].lastElementChild.id;
 
 function hide(x, val1, val2) {
     x.style.height = val1;
@@ -118,27 +114,48 @@ for (let i = 0; i < buy.length; i++) {
     hide(buy[i], "0px", "hidden");
 
     add[i].addEventListener('click', () => {
+        quantity = buy[i].children[1];
         quantity.innerHTML++;
         if (quantity.innerHTML > 0) {
             hide(add[i], "0px", "hidden");
             hide(buy[i], "30px", "");
         };
+        send[`${productid}`] = new Person(productid, name, quantity.innerHTML, rate);
+        console.log(send);
+        sessionStorage.setItem("fav", JSON.stringify(send));
     });
 
 
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
+        // sen = find(send,productid);
+        // console.log(sen);
+        // console.log(productid);
+        send[`${productid}`].quantity++;
+        sessionStorage.setItem("fav", JSON.stringify(send));
     });
 
     minus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         if (quantity.innerHTML > 1) {
             quantity.innerHTML--;
+            // sen = find(send,productid);
+            send[`${productid}`].quantity--;
         } else {
             quantity.innerHTML--;
             hide(buy[i], "0px", "hidden");
             hide(add[i], "auto", "");
+            // sen = arrayRemove(send);
+            // send = sen;
+            delete send[`${productid}`];
         }
+        sessionStorage.setItem("fav", JSON.stringify(send));
+        console.log(send);
     });
 }
+// console.log(JSON.stringify(send));
+
+
+// console.log(JSON.parse(sessionStorage.getItem('fav')));
+// console.log(send);

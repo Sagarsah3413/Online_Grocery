@@ -1,17 +1,20 @@
-var fav = sessionStorage.getItem('fav').split(',');
+// var fav = sessionStorage.getItem('fav').split(',');
 
 
-for (let i = 0; i < fav.length; i++)
+// for (let i = 0; i < fav.length; i++)
 // document.querySelector('div.grid').innerHTML += fav[i];
-    let img = document.querySelectorAll('img');
+// let img = document.querySelectorAll('img');
 
 
-for (let i = 0; i < img.length; i++) {
-    // let str = img[i].src.split('/');
-    // str.splice(4, 0, "../home");
-    // img[i].src = str.join('/');
-}
-sessionStorage.setItem("fav", fav);
+sessionStorage.setItem('index', 'value');
+sessionStorage.setItem('index1', 'value1');
+
+// for (let i = 0; i < img.length; i++) {
+//     // let str = img[i].src.split('/');
+//     // str.splice(4, 0, "../home");
+//     // img[i].src = str.join('/');
+// }
+console.log(sessionStorage.key);
 
 let xhr = new XMLHttpRequest();
 
