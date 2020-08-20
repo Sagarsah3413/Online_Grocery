@@ -8,7 +8,6 @@ for(let i=0;i<prop.length;i++)
     var str=document.createElement('div');
     str.innerHTML="<h2>"+fav[prop[i]].name+"</h2><h4>"+fav[prop[i]].quantity+" &#10006; <span class='price'>Rs."+fav[prop[i]].rate+
     "</span> = <span class='price total'>Rs."+fav[prop[i]].quantity*fav[prop[i]].rate+"</span></h4>";
-    console.log(ca);
     ca.append(str);
 }
 });
