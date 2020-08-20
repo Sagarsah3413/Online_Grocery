@@ -5,10 +5,6 @@ let navigationstyle = navigation.style;
 navigationstyle.width = '0%';
 navigationstyle.height = '100vh';
 
-// console.log((sessionStorage.getItem('fav')));
-// console.log((sessionStorage.key(0)));
-
-
 
 let cartmenu = document.getElementById('cartmenu');
 let cartcontent = document.querySelector('#cartmenu section');
