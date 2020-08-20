@@ -29,7 +29,6 @@ let input,each;
 // console.log(minus);
 str=document.querySelectorAll('tr');
 function up(i){
-    input = plus[i].parentElement.children[1];
     each=str[i].lastElementChild.lastElementChild;
     each.innerHTML=Number(each.innerHTML)-((Number(fav[prop[i]].quantity)-Number(input.value))*Number(fav[prop[i]].rate));
     tot.innerHTML=Number(tot.innerHTML)-((Number(fav[prop[i]].quantity)-Number(input.value))*Number(fav[prop[i]].rate));
@@ -38,11 +37,13 @@ function up(i){
 for (let i = 0; i < plus.length; i++) {
     input = plus[i].parentElement.children[1];
     input.addEventListener('input',()=>{
+        input = plus[i].parentElement.children[1];
         up(i);
         sessionStorage.setItem("fav", JSON.stringify(fav));
 
     });
     input.addEventListener('blur',()=>{
+        
         input = plus[i].parentElement.children[1];
         if(input.value<1) {
             delete fav[prop[i]];
@@ -52,12 +53,14 @@ for (let i = 0; i < plus.length; i++) {
 
     });
     plus[i].addEventListener('click', () => {
+        input = plus[i].parentElement.children[1];
         input.value++;
-        up(i,);
+        up(i);
         sessionStorage.setItem("fav", JSON.stringify(fav));
     });
 
     minus[i].addEventListener('click', () => {
+        input = plus[i].parentElement.children[1];
         if (input.value > 0)  
         input.value--;
         up(i);
