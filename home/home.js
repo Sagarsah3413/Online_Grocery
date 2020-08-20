@@ -8,6 +8,9 @@ let next = document.getElementById('next');
 let count = 1;
 let width = images[0].clientWidth;
 let height = images[0].clientHeight;
+
+let time = performance.now();
+let elapsed;
 //vaiablelist end
 
 
@@ -73,9 +76,9 @@ function arrayRemove(arr, value) {
     );
 };
 var send = [];
-console.log(send);
+// console.log(send);
 let cart = document.querySelectorAll('div.items');
-console.log(cart[0].innerHTML);
+// console.log(cart[0].innerHTML);
 let price = document.querySelectorAll('p');
 for (let i = 0; i < cart.length; i++) {
     let ch = cart[i].lastElementChild.lastElementChild.lastElementChild;
@@ -89,11 +92,11 @@ for (let i = 0; i < cart.length; i++) {
             send = sen;
         }
         sessionStorage.setItem("fav", send);
-        console.log(send);
+        // console.log(send);
     })
 };
 localStorage.setItem('localvar', JSON.stringify(document.getElementById('image')));
-console.log(JSON.parse(localStorage.getItem('localvar')));
+// console.log(JSON.parse(localStorage.getItem('localvar')));
 //quantity addition
 
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
@@ -111,16 +114,28 @@ for (let i = 0; i < buy.length; i++) {
         x.style.transition = 'display 0.3s linear ';
     }
     hide(buy[i], "0px", "hidden");
+
     add[i].addEventListener('click', () => {
+
+
+
         quantity.innerHTML++;
         if (quantity.innerHTML > 0) {
             hide(add[i], "0px", "hidden");
             hide(buy[i], "30px", "");
-        }
+        };
+
+
+        // elapsed = time.getTime();
+        // console.log('here', elapsed);
+
     });
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
+
+        time = performance.now();
+        console.log('home', time);
     });
 
     minus.addEventListener('click', () => {

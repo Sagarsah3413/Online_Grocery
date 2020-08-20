@@ -1,13 +1,27 @@
 var fav = sessionStorage.getItem('fav').split(',');
-console.log(fav);
+
+
 for (let i = 0; i < fav.length; i++)
-    document.querySelector('div.grid').innerHTML += fav[i];
-let img = document.querySelectorAll('img');
-console.log(img[0].src);
-console.log(img[0].url);
+// document.querySelector('div.grid').innerHTML += fav[i];
+    let img = document.querySelectorAll('img');
+
+
 for (let i = 0; i < img.length; i++) {
-    let str = img[i].src.split('/');
-    str.splice(4, 0, "../home");
-    img[i].src = str.join('/');
+    // let str = img[i].src.split('/');
+    // str.splice(4, 0, "../home");
+    // img[i].src = str.join('/');
 }
-sessionStorage.setItem("fav",fav);
+sessionStorage.setItem("fav", fav);
+
+let xhr = new XMLHttpRequest();
+
+window.addEventListener('load', () => {
+    xhr.open('GET', 'retrieve.php', true);
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+
+        };
+    };
+
+});

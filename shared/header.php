@@ -44,6 +44,24 @@
         <nav id="cartmenu">
             <section>
                 <div id="closecartcont" class="hits"><span id="closecart"> <span class="one"></span><span class="two"></span> </span></div>
+                <div>
+                    <h2>Product Name</h2>
+                    <h4>
+                    4 &#10006; <span class="price">Rs.250</span> = <span class="price total">Rs.1000</span>
+                    </h4>
+                </div>
+                <div>
+                <h2>Product Name</h2>
+                    <h4>
+                        4 &#10006; <span class="price">Rs.400</span> = <span class="price total">Rs.1000</span>
+                    </h4>
+                </div>
+                <div>
+                <h2>Product Name</h2>
+                    <h4>
+                    4 &#10006; <span class="price">Rs.300</span> = <span class="price total">Rs.1000</span>
+                    </h4>
+                </div>
                 <article>
                     <div><a href="<?php echo $sharedfolder; ?>../cart/cart.php">view cart</a></div>
                     <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">buy now</a></div>
