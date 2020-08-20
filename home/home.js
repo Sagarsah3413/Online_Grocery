@@ -148,11 +148,8 @@ for (let i = 0; i < buy.length; i++) {
             quantity.innerHTML--;
             hide(buy[i], "0px", "hidden");
             hide(add[i], "auto", "");
-            // sen = arrayRemove(send);
-            // send = sen;
             delete send[`${productid}`];
         }
         sessionStorage.setItem("fav", JSON.stringify(send));
-        console.log(send);
     });
 }
