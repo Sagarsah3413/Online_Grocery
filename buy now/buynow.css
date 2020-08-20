@@ -1,4 +1,99 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'exo', sans-serif ;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+section {
+    /* border-width: 2px;
+    width: 550px;
+    border-color: black;
+    border-style: solid;
+    margin: 8% auto;
+    background-color: #eeeeee;
+    border-radius: 20px; */
+}
+
+
+section form,
+section form input,
+section form select,
+section form button {
+    font-family: 'Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif';
+    margin: auto 20px;
+    font-size: 22px;
+}
+/* 
+section section {
+    margin: 0px;
+    border: 0px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.473);
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(26, 109, 182);
+    text-align: center;
+} */
+
+section form button {
+    /* margin: auto;
+    background-color: rgb(58, 206, 211);
+    border: 2px solid rgb(252, 252, 253);
+    display: block;
+    border-radius: 10px; */
+}
+
+section form input,
+section form select {
+    background-color: rgb(196, 211, 212);
+    transition: 0.2s;
+    color: rgb(46, 116, 177);
+    border-radius: 0px;
+    border-style: solid;
+}
+
+
+section form select option {
+    background-color: rgb(185, 210, 224);
+}
+
+section form input,
+section form select {
+    width: 40%;
+}
+
+section form select option {
+    /* width: 100%; */
+    padding: 0;
+}
+
+.escape {
+    display: flex;
+    margin-left: 0px;
+}
+
+
+section form p
+{
+    padding: 1% 5%;
+}
+
+section form p span#Username {
+    margin-left: 116px;
+}
+
+.click {
+    cursor: pointer;
+}
+
+section form p span.under {
+    color: red;
+    display: block;
+    padding-top: 0px;
+    margin-left: 0px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
