@@ -107,9 +107,14 @@ for (let i = 0; i < buy.length; i++) {
     function hide(x, val1, val2) {
         x.style.height = val1;
         x.style.overflow = val2;
-        x.style.transition = 'display 0.3s linear ';
+        x.style.transition = 'width 0.3s linear ';
     }
     hide(buy[i], "0px", "hidden");
+    if(send[`${productid}`]){
+        quantity.innerHTML=send[`${productid}`].quantity;
+        hide(add[i], "0px", "hidden");
+        hide(buy[i], "30px", "");
+    }
     add[i].addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
