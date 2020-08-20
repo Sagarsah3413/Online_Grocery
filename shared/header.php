@@ -44,23 +44,8 @@
         <nav id="cartmenu">
             <section>
                 <div id="closecartcont" class="hits"><span id="closecart"> <span class="one"></span><span class="two"></span> </span></div>
-                <div>
-                    <h2>Product Name</h2>
-                    <h4>
-                    4 &#10006; <span class="price">Rs.250</span> = <span class="price total">Rs.1000</span>
-                    </h4>
-                </div>
-                <div>
-                <h2>Product Name</h2>
-                    <h4>
-                        4 &#10006; <span class="price">Rs.400</span> = <span class="price total">Rs.1000</span>
-                    </h4>
-                </div>
-                <div>
-                <h2>Product Name</h2>
-                    <h4>
-                    4 &#10006; <span class="price">Rs.300</span> = <span class="price total">Rs.1000</span>
-                    </h4>
+                <div class="extr">
+                    
                 </div>
                 <article>
                     <div><a href="<?php echo $sharedfolder; ?>../cart/cart.php">view cart</a></div>
@@ -71,3 +56,4 @@
     </div>
 </header>
 <script src="<?php echo $sharedfolder; ?>header.js" defer></script>
+<script src="<?php echo $sharedfolder; ?>headerlive.js" defer></script>
