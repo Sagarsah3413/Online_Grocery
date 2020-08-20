@@ -15,35 +15,40 @@
     <?php require_once'../shared/header.php'; ?>
         <h3>kindly enter your details</h3>
         <section>
-            <form onsubmit="return verify();" action="#" method="POST">
+            <form id="form" onsubmit="return verify();" action="#" method="POST">
                 <p>
                     <label for="name">Name :</label>
-                    <input class="escape" type="text" name="name" onclick="choose(this.id);" id="name" autocomplete="off" />
-                    <span id="Username" class="under"></span>
+                    <input class="escape" type="text" name="name" onclick="choose(this.id);" id="uname" autocomplete="off" />
+                    <span id="username" class="under"></span>
 
                 </p>
                 <p>
                     <label for="number">Contact No. :</label>
-                    <input class="escape" name="contact" onclick="choose(this.id);" id="pass" autocomplete="off" />
-                    <span id="Password" class="under"></span>
+                    <input class="escape" name="contact" onclick="choose(this.id);" id="num" autocomplete="off" />
+                    <span id="phone" class="under"></span>
                 </p>
                 <p>
                     <label for="email">Email :</label>
-                    <input class="escape" name="email" onclick="choose(this.id);" id="text" autocomplete="off" />
-                    <span id="email" class="under"></span>
+                    <input class="escape" placeholder="Optional" name="email" onclick="choose(this.id);" id="mail" autocomplete="off" />
+                    <span id="gmail" class="under"></span>
                 </p>
 
                 <p>
                     <label for="address">Address :</label>
-                    <input class="escape" type="text" name="address" onclick="choose(this.id);" id="pass" autocomplete="off" />
-                    <span id="Password" class="under"></span>
+                    <input class="escape" type="text" name="address" onclick="choose(this.id);" id="add" autocomplete="off" />
+                    <span id="loc" class="under"></span>
+                </p>
+                <p>
+                    <label for="landmark">Landmark :</label>
+                    <input class="escape" placeholder="Optional" type="text" name="landmark" onclick="choose(this.id);" id="land" autocomplete="off" />
+                    <span id="mark" class="under"></span>
                 </p>
 
 
             </form>  
         </section>
         <div class="order">
-            <button>place your order</button>
+            <button form="form">place your order</button>
         </div>
 
         <div class="rbj">
@@ -54,4 +59,6 @@
         <h5>visit again</h5>
 
 </body>
+<script src="loginpage.js"></script>
+<script src="verifysignup.js"></script>
 </html>
