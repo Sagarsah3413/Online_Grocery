@@ -5,7 +5,6 @@
     $offset = 0;
     $type = ['grocer','fruit','vegetable'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
+    <link rel="stylesheet" href="../stylesheet/sidemenu.css">
     <title>homepage</title>
 </head>
 <body>
@@ -56,9 +56,8 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[0] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
+                $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[0] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
                 $data = $dbconnection -> query($query);
-        
                 while($row = $data -> fetch_assoc()) {
                     ?>
                 <div class='items'> 
@@ -85,9 +84,8 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[1] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
+                $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[1] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
                 $data = $dbconnection -> query($query);
-        
                 while($row = $data -> fetch_assoc()) {
                     ?>
                 <div class='items'> 
@@ -114,13 +112,12 @@
         </div>
         <h3>vegetables</h3>
         <div class="vegetables">
-            <!-- <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div> -->
-            <!-- <h3>our popular items</h3> -->
+            <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div>
+            <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[2] . "' ORDER BY `productid` DESC LIMIT $offset,5) sub ORDER BY `productid` ASC;";
+                $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[2] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
                 $data = $dbconnection -> query($query);
-        
                 while($row = $data -> fetch_assoc()) {
                     ?>
                 <div class='items'> 
@@ -142,5 +139,3 @@
 <script src="home.js"></script>
 <script src="../shared/ajax.js"></script>
 </html>
-        
-        

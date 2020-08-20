@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-weight: 500;
 }
 
 body {
@@ -17,5 +18,109 @@ body {
 * h3,
 * h4,
 * h5 {
-    font-weight: normal;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    margin: 80px 0px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table th {
+    font-size: 1.7em;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+td {
+    font-size: 1.5em;
+}
+
+td input {
+    text-align: center;
+}
+
+td input,
+td button {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 5px;
+    display: inline-block;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 0px 2px;
+    border-radius: 4px;
+    border-width: 0px;
+}
+
+td button {
+    width: 37px;
+}
+
+td:nth-child(1) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+td:nth-child(1) img {
+    width: 130px;
+    height: 130px;
+}
+
+td input {
+    width: 3em;
+}
+
+td span {
+    display: inline-block;
+    margin: 12px 0px;
+}
+
+th {
+    color: rgb(100, 75, 75);
+    text-transform: capitalize;
+}
+
+div#total {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(250, 250, 210);
+    text-align: right;
+    margin: 30px 0px;
+    padding: 30px 0px;
+}
+
+div#total div {
+    text-align: left;
+    font-size: 35px;
+    width: 35%;
+    display: inline-block;
+    color: rgb(100, 94, 94);
+}
+
+article div {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 40px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #3e4ed5, #1c65ec, #decc3c);
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding: 10px 25px;
+    color: aliceblue;
 }

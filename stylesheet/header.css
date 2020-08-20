@@ -254,6 +254,7 @@ header div.cart nav#cartmenu section article div {
     background-image: linear-gradient(to right, #3e4ed5, #1c65ec, #decc3c);
     font-weight: 600;
     color: aliceblue;
+    font-size: 1.1em;
     /* marg */
 }
 
