@@ -7,6 +7,15 @@
     font-family: 'Exo', sans-serif;
 }
 
+* h1,
+* h2,
+* h3,
+* h4,
+* h5,
+* h6 {
+    font-weight: 400;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -207,8 +216,27 @@ header div.cart nav#cartmenu section {
 
 header div.cart nav#cartmenu section div,
 header div.fill nav#menu section div {
-    padding: 10px 5px;
+    padding: 15px 5px;
     overflow-x: hidden;
+}
+
+header div.cart nav#cartmenu section div {
+    border: 1px solid black;
+}
+
+header div.cart nav#cartmenu section div h2 {
+    font-size: 22px;
+}
+
+header div.cart nav#cartmenu section div h4 {
+    font-size: 18px;
+    width: 90%;
+    margin: auto;
+    word-spacing: 3px;
+}
+
+header div.cart nav#cartmenu section div h4 span.price {
+    font-weight: 600;
 }
 
 header div.cart nav#cartmenu section article {

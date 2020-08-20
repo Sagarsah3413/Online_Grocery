@@ -8,6 +8,9 @@ let next = document.getElementById('next');
 let count = 1;
 let width = images[0].clientWidth;
 let height = images[0].clientHeight;
+
+let time = performance.now();
+let elapsed;
 //vaiablelist end
 
 
@@ -77,16 +80,15 @@ container.addEventListener('transitionend', () => {
 //         }
 //     );
 // }; 
-function Person(productid,name,quantity,rate)
-{
-    this.productid=productid;
-    this.name=name;
-    this.quantity=quantity;
-    this.rate=rate;
+function Person(productid, name, quantity, rate) {
+    this.productid = productid;
+    this.name = name;
+    this.quantity = quantity;
+    this.rate = rate;
 }
 let send=new Object;
 if(sessionStorage.getItem('fav')!=null)
-send=JSON.parse(sessionStorage.getItem('fav'));
+    send=JSON.parse(sessionStorage.getItem('fav'));
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
@@ -120,11 +122,13 @@ for (let i = 0; i < buy.length; i++) {
         send[`${productid}`]=new Person(productid,name,quantity.innerHTML,rate);
         sessionStorage.setItem("fav",JSON.stringify(send));
     });
+
+
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
         send[`${productid}`].quantity++;
-        sessionStorage.setItem("fav",JSON.stringify(send));
+        sessionStorage.setItem("fav", JSON.stringify(send));
     });
 
     minus.addEventListener('click', () => {

@@ -1,17 +1,30 @@
 // var fav = sessionStorage.getItem('fav').split(',');
-// console.log(fav);
+
+
 // for (let i = 0; i < fav.length; i++)
-//     document.querySelector('div.grid').innerHTML += fav[i];
+// document.querySelector('div.grid').innerHTML += fav[i];
 // let img = document.querySelectorAll('img');
-// console.log(img[0].src);
-// console.log(img[0].url);
+
+
+sessionStorage.setItem('index', 'value');
+sessionStorage.setItem('index1', 'value1');
+
 // for (let i = 0; i < img.length; i++) {
-//     let str = img[i].src.split('/');
-//     str.splice(4, 0, "../home");
-//     img[i].src = str.join('/');
+//     // let str = img[i].src.split('/');
+//     // str.splice(4, 0, "../home");
+//     // img[i].src = str.join('/');
 // }
-// sessionStorage.setItem("fav",fav);
-// console.log(JSON.parse(sessionStorage.getItem('fav')));
-// sessionStorage.setItem("fav","bsdk");
-// sessionStorage.setItem("fav","djkj");
-// console.log(sessionStorage.getItem('fav'));
+console.log(sessionStorage.key);
+
+let xhr = new XMLHttpRequest();
+
+window.addEventListener('load', () => {
+    xhr.open('GET', 'retrieve.php', true);
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+
+        };
+    };
+
+});

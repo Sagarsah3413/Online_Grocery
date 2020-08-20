@@ -5,6 +5,8 @@ let navigationstyle = navigation.style;
 navigationstyle.width = '0%';
 navigationstyle.height = '100vh';
 
+console.log(sessionStorage);
+
 
 let cartmenu = document.getElementById('cartmenu');
 let cartcontent = document.querySelector('#cartmenu section');
