@@ -14,7 +14,7 @@
 <body>
     <?php require_once'../shared/header.php'; ?>
         <h3>kindly enter your details</h3>
-        <section>
+        <section id="body">
             <form onsubmit="return verify();" action="#" method="POST">
                 <p>
                     <label for="name">Name :</label>

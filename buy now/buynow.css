@@ -17,7 +17,9 @@ h3 {
     letter-spacing: 2px;
 }
 
-section {}
+section#body {
+    margin-left: 30%;
+}
 
 section form label {
     font-size: 30px;
