@@ -76,12 +76,12 @@ function arrayRemove(arr, value) {
     );
 };
 var send = [];
-// console.log(send);
 let cart = document.querySelectorAll('div.items');
-// console.log(cart[0].innerHTML);
+
 let price = document.querySelectorAll('p');
 for (let i = 0; i < cart.length; i++) {
     let ch = cart[i].lastElementChild.lastElementChild.lastElementChild;
+    console.log(ch);
     ch.addEventListener('click', function() {
         if (ch.innerText === "Add To Cart") {
             ch.innerText = "Remove From Cart";
@@ -103,39 +103,32 @@ let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let xml = new XMLHttpRequest();
+
+function hide(x, val1, val2) {
+    x.style.height = val1;
+    x.style.overflow = val2;
+    x.style.transition = 'display 0.3s linear ';
+}
+
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
     quantity = buy[i].children[1];
 
-    function hide(x, val1, val2) {
-        x.style.height = val1;
-        x.style.overflow = val2;
-        x.style.transition = 'display 0.3s linear ';
-    }
     hide(buy[i], "0px", "hidden");
 
     add[i].addEventListener('click', () => {
-
-
-
         quantity.innerHTML++;
         if (quantity.innerHTML > 0) {
             hide(add[i], "0px", "hidden");
             hide(buy[i], "30px", "");
         };
-
-
-        // elapsed = time.getTime();
-        // console.log('here', elapsed);
-
     });
+
+
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.innerHTML++;
-
-        time = performance.now();
-        console.log('home', time);
     });
 
     minus.addEventListener('click', () => {
