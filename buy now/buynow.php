@@ -38,12 +38,20 @@
                     <input class="escape" type="text" name="address" onclick="choose(this.id);" id="pass" autocomplete="off" />
                     <span id="Password" class="under"></span>
                 </p>
-                <p>
-                    <button class="click" value="submit" type="submit">Submit</button>
-                </p>
 
-            </form>
+
+            </form>  
         </section>
+        <div class="order">
+            <button>place your order</button>
+        </div>
+
+        <div class="rbj">
+            <p>our services are limited within rajbiraj</p>
+        </div>
+
+        <h4>thanks for shopping !!!</h4>
+        <h5>visit again</h5>
 
 </body>
 </html>
