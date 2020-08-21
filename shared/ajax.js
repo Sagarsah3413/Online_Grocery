@@ -1,12 +1,11 @@
 let xhr = new XMLHttpRequest();
 
-
-
-let content = JSON.parse(sessionStorage.getItem('fav'));
+let content = fav;
 let web = 'http://localhost/',
     id = [],
     json, data, img, identity;
-let array = Object.getOwnPropertyNames(content);
+let array = prop;
+console.log(array);
 for (let i = 0; i < array.length; i++) {
     id.push(content[array[i]].productid);
 };
@@ -25,9 +24,16 @@ xhr.onreadystatechange = function() {
         for (let i = 0; i < data.length; i++) {
             identity = data[i].parentElement.id;
 
-            console.log(json);
-            if (json[identity] != 'null')
+            if (json[identity] !== null) {
+                // if (json[identity] === null)
+
                 data[i].src = `${web}productimg/${json[identity]}`;
+            } else {
+                console.log('src val', json[identity]);
+                data[i].src = '';
+                console.log(data[i]);
+                data[i].style.display = 'none';
+            }
 
         };
     };

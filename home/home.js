@@ -6,8 +6,6 @@ let next = document.getElementById('next');
 let count = 1;
 let width = images[0].clientWidth;
 let height = images[0].clientHeight;
-let time = performance.now();
-let elapsed;
 //vaiablelist end
 
 //slider setting
@@ -57,20 +55,7 @@ container.addEventListener('transitionend', () => {
         container.style.transform = 'translateX(' + (-width * count) + 'px';
     }
 });
-// function arrayRemove(arr) {
-//     return arr.filter(
-//         function(ele) {
-//             return ele.quantity >0;
-//         }
-//     );
-// };  
-// function find(arr,val) {
-//     return arr.findIndex(
-//         function(ele) {
-//             return ele.productid ==val;
-//         }
-//     );
-// }; 
+
 function Person(productid, name, quantity, rate) {
     this.productid = productid;
     this.name = name;
