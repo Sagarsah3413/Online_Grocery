@@ -69,7 +69,11 @@ let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
-
+function hide(x, val1, val2) {
+        x.style.height = val1;
+        x.style.overflow = val2;
+        x.style.transition = 'width 0.3s linear ';
+    }
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
@@ -78,41 +82,51 @@ for (let i = 0; i < buy.length; i++) {
     let rate = cart[i].children[2].firstElementChild.innerHTML;
     let productid = cart[i].lastElementChild.id;
 
-    function hide(x, val1, val2) {
-        x.style.height = val1;
-        x.style.overflow = val2;
-        x.style.transition = 'width 0.3s linear ';
-    }
     hide(buy[i], "0px", "hidden");
-    if (send[`${productid}`]) {
-        quantity.innerHTML = send[`${productid}`].quantity;
+    if ((send[`${productid}`])&&(send[`${productid}`].quantity)>0) {
+        quantity.value = send[`${productid}`].quantity;
         hide(add[i], "0px", "hidden");
         hide(buy[i], "30px", "");
     }
     add[i].addEventListener('click', () => {
         quantity = buy[i].children[1];
-        quantity.innerHTML++;
-        if (quantity.innerHTML > 0) {
+        quantity.value++;
+        if (quantity.value > 0) {
             hide(add[i], "0px", "hidden");
             hide(buy[i], "30px", "");
         }
-        send[`${productid}`] = new Person(productid, name, quantity.innerHTML, rate);
+        send[`${productid}`] = new Person(productid, name, quantity.value, rate);
         sessionStorage.setItem("fav", JSON.stringify(send));
+    });
+    quantity = buy[i].children[1];
+    quantity.addEventListener('input', () => {
+        quantity = buy[i].children[1];
+        send[`${productid}`].quantity=quantity.value;
+        sessionStorage.setItem("fav", JSON.stringify(send));
+    });
+    quantity.addEventListener('blur', () => {
+        quantity = buy[i].children[1];
+        if (quantity.value < 1) {
+            delete send[`${productid}`];
+            hide(buy[i], "0px", "hidden");
+            hide(add[i], "auto", "");
+        }
+        sessionStorage.setItem("fav", JSON.stringify(send));
+
     });
 
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
-        quantity.innerHTML++;
-        send[`${productid}`].quantity++;
+        quantity.value++;
+        send[`${productid}`].quantity=quantity.value;
         sessionStorage.setItem("fav", JSON.stringify(send));
     });
     minus.addEventListener('click', () => {
         quantity = buy[i].children[1];
-        if (quantity.innerHTML > 1) {
-            quantity.innerHTML--;
-            send[`${productid}`].quantity--;
-        } else {
-            quantity.innerHTML--;
+        if (quantity.value > 0)
+            quantity.value--;
+            send[`${productid}`].quantity=quantity.value;
+        if(quantity.value<1) {
             hide(buy[i], "0px", "hidden");
             hide(add[i], "auto", "");
             delete send[`${productid}`];
