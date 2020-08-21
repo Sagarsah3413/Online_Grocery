@@ -1,22 +1,21 @@
 let car = document.querySelector('body table');
 let tot = document.querySelector("div#total span");
 let sum = 0;
-let fav=new Object;
+let fav = new Object;
 if (sessionStorage.getItem('fav') != null)
     fav = JSON.parse(sessionStorage.getItem('fav'));
 var prop = Object.getOwnPropertyNames(fav);
 
 for (let i = 0; i < prop.length; i++) {
-    if(fav[prop[i]].quantity>0){
+    if (fav[prop[i]].quantity > 0) {
         var str = document.createElement('tr');
-        str.innerHTML = `<td id='${prop[i]}'><img src='' alt='loading image'><span>` + fav[prop[i]].name +
+        str.innerHTML = `<td id='${prop[i]}'><img src='' alt='loading image' ><span>` + fav[prop[i]].name +
             "</span></td><td><button class='minus'>-</button><input type='number' min='0' value='" + fav[prop[i]].quantity +
             "'><button class='plus'>+</button></td><td>Rs." + fav[prop[i]].rate + "</td><td>Rs.<span>" +
             fav[prop[i]].quantity * fav[prop[i]].rate + "</span></td>";
         car.append(str);
         sum += fav[prop[i]].quantity * fav[prop[i]].rate;
-    }
-    else {
+    } else {
         delete fav[prop[i]];
         sessionStorage.setItem("fav", JSON.stringify(fav));
     }
@@ -29,7 +28,7 @@ let minus = document.querySelectorAll('.minus');
 let input, each;
 // console.log(minus);
 let bat = document.querySelectorAll('tr');
-str=divsArr = [].slice.call(bat);
+str = divsArr = [].slice.call(bat);
 str.shift();
 
 
@@ -50,7 +49,7 @@ for (let i = 0; i < plus.length; i++) {
         input = plus[i].parentElement.children[1];
         if (input.value < 1) {
             delete fav[prop[i]];
-            car.children[i+1].style.display = "none";
+            car.children[i + 1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
 
@@ -69,7 +68,7 @@ for (let i = 0; i < plus.length; i++) {
         up(i);
         if (input.value < 1) {
             delete fav[prop[i]];
-            car.children[i+1].style.display = "none";
+            car.children[i + 1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
     });
@@ -94,6 +93,7 @@ window.addEventListener('resize', () => {
 container.style.height = height + 'px';
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
+
 function fwd() {
     if (count >= images.length - 1)
         return;
@@ -101,6 +101,7 @@ function fwd() {
     count++;
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 }
+
 function pre() {
     if (count <= 0)
         return;
