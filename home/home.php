@@ -105,7 +105,7 @@
                         <article>
                             <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span> 
                             Quantity 
-                            <span class="quantity">0</span>
+                            <input type="number" min="0" value="">
                             <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
                         </article>
                         <p>
@@ -139,7 +139,8 @@
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img src="../home/images/minus.png" alt=""></span>
-                            Quantity <span class="quantity">0</span>
+                            Quantity
+                            <input type="number" min="0" value="">
                             <span class="control"><img src="../home/images/plus.png" alt=""></span>
                         </article>
                         <p>
