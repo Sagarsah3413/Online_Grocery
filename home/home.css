@@ -6,6 +6,7 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
 * h1,
 * h2,
 * h3,
@@ -13,6 +14,7 @@ body {
 * h5 {
     font-weight: normal;
 }
+
 div#image {
     position: relative;
     height: 502px;
@@ -20,6 +22,7 @@ div#image {
     margin-top: 5%;
     overflow: hidden;
 }
+
 #slider {
     height: 502px;
     display: flex;
@@ -27,19 +30,24 @@ div#image {
     transition: 0.3s;
     position: relative;
 }
+
 #slider div.img1 {
     background-image: url(images/img1.jfif);
 }
+
 #slider div.img2 {
     background-image: url(images/img2.jfif);
 }
+
 #slider div#img3 {
     background-image: url(images/img3.jfif);
 }
+
 #slider div {
     min-width: 100%;
     background-size: 100% 502px;
 }
+
 #slider div p {
     display: flex;
     justify-content: center;
@@ -51,11 +59,13 @@ div#image {
     color: rgb(8, 8, 8);
     text-transform: uppercase;
 }
+
 #slider div p:hover {
     cursor: pointer;
     transform: scale(1.2);
     transition: 300ms;
 }
+
 #prev {
     position: absolute;
     z-index: 2;
@@ -63,6 +73,7 @@ div#image {
     top: 45%;
     opacity: 0.4;
 }
+
 #next {
     position: absolute;
     z-index: 2;
@@ -70,19 +81,23 @@ div#image {
     right: 0px;
     opacity: 0.4;
 }
+
 #next:hover {
     cursor: pointer;
     opacity: 1;
 }
+
 #prev:hover {
     cursor: pointer;
     opacity: 1;
 }
+
 div#product div.groceries img,
 div.fruits img {
     height: 90%;
     width: 90%;
 }
+
 div#product section {
     width: 70%;
     height: 350px;
@@ -90,34 +105,40 @@ div#product section {
     margin: auto;
     margin-top: 5%;
 }
+
 div#product h3 {
     text-transform: uppercase;
     font-size: 40px;
     text-align: center;
     padding-top: 7%;
 }
+
 div#product div.groceries div.allsub,
 div.fruits div.all {
     padding: 2%;
     text-align: center;
 }
+
 div#product div.groceries div.allsub img,
 div.fruits div.all img {
     border-radius: 10px;
     cursor: pointer;
 }
+
 div#product div.groceries div.allsub {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
     text-align: center;
 }
+
 div#product div.fruits div.all {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     text-align: center;
 }
+
 div#product div.vegetables div.veggies {
     text-align: center;
     padding: 3%;
@@ -126,11 +147,13 @@ div#product div.vegetables div.veggies {
     justify-content: space-evenly;
     align-items: center;
 }
+
 div#product div.vegetables img {
     border-radius: 10px;
     cursor: pointer;
     width: 95%;
 }
+
 div#product div.groceries h3,
 div#product div.fruits h3,
 div#product div.vegetables h3 {
@@ -139,6 +162,7 @@ div#product div.vegetables h3 {
     text-align: center;
     padding-top: 5%;
 }
+
 body div#product div.grid {
     display: grid;
     padding: 5% 5% 0% 5%;
@@ -148,38 +172,46 @@ body div#product div.grid {
     margin-bottom: 30px;
     text-align: center;
 }
+
 div.grid div.items {
     padding: 2% 2% 0% 2%;
     background-color: bisque;
 }
+
 div.grid div.items h4 {
     padding: 2%;
     font-size: 20px;
     /* text-transform: uppercase; */
     overflow-wrap: break-word;
 }
+
 div.grid div.items p {
     font-weight: bolder;
     margin: 1% 2%;
 }
+
 div#product div.grid div.items p {
     letter-spacing: 1px;
 }
+
 div.grid div.items p span.cross {
     font-weight: normal;
     text-decoration-line: line-through;
     text-decoration-color: red;
     margin-left: 5%;
 }
+
 div#product div.grid div.items img {
     height: auto;
     width: auto;
 }
+
 div.grid div.items div.img:hover {
     transform: scale(1.1);
     transition: 300ms;
     overflow: hidden;
 }
+
 div.grid div.items div.cart p {
     display: flex;
     flex-direction: row;
@@ -187,15 +219,18 @@ div.grid div.items div.cart p {
     align-items: center;
     cursor: pointer;
 }
+
 div#product div.grid div.items div.cart img {
     height: 30px;
     width: 30px;
 }
+
 div.grid div.items div.cart p:hover {
     transform: scale(1.1);
     transition: 300ms;
     cursor: pointer;
 }
+
 div.grid div.items div.cart article {
     user-select: none;
     display: flex;
@@ -203,19 +238,23 @@ div.grid div.items div.cart article {
     justify-content: center;
     align-items: center;
 }
+
 div.grid div.items div.cart article span.control {
     display: inline-block;
     margin: 0px 8px;
 }
+
 div.grid div.items div.cart article span.control:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
+
 div.grid div.items article span {
     display: inline-block;
     margin-left: 6px;
 }
-div.grid div.items article input{   
+
+div.grid div.items article input {
     margin: auto 2%;
     font-size: 21px;
     line-height: 26px;
@@ -224,13 +263,19 @@ div.grid div.items article input{
     text-align: center;
     width: 1.5em;
 }
+
+
 /* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+
 /* Firefox */
+
 input[type=number] {
     -moz-appearance: textfield;
 }
