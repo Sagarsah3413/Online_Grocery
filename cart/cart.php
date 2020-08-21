@@ -14,7 +14,12 @@
 <body>
     <?php require_once'../shared/header.php'; ?>
     <table>
-        
+        <tr>
+            <th>your product</th>
+            <th>quantity</th>
+            <th>rate</th>
+            <th>total cost</th>
+        </tr>
     </table>
     <div id="total">
         <div>Grand Total: Rs.<span>0</span>/- only</div>

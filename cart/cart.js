@@ -6,13 +6,19 @@ var prop = Object.getOwnPropertyNames(fav);
 
 
 for (let i = 0; i < prop.length; i++) {
-    var str = document.createElement('tr');
-    str.innerHTML = `<td id='${prop[i]}'><img src='' alt='loading image'><span>` + fav[prop[i]].name +
-        "</span></td><td><button class='minus'>-</button><input type='number' min='0' value='" + fav[prop[i]].quantity +
-        "'><button class='plus'>+</button></td><td>Rs." + fav[prop[i]].rate + "</td><td>Rs.<span>" +
-        fav[prop[i]].quantity * fav[prop[i]].rate + "</span></td>";
-    car.append(str);
-    sum += fav[prop[i]].quantity * fav[prop[i]].rate;
+    if(fav[prop[i]].quantity>0){
+        var str = document.createElement('tr');
+        str.innerHTML = `<td id='${prop[i]}'><img src='' alt='loading image'><span>` + fav[prop[i]].name +
+            "</span></td><td><button class='minus'>-</button><input type='number' min='0' value='" + fav[prop[i]].quantity +
+            "'><button class='plus'>+</button></td><td>Rs." + fav[prop[i]].rate + "</td><td>Rs.<span>" +
+            fav[prop[i]].quantity * fav[prop[i]].rate + "</span></td>";
+        car.append(str);
+        sum += fav[prop[i]].quantity * fav[prop[i]].rate;
+    }
+    else {
+        delete fav[prop[i]];
+        sessionStorage.setItem("fav", JSON.stringify(fav));
+    }
 }
 tot.innerHTML = sum;
 
@@ -21,7 +27,10 @@ let plus = document.querySelectorAll('.plus');
 let minus = document.querySelectorAll('.minus');
 let input, each;
 // console.log(minus);
-str = document.querySelectorAll('tr');
+let bat = document.querySelectorAll('tr');
+str=divsArr = [].slice.call(bat);
+str.shift();
+
 
 function up(i) {
     each = str[i].lastElementChild.lastElementChild;
@@ -35,14 +44,12 @@ for (let i = 0; i < plus.length; i++) {
         input = plus[i].parentElement.children[1];
         up(i);
         sessionStorage.setItem("fav", JSON.stringify(fav));
-
     });
     input.addEventListener('blur', () => {
-
         input = plus[i].parentElement.children[1];
         if (input.value < 1) {
             delete fav[prop[i]];
-            car.children[i].style.display = "none";
+            car.children[i+1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
 
@@ -61,7 +68,7 @@ for (let i = 0; i < plus.length; i++) {
         up(i);
         if (input.value < 1) {
             delete fav[prop[i]];
-            car.children[i].style.display = "none";
+            car.children[i+1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
     });
