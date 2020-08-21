@@ -19,6 +19,7 @@ window.addEventListener('resize', () => {
 container.style.height = height + 'px';
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 var tim = setInterval(fwd, 5000);
+
 function fwd() {
     if (count >= images.length - 1)
         return;
@@ -26,6 +27,7 @@ function fwd() {
     count++;
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 }
+
 function pre() {
     if (count <= 0)
         return;
@@ -82,7 +84,7 @@ let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
-let xml = new XMLHttpRequest();
+
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;

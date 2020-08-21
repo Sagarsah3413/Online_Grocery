@@ -24,7 +24,7 @@
         <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">Place your Order </a></div>
     </article>
     
-    <div id="image">
+    <!-- <div id="image">
             <i id="prev">
                 <img src="../home/images/img4.png" width="50px" alt="">
             </i>
@@ -48,10 +48,10 @@
                     <p><a href="../fruits/fruits.php">buy now</a></p>
                 </div>
             </div>
-        </div>
+    </div> -->
 
 </body>
-<script src="../home/home.js"></script>
+<!-- <script src="../home/home.js"></script> -->
 <script src="cart.js" defer></script>
 <script src="../shared/ajax.js" defer></script>
 </html>
