@@ -66,8 +66,16 @@
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">0</span><span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span></article>
-                        <p><img class="plus" src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
+                        <article>
+                            <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
+                            Quantity 
+                            <input type="number" min="0" value="">
+                            <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
+                        </article>
+                        <p>
+                            <img class="plus" src='../home/images/cart.png' alt='cart'> 
+                            <span class="addcart">Add To Cart</span>
+                        </p>
                     </div>
                 </div>
                 <?php } ?>
@@ -129,8 +137,15 @@
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">0</span><span class="control"><img src="../home/images/plus.png" alt=""></span></article>
-                        <p><img src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
+                        <article>
+                            <span class="control"><img src="../home/images/minus.png" alt=""></span>
+                            Quantity <span class="quantity">0</span>
+                            <span class="control"><img src="../home/images/plus.png" alt=""></span>
+                        </article>
+                        <p>
+                            <img src='../home/images/cart.png' alt='cart'> 
+                            <span class="addcart">Add To Cart</span>
+                        </p>
                     </div>
                 </div>
                 <?php } ?>

@@ -82,35 +82,50 @@ for (let i = 0; i < buy.length; i++) {
         x.style.transition = 'width 0.3s linear ';
     }
     hide(buy[i], "0px", "hidden");
-    if (send[`${productid}`]) {
-        quantity.innerHTML = send[`${productid}`].quantity;
+    if ((send[`${productid}`])&&(send[`${productid}`].quantity)>0) {
+        quantity.value = send[`${productid}`].quantity;
         hide(add[i], "0px", "hidden");
         hide(buy[i], "30px", "");
     }
     add[i].addEventListener('click', () => {
         quantity = buy[i].children[1];
-        quantity.innerHTML++;
-        if (quantity.innerHTML > 0) {
+        quantity.value++;
+        if (quantity.value > 0) {
             hide(add[i], "0px", "hidden");
             hide(buy[i], "30px", "");
         }
-        send[`${productid}`] = new Person(productid, name, quantity.innerHTML, rate);
+        send[`${productid}`] = new Person(productid, name, quantity.value, rate);
         sessionStorage.setItem("fav", JSON.stringify(send));
+    });
+    quantity = buy[i].children[1];
+    quantity.addEventListener('input', () => {
+        quantity = buy[i].children[1];
+        send[`${productid}`].quantity=quantity.value;
+        sessionStorage.setItem("fav", JSON.stringify(send));
+    });
+    quantity.addEventListener('blur', () => {
+        quantity = buy[i].children[1];
+        if (quantity.value < 1) {
+            delete send[`${productid}`];
+            hide(buy[i], "0px", "hidden");
+            hide(add[i], "auto", "");
+        }
+        sessionStorage.setItem("fav", JSON.stringify(send));
+
     });
 
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
-        quantity.innerHTML++;
-        send[`${productid}`].quantity++;
+        quantity.value++;
+        send[`${productid}`].quantity=quantity.value;
         sessionStorage.setItem("fav", JSON.stringify(send));
     });
     minus.addEventListener('click', () => {
         quantity = buy[i].children[1];
-        if (quantity.innerHTML > 1) {
-            quantity.innerHTML--;
-            send[`${productid}`].quantity--;
-        } else {
-            quantity.innerHTML--;
+        if (quantity.value > 0)
+            quantity.value--;
+            send[`${productid}`].quantity=quantity.value;
+        if(quantity.value<1) {
             hide(buy[i], "0px", "hidden");
             hide(add[i], "auto", "");
             delete send[`${productid}`];
