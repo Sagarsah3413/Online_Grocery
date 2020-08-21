@@ -55,7 +55,6 @@ container.addEventListener('transitionend', () => {
         container.style.transform = 'translateX(' + (-width * count) + 'px';
     }
 });
-
 function Person(productid, name, quantity, rate) {
     this.productid = productid;
     this.name = name;
@@ -74,6 +73,7 @@ function hide(x, val1, val2) {
         x.style.overflow = val2;
         x.style.transition = 'width 0.3s linear ';
     }
+document.getElementById("index").innerHTML=Object.keys(send).length;
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
@@ -90,19 +90,19 @@ for (let i = 0; i < buy.length; i++) {
     }
     add[i].addEventListener('click', () => {
         quantity = buy[i].children[1];
-        quantity.value++;
-        if (quantity.value > 0) {
-            hide(add[i], "0px", "hidden");
-            hide(buy[i], "30px", "");
-        }
+        quantity.value=1;
+        hide(add[i], "0px", "hidden");
+        hide(buy[i], "30px", "");
         send[`${productid}`] = new Person(productid, name, quantity.value, rate);
         sessionStorage.setItem("fav", JSON.stringify(send));
+        document.getElementById("index").innerHTML=Object.keys(send).length;
     });
     quantity = buy[i].children[1];
     quantity.addEventListener('input', () => {
         quantity = buy[i].children[1];
         send[`${productid}`].quantity=quantity.value;
         sessionStorage.setItem("fav", JSON.stringify(send));
+        document.getElementById("index").innerHTML=Object.keys(send).length;
     });
     quantity.addEventListener('blur', () => {
         quantity = buy[i].children[1];
@@ -112,7 +112,7 @@ for (let i = 0; i < buy.length; i++) {
             hide(add[i], "auto", "");
         }
         sessionStorage.setItem("fav", JSON.stringify(send));
-
+        document.getElementById("index").innerHTML=Object.keys(send).length;
     });
 
     plus.addEventListener('click', () => {
@@ -132,5 +132,6 @@ for (let i = 0; i < buy.length; i++) {
             delete send[`${productid}`];
         }
         sessionStorage.setItem("fav", JSON.stringify(send));
+        document.getElementById("index").innerHTML=Object.keys(send).length;
     });
 }
