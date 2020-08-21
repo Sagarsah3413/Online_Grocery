@@ -18,10 +18,10 @@
         
     </table>
     <div id="total">
-        <div>Grand Total: Rs.<span>4000</span>/- only</div>
+        <div>Grand Total: Rs.<span>0</span>/- only</div>
     </div>
     <article>
-        <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">Place Order Now</a></div>
+        <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">Place your Order </a></div>
     </article>
     
 </body>

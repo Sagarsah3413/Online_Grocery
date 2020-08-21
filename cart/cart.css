@@ -4,8 +4,9 @@
     font-weight: 500;
 }
 
+
 body {
-    background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
+    background-color: rgb(255.255.255);
 }
 
 * {
@@ -39,6 +40,7 @@ td {
     padding: 8px;
     width: 25%;
     box-sizing: border-box;
+    color: rgb(0,0,0);
 }
 
 td {
@@ -47,6 +49,7 @@ td {
 
 td input {
     text-align: center;
+    color: rgb(250,101,57);
 }
 
 td input,
@@ -95,8 +98,6 @@ th {
 
 div#total {
     width: 100%;
-    box-sizing: border-box;
-    border: 1px solid rgb(250, 250, 210);
     text-align: right;
     margin: 30px 0px;
     padding: 30px 0px;
@@ -107,7 +108,7 @@ div#total div {
     font-size: 35px;
     width: 35%;
     display: inline-block;
-    color: rgb(100, 94, 94);
+    color: rgb(0,0,0);
 }
 
 article div {
@@ -115,15 +116,18 @@ article div {
     justify-content: center;
     width: 300px;
     margin: 20px auto;
+    background-color: rgb(250,101,57);
     border-radius: 40px;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, #3e4ed5, #1c65ec, #decc3c);
     font-weight: 700;
     font-size: 36px;
     text-align: center;
-    padding: 10px 25px;
-    color: aliceblue;
+    padding: 5px;
+    color: white;
+    letter-spacing: 1px;
 }
+
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -24,7 +24,7 @@ header {
     padding: 15px 20px;
     box-sizing: border-box;
     align-items: center;
-    background-image: linear-gradient(to right, rgb(151, 208, 235), rgb(77, 77, 224));
+    background-color: rgb(250,101,57);
     position: sticky;
     top: 0px;
     z-index: 4;
@@ -131,6 +131,7 @@ header div.cart nav#cartmenu section div#closecartcont span#closecart {
     width: 40px;
     height: 40px;
     position: absolute;
+    background-color: rgb(0,0,0);
 }
 
 header div.cart nav#cartmenu section div#closecartcont span#closecart {
@@ -169,7 +170,7 @@ header div.fill nav#menu span#close span.two {
 
 header div.fill nav#menu section,
 header div.cart nav#cartmenu section {
-    background-color: antiquewhite;
+    background-color: white;
     height: 100vh;
     width: 20%;
     overflow-x: hidden;
@@ -186,6 +187,7 @@ span.sidemenu {
 header div.fill nav#menu section div ul {
     overflow: hidden;
     transition: 0.4s ease-in-out all;
+    
 }
 
 header div.fill nav#menu section div ul li {
@@ -195,7 +197,7 @@ header div.fill nav#menu section div ul li {
     list-style: none;
     text-transform: capitalize;
     white-space: nowrap;
-    color: rgba(129, 33, 27, 0.877);
+    color: rgb(250,101,57);
 }
 
 header div.fill nav#menu section div ul li a {
@@ -205,7 +207,7 @@ header div.fill nav#menu section div ul li a {
 }
 
 header div.fill nav#menu section div ul li:hover {
-    color: rgba(129, 33, 27, 1);
+    color: rgba(0,0,0);
 }
 
 header div.cart nav#cartmenu section {
@@ -255,17 +257,13 @@ header div.cart nav#cartmenu section article div {
     margin: 20px auto;
     border-radius: 40px;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, #3e4ed5, #1c65ec, #decc3c);
     font-weight: 600;
     color: aliceblue;
     font-size: 1.1em;
-    /* marg */
+    background-color: rgb(250,101,57);
 }
 
 header div.cart nav#cartmenu section div#closecartcont {
     height: 40px;
 }
 
-.hits {
-    background-color: gold;
-}
