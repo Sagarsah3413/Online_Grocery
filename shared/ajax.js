@@ -1,5 +1,5 @@
 let xhr = new XMLHttpRequest();
-
+1
 let content = fav;
 let web = 'http://localhost/',
     id = [],
@@ -18,8 +18,12 @@ xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
         data = document.querySelectorAll('td img');
+        if (!xhr.responseText) {
+            json = [];
+        } else {
+            json = JSON.parse(xhr.responseText);
+        }
 
-        json = JSON.parse(xhr.responseText);
 
         for (let i = 0; i < data.length; i++) {
             identity = data[i].parentElement.id;

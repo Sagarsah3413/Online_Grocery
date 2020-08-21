@@ -1,5 +1,6 @@
 let ca = document.querySelector('#cartmenu section div.extr');
 var favourite, prop, str;
+favourite = JSON.parse(sessionStorage.getItem('fav'));
 
 document.getElementById('carticon').addEventListener('click', () => {
     favourite = JSON.parse(sessionStorage.getItem('fav'));
