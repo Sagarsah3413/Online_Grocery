@@ -76,12 +76,12 @@ td:nth-child(1) img {
     height: 130px;
 }
 
-td:nth-child(1) img:before {
-    /* content: "We're sorry, the image below is broken :(";
+/* td:nth-child(1) img:before {
+    content: "We're sorry, the image below is broken :(";
     display: block;
-    margin-bottom: 10px; */
+    margin-bottom: 10px;
 }
-
+ */
 td input {
     width: 3em;
 }

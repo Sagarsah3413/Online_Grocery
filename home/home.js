@@ -69,7 +69,11 @@ let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
-
+function hide(x, val1, val2) {
+        x.style.height = val1;
+        x.style.overflow = val2;
+        x.style.transition = 'width 0.3s linear ';
+    }
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
@@ -78,11 +82,6 @@ for (let i = 0; i < buy.length; i++) {
     let rate = cart[i].children[2].firstElementChild.innerHTML;
     let productid = cart[i].lastElementChild.id;
 
-    function hide(x, val1, val2) {
-        x.style.height = val1;
-        x.style.overflow = val2;
-        x.style.transition = 'width 0.3s linear ';
-    }
     hide(buy[i], "0px", "hidden");
     if ((send[`${productid}`])&&(send[`${productid}`].quantity)>0) {
         quantity.value = send[`${productid}`].quantity;
