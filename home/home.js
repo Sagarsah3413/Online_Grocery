@@ -6,8 +6,6 @@ let next = document.getElementById('next');
 let count = 1;
 let width = images[0].clientWidth;
 let height = images[0].clientHeight;
-// let time = performance.now();
-// let elapsed;
 //vaiablelist end
 
 //slider setting
