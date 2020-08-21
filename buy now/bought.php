@@ -2,7 +2,6 @@
     if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
         exit;
     }
-    print_r($_POST);
     
     $to = 'joysen833@gmail.com';
     $subject = 'My subject';
