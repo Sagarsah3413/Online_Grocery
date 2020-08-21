@@ -43,7 +43,13 @@
         </span>
         <nav id="cartmenu">
             <section>
-                <div id="closecartcont" class="hits"><span id="closecart"> <span class="one"></span><span class="two"></span> </span></div>
+                <div id="closecartcont" class="hits">
+                    <span id="closecart">
+                        <span class="one"></span>
+                        <span class="two"></span> 
+                    </span>
+                    <p>Hide</p>
+                </div>
                 <div class="extr">
                     
                 </div>

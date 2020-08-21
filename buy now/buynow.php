@@ -48,7 +48,7 @@
             </form>  
         </section>
         <div class="order">
-            <button form="form" value="submit" name="submit">place your order</button>
+            <button form="form" value="submit" name="submit">order now</button>
         </div>
 
         <div class="rbj">

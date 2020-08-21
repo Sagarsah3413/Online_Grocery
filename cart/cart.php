@@ -7,7 +7,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../home/home.css"> -->
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="cart.css">
     <title>Cart</title>
@@ -18,10 +17,10 @@
         
     </table>
     <div id="total">
-        <div>Grand Total: Rs.<span>4000</span>/- only</div>
+        <div>Grand Total: Rs.<span>0</span>/- only</div>
     </div>
     <article>
-        <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">Place Order Now</a></div>
+        <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">Place your Order </a></div>
     </article>
     
 </body>
