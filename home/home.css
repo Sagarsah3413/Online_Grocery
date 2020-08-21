@@ -129,6 +129,7 @@ div#product div.vegetables div.veggies {
 div#product div.vegetables img {
     border-radius: 10px;
     cursor: pointer;
+    width: 95%;
 }
 div#product div.groceries h3,
 div#product div.fruits h3,
