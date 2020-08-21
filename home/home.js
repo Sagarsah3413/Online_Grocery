@@ -70,18 +70,11 @@ let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
 
 function hide(x, val1, val2) {
-<<<<<<< HEAD
         x.style.height = val1;
         x.style.overflow = val2;
         x.style.transition = 'width 0.3s linear ';
     }
 document.getElementById("index").innerHTML=Object.keys(send).length;
-=======
-    x.style.height = val1;
-    x.style.overflow = val2;
-    x.style.transition = 'width 0.3s linear ';
-}
->>>>>>> c7d977cd625dfea8f707b199073e56febf5b3266
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
