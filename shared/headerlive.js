@@ -1,15 +1,13 @@
 let ca = document.querySelector('#cartmenu section div.extr');
-
-var fav, prop;
-
+var favourite, prop,str;
 document.getElementById('carticon').addEventListener('click', () => {
-    var fav = JSON.parse(sessionStorage.getItem('fav'));
+    favourite = JSON.parse(sessionStorage.getItem('fav'));
     ca.innerHTML = "";
-    var prop = Object.getOwnPropertyNames(fav);
+    prop = Object.getOwnPropertyNames(favourite);
     for (let i = 0; i < prop.length; i++) {
-        var str = document.createElement('div');
-        str.innerHTML = "<h2>" + fav[prop[i]].name + "</h2><h4>" + fav[prop[i]].quantity + " &#10006; <span class='price'>Rs." + fav[prop[i]].rate +
-            "</span> = <span class='price total'>Rs." + fav[prop[i]].quantity * fav[prop[i]].rate + "</span></h4>";
+        str = document.createElement('div');
+        str.innerHTML = "<h2>" + favourite[prop[i]].name + "</h2><h4>" + favourite[prop[i]].quantity + " &#10006; <span class='price'>Rs." + favourite[prop[i]].rate +
+            "</span> = <span class='price total'>Rs." + favourite[prop[i]].quantity * favourite[prop[i]].rate + "</span></h4>";
         ca.append(str);
     }
 });

@@ -1,9 +1,10 @@
 let car = document.querySelector('body table');
 let tot = document.querySelector("div#total span");
 let sum = 0;
-var fav = JSON.parse(sessionStorage.getItem('fav'));
+let fav=new Object;
+if (sessionStorage.getItem('fav') != null)
+    fav = JSON.parse(sessionStorage.getItem('fav'));
 var prop = Object.getOwnPropertyNames(fav);
-
 
 for (let i = 0; i < prop.length; i++) {
     if(fav[prop[i]].quantity>0){
