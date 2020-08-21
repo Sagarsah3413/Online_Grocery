@@ -68,12 +68,20 @@ let buy = document.querySelectorAll("div.grid div.items div.cart article");
 let plus, minus, quantity;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
+
 function hide(x, val1, val2) {
+<<<<<<< HEAD
         x.style.height = val1;
         x.style.overflow = val2;
         x.style.transition = 'width 0.3s linear ';
     }
 document.getElementById("index").innerHTML=Object.keys(send).length;
+=======
+    x.style.height = val1;
+    x.style.overflow = val2;
+    x.style.transition = 'width 0.3s linear ';
+}
+>>>>>>> c7d977cd625dfea8f707b199073e56febf5b3266
 for (let i = 0; i < buy.length; i++) {
     plus = buy[i].lastElementChild;
     minus = buy[i].firstElementChild;
@@ -83,7 +91,7 @@ for (let i = 0; i < buy.length; i++) {
     let productid = cart[i].lastElementChild.id;
 
     hide(buy[i], "0px", "hidden");
-    if ((send[`${productid}`])&&(send[`${productid}`].quantity)>0) {
+    if ((send[`${productid}`]) && (send[`${productid}`].quantity) > 0) {
         quantity.value = send[`${productid}`].quantity;
         hide(add[i], "0px", "hidden");
         hide(buy[i], "30px", "");
@@ -97,10 +105,11 @@ for (let i = 0; i < buy.length; i++) {
         sessionStorage.setItem("fav", JSON.stringify(send));
         document.getElementById("index").innerHTML=Object.keys(send).length;
     });
+
     quantity = buy[i].children[1];
     quantity.addEventListener('input', () => {
         quantity = buy[i].children[1];
-        send[`${productid}`].quantity=quantity.value;
+        send[`${productid}`].quantity = quantity.value;
         sessionStorage.setItem("fav", JSON.stringify(send));
         document.getElementById("index").innerHTML=Object.keys(send).length;
     });
@@ -118,15 +127,15 @@ for (let i = 0; i < buy.length; i++) {
     plus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         quantity.value++;
-        send[`${productid}`].quantity=quantity.value;
+        send[`${productid}`].quantity = quantity.value;
         sessionStorage.setItem("fav", JSON.stringify(send));
     });
     minus.addEventListener('click', () => {
         quantity = buy[i].children[1];
         if (quantity.value > 0)
             quantity.value--;
-            send[`${productid}`].quantity=quantity.value;
-        if(quantity.value<1) {
+        send[`${productid}`].quantity = quantity.value;
+        if (quantity.value < 1) {
             hide(buy[i], "0px", "hidden");
             hide(add[i], "auto", "");
             delete send[`${productid}`];
@@ -134,4 +143,15 @@ for (let i = 0; i < buy.length; i++) {
         sessionStorage.setItem("fav", JSON.stringify(send));
         document.getElementById("index").innerHTML=Object.keys(send).length;
     });
+}
+
+let quantize = document.getElementsByClassName('quantize');
+
+let held;
+for (let i = 0; i < quantize.length; i++) {
+
+    quantize[i].addEventListener('input', () => {
+        held = parseInt(quantize[i].value);
+        quantize[i].value = held;
+    })
 }

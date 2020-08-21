@@ -2,6 +2,7 @@ let navigation = document.getElementById('menu');
 let sidemenu = document.querySelector('#menu section');
 let navigationstyle = navigation.style;
 
+
 navigationstyle.width = '0%';
 navigationstyle.height = '100vh';
 
