@@ -111,7 +111,10 @@
         </div>
         <h3>vegetables</h3>
         <div class="vegetables">
-            <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div>
+            <div class="veggies">
+                <div class="vege"><img src="images/vege2.jpg"  alt="fruits"></div>
+                <div class="vege"><img src="images/vege1.jpg"  alt="fruits"></div>
+            </div>
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
