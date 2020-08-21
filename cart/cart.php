@@ -20,8 +20,8 @@
         <div>Grand Total: Rs.<span>0</span>/- only</div>
     </div>
     <article id="body">
-        <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">Place your Order </a></div>
         <div><a href="<?php echo $sharedfolder; ?>../home/home.php">Continue Shopping</a></div>
+        <div><a href="<?php echo $sharedfolder; ?>../buy now/buynow.php">Place your Order </a></div>
     </article>
     
     <div id="image">
