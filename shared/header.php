@@ -39,6 +39,7 @@
 
     <div class="cart">
         <span id="carticon" class="headtext">
+            <span id="index">4</span>
             <img src="<?php echo $sharedfolder ?>../home/images/cart.png" alt="">
         </span>
         <nav id="cartmenu">
