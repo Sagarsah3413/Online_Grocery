@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheet/header.css">
+    <link rel="stylesheet" href="../stylesheet/footer.css">
     <link rel="stylesheet" href="cart.css">
     <title>Cart</title>
 </head>
@@ -52,7 +53,8 @@
                 <p><a href="../fruits/fruits.php">buy now</a></p>
             </div>
         </div>
-    </div>    
+    </div>  
+    <?php require_once'../shared/footer.php'; ?>  
 </body>
 <script src="cart.js" defer></script>
 <script src="../shared/ajax.js" defer></script>

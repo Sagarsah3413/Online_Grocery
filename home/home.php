@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
+    <link rel="stylesheet" href="../stylesheet/footer.css">
     <title>homepage</title>
 </head>
 <body>
@@ -137,6 +138,7 @@
             </div>
         </div>
     </div>
+    <?php require_once'../shared/footer.php'; ?>
 </body>
 <script src="home.js"></script>
 <!-- <script src="../shared/ajax.js"></script> -->

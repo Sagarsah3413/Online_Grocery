@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vegetables.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
+    <link rel="stylesheet" href="../stylesheet/footer.css">
     <title>vegetables</title>
 </head>
 <body>
@@ -41,6 +42,7 @@
             </div>
         </div>
     </div>
+    <?php require_once'../shared/footer.php'; ?>
 
 </body>
 

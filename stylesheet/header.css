@@ -24,7 +24,7 @@ header {
     padding: 15px 20px;
     box-sizing: border-box;
     align-items: center;
-    background-color: rgb(250,101,57);
+    background-color: rgb(250,101,1);
     position: sticky;
     top: 0px;
     z-index: 4;
@@ -198,7 +198,7 @@ header div.fill nav#menu section div ul li {
     list-style: none;
     text-transform: capitalize;
     white-space: nowrap;
-    color: rgb(250,101,57);
+    color: rgb(250,101,1);
 }
 
 header div.fill nav#menu section div ul li a {
@@ -261,7 +261,7 @@ header div.cart nav#cartmenu section article div {
     font-weight: 600;
     color: aliceblue;
     font-size: 1.1em;
-    background-color: rgb(250,101,57);
+    background-color: rgb(250,101,1);
 }
 
 header div.cart nav#cartmenu section div#closecartcont {
