@@ -76,6 +76,12 @@ td:nth-child(1) img {
     height: 130px;
 }
 
+/* td:nth-child(1) img:before {
+    content: "We're sorry, the image below is broken :(";
+    display: block;
+    margin-bottom: 10px;
+}
+ */
 td input {
     width: 3em;
 }
@@ -126,7 +132,6 @@ article div {
     color: white;
     letter-spacing: 1px;
 }
-
 
 
 /* Chrome, Safari, Edge, Opera */

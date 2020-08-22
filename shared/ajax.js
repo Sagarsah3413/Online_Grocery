@@ -1,59 +1,11 @@
-// // let xml = new XMLHttpRequest();
-
-// console.log('here');
-
-// let view = document.getElementsByClassName('quantity');
-
-// // console.log(view[0].classList);
-
-// view[0].addEventListener('', () => {});
-// console.log(view[0]);
-
-
-// let observer = new MutationObserver(() => {
-
-//     console.log('thhere');
-//     // console.log(mutationlist);
-
-//     time = performance.now();
-//     console.log('ajax', time);
-// });
-
-// observer.observe(view[0], {
-//     characterDataOldValue: true,
-//     childList: true,
-//     attributes: true,
-//     characterData: true,
-//     // subtree: true,
-// });
-
-// // observer.disconnect();
-
-
-
-// let xhr = new XMLHttpRequest();
-// console.log(fav);
-
-
-// console.log(sessionStorage.key);
-
 let xhr = new XMLHttpRequest();
-
-// window.addEventListener('load', () => {
-//     xhr.open('GET', 'retrieve.php', true);
-
-//     xhr.onreadystatechange = function() {
-//         if (xhr.readyState === 4) {
-
-//         };
-//     };
-// });
-
-let content = JSON.parse(sessionStorage.getItem('fav'));
+1
+let content = fav;
 let web = 'http://localhost/',
     id = [],
     json, data, img, identity;
-let array = Object.getOwnPropertyNames(content);
+let array = prop;
+console.log(array);
 for (let i = 0; i < array.length; i++) {
     id.push(content[array[i]].productid);
 };
@@ -66,16 +18,30 @@ xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
         data = document.querySelectorAll('td img');
-        json = JSON.parse(xhr.responseText);
+        if (!xhr.responseText) {
+            json = [];
+        } else {
+            json = JSON.parse(xhr.responseText);
+        }
+
 
         for (let i = 0; i < data.length; i++) {
             identity = data[i].parentElement.id;
-            data[i].src = `${web}productimg/${json[identity]}`;
+
+            if (json[identity] !== null) {
+                // if (json[identity] === null)
+
+                data[i].src = `${web}productimg/${json[identity]}`;
+            } else {
+                console.log('src val', json[identity]);
+                data[i].src = '';
+                console.log(data[i]);
+                data[i].style.display = 'none';
+            }
 
         };
     };
 };
-
 xhr.send(JSON.stringify(id));
 
 
