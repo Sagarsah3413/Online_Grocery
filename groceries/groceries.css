@@ -5,7 +5,6 @@ body {
 * {
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
 }
 
 * h1,
@@ -16,35 +15,25 @@ body {
     font-weight: normal;
 }
 
-
-
-body div#product {
-    padding: 5%;
-}
-
-
-div#product h2 {
-    margin-bottom: 3%;
-}
-
-h2 {
+div#product h3 {
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
-    padding: 1%;
+    padding-top: 7%;
 }
 
 body div#product div.grid {
     display: grid;
+    padding: 5% 5% 0% 5%;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin: 7px;
+    margin: 7px 7px 0px 7px;
     grid-gap: 40px;
     margin-bottom: 30px;
     text-align: center;
 }
 
 div.grid div.items {
-    padding: 2%;
+    padding: 2% 2% 0% 2%;
     background-color: bisque;
 }
 
@@ -58,9 +47,6 @@ div.grid div.items h4 {
 div.grid div.items p {
     font-weight: bolder;
     margin: 1% 2%;
-}
-
-div#product div.grid div.items p {
     letter-spacing: 1px;
 }
 
@@ -71,8 +57,9 @@ div.grid div.items p span.cross {
     margin-left: 5%;
 }
 
-div.grid div.items div.img {
-    cursor: pointer;
+div#product div.grid div.items img {
+    height: auto;
+    width: auto;
 }
 
 div.grid div.items div.img:hover {
@@ -80,7 +67,6 @@ div.grid div.items div.img:hover {
     transition: 300ms;
     overflow: hidden;
 }
-
 
 div.grid div.items div.cart p {
     display: flex;
@@ -90,7 +76,7 @@ div.grid div.items div.cart p {
     cursor: pointer;
 }
 
-div.grid div.items div.cart img {
+div#product div.grid div.items div.cart img {
     height: 30px;
     width: 30px;
 }
@@ -122,4 +108,30 @@ div.grid div.items div.cart article span.control:hover {
 div.grid div.items article span {
     display: inline-block;
     margin-left: 6px;
+}
+
+div.grid div.items article input {
+    margin: auto 2%;
+    font-size: 21px;
+    line-height: 26px;
+    border-radius: 4px;
+    border-width: 0px;
+    text-align: center;
+    width: 2em;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
 }

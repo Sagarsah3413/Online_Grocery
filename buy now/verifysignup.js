@@ -62,5 +62,6 @@ function verify() {
     form.appendChild(productlist);
     form.appendChild(quantitylist);
 
+    sessionStorage.clear();
     return true;
 }
