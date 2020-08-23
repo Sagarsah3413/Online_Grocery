@@ -10,7 +10,7 @@ for (let i = 0; i < prop.length; i++) {
     if (fav[prop[i]].quantity > 0) {
         var str = document.createElement('tr');
         str.innerHTML = `<td id='${prop[i]}'><img src='' alt='loading image' ><span>` + fav[prop[i]].name +
-            "</span></td><td><button class='minus'>-</button><input type='number' min='0' value='" + fav[prop[i]].quantity +
+            "</span></td><td><button class='minus'>-</button><input type='number' class='quantize' min='0' value='" + fav[prop[i]].quantity +
             "'><button class='plus'>+</button></td><td>Rs." + fav[prop[i]].rate + "</td><td>Rs.<span>" +
             fav[prop[i]].quantity * fav[prop[i]].rate + "</span></td>";
         car.append(str);
@@ -134,3 +134,15 @@ container.addEventListener('transitionend', () => {
         container.style.transform = 'translateX(' + (-width * count) + 'px';
     }
 });
+
+
+let quantize = document.getElementsByClassName('quantize');
+
+let held;
+for (let i = 0; i < quantize.length; i++) {
+
+    quantize[i].addEventListener('input', () => {
+        held = parseInt(quantize[i].value);
+        quantize[i].value = held;
+    })
+}
