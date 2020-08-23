@@ -65,7 +65,7 @@ let send = new Object;
 if (sessionStorage.getItem('fav') != null)
     send = JSON.parse(sessionStorage.getItem('fav'));
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
-let plus, minus, quantity;
+let plus, minus, quantity,held;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
 
@@ -102,6 +102,8 @@ for (let i = 0; i < buy.length; i++) {
     quantity = buy[i].children[1];
     quantity.addEventListener('input', () => {
         quantity = buy[i].children[1];
+        held= parseInt(quantity.value);
+        quantity.value= parseInt(quantity.value);
         send[`${productid}`].quantity = parseInt(quantity.value);
         sessionStorage.setItem("fav", JSON.stringify(send));
         document.getElementById("index").innerHTML=Object.keys(send).length;
