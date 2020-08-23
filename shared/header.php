@@ -12,9 +12,12 @@
                 <div class="hits"><span class="sidemenu"><a href="<?php echo $sharedfolder; ?>../home/home.php">home</a></span> <span id="close"><span class="one"></span><span class="two"></span> </span></div>
                 <div><span class="sidemenu dropdown">grocery</span>
                     <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">pulses</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">rice</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">snacks & drinks</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">rice, pulses & grains</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">Oils, masala & salt</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">aata, sooji, besan & maida</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">dry fruits</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">tea, coffee & sugar</a></li>
                     </ul>
                 </div>
                 <div><span class="sidemenu dropdown">fruits</span>
@@ -25,6 +28,12 @@
                     </ul>
                 </div>
                 <div><span class="sidemenu dropdown">vegetables</span>
+                    <ul>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">pulses</a></li>
+                    </ul>
+                </div>
+                <div><span class="sidemenu dropdown">Household</span>
                     <ul>
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">pulses</a></li>

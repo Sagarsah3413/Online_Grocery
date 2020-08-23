@@ -193,7 +193,7 @@ header div.fill nav#menu section,
 header div.cart nav#cartmenu section {
     background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
     height: 100vh;
-    width: 20%;
+    width: 350px;
     overflow-x: hidden;
     white-space: nowrap;
 }
