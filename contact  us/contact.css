@@ -17,7 +17,7 @@
 div.contactus div.we
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -27,4 +27,15 @@ div.contactus div.we div.icon img
     background-color: rgb(13, 31, 53);
     padding: 5px;
     border-radius: 10px;
+}
+
+h4
+{
+    padding: 3%;
+}
+
+div.git
+{
+
+    width: 200px;
 }
