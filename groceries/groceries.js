@@ -1,3 +1,9 @@
+function Person(productid, name, quantity, rate) {
+    this.productid = productid;
+    this.name = name;
+    this.quantity = quantity;
+    this.rate = rate;
+}
 let send = new Object;
 if (sessionStorage.getItem('fav') != null)
     send = JSON.parse(sessionStorage.getItem('fav'));

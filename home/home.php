@@ -81,7 +81,7 @@
                         <article>
                             <span class="control"><img class="plus" src="images/minus.png" alt=""></span>
                             Quantity 
-                            <input type="number" min="0" value="0" class="quantize">
+                            <input type="number" min="0" value="0">
                             <span class="control"><img class="plus" src="images/plus.png" alt=""></span>
                         </article>
                         <p>
@@ -151,7 +151,7 @@
                         <article>
                             <span class="control"><img src="images/minus.png" alt=""></span>
                             Quantity
-                            <input type="number" min="0" value="" class="quantize">
+                            <input type="number" min="0" value="" >
                             <span class="control"><img src="images/plus.png" alt=""></span>
                         </article>
                         <p>
