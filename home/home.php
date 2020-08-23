@@ -45,12 +45,24 @@
         <h3>groceries</h3>
         <div class="groceries">
             <div class="allsub">
-                <div class="sub"><img src="images/snacks2.jpg" alt="rice"></div>
-                <div class="sub"> <img src="images/rice.jpg" alt="rice"></div>
-                <div class="sub"> <img src="images/snacks1.jpg" alt="rice"></div>
-                <div class="sub"> <img src="images/snacks1.jpg" alt="rice"></div>
-                <div class="sub"><img src="images/snacks2.jpg" alt="rice"></div>
-                <div class="sub"> <img src="images/rice.jpg" alt="rice"></div>
+                <div class="sub"><img src="images/snacks2.jpg" alt="rice">
+                    <span class="text">snacks & drinks</span>
+                </div>
+                <div class="sub"> <img src="images/rice.jpg" alt="rice">
+                    <span class="text">rice, pulses & grains</span>
+                </div>
+                <div class="sub"> <img src="images/snacks1.jpg" alt="rice">
+                    <span class="text">oils, masala & salt</span>
+                </div>
+                <div class="sub"> <img src="images/snacks1.jpg" alt="rice">
+                    <span class="text">aata, sooji, besan & maida</span>
+                </div>
+                <div class="sub"><img src="images/snacks2.jpg" alt="rice">
+                    <span class="text">dry fruits</span>
+                </div>
+                <div class="sub"> <img src="images/rice.jpg" alt="rice">
+                    <span class="text">tea, coffee & sugar</span>
+                </div>
             </div>
             <h3>our popular items</h3>
             <div class="grid">

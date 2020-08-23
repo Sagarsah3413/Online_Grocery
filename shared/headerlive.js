@@ -1,5 +1,10 @@
 let ca = document.querySelector('#cartmenu section div.extr');
 var favourite, prop, str;
+
+if (sessionStorage.getItem('fav') === null) {
+    sessionStorage.setItem('fav', '{}');
+}
+
 document.getElementById('carticon').addEventListener('click', () => {
     favourite = JSON.parse(sessionStorage.getItem('fav'));
     ca.innerHTML = "";
@@ -11,4 +16,4 @@ document.getElementById('carticon').addEventListener('click', () => {
         ca.append(str);
     }
 });
-document.getElementById("index").innerHTML=Object.keys(JSON.parse(sessionStorage.getItem('fav'))).length;
+document.getElementById("index").innerHTML = Object.keys(JSON.parse(sessionStorage.getItem('fav'))).length;

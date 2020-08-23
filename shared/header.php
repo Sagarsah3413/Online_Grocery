@@ -42,8 +42,8 @@
                 <div><span class="sidemenu dropdown">health and care</span>
                     <ul>
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">personal care and products</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">baby care and products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">personal care products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">baby care products</a></li>
                     </ul>
                 </div>
             </section>

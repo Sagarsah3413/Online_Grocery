@@ -131,6 +131,21 @@ div#product div.groceries div.allsub {
     text-align: center;
 }
 
+div#product div.groceries div.allsub div.sub{
+    position: relative;
+}
+
+
+div#product div.groceries div.allsub div.sub span{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
 div#product div.fruits div.all {
     text-align: center;
     padding: 3%;
