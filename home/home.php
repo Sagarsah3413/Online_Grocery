@@ -61,19 +61,19 @@
                     ?>
                 <div class='items'> 
                     <div>
-                        <img class="plus"src='../home/images/down.png' alt='product pic'>
+                        <img class="plus"src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
-                            <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
+                            <span class="control"><img class="plus" src="images/minus.png" alt=""></span>
                             Quantity 
                             <input type="number" min="0" value="0" class="quantize">
-                            <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
+                            <span class="control"><img class="plus" src="images/plus.png" alt=""></span>
                         </article>
                         <p>
-                            <img class="plus" src='../home/images/cart.png' alt='cart'> 
+                            <img class="plus" src='images/cart.png' alt='cart'> 
                             <span class="addcart">Add To Cart</span>
                         </p>
                     </div>
@@ -97,19 +97,19 @@
                     ?>
                 <div class='items'> 
                     <div>
-                        <img class="plus" src='../home/images/down.png' alt='product pic'>
+                        <img class="plus" src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
-                            <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span> 
+                            <span class="control"><img class="plus" src="images/minus.png" alt=""></span> 
                             Quantity 
                             <input type="number" min="0" value="">
-                            <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
+                            <span class="control"><img class="plus" src="images/plus.png" alt=""></span>
                         </article>
                         <p>
-                            <img class="plus" src='../home/images/cart.png' alt='cart'>
+                            <img class="plus" src='images/cart.png' alt='cart'>
                             <span class="addcart">Add To Cart</span>
                         </p>
                     </div>
@@ -132,19 +132,19 @@
                     ?>
                 <div class='items'> 
                     <div>
-                        <img src='../home/images/down.png' alt='product pic'>
+                        <img src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
-                            <span class="control"><img src="../home/images/minus.png" alt=""></span>
+                            <span class="control"><img src="images/minus.png" alt=""></span>
                             Quantity
                             <input type="number" min="0" value="" class="quantize">
-                            <span class="control"><img src="../home/images/plus.png" alt=""></span>
+                            <span class="control"><img src="images/plus.png" alt=""></span>
                         </article>
                         <p>
-                            <img src='../home/images/cart.png' alt='cart'> 
+                            <img src='images/cart.png' alt='cart'> 
                             <span class="addcart">Add To Cart</span>
                         </p>
                     </div>

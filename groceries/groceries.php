@@ -1,11 +1,9 @@
 <?php
     require_once '../shared/database.php';
     $sharedfolder='../shared/';
-    session_start();
     $offset = 0;
     $type = ['grocer','fruit','vegetable'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,31 +16,177 @@
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
-        <div id="product">
-            <h2>groceries</h2>
-            <div class="grid">
-                <?php
-                $query = "SELECT * FROM (SELECT * FROM `grocers`.`products` where type='" . $type[0] . "' ORDER BY `productid` DESC LIMIT $offset,7) sub ORDER BY `productid` ASC;";
-                $data = $dbconnection -> query($query);
-        
-                while($row = $data -> fetch_assoc()) {
-                    ?>
-                <div class='items'> 
-                    <div>
-                        <img src='../home/images/down.png' alt='product pic'>
-                    </div>
-                    <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <?php echo $row['price']; ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article><span class="control"><img src="../home/images/minus.png" alt=""></span>Quantity <span class="quantity">0</span><span class="control"><img src="../home/images/plus.png" alt=""></span></article>
-                        <p><img src='../home/images/cart.png' alt='cart'> <span class="addcart">Add To Cart</span></p>
-                    </div>
+    <div id="product">
+        <h3>Snacks & Drinks</h3>
+        <div class="grid">
+            <?php
+            $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[0] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
+            $data = $dbconnection -> query($query);
+            while($row = $data -> fetch_assoc()) {
+                ?>
+            <div class='items'> 
+                <div>
+                    <img class="plus"src='../home/images/down.png' alt='product pic'>
                 </div>
-                <?php } ?>
+                <h4><?php echo $row['product name']; ?></h4>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <article>
+                        <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
+                        Quantity 
+                        <input type="number" min="0" value="0">
+                        <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
+                    </article>
+                    <p>
+                        <img class="plus" src='../home/images/cart.png' alt='cart'> 
+                        <span class="addcart">Add To Cart</span>
+                    </p>
+                </div>
             </div>
+            <?php } ?>
+        </div>
+        <h3>Rice, pulses & grains</h3>
+        <div class="grid">
+            <?php
+            $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[1] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
+            $data = $dbconnection -> query($query);
+            while($row = $data -> fetch_assoc()) {
+                ?>
+            <div class='items'> 
+                <div>
+                    <img class="plus" src='../home/images/down.png' alt='product pic'>
+                </div>
+                <h4><?php echo $row['product name']; ?></h4>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <article>
+                        <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span> 
+                        Quantity 
+                        <input type="number" min="0" value="">
+                        <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
+                    </article>
+                    <p>
+                        <img class="plus" src='../home/images/cart.png' alt='cart'>
+                        <span class="addcart">Add To Cart</span>
+                    </p>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+        <h3>oil, masala & salt</h3>
+        <div class="grid">
+            <?php
+            $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[2] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
+            $data = $dbconnection -> query($query);
+            while($row = $data -> fetch_assoc()) {
+                ?>
+            <div class='items'> 
+                <div>
+                    <img src='../home/images/down.png' alt='product pic'>
+                </div>
+                <h4><?php echo $row['product name']; ?></h4>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <article>
+                        <span class="control"><img src="../home/images/minus.png" alt=""></span>
+                        Quantity
+                        <input type="number" min="0" value="">
+                        <span class="control"><img src="../home/images/plus.png" alt=""></span>
+                    </article>
+                    <p>
+                        <img src='../home/images/cart.png' alt='cart'> 
+                        <span class="addcart">Add To Cart</span>
+                    </p>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+        <h3>aata, soooji, besan & maida</h3>
+        <div class="grid">
+            <?php
+            $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[2] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
+            $data = $dbconnection -> query($query);
+            while($row = $data -> fetch_assoc()) {
+                ?>
+            <div class='items'> 
+                <div>
+                    <img src='../home/images/down.png' alt='product pic'>
+                </div>
+                <h4><?php echo $row['product name']; ?></h4>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <article>
+                        <span class="control"><img src="../home/images/minus.png" alt=""></span>
+                        Quantity
+                        <input type="number" min="0" value="">
+                        <span class="control"><img src="../home/images/plus.png" alt=""></span>
+                    </article>
+                    <p>
+                        <img src='../home/images/cart.png' alt='cart'> 
+                        <span class="addcart">Add To Cart</span>
+                    </p>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+        <h3>Dry fruits</h3>
+        <div class="grid">
+            <?php
+            $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[2] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
+            $data = $dbconnection -> query($query);
+            while($row = $data -> fetch_assoc()) {
+                ?>
+            <div class='items'> 
+                <div>
+                    <img src='../home/images/down.png' alt='product pic'>
+                </div>
+                <h4><?php echo $row['product name']; ?></h4>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <article>
+                        <span class="control"><img src="../home/images/minus.png" alt=""></span>
+                        Quantity
+                        <input type="number" min="0" value="">
+                        <span class="control"><img src="../home/images/plus.png" alt=""></span>
+                    </article>
+                    <p>
+                        <img src='../home/images/cart.png' alt='cart'> 
+                        <span class="addcart">Add To Cart</span>
+                    </p>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+        <h3>tea, coffee & sugar</h3>
+        <div class="grid">
+            <?php
+            $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[2] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
+            $data = $dbconnection -> query($query);
+            while($row = $data -> fetch_assoc()) {
+                ?>
+            <div class='items'> 
+                <div>
+                    <img src='../home/images/down.png' alt='product pic'>
+                </div>
+                <h4><?php echo $row['product name']; ?></h4>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <article>
+                        <span class="control"><img src="../home/images/minus.png" alt=""></span>
+                        Quantity
+                        <input type="number" min="0" value="">
+                        <span class="control"><img src="../home/images/plus.png" alt=""></span>
+                    </article>
+                    <p>
+                        <img src='../home/images/cart.png' alt='cart'> 
+                        <span class="addcart">Add To Cart</span>
+                    </p>
+                </div>
+            </div>
+            <?php } ?>
         </div>
     </div>
     <?php require_once'../shared/footer.php'; ?>
 </body>
-
+<script src="groceries.js"></script>
 </html>
