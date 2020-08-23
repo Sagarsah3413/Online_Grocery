@@ -34,7 +34,10 @@
                 <img src="../home/images/contact icon.png" alt="">
             </div>
             <div>
-                <h3>Call Us</h3>
+                <h4>+92-302-000-0000</h4>
+                <h4>+92-302-000-0000</h4>
+                <h4>+92-302-000-0000</h4>
+                <h4>+92-302-000-0000</h4>
                 <h4>+92-302-000-0000</h4>
             </div>  
         </div>
@@ -43,8 +46,23 @@
                 <img src="../home/images/mail icon.png" alt="">
             </div>
             <div>
-                <h3>Email</h3>
                 <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
+                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
+                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
+                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
+                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
+            </div>  
+        </div>
+        <div class="we">
+            <div class="icon">
+                <img src="../home/images/git.png" width="38%" alt="">
+            </div>
+            <div class="git">
+                <h4 style="text-transform:uppercase;  ">@Quasilius-Starlord</h4>
+                <h4 style="text-transform:uppercase;  ">@Astrosiddhartha</h4>
+                <h4 style="text-transform:uppercase;  ">@Ratan206thk</h4>
+                <h4 style="text-transform:uppercase;  ">@kshitij-cell</h4>
+                <h4 style="text-transform:uppercase;  ">@kshitij-cell</h4>
             </div>  
         </div>
     </div>
