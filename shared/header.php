@@ -46,6 +46,7 @@
                         <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php">baby care products</a></li>
                     </ul>
                 </div>
+                <div><span class="sidemenu dropdown"> <a href="../contact us/contact.php">contact us</a> </span></div>
             </section>
         </nav>
     </div>
