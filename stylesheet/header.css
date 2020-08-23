@@ -24,7 +24,7 @@ header {
     padding: 15px 20px;
     box-sizing: border-box;
     align-items: center;
-    background-color: rgb(250,101,1);
+    background-color: rgb(250, 101, 1);
     position: sticky;
     top: 0px;
     z-index: 4;
@@ -193,7 +193,7 @@ header div.fill nav#menu section,
 header div.cart nav#cartmenu section {
     background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
     height: 100vh;
-    width: 350px;
+    width: 400px;
     overflow-x: hidden;
     white-space: nowrap;
 }
@@ -217,7 +217,7 @@ header div.fill nav#menu section div ul li {
     list-style: none;
     text-transform: capitalize;
     white-space: nowrap;
-    color: rgb(250,101,1);
+    color: rgb(250, 101, 1);
 }
 
 header div.fill nav#menu section div ul li a {
@@ -281,11 +281,57 @@ header div.cart nav#cartmenu section article div {
     font-weight: 600;
     color: aliceblue;
     font-size: 1.1em;
-    background-color: rgb(250,101,1);
+    background-color: rgb(250, 101, 1);
 }
 
 header div.cart nav#cartmenu section div#closecartcont {
     height: 40px;
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width:910px) {
+    header div.cart nav#cartmenu section article div {
+        width: 63%;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width:410px) {
+    header div.fill nav#menu section,
+    header div.cart nav#cartmenu section {
+        background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
+        height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+        white-space: nowrap;
+    }
+    header div.cart nav#cartmenu section div,
+    header div.fill nav#menu section div {
+        font-size: 20px;
+        padding: 13px 5px;
+    }
+    header div.fill nav#menu section div ul li {
+        font-size: 16px;
+        line-height: 1.3em;
+    }
+    header div.cart nav#cartmenu section article div {
+        width: 224px;
+        font-size: 24px;
+    }
+    header div.cart nav#cartmenu section div#closecartcont p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    header div.cart nav#cartmenu section div,
+    header div.fill nav#menu section div {
+        font-size: 16px;
+        padding: 11px 5px;
+    }
+    header div.cart nav#cartmenu section div h2 {
+        font-size: 19px;
+        white-space: normal;
+    }
 }
