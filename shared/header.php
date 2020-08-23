@@ -35,15 +35,15 @@
                 </div>
                 <div><span class="sidemenu dropdown">household and appliances</span>
                     <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">pulses</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php">pulses</a></li>
                     </ul>
                 </div>
                 <div><span class="sidemenu dropdown">health and care</span>
                     <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">personal care and products</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">baby care and products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php">personal care products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php">baby care products</a></li>
                     </ul>
                 </div>
             </section>
