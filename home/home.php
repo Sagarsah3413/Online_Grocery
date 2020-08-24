@@ -19,7 +19,7 @@
     <div id="product">
         <div id="search">
             <input type="text">
-    <button>search</button>
+            <button>search</button>
         </div>
         <div id="image">
             <i id="prev">
