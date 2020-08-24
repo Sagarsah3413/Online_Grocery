@@ -361,8 +361,9 @@ input[type=number] {
 }
 
 div#product div#search{
-    display:flex;
-    margin:3% 5%;
+    display: flex;
+    width: 50%;
+    margin: 3% auto;
     border: 2px solid GRAY;
     border-radius: 10px;
     height: 35px;
@@ -378,7 +379,7 @@ div#product div#search input{
 div#product div#search span {
     width: 4%;
     cursor: pointer;
-    padding: 2px 0px 2px 13px;
+    padding: 1% 2% 1% 1%;
     background-color: rgb(137,161,162);
 }
 div#product div#search span img{
