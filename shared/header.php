@@ -54,9 +54,15 @@
     
     <div class="headtext">logo</div>
     <div id="search">
-            <input type="text">
-            <span><img src="images/search.png" alt=""></span>
-        </div>
+        <input type="text">
+        <span><a href="<?php echo $sharedfolder ?>../search/search.php?value=" id="initsearch"><img src="<?php echo $sharedfolder; ?>../home/images/search.png" alt=""></a></span>
+        <ul>
+            <li><a href="<?php echo $sharedfolder ?>"></a></li>
+            <li><a href="<?php echo $sharedfolder ?>"></a></li>
+            <li><a href="<?php echo $sharedfolder ?>"></a></li>
+            <li><a href="<?php echo $sharedfolder ?>"></a></li>
+        </ul>
+    </div>
 
     <div class="cart">
         <span id="carticon" class="headtext">

@@ -15,6 +15,10 @@ body {
     font-weight: normal;
 }
 
+#product {
+    margin-top: 7px;
+}
+
 div#image {
     position: relative;
     height: 502px;

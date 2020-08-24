@@ -2,6 +2,10 @@ let navigation = document.getElementById('menu');
 let sidemenu = document.querySelector('#menu section');
 let navigationstyle = navigation.style;
 
+let search = document.querySelector('div#search input'),
+    suggestion, json, getter, initsearch = document.getElementById('initsearch');
+let xhr = new XMLHttpRequest();
+
 
 navigationstyle.width = '0%';
 navigationstyle.height = '100vh';
@@ -20,6 +24,37 @@ window.addEventListener('resize', () => {
     cartmenustyle.transition = 'none';
     navigationstyle.height = '100vh';
     cartmenustyle.height = '100vh';
+});
+
+suggestion = search.parentElement.lastElementChild;
+initsearch.href += encodeURI(search.value);
+search.addEventListener('input', () => {
+    initsearch.href += encodeURI(search.value);
+
+    if (search.value.length >= 3)
+        suggestion.style.display = 'block';
+    else {
+        suggestion.style.display = 'none';
+        return;
+    }
+
+    xhr.open('GET', `../shared/autosuggest.php?value=${search.value}`, true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            json = JSON.parse(xhr.responseText);
+            console.log(json);
+            for (let i = 0; i < json.length; i++) {
+                getter = suggestion.children[i].firstElementChild;
+                getter.innerHTML = json[i];
+                getter.href += `../search/search.php?value=${encodeURI(json[i])}`;
+            }
+
+        };
+    };
+    xhr.send();
+
 });
 
 

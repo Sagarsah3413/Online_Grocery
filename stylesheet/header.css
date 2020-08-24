@@ -296,7 +296,7 @@ div#search {
     flex-direction: row;
     align-items: flex-start;
     box-sizing: border-box;
-    overflow: hidden;
+    position: relative;
 }
 
 div#search input {
@@ -323,6 +323,31 @@ div#search span {
 div#search span img {
     width: 30px;
     height: 30px;
+}
+
+div#search ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: aliceblue;
+    list-style: none;
+}
+
+div#search ul li {
+    margin: 0px;
+}
+
+div#search ul li a {
+    padding: 0px 5px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+
+div#search ul li:hover {
+    background-color: rgb(162, 233, 224);
 }
 
 @media only screen and (max-width:910px) {
