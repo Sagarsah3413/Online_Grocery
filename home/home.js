@@ -62,6 +62,7 @@ function Person(productid, name, quantity, rate) {
     this.quantity = quantity;
     this.rate = rate;
 }
+
 let send = new Object;
 if (sessionStorage.getItem('fav') != null)
     send = JSON.parse(sessionStorage.getItem('fav'));
@@ -96,6 +97,7 @@ for (let i = 0; i < buy.length; i++) {
         hide(add[i], "0px", "hidden");
         hide(buy[i], "30px", "");
         send[`${productid}`] = new Person(productid, name, quantity.value, rate);
+        console.log(send);
         sessionStorage.setItem("fav", JSON.stringify(send));
         document.getElementById("index").innerHTML = Object.keys(send).length;
     });
