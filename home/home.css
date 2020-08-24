@@ -381,4 +381,5 @@ div#product div#search button{
     padding: 0px;
     border-radius: 10px;
     border: 2px solid gray;
+    cursor: pointer;
 }
