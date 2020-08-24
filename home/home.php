@@ -17,6 +17,10 @@
 <body>
     <?php require_once'../shared/header.php'; ?>
     <div id="product">
+        <div id="search">
+            <input type="text">
+    <button>search</button>
+        </div>
         <div id="image">
             <i id="prev">
                 <img src="images/img4.png" width="50px" alt="">
@@ -29,7 +33,7 @@
                     <p><a href="../groceries/groceries.php">add to cart</a></p>
                 </div>
                 <div class="img2">
-                    <p><a href="../fruits/fruits.php">buy now</a></p>
+                    <p> <a href="../fruits/fruits.php">buy now</a></p>
                 </div>
                 <div id="img3">
                     <p><a href="../vegetables/vegetables.php">free home delievery</a></p>
