@@ -359,30 +359,3 @@ input[type=number] {
         padding: 7%;
     }
 }
-
-div#product div#search{
-    display: flex;
-    width: 50%;
-    margin: 3% auto;
-    border: 2px solid GRAY;
-    border-radius: 10px;
-    height: 35px;
-    overflow: hidden;
-}
-div#product div#search input{
-    width: 96%;
-    font-size: 25px;
-    border: 0px none;
-    color: rgb(241, 118, 18);
-    background-color: rgb(235, 232, 228);
-}
-div#product div#search span {
-    width: 4%;
-    cursor: pointer;
-    padding: 1% 2% 1% 1%;
-    background-color: rgb(137,161,162);
-}
-div#product div#search span img{
-    width: 30px;
-    height: 30px;
-}

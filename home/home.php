@@ -17,10 +17,10 @@
 <body>
     <?php require_once'../shared/header.php'; ?>
     <div id="product">
-        <div id="search">
+        <!-- <div id="search">
             <input type="text">
             <span><img src="images/search.png" alt=""></span>
-        </div>
+        </div> -->
         <div id="image">
             <i id="prev">
                 <img src="images/img4.png" width="50px" alt="">

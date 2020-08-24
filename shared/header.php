@@ -53,6 +53,10 @@
     
     
     <div class="headtext">logo</div>
+    <div id="search">
+            <input type="text">
+            <span><img src="images/search.png" alt=""></span>
+        </div>
 
     <div class="cart">
         <span id="carticon" class="headtext">

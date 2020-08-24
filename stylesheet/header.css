@@ -290,10 +290,80 @@ header div.cart nav#cartmenu section div#closecartcont {
     justify-content: center;
 }
 
+div#search {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+div#search input {
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid rgb(128, 128, 128);
+    width: 90%;
+    font-size: 25px;
+    padding-left: 3px;
+    color: rgb(241, 18, 18);
+    background-color: rgb(235, 232, 228);
+}
+
+div#search span {
+    width: 10%;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    padding: 5px 5px;
+    height: 23.5px;
+    display: inline-block;
+    background-color: rgb(137, 161, 162);
+}
+
+div#search span img {
+    width: 30px;
+    height: 30px;
+}
+
 @media only screen and (max-width:910px) {
     header div.cart nav#cartmenu section article div {
         width: 63%;
         font-size: 25px;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    div#search {
+        width: 200px;
+    }
+    div#search input {
+        border-radius: 10px 0px 0px 10px;
+        width: 77%;
+    }
+    div#search span {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    div#search {
+        width: 130px;
+    }
+    div#search input {
+        font-size: 20px;
+        box-sizing: border-box;
+        border-radius: 10px 0px 0px 10px;
+        width: 68%;
+    }
+    div#search span {
+        width: 20%;
+        height: 29px;
+        padding: 4px 2px 2px 0px;
+        box-sizing: border-box;
+    }
+    div#search span img {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -321,6 +391,25 @@ header div.cart nav#cartmenu section div#closecartcont {
     }
     header div.cart nav#cartmenu section div#closecartcont p {
         font-size: 20px;
+    }
+    header div.cart span#carticon {
+        width: 45px;
+        height: 45px;
+    }
+    header div.fill span#open {
+        height: 45px;
+        width: 45px;
+        font-size: 6.5px;
+        padding: 8px;
+    }
+    header div.fill span#open span {
+        height: 2.5px;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    header {
+        padding: 13px;
     }
 }
 
