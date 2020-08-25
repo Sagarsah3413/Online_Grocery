@@ -55,7 +55,7 @@ for (let i = 0; i < buy.length; i++) {
     });
     quantity.addEventListener('blur', () => {
         quantity = buy[i].children[1];
-        if (parseInt(quantity.value) < 1) {
+        if (quantity.value < 1) {
             delete send[`${productid}`];
             hide(buy[i], "0px", "hidden");
             hide(add[i], "auto", "");
