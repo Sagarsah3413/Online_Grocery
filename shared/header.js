@@ -45,12 +45,14 @@ search.addEventListener('input', () => {
     }
 
     xhr.open('GET', `../shared/autosuggest.php?value=${search.value}`, true);
+
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             json = JSON.parse(xhr.responseText);
             console.log(json);
+
             for (let i = 0; i < 4; i++) {
                 getter = suggestion.children[i].firstElementChild;
                 if (json[i] == undefined) {

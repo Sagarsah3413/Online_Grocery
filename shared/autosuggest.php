@@ -5,6 +5,8 @@ require_once 'database.php';
 if(isset($_GET['value']))
 {
     $value = $_GET['value'];
+    // echo $value;
+    // return;
     $query = "SELECT * FROM `products` WHERE `product name` LIKE '%$value%';";
     $data = $dbconnection -> query($query);
     $iterate = $data -> num_rows;
