@@ -336,6 +336,11 @@ div#search ul {
 
 div#search ul li {
     margin: 0px;
+    display: none;
+}
+
+div#search ul li::marker {
+    display: none;
 }
 
 div#search ul li a {

@@ -1,12 +1,6 @@
 <?php
 
 require_once 'database.php';
-// echo 'hered';
-// if(isset($_SERVER['Content-type']) && $_SERVER['Content-type'] == 'application/x-www-form-urlencoded')
-// {
-//     echo "here";
-//     return;
-// }
 
 if(isset($_GET['value']))
 {
@@ -27,6 +21,7 @@ if(isset($_GET['value']))
             $suggestion[] = $row['product name'];
         }
     };
+    $dbconnection -> close();
     echo json_encode($suggestion);
 }
 ?>

@@ -1,11 +1,13 @@
 <?php
     $sharedfolder='../shared/';
     require_once '../shared/database.php';
+    $accept = 0;
     if(isset($_GET['value']) && !empty($_GET['value']))
     {
         $value = $_GET['value'];
         $query = "SELECT * FROM `products` WHERE `product name` LIKE '%$value%';";
         $data = $dbconnection -> query($query);
+        $accept = 1;
     }
 ?>
 <!DOCTYPE html>
@@ -21,6 +23,7 @@
     <?php require_once '../shared/header.php' ?>
     <div>
         <?php
+        if($accept) {
         while($row = $data -> fetch_assoc()) {
         ?>
         <div class='items'> 
@@ -42,8 +45,8 @@
                 </p>
             </div>
         </div>
-        <?php } ?>
-        ?>
+        <?php }}; $dbconnection -> close();?>
+        
     </div>
 </body>
     <script src="search.js"></script>

@@ -27,9 +27,16 @@ window.addEventListener('resize', () => {
 });
 
 suggestion = search.parentElement.lastElementChild;
-initsearch.href += encodeURI(search.value);
-search.addEventListener('input', () => {
+console.log(encodeURI(search.value));
+search.value = '';
+
+initsearch.addEventListener('click', () => {
+    console.log(encodeURI(search.value));
     initsearch.href += encodeURI(search.value);
+
+});
+
+search.addEventListener('input', () => {
 
     if (search.value.length >= 3)
         suggestion.style.display = 'block';
@@ -45,9 +52,15 @@ search.addEventListener('input', () => {
         if (xhr.readyState == 4) {
             json = JSON.parse(xhr.responseText);
             console.log(json);
-            for (let i = 0; i < json.length; i++) {
+            for (let i = 0; i < 4; i++) {
                 getter = suggestion.children[i].firstElementChild;
-                getter.innerHTML = json[i];
+                if (json[i] == undefined) {
+                    getter.parentElement.style.display = 'none';
+                } else {
+                    getter.innerHTML = json[i];
+                    getter.parentElement.style.display = 'block';
+
+                }
                 getter.href += `../search/search.php?value=${encodeURI(json[i])}`;
             }
 
