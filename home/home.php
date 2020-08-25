@@ -245,4 +245,6 @@
 </body>
 <script src="home.js"></script>
 <!-- <script src="../shared/ajax.js"></script> -->
+<script src="../shared/slider.js"></script>
+<script src="../shared/add.js"></script>
 </html>

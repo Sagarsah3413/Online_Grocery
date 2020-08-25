@@ -58,4 +58,5 @@
 </body>
 <script src="cart.js" defer></script>
 <script src="../shared/ajax.js" defer></script>
+<script src="../shared/slider.js"></script>
 </html>
