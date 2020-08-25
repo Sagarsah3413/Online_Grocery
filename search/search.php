@@ -23,8 +23,8 @@
 </head>
 <body>
     <?php require_once '../shared/header.php' ?>
-    <div class="product">
-
+    <div id="product">
+        <h3>search results</h3>
         <div class="grid">
             <?php
             if($accept) {
@@ -35,7 +35,7 @@
                     <img class="plus" src='../home/images/down.png' alt='product pic'>
                 </div>
                 <h4><?php echo $row['product name']; ?></h4>
-                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                 <div class="cart" id="<?php echo $row['productid'] ?>">
                     <article>
                         <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
