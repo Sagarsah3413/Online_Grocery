@@ -25,15 +25,16 @@ tot.innerHTML = sum;
 
 let plus = document.querySelectorAll('.plus');
 let minus = document.querySelectorAll('.minus');
-let input, each;
+let input, each, held;
 // console.log(minus);
 let bat = document.querySelectorAll('tr');
 str = divsArr = [].slice.call(bat);
 str.shift();
 
-
 function up(i) {
     each = str[i].lastElementChild.lastElementChild;
+    held = parseInt(input.value);
+    input.value = held;
     each.innerHTML = Number(each.innerHTML) - ((Number(fav[prop[i]].quantity) - Number(input.value)) * Number(fav[prop[i]].rate));
     tot.innerHTML = Number(tot.innerHTML) - ((Number(fav[prop[i]].quantity) - Number(input.value)) * Number(fav[prop[i]].rate));
     fav[prop[i]].quantity = input.value;
@@ -44,7 +45,6 @@ for (let i = 0; i < plus.length; i++) {
         input = plus[i].parentElement.children[1];
         up(i);
         sessionStorage.setItem("fav", JSON.stringify(fav));
-        document.getElementById("index").innerHTML=Object.keys(fav).length;
     });
     input.addEventListener('blur', () => {
         input = plus[i].parentElement.children[1];
@@ -53,7 +53,6 @@ for (let i = 0; i < plus.length; i++) {
             car.children[i + 1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
-        document.getElementById("index").innerHTML=Object.keys(fav).length;
 
     });
     plus[i].addEventListener('click', () => {
@@ -73,17 +72,5 @@ for (let i = 0; i < plus.length; i++) {
             car.children[i + 1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
-        document.getElementById("index").innerHTML=Object.keys(fav).length;
     });
-}
-
-let quantize = document.getElementsByClassName('quantize');
-
-let held;
-for (let i = 0; i < quantize.length; i++) {
-
-    quantize[i].addEventListener('input', () => {
-        held = parseInt(quantize[i].value);
-        quantize[i].value = held;
-    })
 }
