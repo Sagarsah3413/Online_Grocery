@@ -1,6 +1,7 @@
 //variable list
 let container = document.querySelector('#slider');
 let images = document.querySelectorAll('#slider div');
+console.log(images);
 let prev = document.getElementById('prev');
 let next = document.getElementById('next');
 let count = 1;
