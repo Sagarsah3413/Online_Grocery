@@ -9,9 +9,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="groceries.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
+    <link rel="stylesheet" href="../stylesheet/product.css">
     <title>Groceries</title>
 </head>
 <body>

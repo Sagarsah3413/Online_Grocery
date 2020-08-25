@@ -1,20 +1,3 @@
-body {
-    background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
-}
-
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-* h1,
-* h2,
-* h3,
-* h4,
-* h5 {
-    font-weight: normal;
-}
-
 #product {
     margin-top: 7px;
 }
@@ -33,12 +16,6 @@ div#product section {
     margin-top: 5%;
 }
 
-div#product h3 {
-    text-transform: uppercase;
-    font-size: 40px;
-    text-align: center;
-    padding-top: 7%;
-}
 
 div#product div.groceries div.allsub {
     padding: 2%;
@@ -103,16 +80,5 @@ div#product div.vegetables h3 {
     font-size: 30px;
     text-align: center;
     padding-top: 5%;
-}
-
-
-
-@media only screen and (max-width:730px) {
-    #slider {
-        height: 400px;
-    }
-    div#image {
-        height: 400px;
-    }
 }
 
