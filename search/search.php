@@ -21,7 +21,7 @@
 </head>
 <body>
     <?php require_once '../shared/header.php' ?>
-    <div>
+    <div class="grid">
         <?php
         if($accept) {
         while($row = $data -> fetch_assoc()) {
