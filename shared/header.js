@@ -61,7 +61,7 @@ search.addEventListener('input', () => {
                     getter.parentElement.style.display = 'block';
 
                 }
-                getter.href += `../search/search.php?value=${encodeURI(json[i])}`;
+                getter.href = `../search/search.php?value=${encodeURI(json[i])}`;
             }
 
         };
