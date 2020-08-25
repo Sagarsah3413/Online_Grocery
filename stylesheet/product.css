@@ -60,7 +60,7 @@ div.grid div.items p span.cross {
     margin-left: 5%;
 }
 
-div#product div.grid div.items img {
+div.grid div.items img {
     height: auto;
     width: 80%;
 }
@@ -78,8 +78,7 @@ div.grid div.items div.cart p {
     align-items: center;
     cursor: pointer;
 }
-
-div#product div.grid div.items div.cart p img {
+div.grid div.items div.cart p img {
     height: 30px;
     width: 30px;
 }
