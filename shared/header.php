@@ -12,12 +12,13 @@
                 <div class="hits"><span class="sidemenu"><a href="<?php echo $sharedfolder; ?>../home/home.php">home</a></span> <span id="close"><span class="one"></span><span class="two"></span> </span></div>
                 <div><span class="sidemenu dropdown">grocery</span>
                     <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">snacks & drinks</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">rice, pulses & grains</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">Oils, masala & salt</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">aata, sooji, besan & maida</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">dry fruits</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">tea, coffee & sugar</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('all') ?>">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('snacks & drinks') ?>">snacks & drinks</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('rice, pulses & grains') ?>">rice, pulses & grains</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('oils, masala & salt') ?>">Oils, masala & salt</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan & maida') ?>">aata, sooji, besan & maida</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('dry fruits') ?>">dry fruits</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('tea, coffee & sugar') ?>">tea, coffee & sugar</a></li>
                     </ul>
                 </div>
                 <div><span class="sidemenu dropdown">fruits</span>

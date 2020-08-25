@@ -59,7 +59,7 @@ div.grid div.items p span.cross {
 
 div#product div.grid div.items img {
     height: auto;
-    width: auto;
+    width: 80%;
 }
 
 div.grid div.items div.img:hover {
@@ -76,7 +76,7 @@ div.grid div.items div.cart p {
     cursor: pointer;
 }
 
-div#product div.grid div.items div.cart img {
+div#product div.grid div.items div.cart p img {
     height: 30px;
     width: 30px;
 }
