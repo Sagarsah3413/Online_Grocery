@@ -12,40 +12,15 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
+
     <title>homepage</title>
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
     <div id="product">
-        <!-- <div id="search">
-            <input type="text">
-            <span><img src="images/search.png" alt=""></span>
-        </div> -->
-        <div id="image">
-            <i id="prev">
-                <img src="images/img4.png" width="50px" alt="">
-            </i>
-            <i id="next">
-                <img src="images/img5.png" width="50px" alt="">
-            </i>
-            <div id="slider">
-                <div class="img1">
-                    <p><a href="../groceries/groceries.php">add to cart</a></p>
-                </div>
-                <div class="img2">
-                    <p> <a href="../fruits/fruits.php">buy now</a></p>
-                </div>
-                <div id="img3">
-                    <p><a href="../vegetables/vegetables.php">free home delievery</a></p>
-                </div>
-                <div class="img1">
-                    <p><a href="../groceries/groceries.php">add to cart</a></p>
-                </div>
-                <div class="img2">
-                    <p><a href="../fruits/fruits.php">buy now</a></p>
-                </div>
-            </div>
-        </div>
+        
+        <?php require_once '../shared/slider.php' ?>
+
         <h3>groceries</h3>
         <div class="groceries">
             <div class="allsub">
@@ -81,7 +56,7 @@
                         <img class="plus"src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img class="plus" src="images/minus.png" alt=""></span>
@@ -116,7 +91,7 @@
                         <img class="plus" src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img class="plus" src="images/minus.png" alt=""></span> 
@@ -151,7 +126,7 @@
                         <img src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img src="images/minus.png" alt=""></span>
@@ -187,7 +162,7 @@
                         <img class="plus" src='../home/images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span> 
@@ -222,7 +197,7 @@
                         <img class="plus" src='../home/images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span> 
