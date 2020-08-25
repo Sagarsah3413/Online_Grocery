@@ -15,14 +15,20 @@
 <body>
 <?php require_once '../shared/header.php'; ?>
     <h1>we the <span>team</span></h1>
-    <div class="we">
+    <div class="team">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis suscipit reprehenderit voluptas vel. Accusantium qui nesciunt eaque officia unde dolores necessitatibus blanditiis quam in? Quo omnis deleniti ad repellendus cupiditate!
         </p>
     </div>
     <div class="sell">
-        <div class="digital"></div>
-        <div class="platform"></div>
+        <div class="digital">
+            <h2>be a part of digital evolution</h2>
+            <p>as we see, online platforms are the best ways of selling your products in 21st century. so follow the trendd and be the part of this global digital evolution.</p>
+        </div>
+        <div class="platform">
+            <h2>add your shops to our platform</h2>
+            <p>We are providing you with the platform where you can collaborate your shop with us and can sell your online and increase your nunmber of customers. </p>
+        </div>
     </div>
 
     <div class="join">Join us</div>
@@ -51,18 +57,6 @@
                 <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
                 <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
                 <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
-            </div>  
-        </div>
-        <div class="we">
-            <div class="icon">
-                <img src="../home/images/git.png" width="38%" alt="">
-            </div>
-            <div class="git">
-                <h4 style="text-transform:uppercase;  ">@Quasilius-Starlord</h4>
-                <h4 style="text-transform:uppercase;  ">@Astrosiddhartha</h4>
-                <h4 style="text-transform:uppercase;  ">@Ratan206thk</h4>
-                <h4 style="text-transform:uppercase;  ">@kshitij-cell</h4>
-                <h4 style="text-transform:uppercase;  ">@kshitij-cell</h4>
             </div>  
         </div>
     </div>
