@@ -188,5 +188,6 @@
     </div>
     <?php require_once'../shared/footer.php'; ?>
 </body>
-<script src="groceries.js"></script>
+<script src="../shared/add.js"></script>
+<script src="../shared/slider.js"></script>
 </html>

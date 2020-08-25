@@ -51,5 +51,5 @@
         
     </div>
 </body>
-    <script src="search.js"></script>
+    <script src="../shared/add.js"></script>
 </html>
