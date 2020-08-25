@@ -1,39 +1,39 @@
-let xhr = new XMLHttpRequest();
+let ajax = new XMLHttpRequest();
 1
 let content = fav;
 let web = 'http://localhost/',
     id = [],
-    json, data, img, identity;
+    retrive, data, img, identity;
 let array = prop;
 console.log(array);
 for (let i = 0; i < array.length; i++) {
     id.push(content[array[i]].productid);
 };
 
-xhr.open('POST', 'retrieve.php', true);
-xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+ajax.open('POST', 'retrieve.php', true);
+ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
 
 
-xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
+ajax.onreadystatechange = function() {
+    if (ajax.readyState === 4) {
         data = document.querySelectorAll('td img');
-        if (!xhr.responseText) {
-            json = [];
+        if (!ajax.responseText) {
+            retrive = [];
         } else {
-            json = JSON.parse(xhr.responseText);
+            retrive = JSON.parse(ajax.responseText);
         }
 
 
         for (let i = 0; i < data.length; i++) {
             identity = data[i].parentElement.id;
 
-            if (json[identity] !== null) {
-                // if (json[identity] === null)
+            if (retrive[identity] !== null) {
+                // if (retrive[identity] === null)
 
-                data[i].src = `${web}productimg/${json[identity]}`;
+                data[i].src = `${web}productimg/${retrive[identity]}`;
             } else {
-                console.log('src val', json[identity]);
+                console.log('src val', retrive[identity]);
                 data[i].src = '';
                 console.log(data[i]);
                 data[i].style.display = 'none';
@@ -42,7 +42,7 @@ xhr.onreadystatechange = function() {
         };
     };
 };
-xhr.send(JSON.stringify(id));
+ajax.send(JSON.stringify(id));
 
 
 let carticon = document.querySelector('#carticon img');

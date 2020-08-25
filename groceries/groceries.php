@@ -17,6 +17,7 @@
 <body>
     <?php require_once'../shared/header.php'; ?>
     <div id="product">
+        <?php require_once '../shared/slider.php' ?>
         <h3>Snacks & Drinks</h3>
         <div class="grid">
             <?php

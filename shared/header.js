@@ -33,7 +33,6 @@ search.value = '';
 initsearch.addEventListener('click', () => {
     console.log(encodeURI(search.value));
     initsearch.href += encodeURI(search.value);
-
 });
 
 search.addEventListener('input', () => {

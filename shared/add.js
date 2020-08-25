@@ -9,7 +9,7 @@ let send = new Object;
 if (sessionStorage.getItem('fav') != null)
     send = JSON.parse(sessionStorage.getItem('fav'));
 let buy = document.querySelectorAll("div.grid div.items div.cart article");
-let plus, minus, quantity,held;
+let plus, minus, quantity, held;
 let add = document.querySelectorAll("div.grid div.items div.cart p");
 let cart = document.querySelectorAll("div.items");
 
