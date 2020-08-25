@@ -305,8 +305,13 @@ div#search input {
     width: 90%;
     font-size: 25px;
     padding-left: 3px;
-    color: rgb(241, 18, 18);
+    color: rgb(250, 101, 1);
     background-color: rgb(235, 232, 228);
+}
+
+*:focus
+{
+    outline: none;
 }
 
 div#search span {

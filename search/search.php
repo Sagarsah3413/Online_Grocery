@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="search.css">
-    <title>Document</title>
+    <title>search</title>
 </head>
 <body>
     <?php require_once '../shared/header.php' ?>
@@ -32,7 +32,7 @@
             </div>
             <h4><?php echo $row['product name']; ?></h4>
             <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
-            <div class='cart' id="<?php echo $row['productid'] ?>">
+            <div class="cart" id="<?php echo $row['productid'] ?>">
                 <article>
                     <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
                     Quantity 
