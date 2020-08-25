@@ -47,9 +47,9 @@ for (let i = 0; i < buy.length; i++) {
     quantity = buy[i].children[1];
     quantity.addEventListener('input', () => {
         quantity = buy[i].children[1];
-        held = parseInt(quantity.value);
-        quantity.value = parseInt(quantity.value);
-        send[`${productid}`].quantity = parseInt(quantity.value);
+        held= parseInt(quantity.value);
+        quantity.value= held;
+        send[`${productid}`].quantity = held;
         sessionStorage.setItem("fav", JSON.stringify(send));
         document.getElementById("index").innerHTML = Object.keys(send).length;
     });

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
+    <link rel="stylesheet" href="../stylesheet/product.css">
 
     <title>homepage</title>
 </head>
