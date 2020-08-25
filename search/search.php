@@ -4,9 +4,11 @@
     $accept = 0;
     if(isset($_GET['value']) && !empty($_GET['value']))
     {
-        $value = $_GET['value'];
+        
+        $value = $dbconnection -> real_escape_string($_GET['value']);
         $query = "SELECT * FROM `products` WHERE `product name` LIKE '%$value%';";
         $data = $dbconnection -> query($query);
+    
         $accept = 1;
     }
 ?>

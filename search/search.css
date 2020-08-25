@@ -3,47 +3,46 @@
     padding: 0px;
 }
 
-
- div.items {
+div.items {
     padding: 2% 2% 0% 2%;
     background-color: bisque;
 }
 
- div.items h4 {
+div.items h4 {
     padding: 2%;
     font-size: 20px;
     text-transform: capitalize;
     overflow-wrap: break-word;
 }
 
- div.items p {
+div.items p {
     font-weight: bolder;
     margin: 1% 2%;
 }
 
-  div.items p {
+div.items p {
     letter-spacing: 1px;
 }
 
- div.items p span.cross {
+div.items p span.cross {
     font-weight: normal;
     text-decoration-line: line-through;
     text-decoration-color: red;
     margin-left: 5%;
 }
 
-  div.items img {
+div.items img {
     height: 128px;
     width: 128px;
 }
 
- div.items div.img:hover {
+div.items div.img:hover {
     transform: scale(1.1);
     transition: 300ms;
     overflow: hidden;
 }
 
- div.items div.cart p {
+div.items div.cart p {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -51,18 +50,18 @@
     cursor: pointer;
 }
 
-  div.items div.cart img {
+div.items div.cart img {
     height: 30px;
     width: 30px;
 }
 
- div.items div.cart p:hover {
+div.items div.cart p:hover {
     transform: scale(1.1);
     transition: 300ms;
     cursor: pointer;
 }
 
- div.items div.cart article {
+div.items div.cart article {
     user-select: none;
     display: flex;
     flex-direction: row;
@@ -70,22 +69,22 @@
     align-items: center;
 }
 
- div.items div.cart article span.control {
+div.items div.cart article span.control {
     display: inline-block;
     margin: 0px 8px;
 }
 
- div.items div.cart article span.control:hover {
+div.items div.cart article span.control:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
- div.items article span {
+div.items article span {
     display: inline-block;
     margin-left: 6px;
 }
 
- div.items article input {
+div.items article input {
     margin: auto 2%;
     font-size: 21px;
     line-height: 26px;
@@ -93,4 +92,20 @@
     border-width: 0px;
     text-align: center;
     width: 2em;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
