@@ -39,12 +39,12 @@
             <div class="icon">
                 <img src="../home/images/contact icon.png" alt="">
             </div>
-            <div>
-                <h4>+92-302-000-0000</h4>
-                <h4>+92-302-000-0000</h4>
-                <h4>+92-302-000-0000</h4>
-                <h4>+92-302-000-0000</h4>
-                <h4>+92-302-000-0000</h4>
+            <div id="num">
+                <h4>+977-9819792760</h4>
+                <h4>+977-9819792760</h4>
+                <h4>+977-9819792760</h4>
+                <h4>+977-9819792760</h4>
+                <h4>+977-9819792760</h4>
             </div>  
         </div>
         <div class="we">
@@ -52,11 +52,11 @@
                 <img src="../home/images/mail icon.png" alt="">
             </div>
             <div>
-                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
-                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
-                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
-                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
-                <h4 style="text-transform:uppercase;  ">www.elearning.com</h4>
+                <h4>rahulanand2073@gmail.com</h4>
+                <h4>kshitijkanth2000@gmail.com</h4>
+                <h4>joysen833@gmail.com</h4>
+                <h4>ratan206thk@gmail.com</h4>
+                <h4>astrosiddhartha.64@gmail.com</h4>
             </div>  
         </div>
     </div>
