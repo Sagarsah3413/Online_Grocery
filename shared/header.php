@@ -42,9 +42,9 @@
                 </div>
                 <div><span class="sidemenu dropdown">health and care</span>
                     <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php">personal care products</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php">baby care products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('all') ?>">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('personal care products') ?>">personal care products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('baby care products') ?>">baby care products</a></li>
                     </ul>
                 </div>
                 <div><span class="sidemenu dropdown"> <a href="../contact us/contact.php">contact us</a> </span></div>
