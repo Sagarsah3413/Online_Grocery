@@ -2,11 +2,12 @@
     margin-top: 7px;
 }
 
-div.groceries img,
+
+/* div.groceries img,
 div.fruits img {
     height: 90%;
     width: 90%;
-}
+} */
 
 div#product section {
     width: 70%;
@@ -17,24 +18,29 @@ div#product section {
 }
 
 div#product div.groceries div.allsub {
-    padding: 2%;
+    padding: 3%;
     text-align: center;
 }
 
 div#product div.groceries div.allsub img,
 div.fruits div.all img {
-    border-radius: 10px;
     cursor: pointer;
+    filter: blur(2px);
+    /* filter:; */
+    width: 100%;
+    height: 100%;
 }
 
 div#product div.groceries div.allsub {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(357px, 2fr));
+    grid-gap: 75px;
     text-align: center;
 }
 
 div#product div.groceries div.allsub div.sub {
+    border-radius: 10px;
+    border: 1px solid rgb(28, 115, 165);
     position: relative;
 }
 
@@ -44,7 +50,8 @@ div#product div.groceries div.allsub div.sub span {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 2em;
+    color: rgb(12, 4, 19);
     text-transform: capitalize;
 }
 
