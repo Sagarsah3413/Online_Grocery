@@ -25,7 +25,7 @@
         <h3>groceries</h3>
         <div class="groceries">
             <div class="allsub">
-                <div class="sub"><img src="images/snacks2.jpg" alt="rice">
+                <div class="sub"><img src="images/snacks.png" alt="rice">
                     <span class="text">snacks & drinks</span>
                 </div>
                 <div class="sub"> <img src="images/rice.jpg" alt="rice">
