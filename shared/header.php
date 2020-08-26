@@ -28,16 +28,17 @@
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">non citrus fruit</a></li>
                     </ul>
                 </div>
-                <div><span class="sidemenu dropdown">vegetables</span>
-                    <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">pulses</a></li>
-                    </ul>
+                <div>
+                    <span class="sidemenu dropdown">
+                        <a href="<?php echo $sharedfolder; ?>../vegetables/vegetables.php?subcat=<?php echo urlencode('all') ?>">vegetables</a>  
+                    </span>
                 </div>
                 <div><span class="sidemenu dropdown">household and appliances</span>
                     <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php">pulses</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('all') ?>">view all</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('cleaning products') ?>">cleaning products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('pooja products') ?>">pooja products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('home appliances') ?>">home appliances</a></li>
                     </ul>
                 </div>
                 <div><span class="sidemenu dropdown">health and care</span>

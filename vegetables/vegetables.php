@@ -2,35 +2,36 @@
     require_once '../shared/database.php';
     $sharedfolder='../shared/';
     $offset = 0;
-    $type = ['grocer','fruit','vegetable'];
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheet/product.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
-    <link rel="stylesheet" href="../stylesheet/product.css">
-    <title>Vegetables</title>
+    <title>Groceries</title>
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
     <div id="product">
-        <?php require_once '../shared/slider.php' ?>
-        <h3>Subdivision if there</h3>
+        <?php require_once '../shared/slider.php'; ?>
+
+        <?php
+        $query = "SELECT * FROM `products` WHERE `subcatid` = '9';";  
+        $data = $dbconnection->query($query);
+        ?>
+        <h3>vegetables</h3>
         <div class="grid">
-            <?php
-            $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[0] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
-            $data = $dbconnection -> query($query);
-            while($row = $data -> fetch_assoc()) {
-                ?>
-            <div class='items'> 
+            <?php while($row = $data->fetch_assoc()){ ?>
+            <div class="items">
                 <div>
-                    <img class="plus"src='../home/images/down.png' alt='product pic'>
+                    <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
                 </div>
                 <h4><?php echo $row['product name']; ?></h4>
-                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <span class="cross">Rs <?php echo $row['mprice']; ?></span></p>
+                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                 <div class='cart' id="<?php echo $row['productid'] ?>">
                     <article>
                         <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
@@ -45,7 +46,7 @@
                 </div>
             </div>
             <?php } ?>
-        </div>
+        </div>  
     </div>
     <?php require_once'../shared/footer.php'; ?>
 </body>
