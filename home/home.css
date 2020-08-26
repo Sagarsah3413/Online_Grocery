@@ -66,7 +66,7 @@ div#product div.vegetables div.veggies {
     align-items: center;
 }
 
-div#product div.vegetables img {
+div#product div.vegetables div.vege img {
     border-radius: 10px;
     cursor: pointer;
     width: 95%;
