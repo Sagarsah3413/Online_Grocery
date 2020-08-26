@@ -44,7 +44,7 @@
             </div>
         </div>
         <div id="ending">
-            <div class="move">2020 Copyright Company Name. All rights reserved.</div>
+            <div class="move">2020 Copyright Online Bazzar. All rights reserved.</div>
             <div class="move" style="text-transform: capitalize;"> <a href="../contact us/contact.php"> contact us for further colabaration</a></div>
         </div>
     </footer>

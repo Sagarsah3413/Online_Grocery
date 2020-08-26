@@ -28,7 +28,7 @@ e-commerce platform where everything can be bought online just with a smartphone
         </div>
         <div class="platform">
             <h2>add your shops to our platform</h2>
-            <p>We are providing you with the platform where you can collaborate your shop with us and can sell your online and increase your nunmber of customers. </p>
+            <p>We are providing you with the platform where you can collaborate your shop with us and can sell your products online and increase your nunmber of customers. </p>
         </div>
     </div>
 
