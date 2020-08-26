@@ -34,7 +34,7 @@ body div.grid {
 
 div.grid div.items {
     padding: 2% 2% 0% 2%;
-    background-color: bisque;
+    background-color: rgb(252, 252, 252);
 }
 
 div.grid div.items h4 {

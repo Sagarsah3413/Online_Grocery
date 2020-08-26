@@ -3,10 +3,8 @@
             <div id="logo">
                     <h2><span>company</span> logo</h2>
                 <br><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                <p>
+                At onlinebazzar we  had a variety of premium quality products (1000+)  at  numerous discounted offer. So, shop online here and get it at  your doorsteps within no time.
                 </p>
                 <br>
                 <img src="<?php echo $sharedfolder ?>../Images/social media icons.png" alt="social media">
