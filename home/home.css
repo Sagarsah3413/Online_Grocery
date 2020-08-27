@@ -16,7 +16,8 @@ div#product div.groceries div.allsub {
 }
 
 div#product div.groceries div.allsub img,
-div.fruits div.all img,div#product div.vegetables div.vege img {
+div.fruits div.all img,
+div#product div.vegetables div.vege img {
     cursor: pointer;
     /* filter: blur(1px); */
     width: 100%;
@@ -47,11 +48,13 @@ div#product div.groceries div.allsub div.sub span {
     width: 80%;
 }
 
-div#product div.fruits div.all,div#product div.vegetables div.veggies{
+div#product div.fruits div.all,
+div#product div.vegetables div.veggies {
     text-align: center;
     padding: 3%;
     display: grid;
-    grid-template-columns: ;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
 }
 
 div#product div.groceries h3,

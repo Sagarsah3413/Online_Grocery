@@ -156,7 +156,7 @@ input[type=number] {
         font-size: 18px;
     }
     body div.grid {
-        grid-gap: 9px;
+        grid-gap: 16px;
     }
     div.grid div.items div.cart article {
         font-size: 18px;
@@ -185,12 +185,38 @@ input[type=number] {
 
 @media only screen and (max-width:380px) {
     body div.grid {
-        padding: 13%;
+        padding: 2%;
+    }
+    body div.grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    div.grid div.items div.cart p {
+        font-size: 12px;
     }
 }
 
-@media only screen and (max-width:300px) {
+@media only screen and (max-width:360px) {
     body div.grid {
-        padding: 7%;
+        /* padding: 7%; */
+    }
+    div.grid div.items img {
+        height: auto;
+        width: 50%;
+    }
+    div.grid div.items h4 {
+        font-size: 9px;
+    }
+    div.grid div.items p {
+        font-size: 12px;
+    }
+    div.grid div.items p {
+        font-size: 12px;
+    }
+    body div.grid {
+        padding: 0;
+        margin: 0px;
+    }
+    div.grid div.items {
+        width: 76%;
     }
 }
