@@ -197,18 +197,12 @@ input[type=number] {
 }
 
 @media only screen and (max-width:370px) {
-    body div.grid {
-        /* padding: 7%; */
-    }
     div.grid div.items img {
         height: auto;
         width: 50%;
     }
     div.grid div.items h4 {
-        font-size: 9px;
-    }
-    div.grid div.items p {
-        font-size: 12px;
+        font-size: 15px;
     }
     div.grid div.items p {
         font-size: 12px;
