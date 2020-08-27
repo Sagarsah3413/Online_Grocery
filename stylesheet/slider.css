@@ -26,9 +26,9 @@ div#image {
     align-items: center;
     height: 100%;
     font-size: 50px;
-    font-weight: bolder;
+    font-weight: 400;
     letter-spacing: 2px;
-    color: rgb(8, 8, 8);
+    color:#0408ff;
     text-transform: capitalize;
 }
 
