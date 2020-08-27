@@ -34,6 +34,7 @@ body div.grid {
 
 div.grid div.items {
     padding: 2% 2% 0% 2%;
+    position: relative;
     background-color: rgb(252, 252, 252);
 }
 
@@ -78,6 +79,7 @@ div.grid div.items div.cart p {
     align-items: center;
     cursor: pointer;
 }
+
 div.grid div.items div.cart p img {
     height: 30px;
     width: 30px;
@@ -120,6 +122,8 @@ div.grid div.items article input {
     border-width: 0px;
     text-align: center;
     width: 2em;
+    background-color: rgb(250, 101, 1);
+    color: aliceblue;
 }
 
 

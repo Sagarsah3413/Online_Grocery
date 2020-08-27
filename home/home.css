@@ -18,7 +18,7 @@ div#product div.groceries div.allsub {
 div#product div.groceries div.allsub img,
 div.fruits div.all img,div#product div.vegetables div.vege img {
     cursor: pointer;
-    filter: blur(1px);
+    /* filter: blur(1px); */
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -26,7 +26,7 @@ div.fruits div.all img,div#product div.vegetables div.vege img {
 
 div#product div.groceries div.allsub {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(357px, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(357px, 1fr));
     grid-gap: 75px;
     text-align: center;
 }
@@ -44,6 +44,7 @@ div#product div.groceries div.allsub div.sub span {
     font-size: 2.8em;
     color: rgb(8, 6, 24);
     text-transform: capitalize;
+    width: 80%;
 }
 
 div#product div.fruits div.all,div#product div.vegetables div.veggies{
@@ -61,4 +62,40 @@ div#product div.vegetables h3 {
     text-transform: capitalize;
     font-size: 30px;
     text-align: center;
+}
+
+@media only screen and (max-width:876px) {
+    div#product div.groceries div.allsub {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 75px;
+        text-align: center;
+    }
+    div#product div.groceries div.allsub div.sub span {
+        font-size: 2.3em;
+    }
+    div#product div.groceries div.allsub {
+        grid-gap: 35px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    div#product div.groceries div.allsub div.sub span {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width:528px) {
+    div#product div.groceries div.allsub div.sub span {
+        font-size: 1.7em;
+    }
+    div#product div.groceries div.allsub {
+        grid-gap: 12px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    div#product div.groceries div.allsub div.sub span {
+        font-size: 1.4em;
+    }
 }

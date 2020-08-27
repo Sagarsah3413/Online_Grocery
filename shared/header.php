@@ -7,7 +7,7 @@
             <span></span>
             <span></span>
         </span>
-        <nav class="content" id="menu">
+        <nav class="content" id="menu" style="display: none;">
             <section class="relative">
                 <div class="hits"><span class="sidemenu"><a href="<?php echo $sharedfolder; ?>../home/home.php">home</a></span> <span id="close"><span class="one"></span><span class="two"></span> </span></div>
                 <div><span class="sidemenu dropdown">grocery</span>
@@ -69,7 +69,7 @@
             <span id="index">0</span>
             <img src="<?php echo $sharedfolder ?>../home/images/cart.png" alt="">
         </span>
-        <nav id="cartmenu">
+        <nav id="cartmenu" style="display: none;">
             <section>
                 <div id="closecartcont" class="hits">
                     <span id="closecart">
