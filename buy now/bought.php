@@ -50,7 +50,8 @@
     }
     echo $mailbody;
     mail($to,$subject,$mailbody,$header);
-    $total=60;
+    // $total=60;
+    
 ?>
 
 <!DOCTYPE html>
