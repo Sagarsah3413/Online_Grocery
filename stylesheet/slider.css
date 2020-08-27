@@ -2,7 +2,9 @@ div#image {
     position: relative;
     height: 502px;
     margin: auto;
+    margin: 3% auto;
     overflow: hidden;
+    width: 70%;
 }
 
 #slider {
@@ -64,13 +66,48 @@ div#image {
 #prev:hover {
     cursor: pointer;
     opacity: 1;
+    -moz-appearance: textfield;
 }
 
 @media only screen and (max-width:730px) {
     #slider {
-        height: 400px;
+        height: 390px;
     }
     div#image {
-        height: 400px;
+        height: 390px;
+    }
+    #slider div {
+        background-size: 100% 390px;
+    }    
+    #slider div p{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width:500px) {
+    #slider {
+        height: 280px;
+    }
+    div#image {
+        height: 280px;
+    }
+    #slider div {
+        background-size: 100% 280px;
+    }    
+    #slider div p{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:350px) {
+    #slider {
+        height: 200px;
+    }
+    div#image {
+        height: 200px;
+    }
+    #slider div {
+        background-size: 100% 200px;
+    }    
+    #slider div p{
+        font-size: 23px;
     }
 }
