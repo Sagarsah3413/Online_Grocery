@@ -2,7 +2,7 @@
     require_once '../shared/database.php';
     $sharedfolder='../shared/';
     $offset = 0;
-    $type = ['grocer','fruit','vegetable'];
+    $type = ['grocer','vegetable','household and appliances','health and care'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +61,7 @@
                         <img class="plus"src='images/down.png' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
-                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
+                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
                     <div class='cart' id="<?php echo $row['productid'] ?>">
                         <article>
                             <span class="control"><img class="plus" src="images/minus.png" alt=""></span>
@@ -78,41 +78,7 @@
                 <?php } ?>
             </div>
         </div>
-        <h3>fruits</h3>
-        <div class="fruits">
-            <div class="all">
-                <div class="fruit1"><img src="images/fruit1.jpg"  alt="fruits"></div>
-                <div class="fruit1"><img src="images/fruit2.jpg"  alt="fruits"></div>
-            </div>
-            <h3>our popular items</h3>
-            <div class="grid">
-                <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[0]' LIMIT 5;";
-                $data = $dbconnection -> query($query);
-                while($row = $data -> fetch_assoc()) {
-                    ?>
-                <div class='items'> 
-                    <div>
-                        <img class="plus" src='images/down.png' alt='product pic'>
-                    </div>
-                    <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article>
-                            <span class="control"><img class="plus" src="images/minus.png" alt=""></span> 
-                            Quantity 
-                            <input type="number" min="0" value="">
-                            <span class="control"><img class="plus" src="images/plus.png" alt=""></span>
-                        </article>
-                        <p>
-                            <img class="plus" src='images/cart.png' alt='cart'>
-                            <span class="addcart">Add To Cart</span>
-                        </p>
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
+        
         <h3>vegetables</h3>
         <div class="vegetables">
             <div class="veggies">
@@ -122,7 +88,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[0]' LIMIT 5;";
+                $query = "SELECT * FROM `products` WHERE `type`='$type[1]' LIMIT 5;";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -158,7 +124,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[0]' LIMIT 5;";
+                $query = "SELECT * FROM `products` WHERE `type`='$type[2]' LIMIT 5;";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -193,7 +159,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[0]' LIMIT 5;";
+                $query = "SELECT * FROM `products` WHERE `type`='$type[3]' LIMIT 5;";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
