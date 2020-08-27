@@ -48,7 +48,7 @@
                         <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('baby care products') ?>">baby care products</a></li>
                     </ul>
                 </div>
-                <div><span class="sidemenu"> <a href="../contact us/contact.php">contact us</a> </span></div>
+                <div><span class="sidemenu"> <a href="../about/about.php">About us</a> </span></div>
             </section>
         </nav>
     </div>
