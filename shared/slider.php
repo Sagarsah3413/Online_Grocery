@@ -2,15 +2,18 @@
 <div id="image">
     <style> 
         #slider div.img1 {
-            background-image: url(<?php echo $sharedfolder; ?>../home/images/img1.jfif);
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img4.jpeg);
         }
 
         #slider div.img2 {
-            background-image: url(<?php echo $sharedfolder; ?>../home/images/img2.jfif);
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img5.jpeg);
         }
 
         #slider div#img3 {
-            background-image: url(<?php echo $sharedfolder; ?>../home/images/img3.jfif);
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img6.jpeg);
+        }
+        #slider div#img4 {
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img1.jpeg);
         }
     </style>
     <i id="prev">
@@ -21,19 +24,22 @@
     </i>
     <div id="slider">
         <div class="img1">
-            <p><a href="../groceries/groceries.php">add to cart</a></p>
+            <p>place order</a></p>
         </div>
         <div class="img2">
-            <p> <a href="../fruits/fruits.php">buy now</a></p>
+            <p>welcome to onlinebazzar</a></p>
         </div>
         <div id="img3">
-            <p><a href="../vegetables/vegetables.php">free home delievery</a></p>
+            <p>now shop online</a></p>
+        </div>
+        <div id="img4">
+            <p>add to cart</a></p>
         </div>
         <div class="img1">
-            <p><a href="../groceries/groceries.php">add to cart</a></p>
+            <p>place order</a></p>
         </div>
         <div class="img2">
-            <p><a href="../fruits/fruits.php">buy now</a></p>
+            <p>welcome to onlinebazzar</a></p>
         </div>
     </div>
 </div>
