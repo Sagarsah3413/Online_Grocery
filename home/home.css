@@ -18,10 +18,8 @@ div#product div.groceries div.allsub {
 div#product div.groceries div.allsub img,
 div.fruits div.all img,
 div#product div.vegetables div.vege img {
-    cursor: pointer;
-    /* filter: blur(1px); */
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 10px;
 }
 
@@ -34,18 +32,35 @@ div#product div.groceries div.allsub {
 
 div#product div.groceries div.allsub div.sub {
     position: relative;
+    height: 90%;
 }
 
-div#product div.groceries div.allsub div.sub span {
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+figcaption.text {
     font-weight: 600;
-    font-size: 2.8em;
+    font-size: 2.5em;
     color: rgb(8, 6, 24);
+    height: 20%;
     text-transform: capitalize;
-    width: 80%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+figcaption.text a {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 32px;
+}
+
+.fortwo {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.forthree {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 div#product div.fruits div.all,
@@ -53,7 +68,6 @@ div#product div.vegetables div.veggies {
     text-align: center;
     padding: 3%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
 }
 
@@ -63,6 +77,12 @@ div#product div.vegetables h3 {
     text-transform: capitalize;
     font-size: 30px;
     text-align: center;
+}
+
+@media only screen and (max-width:1000px) {
+    .forthree {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media only screen and (max-width:876px) {
@@ -78,11 +98,17 @@ div#product div.vegetables h3 {
     div#product div.groceries div.allsub {
         grid-gap: 35px;
     }
+    figcaption.text a {
+        font-size: 29px;
+    }
 }
 
 @media only screen and (max-width:600px) {
     div#product div.groceries div.allsub div.sub span {
         font-size: 2em;
+    }
+    figcaption.text a {
+        font-size: 19px;
     }
 }
 
@@ -98,5 +124,8 @@ div#product div.vegetables h3 {
 @media only screen and (max-width:400px) {
     div#product div.groceries div.allsub div.sub span {
         font-size: 1.4em;
+    }
+    figcaption.text a {
+        font-size: 15px;
     }
 }

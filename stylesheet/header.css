@@ -408,6 +408,7 @@ div#search ul li:hover {
     div#search span img {
         width: 20px;
         height: 20px;
+        transform: translateY(18%);
     }
 }
 
