@@ -26,14 +26,13 @@ section form label {
     letter-spacing: 1px;
 }
 
-section form input
-{
+section form input {
     padding: 1%;
     width: 50%;
     color: rgb(0 39 121);
     border-radius: 0px;
     border-style: solid;
-    border-color: rgb(0,0,0);
+    border-color: rgb(0, 0, 0);
     font-size: 24px;
 }
 
@@ -126,9 +125,69 @@ h5 {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-::placeholder{
+
+::placeholder {
     font-size: 0.7em;
     padding-left: 5%;
     color: rgb(43, 59, 65);
     opacity: 0.8;
+}
+
+@media only screen and (max-width:1200px) {
+    section#body {
+        width: 50%;
+        margin: 0px;
+        margin: 0px auto;
+    }
+    section form input {
+        width: 90%;
+    }
+    h4.tq {
+        font-size: 56px;
+    }
+    h5 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    section#body {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:680px) {
+    h3.kind {
+        font-size: 32px;
+    }
+    section form label {
+        font-size: 24px;
+    }
+    h4.tq {
+        font-size: 40px;
+    }
+    h5 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    section#body {
+        width: 95%;
+    }
+    h4.tq {
+        font-size: 28px;
+    }
+    h5 {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    h4.tq {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 12px;
+    }
 }
