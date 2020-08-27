@@ -1,7 +1,7 @@
-<?php require_once '../shared/database.php'; ?><?php
-    if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
-        exit;
-    }
+<?php require '../shared/database.php'; ?><?php
+    // if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
+    //     exit;
+    // }
     
     $to = 'joysen833@gmail.com';
     $subject = 'My subject';
@@ -35,6 +35,39 @@
         $bill .= $row['price']*floatval($productquantity[$index]) . "\r\n";
         $index++;
     }
+    $totalsav = $total;
+    mysqli_close($dbconnection);
+    require '../shared/database.php';
+
+    $query = "SELECT * FROM `customer` WHERE `number`={$customer['number']}";
+    $query = "SELECT buying FROM customer WHERE `number`=1234567890;";
+    $data = $dbconnection -> query($query);
+    $row = $data -> fetch_assoc();
+
+    if($row['buying'] > 0 && $row['buying'] <= 3)
+    {
+        if($total > 999 && $total <= 1999)
+        {
+            $total-= 50;
+        }elseif($total > 1999)
+        {
+            $total-= 100;   
+        }
+        $freqinit = is_null(floatval($row['buying'])) ? 0 : floatval($row['buying']);
+        $freq = $freqinit + 1;
+        $index += floatval($row['quantity']);
+        $totalsav += floatval($row['total']);
+        $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$totalsav' WHERE `customer`.`customerid` = {$row['customerid']}; ";
+        $dbconnection -> query($query);
+        
+    }elseif($row['buying'] == null)
+    {
+        $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
+        $dbconnection -> query($query);        
+    }
+
+
+
     $bill .= "\r\n";
     $bill .= "Grand Total: $total" . "\r\n\r\n";
     $customer['product'] = $bill;
@@ -51,7 +84,9 @@
     echo $mailbody;
     mail($to,$subject,$mailbody,$header);
     // $total=60;
+
     
+
 ?>
 
 <!DOCTYPE html>
