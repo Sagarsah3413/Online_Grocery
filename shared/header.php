@@ -23,11 +23,6 @@
                 </div>
                 <div>
                     <span class="sidemenu dropdown">
-                        <a href="<?php echo $sharedfolder; ?>../fruits/fruits.php?subcat=<?php echo urlencode('all') ?>">Fruits</a>  
-                    </span>
-                </div>
-                <div>
-                    <span class="sidemenu dropdown">
                         <a href="<?php echo $sharedfolder; ?>../vegetables/vegetables.php?subcat=<?php echo urlencode('all') ?>">vegetables</a>  
                     </span>
                 </div>
