@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    color: wheat;
+}
+
+* h1,
+* h2,
+* h3,
+* h4,
+* h5 {
+    font-weight: 500;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+header {
+    width: 100%;
+    background-color: orangered;
+    height: 2em;
+}
+
+section {
+    margin: 90px auto;
+    border: 3px dashed rgb(139, 100, 100);
+    border-radius: 12px;
+    width: 60%;
+    padding: 80px;
+    text-align: center;
+    background-color: rgb(190, 135, 135);
+}
+
+section h1 {
+    margin: 30px 0px;
+}
+
+section h2 {
+    line-height: 47px;
+    color: #5de7e0ab;
+    font-size: 30px;
+}
+
+section div {
+    width: 30%;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(255, 0, 0, 0.658);
+    font-size: 2em;
+}
+
+section div:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+section div a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
