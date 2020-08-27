@@ -29,23 +29,41 @@
         <h3><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('all') ?>">groceries</a></h3>
         <div class="groceries">
             <div class="allsub">
-                <div class="sub"><img src="images/snacks.png" alt="rice">
-                    <span class="text"><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('snacks & drinks') ?>">snacks & drinks</a></span>
+                <div class="sub">
+                    <img src="images/snacks.png" alt="rice">
+                    <span class="text">
+                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('snacks & drinks') ?>">snacks & drinks</a>
+                    </span>
                 </div>
-                <div class="sub"> <img src="images/rice.jpg" alt="rice">
-                    <span class="text"><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('rice, pulses & grains') ?>">rice, pulses & grains</a></span>
+                <div class="sub"> 
+                    <img src="images/rice.jpg" alt="rice">
+                    <span class="text">
+                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('rice, pulses & grains') ?>">rice, pulses & grains</a>
+                    </span>
                 </div>
-                <div class="sub"> <img src="images/snacks1.jpg" alt="rice">
-                    <span class="text"><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('oils, masala & salt') ?>">oils, masala & salt</a></span>
+                <div class="sub"> 
+                    <img src="images/snacks1.jpg" alt="rice">
+                    <span class="text">
+                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('oils, masala & salt') ?>">oils, masala & salt</a>
+                    </span>
                 </div>
-                <div class="sub"> <img src="images/snacks1.jpg" alt="rice">
-                    <span class="text"><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan & maida') ?>">aata, sooji, besan & maida</a></span>
+                <div class="sub"> 
+                    <img src="images/snacks1.jpg" alt="rice">
+                    <span class="text">
+                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan & maida') ?>">aata, sooji, besan & maida</a>
+                    </span>
                 </div>
-                <div class="sub"><img src="images/snacks2.jpg" alt="rice">
-                    <span class="text"><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('dry fruits') ?>">dry fruits</a></span>
+                <div class="sub">
+                    <img src="images/snacks2.jpg" alt="rice">
+                    <span class="text">
+                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('dry fruits') ?>">dry fruits</a>
+                    </span>
                 </div>
-                <div class="sub"> <img src="images/rice.jpg" alt="rice">
-                    <span class="text"><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('tea, coffee & sugar') ?>">tea, coffee & sugar</a></span>
+                <div class="sub"> 
+                    <img src="images/rice.jpg" alt="rice">
+                    <span class="text">
+                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('tea, coffee & sugar') ?>">tea, coffee & sugar</a>
+                    </span>
                 </div>
             </div>
             <h3>our popular items</h3>
