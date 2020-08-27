@@ -25,7 +25,7 @@ div#product div.vegetables div.vege img {
 
 div#product div.groceries div.allsub {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(357px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 75px;
     text-align: center;
 }
