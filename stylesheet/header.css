@@ -104,6 +104,14 @@ header div.cart nav#cartmenu {
 .headtext {
     font-size: 2em;
 }
+.logo{
+    width: 20%;
+}
+.logo img{
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
 
 header div.cart nav#cartmenu section div#closecartcont span#closecart,
 header div.fill nav#menu span#close {

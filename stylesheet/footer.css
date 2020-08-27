@@ -91,39 +91,13 @@ div#footer div#logo img {
     margin-left: 6%;
     width: 60%;
 }
-/* 
-div#footer div#links {
-    width: 20%;
-    flex-direction: column;
-    justify-content: center;
-}
 
-div#footer div#links h3 {
-    font-size: 20px;
-}
-
-div#footer div#links ul li a {
-    margin-right: 20px;
-} */
-
-ul li {
-    list-style: none;
-    margin: 20px 2px;
-}
-
-ul li a {
-    text-decoration: none;
-    color: inherit;
-}
 
 div#footer div#contacts {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
-    /* align-items: center; */
     width: 30%;
-    /* height: 80%; */
 }
 
 div#footer div#contacts h3 {
@@ -138,7 +112,6 @@ div#footer div#contacts div.info {
     justify-content: left;
     align-items: center;
     font-weight: 600;
-    /* margin: 4%; */
 }
 
 div#footer div#contacts div.info div h3,
@@ -147,6 +120,11 @@ div#footer div#contacts div.info div h4.foot {
     color: whitesmoke;
     margin: 10% 0% 10% 10%;
 }
+/* .log img{
+    display: flex;
+    margin: auto;
+    width: 100%;
+} */
 
 @media only screen and (max-width:1100px) {
     footer {
@@ -190,10 +168,8 @@ div#footer div#contacts div.info div h4.foot {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        /* text-align: center; */
     }
     div#footer div#logo img {
-        /* margin-left: 6%; */
         width: 40%;
     }
     div#footer div#logo span {
@@ -216,7 +192,6 @@ div#footer div#contacts div.info div h4.foot {
         justify-content: space-between;
         align-items: center;
         width: 95%;
-        /* height: 80%; */
     }
     div#footer div#contacts h3 {
         align-self: center;

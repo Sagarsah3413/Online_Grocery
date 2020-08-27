@@ -47,7 +47,7 @@
     </div>
     
     
-    <div class="headtext">logo</div>
+    <div class="headtext logo"><a href="<?php echo $sharedfolder; ?>../home/home.php"><img src="../home/images/logo.png" alt=""></a></div>
     <div id="search">
         <input type="text">
         <span><a href="<?php echo $sharedfolder ?>../search/search.php?value=" id="initsearch"><img src="<?php echo $sharedfolder; ?>../home/images/search.png" alt=""></a></span>
