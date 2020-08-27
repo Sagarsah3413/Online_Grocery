@@ -156,7 +156,8 @@ input[type=number] {
         font-size: 18px;
     }
     body div.grid {
-        grid-gap: 16px;
+        grid-row-gap: 4px;
+        grid-column-gap: 3px;
     }
     div.grid div.items div.cart article {
         font-size: 18px;
@@ -188,14 +189,14 @@ input[type=number] {
         padding: 2%;
     }
     body div.grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
     }
     div.grid div.items div.cart p {
         font-size: 12px;
     }
 }
 
-@media only screen and (max-width:360px) {
+@media only screen and (max-width:370px) {
     body div.grid {
         /* padding: 7%; */
     }
@@ -213,10 +214,10 @@ input[type=number] {
         font-size: 12px;
     }
     body div.grid {
-        padding: 0;
+        padding: 10px 5px;
         margin: 0px;
     }
     div.grid div.items {
-        width: 76%;
+        width: 95%;
     }
 }
