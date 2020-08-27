@@ -44,7 +44,16 @@ function verify() {
         document.getElementById('loc').innerHTML = "Enter the Address!!!";
         return false;
     }
-
+    let sum=0;
+    for (let i = 0; i < index.length; i++) {
+        sum+=fav[index[i]].quantity * fav[index[i]].rate;
+    }    
+    console.log(sum);
+    if(sum<149)
+    {
+        document.getElementById('less').innerHTML = "Select the order amounting to atleast Rs.150!!!";
+        return false;
+    }
 
     for (let i = 0; i < index.length; i++) {
         productinput.push(fav[index[i]].productid);
