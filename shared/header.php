@@ -21,12 +21,10 @@
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('tea, coffee & sugar') ?>">tea, coffee & sugar</a></li>
                     </ul>
                 </div>
-                <div><span class="sidemenu dropdown">fruits</span>
-                    <ul>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">citrus fruits</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php">non citrus fruit</a></li>
-                    </ul>
+                <div>
+                    <span class="sidemenu dropdown">
+                        <a href="<?php echo $sharedfolder; ?>../fruits/fruits.php?subcat=<?php echo urlencode('all') ?>">Fruits</a>  
+                    </span>
                 </div>
                 <div>
                     <span class="sidemenu dropdown">

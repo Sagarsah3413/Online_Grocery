@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../stylesheet/product.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
-    <title>Groceries</title>
+    <title>Vegetables</title>
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
