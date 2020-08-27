@@ -14,9 +14,6 @@
     $productquantity = explode(',', $_POST['quantity']);
 
 
-    // for ($i=0; $i < $index; $i++) { 
-    //     # code...
-    // }
     
     $customer = [];
     $customer['name'] = 'Customer name is: ' . $_POST['name'];
@@ -53,5 +50,29 @@
     }
     echo $mailbody;
     mail($to,$subject,$mailbody,$header);
-    header('Location: ../home/home.php');
+    $total=60;
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bought.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <section>
+        <h1>Thank you for shopping with us.</h1>
+        <h1>Your order of Rs.<?php echo $total; ?> will be delivered to your doorsteps soon.</h1>
+        <h2>A coupon code has been activated on next 3 order <br/>
+            you will get Rs.50 off on order of Rs.999 and up <br/>
+            and Rs.110 off on order of Rs.1999 and up.
+        </h2>
+        <div><a href="../home/home.php">Back to home</a></div>
+    </section>
+</body>
+</html>
