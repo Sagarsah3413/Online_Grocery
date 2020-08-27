@@ -1,4 +1,4 @@
-let navigation = document.getElementById('menu');
+let navigation = document.getElementById('menu'); //here
 let sidemenu = document.querySelector('#menu section');
 let navigationstyle = navigation.style;
 
@@ -11,7 +11,7 @@ navigationstyle.width = '0%';
 navigationstyle.height = '100vh';
 
 
-let cartmenu = document.getElementById('cartmenu');
+let cartmenu = document.getElementById('cartmenu'); //here
 let cartcontent = document.querySelector('#cartmenu section');
 let cartmenustyle = cartmenu.style;
 
@@ -165,3 +165,9 @@ cartmenu.addEventListener('transitionstart', () => {
         document.getElementById('closecart').style.display = 'none';
     };
 });
+
+
+
+//display activate
+navigation.style.display = 'block';
+cartmenu.style.display = 'block';
