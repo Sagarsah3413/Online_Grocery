@@ -2,7 +2,7 @@
 <div id="image">
     <style> 
         #slider div.img1 {
-            background-image: url(<?php echo $sharedfolder; ?>../home/images/img4.jpeg);
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img2.jpeg);
         }
 
         #slider div.img2 {
@@ -17,10 +17,10 @@
         }
     </style>
     <i id="prev">
-        <img src="<?php echo $sharedfolder; ?>../home/images/img4.png" width="50px" alt="">
+        <img src="<?php echo $sharedfolder; ?>../home/images/prev.png" width="50px" alt="">
     </i>
     <i id="next">
-        <img src="<?php echo $sharedfolder; ?>../home/images/img5.png" width="50px" alt="">
+        <img src="<?php echo $sharedfolder; ?>../home/images/next.png" width="50px" alt="">
     </i>
     <div id="slider">
         <div class="img1">
