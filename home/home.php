@@ -82,7 +82,7 @@
                     ?>
                 <div class='items'> 
                     <div>
-                        <img class="plus"src='images/down.png' alt='product pic'>
+                        <img class="plus"src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
@@ -122,7 +122,7 @@
                     ?>
                 <div class='items'> 
                     <div>
-                        <img src='images/down.png' alt='product pic'>
+                        <img src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
@@ -173,7 +173,7 @@
                     ?>
                 <div class='items'> 
                     <div>
-                        <img class="plus" src='../home/images/down.png' alt='product pic'>
+                        <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
@@ -218,7 +218,7 @@
                     ?>
                 <div class='items'> 
                     <div>
-                        <img class="plus" src='../home/images/down.png' alt='product pic'>
+                        <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
                     </div>
                     <h4><?php echo $row['product name']; ?></h4>
                     <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
