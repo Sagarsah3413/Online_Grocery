@@ -2,13 +2,6 @@
     margin-top: 7px;
 }
 
-
-/* div.groceries img,
-div.fruits img {
-    height: 90%;
-    width: 90%;
-} */
-
 div#product section {
     width: 70%;
     height: 350px;
@@ -23,7 +16,7 @@ div#product div.groceries div.allsub {
 }
 
 div#product div.groceries div.allsub img,
-div.fruits div.all img {
+div.fruits div.all img,div#product div.vegetables div.vege img {
     cursor: pointer;
     filter: blur(1px);
     width: 100%;
@@ -53,28 +46,13 @@ div#product div.groceries div.allsub div.sub span {
     text-transform: capitalize;
 }
 
-div#product div.fruits div.all {
+div#product div.fruits div.all,div#product div.vegetables div.veggies{
     text-align: center;
     padding: 3%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
-
-div#product div.vegetables div.veggies {
-    text-align: center;
-    padding: 3%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-div#product div.vegetables div.vege img {
-    border-radius: 10px;
-    cursor: pointer;
-    width: 95%;
 }
 
 div#product div.groceries h3,
@@ -83,5 +61,4 @@ div#product div.vegetables h3 {
     text-transform: capitalize;
     font-size: 30px;
     text-align: center;
-    padding-top: 5%;
 }

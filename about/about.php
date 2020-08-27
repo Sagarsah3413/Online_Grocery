@@ -24,11 +24,11 @@ e-commerce platform where everything can be bought online just with a smartphone
     <div class="sell">
         <div class="digital">
             <h2>be a part of digital evolution</h2>
-            <p>as we see, online platforms are the best ways of selling your products in 21st century. so follow the trendd and be the part of this global digital evolution.</p>
+            <p>as we see, online platforms are the best ways of selling your products in 21st century. so follow the trend and be the part of this global digital evolution.</p>
         </div>
         <div class="platform">
             <h2>add your shops to our platform</h2>
-            <p>We are providing you with the platform where you can collaborate your shop with us and can sell your products online and increase your nunmber of customers. </p>
+            <p>We are providing you with the platform where you can collaborate your shop with us and can sell your products online and increase your number of customers. </p>
         </div>
     </div>
 
