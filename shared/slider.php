@@ -17,10 +17,10 @@
         }
     </style>
     <i id="prev">
-        <img src="<?php echo $sharedfolder; ?>../home/images/prev.jpg" width="50px" alt="">
+        <img src="<?php echo $sharedfolder; ?>../home/images/prev.png" width="50px" alt="">
     </i>
     <i id="next">
-        <img src="<?php echo $sharedfolder; ?>../home/images/next.jpg" width="50px" alt="">
+        <img src="<?php echo $sharedfolder; ?>../home/images/next.png" width="50px" alt="">
     </i>
     <div id="slider">
         <div class="img1">
