@@ -50,7 +50,6 @@
         </section>
         <div class="order">
             <button form="form" value="submit" name="submit">order now</button>
-            <span id="less" class="under"></span>
         </div>
 
         <div class="rbj">
