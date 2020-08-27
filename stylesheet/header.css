@@ -401,7 +401,7 @@ div#search ul li:hover {
     }
     div#search span {
         width: 20%;
-        height: 29px;
+        height: auto;
         padding: 4px 2px 2px 0px;
         box-sizing: border-box;
     }
