@@ -5,7 +5,6 @@ let web = 'http://localhost/',
     id = [],
     retrive, data, img, identity;
 let array = prop;
-console.log(array);
 for (let i = 0; i < array.length; i++) {
     id.push(content[array[i]].productid);
 };
@@ -33,9 +32,7 @@ ajax.onreadystatechange = function() {
 
                 data[i].src = `${web}productimg/${retrive[identity]}`;
             } else {
-                console.log('src val', retrive[identity]);
                 data[i].src = '';
-                console.log(data[i]);
                 data[i].style.display = 'none';
             }
 
@@ -47,6 +44,5 @@ ajax.send(JSON.stringify(id));
 
 let carticon = document.querySelector('#carticon img');
 setTimeout(() => {
-    console.log(carticon.src);
     // carticon.src = 'http://localhost/home/images/fruit2.jpg';
 }, 2000)

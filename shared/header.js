@@ -27,11 +27,9 @@ window.addEventListener('resize', () => {
 });
 
 suggestion = search.parentElement.lastElementChild;
-console.log(encodeURI(search.value));
 search.value = '';
 
 initsearch.addEventListener('click', () => {
-    console.log(encodeURI(search.value));
     initsearch.href += encodeURI(search.value);
 });
 
@@ -51,7 +49,6 @@ search.addEventListener('input', () => {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             json = JSON.parse(xhr.responseText);
-            console.log(json);
 
             for (let i = 0; i < 4; i++) {
                 getter = suggestion.children[i].firstElementChild;
