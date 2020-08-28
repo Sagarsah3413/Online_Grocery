@@ -15,7 +15,7 @@
                     </div>
                     <div>
                         <h3>Call Us</h3>
-                        <h4 class="foot">+977-9815739061</h4>
+                        <h4 class="foot"style="white-space: nowrap;">+977-9815739061</h4>
                     </div>  
                 </div>
                 <div class="info">
@@ -24,7 +24,7 @@
                     </div>
                     <div>
                         <h3>Email</h3>
-                        <h4 class="foot" style="text-transform:uppercase;  ">onlinebazzar07@gmail.com</h4>
+                        <h4 class="foot">onlinebazzar07@gmail.com</h4>
                     </div>  
                 </div>
             </div>
