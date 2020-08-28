@@ -397,6 +397,9 @@ div#search ul li:hover {
     div#search span {
         width: 20%;
     }
+    .logo {
+        width: 30%;
+    }
 }
 
 @media only screen and (max-width:500px) {
@@ -420,10 +423,8 @@ div#search ul li:hover {
         height: 20px;
         transform: translateY(18%);
     }
-    .logo img {
-        display: flex;
-        margin: auto;
-        width: 109px;
+    .logo {
+        width: 30%;
     }
 }
 
@@ -465,21 +466,11 @@ div#search ul li:hover {
     header div.fill span#open span {
         height: 2px;
     }
-    .logo img {
-        display: flex;
-        margin: auto;
-        width: 80px;
-    }
 }
 
 @media only screen and (max-width:350px) {
     header {
         padding: 13px;
-    }
-    .logo img {
-        display: flex;
-        margin: auto;
-        width: 68px;
     }
 }
 
@@ -493,9 +484,7 @@ div#search ul li:hover {
         font-size: 19px;
         white-space: normal;
     }
-    .logo img {
-        display: flex;
-        margin: auto;
-        width: 100%;
+    .logo {
+        width: 40%;
     }
 }
