@@ -29,20 +29,25 @@ window.addEventListener('resize', () => {
 suggestion = search.parentElement.lastElementChild;
 search.value = '';
 
-initsearch.addEventListener('click', () => {
-    initsearch.href += encodeURI(search.value);
+initsearch.addEventListener('click', (e) => {
+
+    if (search.value.trim() === "") {
+        e.preventDefault();
+        return false;
+    }
+    initsearch.href += 'erere' + encodeURI(search.value);
 });
 
 search.addEventListener('input', () => {
 
-    if (search.value.length >= 3)
+    if (search.value.trim().length >= 3)
         suggestion.style.display = 'block';
     else {
         suggestion.style.display = 'none';
         return;
     }
 
-    xhr.open('GET', `../shared/autosuggest.php?value=${search.value}`, true);
+    xhr.open('GET', `../shared/autosuggest.php?value=${search.value.trim()}`, true);
 
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 

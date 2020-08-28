@@ -37,7 +37,7 @@
     }
     $totalsav = $total;
     mysqli_close($dbconnection);
-    require '../shared/database.php';
+    require '../shared/writing.php';
 
     $query = "SELECT * FROM `customer` WHERE `number`={$customer['number']}";
     // $query = "SELECT buying FROM customer WHERE `number`=1234567890;";
@@ -63,7 +63,7 @@
         $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$totalsav' WHERE `customer`.`customerid` = {$row['customerid']}; ";
         $dbconnection -> query($query);
 
-    }else{
+    }elseif($history <= 0){
         $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
         $dbconnection -> query($query);
     }
@@ -105,7 +105,7 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
-    echo $mailbody;
+    // echo $mailbody;
     mail($to,$subject,$mailbody,$header);
     // $total=60;
 
@@ -128,7 +128,7 @@
     </header>
     <section>
         <h1>Thank you for shopping with us.</h1>
-        <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "(Discount: $discount, Initial price: $totalsav)"; } ?> will be delivered to your doorsteps soon.</h1>
+        <h1>Your order of Rs.<?php echo $total; ?><?php //if($discount){ echo "(Discount: $discount, Initial price: $totalsav)"; } ?> will be delivered to your doorsteps soon.</h1>
         <h2>A coupon code has been activated on next 3 order <br/>
             you will get Rs.50 off on order of Rs.999 and up <br/>
             and Rs.110 off on order of Rs.1999 and up.
