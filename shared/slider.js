@@ -16,7 +16,7 @@ window.addEventListener('resize', () => {
 })
 container.style.height = height + 'px';
 container.style.transform = 'translateX(' + (-width * count) + 'px';
-var tim = setInterval(fwd, 5000);
+var tim = setInterval(fwd, 3000);
 
 function fwd() {
     if (count >= images.length - 1)
@@ -35,12 +35,12 @@ function pre() {
 }
 next.addEventListener('click', () => {
     clearInterval(tim);
-    tim = setInterval(fwd, 5000);
+    tim = setInterval(fwd, 3000);
     fwd();
 });
 prev.addEventListener('click', () => {
     clearInterval(tim);
-    tim = setInterval(pre, 5000);
+    tim = setInterval(pre, 3000);
     pre();
 });
 
