@@ -76,7 +76,7 @@
             <div class="grid">
                 <?php
                 // $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[0] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
-                $query = "SELECT * FROM `products` WHERE `type`='$type[0]' LIMIT 5;";
+                $query = "SELECT * FROM `products` WHERE `type`='$type[0]' ORDER BY `product name` ASC LIMIT 5;";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -116,7 +116,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[1]' LIMIT 5;";
+                $query = "SELECT * FROM `products` WHERE `type`='$type[1]' ORDER BY `product name` ASC LIMIT 5;";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -167,7 +167,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[2]' LIMIT 5;";
+                $query = "SELECT * FROM `products` WHERE `type`='$type[2]' ORDER BY `product name` ASC LIMIT 5;";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -212,7 +212,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[3]' LIMIT 5;";
+                $query = "SELECT * FROM `products` WHERE `type`='$type[3]' ORDER BY `product name` ASC LIMIT 5;";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>

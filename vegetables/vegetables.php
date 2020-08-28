@@ -20,7 +20,7 @@
         <?php require_once '../shared/slider.php'; ?>
 
         <?php
-        $query = "SELECT * FROM `products` WHERE `subcatid` = '9';";  
+        $query = "SELECT * FROM `products` WHERE `subcatid` = '9' ORDER BY `product name` ASC;";  
         $data = $dbconnection->query($query);
         ?>
         <h3>vegetables</h3>

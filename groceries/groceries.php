@@ -34,7 +34,7 @@
         if(isset($_GET['subcat']) && $_GET['subcat'] == 'all')
         {
             foreach ($subcat as $key => $value) {
-                $query = "SELECT * FROM `products` WHERE `subcatid` = $value;";  
+                $query = "SELECT * FROM `products` WHERE `subcatid` = $value ORDER BY `product name` ASC;";  
                 $data = $dbconnection->query($query);
 
                 ?>
@@ -66,7 +66,7 @@
             }
         }elseif (isset($_GET['subcat']) && isset($subcat[$show])) {
             
-            $query = "SELECT * FROM `products` WHERE `subcatid` = {$subcat[$show]};";  
+            $query = "SELECT * FROM `products` WHERE `subcatid` = {$subcat[$show]} ORDER BY `product name` ASC;";  
             $data = $dbconnection->query($query);
         ?>
 

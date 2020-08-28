@@ -5,7 +5,7 @@
     if(isset($_GET['value']) && !empty($_GET['value']))
     {
         $value = $dbconnection -> real_escape_string($_GET['value']);
-        $query = "SELECT * FROM `products` WHERE `product name` LIKE '%$value%';";
+        $query = "SELECT * FROM `products` WHERE `product name` LIKE '%$value%' ORDER BY `product name` ASC;";
         $data = $dbconnection -> query($query);
     
         $accept = 1;
