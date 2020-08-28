@@ -52,7 +52,7 @@
                 </div>
                 <div class="sub">
                     <figcaption class="text">
-                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan & maida') ?>">aata, sooji, besan & maida</a>
+                        <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan & maida') ?>">aata, sooji, besan, maida & sattu</a>
                     </figcaption>
                     <a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan & maida') ?>"> <img src="images/groc4.jpeg" alt="rice"></a>
                     
