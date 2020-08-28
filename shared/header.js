@@ -35,7 +35,7 @@ initsearch.addEventListener('click', (e) => {
         e.preventDefault();
         return false;
     }
-    initsearch.href += 'erere' + encodeURI(search.value);
+    initsearch.href += encodeURI(search.value.trim());
 });
 
 search.addEventListener('input', () => {

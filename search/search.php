@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
     <link rel="stylesheet" href="../stylesheet/product.css">
+    <link rel="icon" href="../home/images/logo.png">
     <title>search</title>
 </head>
 <body>
