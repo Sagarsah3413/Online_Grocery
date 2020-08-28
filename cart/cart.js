@@ -26,7 +26,6 @@ tot.innerHTML = sum;
 let plus = document.querySelectorAll('.plus');
 let minus = document.querySelectorAll('.minus');
 let input, each, held;
-// console.log(minus);
 let bat = document.querySelectorAll('tr');
 str = divsArr = [].slice.call(bat);
 str.shift();

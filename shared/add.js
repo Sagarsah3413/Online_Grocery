@@ -39,7 +39,6 @@ for (let i = 0; i < buy.length; i++) {
         hide(add[i], "0px", "hidden");
         hide(buy[i], "30px", "");
         send[`${productid}`] = new Person(productid, name, quantity.value, rate);
-        console.log(send);
         sessionStorage.setItem("fav", JSON.stringify(send));
         document.getElementById("index").innerHTML = Object.keys(send).length;
     });
