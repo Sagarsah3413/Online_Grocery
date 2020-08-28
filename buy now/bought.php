@@ -1,7 +1,7 @@
 <?php require '../shared/database.php'; ?><?php
-    // if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
-    //     exit;
-    // }
+    if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
+        exit;
+    }
     
     $to = 'joysen833@gmail.com';
     $subject = 'My subject';
@@ -50,11 +50,12 @@
             if($row['buying'] <= 3)
             {
                 if($total > 999 && $total <= 1999)
-            {
-                $total-= 50;
-            }elseif($total > 1999)
-            {
-                $total-= 100;   
+                {
+                    $total-= 50;
+                }elseif($total > 1999)
+                {
+                    $total-= 100;   
+                }
             }
         $freq = floatval($row['buying']) + 1;
         $index += floatval($row['quantity']);
@@ -112,6 +113,7 @@
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,7 +128,7 @@
     </header>
     <section>
         <h1>Thank you for shopping with us.</h1>
-        <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "(Discount: $discount, Initial price: $totalsav)" ?> will be delivered to your doorsteps soon.</h1>
+        <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "(Discount: $discount, Initial price: $totalsav)"; } ?> will be delivered to your doorsteps soon.</h1>
         <h2>A coupon code has been activated on next 3 order <br/>
             you will get Rs.50 off on order of Rs.999 and up <br/>
             and Rs.110 off on order of Rs.1999 and up.
