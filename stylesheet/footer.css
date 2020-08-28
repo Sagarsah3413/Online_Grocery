@@ -92,7 +92,6 @@ div#footer div#logo img {
     width: 60%;
 }
 
-
 div#footer div#contacts {
     display: flex;
     flex-direction: column;
@@ -120,6 +119,8 @@ div#footer div#contacts div.info div h4.foot {
     color: whitesmoke;
     margin: 10% 0% 10% 10%;
 }
+
+
 /* .log img{
     display: flex;
     margin: auto;
@@ -170,7 +171,7 @@ div#footer div#contacts div.info div h4.foot {
         justify-content: space-evenly;
     }
     div#footer div#logo img {
-        width: 40%;
+        width: 36%;
     }
     div#footer div#logo span {
         margin-left: 16px;

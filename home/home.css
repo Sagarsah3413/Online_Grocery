@@ -133,6 +133,9 @@ div#product div.vegetables h3 {
     div#product div.groceries div.allsub {
         grid-gap: 12px;
     }
+    figcaption.text {
+        height: 27%;
+    }
 }
 
 @media only screen and (max-width:400px) {

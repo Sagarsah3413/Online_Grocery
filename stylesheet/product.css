@@ -149,6 +149,9 @@ input[type=number] {
         padding-bottom: 0px;
         grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
     }
+    div#product h3 {
+        font-size: 32px;
+    }
 }
 
 @media only screen and (max-width:470px) {

@@ -28,7 +28,7 @@ div#image {
     font-size: 50px;
     font-weight: 400;
     letter-spacing: 2px;
-    color:#0408ff;
+    color: #0408ff;
     text-transform: capitalize;
 }
 
@@ -78,14 +78,16 @@ div#image {
     }
     #slider div {
         background-size: 100% 390px;
-    }    
-    #slider div p{
+    }
+    #slider div p {
         font-size: 36px;
     }
-    i#prev img, i#next img{
+    i#prev img,
+    i#next img {
         width: 40px;
     }
 }
+
 @media only screen and (max-width:500px) {
     #slider {
         height: 280px;
@@ -95,14 +97,16 @@ div#image {
     }
     #slider div {
         background-size: 100% 280px;
-    }    
-    #slider div p{
+    }
+    #slider div p {
         font-size: 24px;
     }
-    i#prev img, i#next img{
+    i#prev img,
+    i#next img {
         width: 30px;
     }
 }
+
 @media only screen and (max-width:350px) {
     #slider {
         height: 200px;
@@ -112,11 +116,12 @@ div#image {
     }
     #slider div {
         background-size: 100% 200px;
-    }    
-    #slider div p{
+    }
+    #slider div p {
         font-size: 17px;
     }
-    i#prev img, i#next img{
+    i#prev img,
+    i#next img {
         width: 20px;
     }
 }

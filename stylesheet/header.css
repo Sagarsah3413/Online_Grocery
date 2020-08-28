@@ -24,7 +24,7 @@ header {
     padding: 15px 20px;
     box-sizing: border-box;
     align-items: center;
-    background-color: rgb(0, 171, 252);
+    background-color: rgb(13, 31, 53);
     position: sticky;
     top: 0px;
     z-index: 4;
@@ -405,15 +405,16 @@ div#search ul li:hover {
 @media only screen and (max-width:500px) {
     div#search {
         width: 130px;
+        margin: 0px 5px;
     }
     div#search input {
         font-size: 20px;
         box-sizing: border-box;
         border-radius: 10px 0px 0px 10px;
-        width: 68%;
+        width: 80%;
     }
     div#search span {
-        width: 20%;
+        width: 24%;
         height: auto;
         padding: 4px 2px 2px 0px;
         box-sizing: border-box;
@@ -454,14 +455,17 @@ div#search ul li:hover {
         font-size: 20px;
     }
     header div.cart span#carticon {
-        width: 45px;
-        height: 45px;
+        width: 37px;
+        height: 37px;
     }
     header div.fill span#open {
-        height: 45px;
-        width: 45px;
-        font-size: 6.5px;
+        height: 37px;
+        width: 37px;
+        font-size: 4.5px;
         padding: 8px;
+    }
+    header div.cart span#carticon span#index {
+        font-size: 14px;
     }
     header div.fill span#open span {
         height: 2px;
