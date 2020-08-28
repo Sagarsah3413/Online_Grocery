@@ -87,6 +87,9 @@ div#product div.vegetables h3 {
     .forthree {
         grid-template-columns: repeat(2, 1fr);
     }
+    div#product div.vege img{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width:876px) {
@@ -105,6 +108,9 @@ div#product div.vegetables h3 {
     figcaption.text a {
         font-size: 29px;
     }
+    div#product div.vege img{
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width:600px) {
@@ -113,6 +119,9 @@ div#product div.vegetables h3 {
     }
     figcaption.text a {
         font-size: 19px;
+    }
+    div#product div.vege img{
+        width: 100%;
     }
 }
 
