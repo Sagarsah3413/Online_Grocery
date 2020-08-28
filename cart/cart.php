@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="icon" href="../home/images/logo.png">
     <title>Cart</title>
 </head>
 <body>

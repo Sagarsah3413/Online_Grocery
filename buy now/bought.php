@@ -3,7 +3,7 @@
         exit;
     }
     
-    $to = 'joysen833@gmail.com';
+    $to = 'onlinebazzar07@gmail.com';
     $subject = 'My subject';
     $header = 'From: ';
     $mailbody='';
@@ -68,27 +68,6 @@
         $dbconnection -> query($query);
     }
 
-    // if($row['buying'] > 0 && $row['buying'] <= 3)
-    // {
-    //     if($total > 999 && $total <= 1999)
-    //     {
-    //         $total-= 50;
-    //     }elseif($total > 1999)
-    //     {
-    //         $total-= 100;   
-    //     }
-    //     $freqinit = is_null(floatval($row['buying'])) ? 0 : floatval($row['buying']);
-    //     $freq = $freqinit + 1;
-    //     $index += floatval($row['quantity']);
-    //     $totalsav += floatval($row['total']);
-    //     $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$totalsav' WHERE `customer`.`customerid` = {$row['customerid']}; ";
-    //     $dbconnection -> query($query);
-        
-    // }elseif($row['buying'] == null)
-    // {
-    //     $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
-    //     $dbconnection -> query($query);        
-    // }
     $discount = $totalsav - $total;
 
 
@@ -105,9 +84,7 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
-    // echo $mailbody;
     mail($to,$subject,$mailbody,$header);
-    // $total=60;
 
     
 
@@ -120,6 +97,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="../home/images/logo.png">
     <link rel="stylesheet" href="bought.css">
 </head>
 <body>
