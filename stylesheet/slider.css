@@ -28,8 +28,15 @@ div#image {
     font-size: 50px;
     font-weight: 400;
     letter-spacing: 2px;
-    color: #0408ff;
+    color: #ffffff;
+    font-weight: 600;
     text-transform: capitalize;
+}
+
+#slider div p span {
+    background-color: rgb(250, 101, 1);
+    padding: 3px 2px;
+    border-radius: 5px;
 }
 
 #slider div p a {

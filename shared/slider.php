@@ -24,22 +24,22 @@
     </i>
     <div id="slider">
         <div class="img1">
-            <p>place order</a></p>
+            <p><span>order</span></p>
         </div>
         <div class="img2">
-            <p>welcome to onlinebazzar</a></p>
+            <p><span>welcome to onlinebazzar</span></p>
         </div>
         <div id="img3">
-            <p>now shop online</a></p>
+            <p><span>now shop online</span></p>
         </div>
         <div id="img4">
-            <p>add to cart</a></p>
+            <p><span>add to cart</span></p>
         </div>
         <div class="img1">
-            <p>place order</a></p>
+            <p><span>place order</span></p>
         </div>
         <div class="img2">
-            <p>welcome to onlinebazzar</a></p>
+            <p><span>welcome to onlinebazzar</span></p>
         </div>
     </div>
 </div>
