@@ -196,13 +196,13 @@
         <h3><a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('all') ?>">health and care</a></h3>
         <div class="fruits">
             <div class="all fortwo">
-                <div class="fruit1">
+                <div class="fruit1 vege">
                     <figcaption class="text">
                         <a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('personal care products') ?>">personal care products</a>
                     </figcaption>
                     <a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('personal care products') ?>"><img src="images/pers.jpeg"  alt="fruits"></a>
                 </div>
-                <div class="fruit1">
+                <div class="fruit1 vege">
                     <figcaption class="text">
                         <a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('baby care products') ?>">baby care products</a>
                     </figcaption>
