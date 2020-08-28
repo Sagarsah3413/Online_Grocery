@@ -24,7 +24,7 @@ header {
     padding: 15px 20px;
     box-sizing: border-box;
     align-items: center;
-    background-color: rgb(0,171,252);
+    background-color: rgb(0, 171, 252);
     position: sticky;
     top: 0px;
     z-index: 4;
@@ -104,10 +104,12 @@ header div.cart nav#cartmenu {
 .headtext {
     font-size: 2em;
 }
-.logo{
+
+.logo {
     width: 20%;
 }
-.logo img{
+
+.logo img {
     display: flex;
     margin: auto;
     width: 100%;
@@ -418,6 +420,11 @@ div#search ul li:hover {
         height: 20px;
         transform: translateY(18%);
     }
+    .logo img {
+        display: flex;
+        margin: auto;
+        width: 109px;
+    }
 }
 
 @media only screen and (max-width:410px) {
@@ -456,13 +463,23 @@ div#search ul li:hover {
         padding: 8px;
     }
     header div.fill span#open span {
-        height: 2.5px;
+        height: 2px;
+    }
+    .logo img {
+        display: flex;
+        margin: auto;
+        width: 80px;
     }
 }
 
 @media only screen and (max-width:350px) {
     header {
         padding: 13px;
+    }
+    .logo img {
+        display: flex;
+        margin: auto;
+        width: 68px;
     }
 }
 
@@ -475,5 +492,10 @@ div#search ul li:hover {
     header div.cart nav#cartmenu section div h2 {
         font-size: 19px;
         white-space: normal;
+    }
+    .logo img {
+        display: flex;
+        margin: auto;
+        width: 100%;
     }
 }
