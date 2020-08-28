@@ -1,26 +1,12 @@
 <footer>
         <div id="footer">
             <div id="logo">
-                    <h2><span>company</span> logo</h2>
+                <div><a href="<?php echo $sharedfolder; ?>../home/home.php"><img src="../home/images/logo.png" alt=""></a></div>
                 <br><br>
                 <p>
                 At onlinebazzar we  had a variety of premium quality products (1000+)  at  numerous discounted offer. So, shop online here and get it at  your doorsteps within no time.
                 </p>
-                <br>
-                <img src="<?php echo $sharedfolder ?>../Images/social media icons.png" alt="social media">
             </div>
-            <!-- <div id=links>
-                <h3>Useful links</h3>
-                <ul>
-                    <li><a href="#"> All Properties</a></li>
-                    <li><a href="<?php echo $sharedfolder; ?>../pricing/pricingadd.php#faq"> FAQs</a></li>
-                    <li><a href="#"> Terms & Condition</a></li>
-                    <li><a href="<?php echo $sharedfolder; ?>../signup and login/signup.php"> Sign Up</a></li>
-                    <li><a href="<?php echo $sharedfolder; ?>../blog/bloghome.php"> Articles</a></li>
-                    <li><a href="#"> Popular Tags</a></li>
-                </ul>
-
-            </div> -->
             <div id="contacts">
                 <h3>Contacts</h3>
                 <div class="info">
