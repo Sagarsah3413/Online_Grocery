@@ -7,10 +7,12 @@ quantitylist.setAttribute('name', 'quantity');
 
 productlist.setAttribute('value', '');
 quantitylist.setAttribute('value', '');
-
-let fav = JSON.parse(sessionStorage.getItem('fav'));
-let index = Object.getOwnPropertyNames(fav);
-
+let fav = new Object;
+let index=[];
+if (sessionStorage.getItem('fav') != null){
+    fav = JSON.parse(sessionStorage.getItem('fav'));
+    index = Object.getOwnPropertyNames(fav);
+}
 let quantityinput = [],
     productinput = [];
 
@@ -42,6 +44,15 @@ function verify() {
 
     if (add === "") {
         document.getElementById('loc').innerHTML = "Enter the Address!!!";
+        return false;
+    }
+    let sum=0;
+    for (let i = 0; i < index.length; i++) {
+        sum+=fav[index[i]].quantity * fav[index[i]].rate;
+    }    
+    if(sum<1)
+    {
+        document.getElementById('less').innerHTML = "Select atleast 1 product!!!";
         return false;
     }
 

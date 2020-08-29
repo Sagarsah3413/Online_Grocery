@@ -51,10 +51,7 @@
         </section>
         <div class="order">
             <button form="form" value="submit" name="submit">order now</button>
-        </div>
-
-        <div class="rbj">
-            <p>our services are limited within rajbiraj</p>
+            <span id="less" class="under"></span>
         </div>
 
         <h4 class="tq">thanks for shopping !!!</h4>
