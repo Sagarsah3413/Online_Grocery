@@ -21,14 +21,17 @@
     <?php require_once'../shared/header.php'; ?>
 
     <div class="nepali">
-        <div class="teach">
+        <div class="tribhuwan">
+            <div class="chowk"><img src="images/chowk.jpg" width="50%" alt="chowk"></div>
             <p>॥ शॉपिंग्को लागि <span>ADD TO CART</span>  मा क्लिक गर्नुहोस् ॥
-            सामान थरी थरी , राजबिराज भरी , <span> FREE HOME DELIVERY</span></p>
+            ॥ सामान थरी थरी ,<span> राजबिराज</span> भरी , <span> FREE HOME DELIVERY ॥</span></p>
         </div>
-        <div class="offer">
-        
-            <p> <span>Rs. 1000 </span> भन्दा बढीको  <span>SHOPPING</span> गर्नुहोस् 
-            र <span>Rs. 10</span> मूल्यको <span>COUPON CODE</span>  पाउनुहोस् |</p>
+        <div class="discount">
+            <div><img src="images/offer.jpg" width="70%" alt="offer"></div>
+            <p>॥ <span>Rs. 500 + </span> को  <span>SHOPPING</span> मा
+             <span>Rs. 50</span> को <span>COUPON CODE</span>
+             र <span>Rs. 3000 + </span> को <span>SHOPPING</span> मा
+            <span>EXCITING SURPRISE GIFTS</span> पनि पाउनुहोस् ॥</p>
         </div>
     </div>
 
