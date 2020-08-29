@@ -9,6 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
     <link rel="stylesheet" href="../stylesheet/product.css">
@@ -18,6 +19,19 @@
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
+
+    <div class="nepali">
+        <div class="teach">
+            <p>॥ शॉपिंग्को लागि <span>ADD TO CART</span>  मा क्लिक गर्नुहोस् ॥
+            सामान थरी थरी , राजबिराज भरी , <span> FREE HOME DELIVERY</span></p>
+        </div>
+        <div class="offer">
+        
+            <p> <span>Rs. 1000 </span> भन्दा बढीको  <span>SHOPPING</span> गर्नुहोस् 
+            र <span>Rs. 10</span> मूल्यको <span>COUPON CODE</span>  पाउनुहोस् |</p>
+        </div>
+    </div>
+
     <div id="product">
         
         <?php require_once '../shared/slider.php' ?>
