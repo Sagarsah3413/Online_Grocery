@@ -116,7 +116,7 @@
         ?>
         <h2>A coupon code has been activated. On shopping of Rs.500 and above 
             get reward up Rs.50.<br/>
-            On shopping of Rs.2500 and above get discount and exciting GIVE AWAYS!! <br/>
+            On shopping of Rs.3000 and above get discount and exciting GIVE AWAYS!! <br/>
         </h2>
         <div><a href="../home/home.php">Back to home</a></div>
     </section>
