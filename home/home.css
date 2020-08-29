@@ -99,7 +99,7 @@ div.nepali div
 div.nepali div p
 {
     font-size: 25px;
-    padding: 1%;
+    padding: 1% 3%;
     letter-spacing: 2px;
 }
 
@@ -117,6 +117,9 @@ div.nepali div p span
     }
     div#product div.vege img {
         width: 80%;
+    }
+    div.nepali img{
+        width: 250px;
     }
 }
 
@@ -139,6 +142,18 @@ div.nepali div p span
     div#product div.vege img {
         width: 90%;
     }
+    div.nepali img{
+        width: 200px;
+    }
+    div.nepali div p span
+    {
+        font-weight: 600;
+    }
+    div.nepali div p
+    {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
 }
 
 @media only screen and (max-width:600px) {
@@ -150,6 +165,19 @@ div.nepali div p span
     }
     div#product div.vege img {
         width: 100%;
+    }
+    
+    div.nepali img{
+        width: 150px;
+    }
+    div.nepali div p span
+    {
+        font-weight: 500;
+    }
+    div.nepali div p
+    {
+        font-size: 15px;
+        letter-spacing: 0px;
     }
 }
 
@@ -172,4 +200,23 @@ div.nepali div p span
     figcaption.text a {
         font-size: 15px;
     }
+    
+    div.nepali img{
+        width: 130px;
+    }
+    div.nepali div p
+    {
+        font-size: 13px;
+        letter-spacing: 0px;
+    }
+}
+@media only screen and (max-width:300px)
+{
+    div.nepali img{
+        width: 100px;
+    }
+    div.nepali div p
+    {
+        font-size: 12px;
+        }
 }

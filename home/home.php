@@ -22,12 +22,12 @@
 
     <div class="nepali">
         <div class="tribhuwan">
-            <div class="chowk"><img src="images/chowk.jpg" width="50%" alt="chowk"></div>
+            <div class="chowk"><img src="images/chowk.jpg" alt="chowk"></div>
             <p>॥ शॉपिंग्को लागि <span>ADD TO CART</span>  मा क्लिक गर्नुहोस् ॥
             ॥ सामान थरी थरी ,<span> राजबिराज</span> भरी , <span> FREE HOME DELIVERY ॥</span></p>
         </div>
         <div class="discount">
-            <div><img src="images/offer.jpg" width="70%" alt="offer"></div>
+            <div><img src="images/offer.jpg" alt="offer"></div>
             <p>॥ <span>Rs. 500 + </span> को  <span>SHOPPING</span> मा
              <span>Rs. 50</span> को <span>COUPON CODE</span>
              र <span>Rs. 3000 + </span> को <span>SHOPPING</span> मा
