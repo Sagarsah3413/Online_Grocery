@@ -3,10 +3,10 @@
         exit;
     }
     function take($sum) {
-        for($i=0;$i<5;$i++)
+        for($i=0;$i<6;$i++)
             if($sum<500*($i+1))
             return($i*5);
-        return(25);
+        return(30);
     }
 
     $to = 'onlinebazzar07@gmail.com';
@@ -84,7 +84,7 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
-    if($totalsav > 3500)
+    if($totalsav > 2999)
         $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
     mail($to,$subject,$mailbody);
 
@@ -110,7 +110,7 @@
         <h1>Thank you for shopping with us.</h1>
         <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "<span style='color:red'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be delivered to your doorsteps soon.</h1>
         <?php
-        if($totalsav > 3500){
+        if($totalsav > 2999){
             echo "<h1 style='font-weight:700'>Congratulations! You earned takeaway reward.</h1>";
         }
         ?>
