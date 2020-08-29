@@ -16,9 +16,12 @@ h1
 div.team
 {
     text-align: center;
-    padding: 3% 20%;
+    display: flex;
+    width: 70%;
+    margin: 5% auto;
     letter-spacing: 2px;
     line-height: 40px;
+    white-space: normal;
 }
 
 div.sell
@@ -111,7 +114,9 @@ body h1 span{
         font-size: 25px;
         padding: 2%;
     }
-
+    div.team{
+        line-height: 30px;
+    }
     div.sell div p
     {
         padding: 2%;
@@ -139,7 +144,9 @@ body h1 span{
         letter-spacing: 1px;
         line-height: 25px;
     }
-
+    div.team{
+        line-height: 25px;
+    }
     div.sell div.digital, div.platform
     {
         width: 38%;
@@ -159,6 +166,9 @@ body h1 span{
         padding: 0%;
         letter-spacing: 1px;
         line-height: 18px;
+    }
+    div.team{
+        line-height: 20px;
     }
 }
 @media only screen and (max-width:460px)
