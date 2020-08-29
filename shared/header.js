@@ -39,6 +39,11 @@ initsearch.addEventListener('click', (e) => {
     initsearch.href = `../search/search.php?value=${encodeURI(search.value.trim())}`;
 });
 
+window.addEventListener('load', () => {
+    // document.getElementById('index').innerHTML = 
+    console.log(sessionStorage.getItem('fav'));
+});
+
 search.addEventListener('input', () => {
 
     if (search.value.trim().length >= 3)

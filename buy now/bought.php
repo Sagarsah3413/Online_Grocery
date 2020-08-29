@@ -2,7 +2,13 @@
     if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
         exit;
     }
-    
+    function take($sum) {
+        for($i=0;$i<5;$i++)
+            if($sum<500*($i+1))
+            return($i*5);
+        return(25);
+    }
+
     $to = 'onlinebazzar07@gmail.com';
     $subject = 'My subject';
     $header = 'From: ';
@@ -47,16 +53,8 @@
     if($history > 0)
     {
         $row = $data -> fetch_assoc();
-            if($row['buying'] <= 2)
-            {
-                if($total > 999 && $total <= 1999)
-                {
-                    $total-= 50;
-                }elseif($total > 1999)
-                {
-                    $total-= 100;   
-                }
-            }
+        $total -= take($total);
+
         $freq = floatval($row['buying']) + 1;
         $index += floatval($row['quantity']);
         
@@ -65,17 +63,12 @@
         $dbconnection -> query($query);
 
     }elseif($history <= 0){
-        if($total > 999 && $total <= 1999)
-        {
-            $total-= 50;
-        }elseif($total > 1999)
-        {
-            $total-= 100;   
-        }
+        
+        $total -= take($total);
         $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
         $dbconnection -> query($query);
     }
-    $discount = $totalsav - $total;
+    $discount = take($totalsav);
 
 
     $bill .= "\r\n";
@@ -91,6 +84,8 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
+    if($totalsav > 2500)
+        $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
     mail($to,$subject,$mailbody);
 
     
@@ -114,6 +109,11 @@
     <section>
         <h1>Thank you for shopping with us.</h1>
         <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "<span style='color:red'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be delivered to your doorsteps soon.</h1>
+        <?php
+        if($totalsav > 2500){
+            echo "<h1 style='font-weight:700'>Congratulations! You earned takeaway reward.</h1>"
+        }
+        ?>
         <h2>A coupon code has been activated on next 3 order <br/>
             you will get Rs.50 off on order of Rs.999 and up <br/>
             and Rs.110 off on order of Rs.1999 and up.
