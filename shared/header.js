@@ -28,6 +28,7 @@ window.addEventListener('resize', () => {
 
 suggestion = search.parentElement.lastElementChild;
 search.value = '';
+initsearch.href = `../search/search.php?value=${encodeURI(search.value.trim())}`;
 
 initsearch.addEventListener('click', (e) => {
 
@@ -35,7 +36,7 @@ initsearch.addEventListener('click', (e) => {
         e.preventDefault();
         return false;
     }
-    initsearch.href += encodeURI(search.value.trim());
+    initsearch.href = `../search/search.php?value=${encodeURI(search.value.trim())}`;
 });
 
 search.addEventListener('input', () => {

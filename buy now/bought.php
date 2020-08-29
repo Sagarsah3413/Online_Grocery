@@ -84,7 +84,7 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
-    mail($to,$subject,$mailbody,$header);
+    mail($to,$subject,$mailbody);
 
     
 

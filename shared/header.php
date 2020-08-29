@@ -16,7 +16,7 @@
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('snacks & drinks') ?>">snacks & drinks</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('rice, pulses & grains') ?>">rice, pulses & grains</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('oils, masala & salt') ?>">Oils, masala & salt</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan & maida') ?>">aata, sooji, besan & maida</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('aata, sooji, besan, maida & sattu') ?>">aata, sooji, besan, maida & sattu</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('dry fruits') ?>">dry fruits</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('tea, coffee & sugar') ?>">tea, coffee & sugar</a></li>
                     </ul>
