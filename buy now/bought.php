@@ -84,7 +84,7 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
-    if($totalsav > 2500)
+    if($totalsav > 3500)
         $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
     mail($to,$subject,$mailbody);
 
@@ -110,7 +110,7 @@
         <h1>Thank you for shopping with us.</h1>
         <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "<span style='color:red'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be delivered to your doorsteps soon.</h1>
         <?php
-        if($totalsav > 2500){
+        if($totalsav > 3500){
             echo "<h1 style='font-weight:700'>Congratulations! You earned takeaway reward.</h1>"
         }
         ?>
