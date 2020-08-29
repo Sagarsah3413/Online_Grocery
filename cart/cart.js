@@ -44,6 +44,7 @@ for (let i = 0; i < plus.length; i++) {
         input = plus[i].parentElement.children[1];
         up(i);
         sessionStorage.setItem("fav", JSON.stringify(fav));
+        document.getElementById("index").innerHTML=Object.keys(fav).length;
     });
     input.addEventListener('blur', () => {
         input = plus[i].parentElement.children[1];
@@ -52,7 +53,7 @@ for (let i = 0; i < plus.length; i++) {
             car.children[i + 1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
-
+        document.getElementById("index").innerHTML=Object.keys(fav).length;
     });
     plus[i].addEventListener('click', () => {
         input = plus[i].parentElement.children[1];
@@ -71,5 +72,6 @@ for (let i = 0; i < plus.length; i++) {
             car.children[i + 1].style.display = "none";
         }
         sessionStorage.setItem("fav", JSON.stringify(fav));
+        document.getElementById("index").innerHTML=Object.keys(fav).length;
     });
 }
