@@ -34,9 +34,9 @@
     while($row = $data -> fetch_assoc())
     {
         $bill .= $row['productid'] . '. ';
-        $bill .= $row['product name'] . '\t';
-        $bill .= $productquantity[$index] . '\t';
-        $bill .= $row['price'] . '\t';
+        $bill .= $row['product name'] . "\t";
+        $bill .= $productquantity[$index] . "\t";
+        $bill .= $row['price'] . "\t";
         $total += $row['price']*floatval($productquantity[$index]); 
         $bill .= $row['price']*floatval($productquantity[$index]) . "\r\n";
         $index++;
@@ -98,8 +98,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="icon" href="../home/images/logo.png">
+    <title>ORDER</title>
     <link rel="stylesheet" href="bought.css">
 </head>
 <body>
@@ -116,7 +116,7 @@
         ?>
         <h2>A coupon code has been activated. On shopping of Rs.500 and above 
             get reward up Rs.50.<br/>
-            On shopping of Rs.2500 and above get discount and exciting GIVE AWAYS!!.<br/>
+            On shopping of Rs.2500 and above get discount and exciting GIVE AWAYS!! <br/>
         </h2>
         <div><a href="../home/home.php">Back to home</a></div>
     </section>
