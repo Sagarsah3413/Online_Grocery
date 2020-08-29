@@ -34,9 +34,9 @@
     while($row = $data -> fetch_assoc())
     {
         $bill .= $row['productid'] . '. ';
-        $bill .= $row['product name'] . '\t';
-        $bill .= $productquantity[$index] . '\t';
-        $bill .= $row['price'] . '\t';
+        $bill .= $row['product name'] . "\t";
+        $bill .= $productquantity[$index] . "\t";
+        $bill .= $row['price'] . "\t";
         $total += $row['price']*floatval($productquantity[$index]); 
         $bill .= $row['price']*floatval($productquantity[$index]) . "\r\n";
         $index++;
@@ -84,7 +84,7 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
-    if($totalsav > 3500)
+    if($totalsav > 3499)
         $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
     mail($to,$subject,$mailbody);
 
@@ -110,13 +110,13 @@
         <h1>Thank you for shopping with us.</h1>
         <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "<span style='color:red'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be delivered to your doorsteps soon.</h1>
         <?php
-        if($totalsav > 3500){
+        if($totalsav > 3499){
             echo "<h1 style='font-weight:700'>Congratulations! You earned takeaway reward.</h1>";
         }
         ?>
         <h2>A coupon code has been activated. On shopping of Rs.500 and above 
             get reward up Rs.50.<br/>
-            On shopping of Rs.2500 and above get discount and exciting GIVE AWAYS!!.<br/>
+            On shopping of Rs.2500 and above get discount and exciting GIVE AWAYS!! <br/>
         </h2>
         <div><a href="../home/home.php">Back to home</a></div>
     </section>
