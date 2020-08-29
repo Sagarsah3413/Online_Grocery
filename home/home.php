@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../stylesheet/product.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="icon" href="images/logo.png">
-    <title>homepage</title>
+    <title>Home</title>
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
@@ -24,13 +24,13 @@
         <div class="tribhuwan">
             <div class="chowk"><img src="images/chowk.jpg" alt="chowk"></div>
             <p>॥ शॉपिंग्को लागि <span>ADD TO CART</span>  मा क्लिक गर्नुहोस् ॥
-            ॥ सामान थरी थरी ,<span> राजबिराज</span> भरी , <span> FREE HOME DELIVERY ॥</span></p>
+            ॥ सामान थरी थरी ,<span> राजबिराज</span> भरी , <span> FREE HOME DELIVERY</span> ॥</p>
         </div>
         <div class="discount">
             <div><img src="images/offer.jpg" alt="offer"></div>
-            <p>॥ <span>Rs. 500 + </span> को  <span>SHOPPING</span> मा
-             <span>Rs. 50</span> को <span>COUPON CODE</span>
-             र <span>Rs. 3000 + </span> को <span>SHOPPING</span> मा
+            <p>॥ <span>Rs.500 + </span> को  <span>SHOPPING</span> मा
+             <span>Rs.50</span>  सम्मको  <span>COUPON CODE</span>
+             र <span>Rs.3000 + </span> को <span>SHOPPING</span> मा
             <span>EXCITING SURPRISE GIFTS</span> पनि पाउनुहोस् ॥</p>
         </div>
     </div>
