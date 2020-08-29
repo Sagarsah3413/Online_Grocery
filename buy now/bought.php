@@ -111,12 +111,12 @@
         <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "<span style='color:red'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be delivered to your doorsteps soon.</h1>
         <?php
         if($totalsav > 3500){
-            echo "<h1 style='font-weight:700'>Congratulations! You earned takeaway reward.</h1>"
+            echo "<h1 style='font-weight:700'>Congratulations! You earned takeaway reward.</h1>";
         }
         ?>
-        <h2>A coupon code has been activated on next 3 order <br/>
-            you will get Rs.50 off on order of Rs.999 and up <br/>
-            and Rs.110 off on order of Rs.1999 and up.
+        <h2>A coupon code has been activated. On shopping of Rs.500 and above 
+            get reward up Rs.50.<br/>
+            On shopping of Rs.2500 and above get discount and exciting GIVE AWAYS!!.<br/>
         </h2>
         <div><a href="../home/home.php">Back to home</a></div>
     </section>
