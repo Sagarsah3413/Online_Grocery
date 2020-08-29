@@ -54,10 +54,6 @@
             <span id="less" class="under"></span>
         </div>
 
-        <div class="rbj">
-            <p>our services are limited within rajbiraj</p>
-        </div>
-
         <h4 class="tq">thanks for shopping !!!</h4>
         <h5>visit again</h5>
         <?php require_once'../shared/footer.php'; ?>

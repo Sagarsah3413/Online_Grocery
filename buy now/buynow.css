@@ -95,22 +95,6 @@ div.order button:hover {
     outline: none;
 }
 
-div.rbj {
-    background-image: url(../home/images/rice.jpg);
-    height: 400px;
-    margin-top: 3%;
-}
-
-div.rbj p {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-}
-
 h4.tq {
     text-align: center;
     font-size: 70px;
