@@ -361,10 +361,18 @@ div#search ul {
 div#search ul li {
     margin: 0px;
     display: none;
+    border-top: 1px solid rgb(250,101,1);
+    border-bottom : 1px solid rgb(250,101,1);
 }
 
 div#search ul li::marker {
     display: none;
+}
+::placeholder {
+    font-size: 0.7em;
+    padding-left: 5%;
+    color: rgb(43, 59, 65);
+    opacity: 0.8;
 }
 
 div#search ul li a {
@@ -373,6 +381,7 @@ div#search ul li a {
     display: inline-block;
     box-sizing: border-box;
     line-height: 30px;
+    text-transform: capitalize;
 }
 
 div#search ul li:hover {
@@ -475,6 +484,10 @@ div#search ul li:hover {
 @media only screen and (max-width:350px) {
     header {
         padding: 13px;
+    }
+    ::placeholder {
+        font-size: 0.5em;
+        padding-left: 0%;
     }
 }
 
