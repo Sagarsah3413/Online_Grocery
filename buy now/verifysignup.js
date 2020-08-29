@@ -50,7 +50,6 @@ function verify() {
     for (let i = 0; i < index.length; i++) {
         sum+=fav[index[i]].quantity * fav[index[i]].rate;
     }    
-    console.log(sum);
     if(sum<1)
     {
         document.getElementById('less').innerHTML = "Select atleast 1 product!!!";
