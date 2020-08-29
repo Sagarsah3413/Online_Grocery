@@ -62,7 +62,7 @@ section form p span#Username {
     cursor: pointer;
 }
 
-section form p span.under{
+body span.under{
     color: #e2294d;
     display: block;
     padding-top: 8px;
