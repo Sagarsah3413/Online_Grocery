@@ -29,7 +29,7 @@
                 <div><span class="sidemenu dropdown">household and appliances</span>
                     <ul>
                         <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('all') ?>">view all</a></li>
-                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('cleaning products') ?>">cleaning products</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('house cleaning products') ?>">house cleaning products</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('pooja products') ?>">pooja products</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('home appliances') ?>">home appliances</a></li>
                     </ul>

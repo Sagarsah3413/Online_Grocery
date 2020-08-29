@@ -164,9 +164,9 @@
             <div class="all forthree">
                 <div class="fruit1">
                     <figcaption class="text">
-                        <a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('cleaning products') ?>">cleaning products</a>
+                        <a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('house cleaning products') ?>">house cleaning products</a>
                     </figcaption>
-                    <a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('cleaning products') ?>"><img src="images/clean.jpeg"  alt="fruits"></a>
+                    <a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('house cleaning products') ?>"><img src="images/clean.jpeg"  alt="fruits"></a>
                 </div>
                 <div class="fruit1">
                     <figcaption class="text">
