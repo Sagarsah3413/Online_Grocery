@@ -108,7 +108,7 @@
 
     <section>
         <h1>Thank you for shopping with us.</h1>
-        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$totalsav</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be <span> delivered to your doorsteps soon</span>.</h1>
+        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$total</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be <span> delivered to your doorsteps soon</span>.</h1>
         <?php
         if($totalsav > 2999){
             echo "<h1 style='font-weight:700'>Congratulations! You earned  giveaway reward.</h1>";
