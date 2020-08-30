@@ -2,7 +2,7 @@
 <div id="image">
     <style> 
         #slider div.img1 {
-            background-image: url(<?php echo $sharedfolder; ?>../home/images/img2.jpeg);
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img7.jpeg);
         }
 
         #slider div.img2 {
@@ -16,10 +16,10 @@
             background-image: url(<?php echo $sharedfolder; ?>../home/images/img1.jpeg);
         }
         #slider div#img5{
-            background-image: url(<?php echo $sharedfolder; ?>../home/images/img3.jpeg);
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img2.jpeg);
         }
         #slider div#img6 {
-            background-image: url(<?php echo $sharedfolder; ?>../home/images/img7.jpeg);
+            background-image: url(<?php echo $sharedfolder; ?>../home/images/img3.jpeg);
         }
     </style>
     <i id="prev">
