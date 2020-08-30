@@ -85,5 +85,6 @@
         </nav>
     </div>
 </header>
+<aside></aside>
 <script src="<?php echo $sharedfolder; ?>header.js" defer></script>
 <script src="<?php echo $sharedfolder; ?>headerlive.js" defer></script>
