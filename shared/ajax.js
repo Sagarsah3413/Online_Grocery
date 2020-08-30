@@ -1,7 +1,7 @@
 let ajax = new XMLHttpRequest();
 1
 let content = fav;
-let web = 'http://localhost/',
+let web = 'http://onlinebazzar.co/',
     id = [],
     retrive, data, img, identity;
 let array = prop;

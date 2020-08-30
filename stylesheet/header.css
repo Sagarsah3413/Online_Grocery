@@ -361,13 +361,14 @@ div#search ul {
 div#search ul li {
     margin: 0px;
     display: none;
-    border-top: 1px solid rgb(250,101,1);
-    border-bottom : 1px solid rgb(250,101,1);
+    border-top: 1px solid rgb(250, 101, 1);
+    border-bottom: 1px solid rgb(250, 101, 1);
 }
 
 div#search ul li::marker {
     display: none;
 }
+
 ::placeholder {
     font-size: 0.7em;
     padding-left: 5%;
@@ -409,25 +410,33 @@ div#search ul li:hover {
     .logo {
         width: 30%;
     }
+    div#search {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+        left: 0px;
+        z-index: inherit;
+        height: 41px;
+        background-color: inherit;
+    }
+    div#search input {
+        width: 90%;
+    }
+    div#search span {
+        width: 10%;
+    }
+    div#search input,
+    div#search input {
+        box-sizing: border-box;
+    }
+    div.nepali {
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (max-width:500px) {
-    div#search {
-        width: 130px;
-        margin: 0px 5px;
-    }
-    div#search input {
-        font-size: 20px;
-        box-sizing: border-box;
-        border-radius: 10px 0px 0px 10px;
-        width: 80%;
-    }
-    div#search span {
-        width: 24%;
-        height: auto;
-        padding: 4px 2px 2px 0px;
-        box-sizing: border-box;
-    }
     div#search span img {
         width: 20px;
         height: 20px;
@@ -435,6 +444,13 @@ div#search ul li:hover {
     }
     .logo {
         width: 30%;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    header div.fill nav#menu section,
+    header div.cart nav#cartmenu section {
+        width: 100%;
     }
 }
 
@@ -485,7 +501,7 @@ div#search ul li:hover {
     header {
         padding: 13px;
     }
-    ::placeholder {
+     ::placeholder {
         font-size: 0.5em;
         padding-left: 0%;
     }
@@ -503,5 +519,11 @@ div#search ul li:hover {
     }
     .logo {
         width: 40%;
+    }
+    div#search span {
+        width: 13%;
+    }
+    div#search input {
+        width: 87%;
     }
 }
