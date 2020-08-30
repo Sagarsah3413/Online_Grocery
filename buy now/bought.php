@@ -1,94 +1,96 @@
 <?php require '../shared/database.php'; ?><?php
-    if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
-        exit;
-    }
-    function take($sum) {
-        for($i=0;$i<6;$i++)
-            if($sum<500*($i+1))
-            return($i*5);
-        return(30);
-    }
+    // if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
+    //     exit;
+    // }
+    // function take($sum) {
+    //     for($i=0;$i<6;$i++)
+    //         if($sum<500*($i+1))
+    //         return($i*5);
+    //     return(30);
+    // }
 
-    $to = 'onlinebazzar07@gmail.com';
-    $subject = 'My subject';
-    $header = 'From: ';
-    $mailbody='';
-    $productquantity = '';
-    $productid = '';
+    // $to = 'onlinebazzar07@gmail.com';
+    // $subject = 'My subject';
+    // $header = 'From: ';
+    // $mailbody='';
+    // $productquantity = '';
+    // $productid = '';
 
-    $productid = explode(',', $_POST['product']);
-    $productquantity = explode(',', $_POST['quantity']);
+    // $productid = explode(',', $_POST['product']);
+    // $productquantity = explode(',', $_POST['quantity']);
 
 
     
-    $customer = [];
-    $customer['name'] = 'Customer name is: ' . $_POST['name'];
-    $customer['number'] = 'Customer contact number is: '.  $_POST['contact'];
-    $customer['email'] = 'Customer EmailId is: '. $_POST['email'];
+    // $customer = [];
+    // $customer['name'] = 'Customer name is: ' . $_POST['name'];
+    // $customer['number'] = 'Customer contact number is: '.  $_POST['contact'];
+    // $customer['email'] = 'Customer EmailId is: '. $_POST['email'];
 
-    $index = 0;$total=0;
-    $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
-    $data = $dbconnection-> query($query);
-    $bill = "\r\n\r\n";
-    $bill = "Id\tName\tQuantity\tRate\tTotal\r\n";
-    while($row = $data -> fetch_assoc())
-    {
-        $bill .= $row['productid'] . '. ';
-        $bill .= $row['product name'] . "\t";
-        $bill .= $productquantity[$index] . "\t";
-        $bill .= $row['price'] . "\t";
-        $total += $row['price']*floatval($productquantity[$index]); 
-        $bill .= $row['price']*floatval($productquantity[$index]) . "\r\n";
-        $index++;
-    }
-    $totalsav = $total;
+    // $index = 0;$total=0;
+    // $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
+    // $data = $dbconnection-> query($query);
+    // $bill = "\r\n\r\n";
+    // $bill = "Id\tName\tQuantity\tRate\tTotal\r\n";
+    // while($row = $data -> fetch_assoc())
+    // {
+    //     $bill .= $row['productid'] . '. ';
+    //     $bill .= $row['product name'] . "\t";
+    //     $bill .= $productquantity[$index] . "\t";
+    //     $bill .= $row['price'] . "\t";
+    //     $total += $row['price']*floatval($productquantity[$index]); 
+    //     $bill .= $row['price']*floatval($productquantity[$index]) . "\r\n";
+    //     $index++;
+    // }
+    // $totalsav = $total;
     
-    mysqli_close($dbconnection);
-    require '../shared/writing.php';
+    // mysqli_close($dbconnection);
+    // require '../shared/writing.php';
 
-    $query = "SELECT * FROM `customer` WHERE `number`={$_POST['contact']}";
-    $data = $dbconnection -> query($query);
-    $history = $data -> num_rows;
+    // $query = "SELECT * FROM `customer` WHERE `number`={$_POST['contact']}";
+    // $data = $dbconnection -> query($query);
+    // $history = $data -> num_rows;
     
-    if($history > 0)
-    {
-        $row = $data -> fetch_assoc();
-        $total -= take($total);
+    // if($history > 0)
+    // {
+    //     $row = $data -> fetch_assoc();
+    //     $total -= take($total);
 
-        $freq = floatval($row['buying']) + 1;
-        $index += floatval($row['quantity']);
+    //     $freq = floatval($row['buying']) + 1;
+    //     $index += floatval($row['quantity']);
         
-        $hold = $totalsav + floatval($row['total']);
-        $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$hold' WHERE `customer`.`customerid` = {$row['customerid']}; ";
-        $dbconnection -> query($query);
+    //     $hold = $totalsav + floatval($row['total']);
+    //     $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$hold' WHERE `customer`.`customerid` = {$row['customerid']}; ";
+    //     $dbconnection -> query($query);
 
-    }elseif($history <= 0){
+    // }elseif($history <= 0){
         
-        $total -= take($total);
-        $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
-        $dbconnection -> query($query);
-    }
-    $discount = take($totalsav);
+    //     $total -= take($total);
+    //     $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
+    //     $dbconnection -> query($query);
+    // }
+    // $discount = take($totalsav);
 
 
-    $bill .= "\r\n";
-    $bill .= "Grand Total: $total" . "\r\n\r\n";
-    $customer['product'] = $bill;
+    // $bill .= "\r\n";
+    // $bill .= "Grand Total: $total" . "\r\n\r\n";
+    // $customer['product'] = $bill;
     
-    $customer['address'] = 'Delivered at address: '. $_POST['address'];
-    if($_POST['landmark'])
-        $customer['landmark'] = 'Landmark near: '. $_POST['landmark'];
+    // $customer['address'] = 'Delivered at address: '. $_POST['address'];
+    // if($_POST['landmark'])
+    //     $customer['landmark'] = 'Landmark near: '. $_POST['landmark'];
 
-    $header.=$_POST['email'];
-    foreach ($customer as $key => $value) {
-        $mailbody.= $value;
-        $mailbody.= "\r\n";
-    }
-    if($totalsav > 2999)
-        $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
-    mail($to,$subject,$mailbody);
+    // $header.=$_POST['email'];
+    // foreach ($customer as $key => $value) {
+    //     $mailbody.= $value;
+    //     $mailbody.= "\r\n";
+    // }
+    // if($totalsav > 2999)
+    //     $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
+    // mail($to,$subject,$mailbody);
 
-    
+    $total = 79;
+    $discount = 0;
+    $totalsav = 90;
 
 ?>
 
