@@ -50,7 +50,7 @@
     <div class="headtext logo"><a href="<?php echo $sharedfolder; ?>../home/home.php"><img src="../home/images/logo.png" alt=""></a></div>
     <form action="" value="submit" method="POST" id="form">
         <div id="search">
-            <input type="text" placeholder="Search Here">
+            <input type="search" placeholder="Search Here">
             <span><a href="<?php echo $sharedfolder ?>../search/search.php?value=" id="initsearch"><img src="<?php echo $sharedfolder; ?>../home/images/search.png" alt=""></a></span>
             <ul>
                 <li><a href="<?php echo $sharedfolder ?>"></a></li>
