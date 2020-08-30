@@ -18,13 +18,11 @@ div#product div.groceries div.allsub {
 div#product div.groceries div.allsub img,
 div.fruits div.all img {
     width: 100%;
-    height: 80%;
     border-radius: 10px;
 }
 
 div#product div.vege img {
     width: 70%;
-    height: 80%;
     border-radius: 10px;
 }
 
@@ -137,7 +135,7 @@ div.nepali div p span
         grid-gap: 35px;
     }
     figcaption.text a {
-        font-size: 29px;
+        font-size: 27px;
     }
     div#product div.vege img {
         width: 90%;
@@ -189,7 +187,7 @@ div.nepali div p span
         grid-gap: 12px;
     }
     figcaption.text {
-        height: 27%;
+        height: 22%;
     }
 }
 
@@ -198,7 +196,7 @@ div.nepali div p span
         font-size: 1.4em;
     }
     figcaption.text a {
-        font-size: 15px;
+        font-size: 13px;
     }
     
     div.nepali img{

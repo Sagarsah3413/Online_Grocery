@@ -78,6 +78,14 @@ search.addEventListener('input', () => {
     xhr.send();
 
 });
+document.getElementById("form").addEventListener("submit",function(){
+    console.log("budb");
+    if (search.value.trim() === "") {
+        e.preventDefault();
+        return false;
+    }
+    document.getElementById("form").action= `../search/search.php?value=${encodeURI(search.value.trim())}`;
+});
 
 
 let dropdown = document.getElementsByClassName('dropdown');
