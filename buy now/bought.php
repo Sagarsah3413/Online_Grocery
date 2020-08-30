@@ -103,20 +103,18 @@
     <link rel="stylesheet" href="bought.css">
 </head>
 <body>
-    <header>
-        
-    </header>
+
     <section>
         <h1>Thank you for shopping with us.</h1>
-        <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "<span style='color:red'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be delivered to your doorsteps soon.</h1>
+        <h1>Your order of Rs.<?php echo $total; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be <span> delivered to your doorsteps soon</span>.</h1>
         <?php
         if($totalsav > 2999){
-            echo "<h1 style='font-weight:700'>Congratulations! You earned takeaway reward.</h1>";
+            echo "<h1 style='font-weight:700'>Congratulations! You earned  giveaway reward.</h1>";
         }
         ?>
-        <h2>A coupon code has been activated. On shopping of Rs.500 and above 
-            get reward up Rs.50.<br/>
-            On shopping of Rs.3000 and above get discount and exciting GIVE AWAYS!! <br/>
+        <h2>A coupon code has been activated. On shopping of <span> Rs.500 and above </span>
+            get reward up <span> Rs.50</span> .<br/>
+            On shopping of <span> Rs.3000</span>  and above get discount and <span> EXCITING GIVEAWAYS...!!!</span>  <br/>
         </h2>
         <div><a href="../home/home.php">Back to home</a></div>
     </section>
