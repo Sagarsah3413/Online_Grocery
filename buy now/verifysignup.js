@@ -1,4 +1,4 @@
-let form = document.getElementById('form');
+let form = document.getElementById('formm');
 let productlist = document.createElement('input');
 let quantitylist = document.createElement('input');
 
@@ -8,8 +8,8 @@ quantitylist.setAttribute('name', 'quantity');
 productlist.setAttribute('value', '');
 quantitylist.setAttribute('value', '');
 let fav = new Object;
-let index=[];
-if (sessionStorage.getItem('fav') != null){
+let index = [];
+if (sessionStorage.getItem('fav') != null) {
     fav = JSON.parse(sessionStorage.getItem('fav'));
     index = Object.getOwnPropertyNames(fav);
 }
@@ -46,12 +46,11 @@ function verify() {
         document.getElementById('loc').innerHTML = "Enter the Address!!!";
         return false;
     }
-    let sum=0;
+    let sum = 0;
     for (let i = 0; i < index.length; i++) {
-        sum+=fav[index[i]].quantity * fav[index[i]].rate;
-    }    
-    if(sum<1)
-    {
+        sum += fav[index[i]].quantity * fav[index[i]].rate;
+    }
+    if (sum < 1) {
         document.getElementById('less').innerHTML = "Select atleast 1 product!!!";
         return false;
     }

@@ -17,7 +17,7 @@
     <?php require_once'../shared/header.php'; ?>
         <h3 class="kind">kindly enter your details</h3>
         <section id="body">
-            <form onsubmit="return verify();" action="bought.php" method="POST" id="form">
+            <form onsubmit="return verify();" action="bought.php" method="POST" id="formm">
                 <p>
                     <label for="name">Name :</label>
                     <input class="escape" type="text" name="name" onclick="choose(this.id);" id="uname" autocomplete="off" />
@@ -50,7 +50,7 @@
             </form>  
         </section>
         <div class="order">
-            <button form="form" value="submit" name="submit">order now</button>
+            <button form="formm" value="submit" name="submit">order now</button>
             <span id="less" class="under"></span>
         </div>
 

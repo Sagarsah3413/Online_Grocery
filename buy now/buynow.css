@@ -21,12 +21,12 @@ section#body {
     margin-left: 30%;
 }
 
-section form label {
+section form#formm label {
     font-size: 30px;
     letter-spacing: 1px;
 }
 
-section form input {
+section form#formm input {
     padding: 1%;
     width: 50%;
     color: rgb(0 39 121);
@@ -36,11 +36,11 @@ section form input {
     font-size: 24px;
 }
 
-section form select option {
+section form#formm select option {
     background-color: rgb(185, 210, 224);
 }
 
-section form select option {
+section form#formm select option {
     /* width: 100%; */
     padding: 0;
 }
@@ -50,11 +50,11 @@ section form select option {
     margin-left: 0px;
 }
 
-section form p {
+section form#formm p {
     padding: 1% 5%;
 }
 
-section form p span#Username {
+section form#formm p span#Username {
     margin-left: 116px;
 }
 
@@ -62,7 +62,7 @@ section form p span#Username {
     cursor: pointer;
 }
 
-body span.under{
+body span.under {
     color: #e2294d;
     display: block;
     padding-top: 8px;
@@ -123,7 +123,7 @@ h5 {
         margin: 0px;
         margin: 0px auto;
     }
-    section form input {
+    section form#formm input {
         width: 90%;
     }
     h4.tq {
@@ -144,7 +144,7 @@ h5 {
     h3.kind {
         font-size: 32px;
     }
-    section form label {
+    section form#formm label {
         font-size: 24px;
     }
     h4.tq {
