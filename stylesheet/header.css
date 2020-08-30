@@ -411,15 +411,16 @@ div#search ul li:hover {
         width: 30%;
     }
     div#search {
+        margin-bottom: 5px;
         position: absolute;
         top: 100%;
         width: 100%;
         box-sizing: border-box;
         padding: 5px;
         left: 0px;
-        z-index: inherit;
+        z-index: 1;
         height: 41px;
-        background-color: inherit;
+        background-color: rgb(13, 31, 53);
     }
     div#search input {
         width: 90%;
@@ -500,10 +501,6 @@ div#search ul li:hover {
 @media only screen and (max-width:350px) {
     header {
         padding: 13px;
-    }
-     ::placeholder {
-        font-size: 0.5em;
-        padding-left: 0%;
     }
 }
 
