@@ -41,7 +41,10 @@
                 ?>
                 <h3><?php echo $key; ?></h3>
                 <div class="grid">
-                    <?php while($row = $data->fetch_assoc()){ ?>
+                    <?php while($row = $data->fetch_assoc()){ 
+                        if(!$row['available'])
+                            continue;
+                        ?>
                     <div class="items">
                         <div>
                             <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
@@ -74,7 +77,10 @@
         <h3><?php echo $show; ?></h3>
 
         <div class="grid">
-            <?php while($row = $data->fetch_assoc()){ ?>
+            <?php while($row = $data->fetch_assoc()){ 
+                if(!$row['available'])
+                    continue;
+                ?>
                 <div class="items">
                     <div>
                         <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>

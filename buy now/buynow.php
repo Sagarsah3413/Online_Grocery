@@ -18,6 +18,7 @@
         <h3 class="kind">kindly enter your details</h3>
         <section id="body">
             <form onsubmit="return verify();" action="bought.php" method="POST" id="formm">
+            <div id="info">Our services are limited within Rajbiraj,Nepal only till now. <br>|| हाम्रा सेवाहरू राजविराज, नेपाल भित्र सीमित छन् ||</div>
                 <p>
                     <label for="name">Name :</label>
                     <input class="escape" type="text" name="name" onclick="choose(this.id);" id="uname" autocomplete="off" />
@@ -26,7 +27,7 @@
                 </p>
                 <p>
                     <label for="number">Contact No. :</label>
-                    <input class="escape" name="contact" onclick="choose(this.id);" id="num" autocomplete="off" />
+                    <input class="escape"  name="contact" onclick="choose(this.id);" id="num" autocomplete="off" />
                     <span id="phone" class="under"></span>
                 </p>
                 <p>
@@ -37,7 +38,7 @@
 
                 <p>
                     <label for="address">Address :</label>
-                    <input class="escape" type="text" name="address" onclick="choose(this.id);" id="add" autocomplete="off" />
+                    <input class="escape" placeholder="Rajbiraj,Saptari,Nepal" type="text" name="address" onclick="choose(this.id);" id="add" autocomplete="off" />
                     <span id="loc" class="under"></span>
                 </p>
                 <p>

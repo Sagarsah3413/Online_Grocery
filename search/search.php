@@ -30,6 +30,8 @@
             <?php
             if($accept) {
             while($row = $data -> fetch_assoc()) {
+                if(!$row['available'])
+                    continue;
             ?>
             <div class='items'> 
                 <div>

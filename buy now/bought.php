@@ -2,6 +2,7 @@
     // if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
     //     exit;
     // }
+
     // function take($sum) {
     //     for($i=0;$i<6;$i++)
     //         if($sum<500*($i+1))
@@ -88,6 +89,8 @@
     //     $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
     // mail($to,$subject,$mailbody);
 
+    
+
     $total = 79;
     $discount = 0;
     $totalsav = 90;
@@ -103,12 +106,14 @@
     <link rel="icon" href="../home/images/logo.png">
     <title>ORDER</title>
     <link rel="stylesheet" href="bought.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
 
     <section>
         <h1>Thank you for shopping with us.</h1>
-        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$totalsav</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be <span> delivered to your doorsteps soon</span>.</h1>
+        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$total</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be <span> delivered to your doorsteps soon</span>.</h1>
         <?php
         if($totalsav > 2999){
             echo "<h1 style='font-weight:700'>Congratulations! You earned  giveaway reward.</h1>";
@@ -118,7 +123,32 @@
             get reward up <span> Rs.50</span> .<br/>
             On shopping of <span> Rs.3000</span>  and above get discount and <span> EXCITING GIVEAWAYS...!!!</span>  <br/>
         </h2>
+        <div id="load"><a href="#" download>Save your Order</a></div>
         <div><a href="../home/home.php">Back to home</a></div>
     </section>
+
+    <aside>
+        <section>
+            <div>Print</div>
+        </section>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>asdfff</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>sdasasd</td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>asdass</td>
+                <td>98</td>
+            </tr>
+        </table>
+    </aside>
 </body>
 </html>

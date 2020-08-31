@@ -85,6 +85,14 @@ td span {
     margin: 12px 0px;
 }
 
+div#info{
+    width: 50%;
+    margin: 3% auto;
+    display: flex;
+    font-size: 25px;
+    color: rgb(250, 101, 1);
+}
+
 th {
     color: rgb(100, 75, 75);
     text-transform: capitalize;
@@ -152,6 +160,9 @@ input[type=number] {
         border-radius: 35px;
         font-size: 34px;
     }
+    div#info{
+        font-size: 23px;
+    }
 }
 @media only screen and (max-width:950px)
 {
@@ -162,6 +173,10 @@ input[type=number] {
     article div {
         width: 30%;
         font-size: 32px;
+    }
+    
+    div#info{
+        font-size: 21px;
     }
 }
 @media only screen and (max-width:800px)
@@ -208,6 +223,10 @@ input[type=number] {
     table{
         table-layout: auto;
     }
+    
+    div#info{
+        font-size: 19px;
+    }
 }
 
 @media only screen and (max-width:600px)
@@ -238,6 +257,10 @@ input[type=number] {
     }
     td button {
         width: 20%;
+    }
+    
+    div#info{
+        font-size: 17px;
     }
 }
 @media only screen and (max-width:400px)
@@ -270,6 +293,9 @@ input[type=number] {
     }
     td button {
         width: 20%;
+    }
+    div#info{
+        font-size: 15px;
     }
 }
 @media only screen and (max-width:350px)
