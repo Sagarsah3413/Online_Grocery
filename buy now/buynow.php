@@ -27,7 +27,7 @@
                 </p>
                 <p>
                     <label for="number">Contact No. :</label>
-                    <input class="escape" placeholder="+977-98XXXXXXXX"  name="contact" onclick="choose(this.id);" id="num" autocomplete="off" />
+                    <input class="escape"  name="contact" onclick="choose(this.id);" id="num" autocomplete="off" />
                     <span id="phone" class="under"></span>
                 </p>
                 <p>

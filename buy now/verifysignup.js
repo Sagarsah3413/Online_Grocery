@@ -29,7 +29,8 @@ function verify() {
         return false;
     }
 
-    var phoneno=/^\+?([0-9]{3})?[-. ]?([0-9]{10})$/;
+    var phoneno = /^\d{10}$/;
+    // var phoneno=/^\+?([0-9]{3})?[-. ]?([0-9]{10})$/;
     if (!(num.match(phoneno))) {
         document.getElementById('phone').innerHTML = "Enter Mobile Number!!!";
         return false;
