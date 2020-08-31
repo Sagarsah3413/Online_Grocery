@@ -88,7 +88,7 @@
             <div class="grid">
                 <?php
                 // $query = "SELECT * FROM (SELECT * FROM grocers.`products` where type='" . $type[0] . "' ORDER BY productid DESC LIMIT $offset,5) sub ORDER BY productid ASC;";
-                $query = "SELECT * FROM `products` WHERE `type`='$type[0]' ORDER BY `product name` ASC LIMIT 5;";
+                $query = "select * from products WHERE `productid` In (1,259,263,302,278);";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -128,7 +128,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[1]' ORDER BY `product name` ASC LIMIT 5;";
+                $query = "select * from products WHERE `productid` In (343,346,347,348,126);";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -179,7 +179,7 @@
             <h3>our popular items</h3>
             <div class="grid">
                 <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[2]' ORDER BY `product name` ASC LIMIT 5;";
+                $query = "select * from products WHERE `productid` In (463,466,488,448,543);";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     ?>
@@ -223,9 +223,8 @@
             </div>
             <h3>our popular items</h3>
             <div class="grid">
-                <?php
-                $query = "SELECT * FROM `products` WHERE `type`='$type[3]' ORDER BY `product name` ASC LIMIT 5;";
-                $data = $dbconnection -> query($query);
+                <?php                
+                $query = "select * from products WHERE `productid` In (188,147,184,436,442);";
                 while($row = $data -> fetch_assoc()) {
                     ?>
                 <div class='items'> 

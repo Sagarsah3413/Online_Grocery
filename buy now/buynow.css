@@ -16,7 +16,12 @@ h3.kind {
     padding: 1%;
     letter-spacing: 2px;
 }
-
+div#info{
+    margin: auto;
+    display: flex;
+    font-size: 20px;
+    color: rgb(255,0,0);
+}
 section#body {
     margin-left: 30%;
 }

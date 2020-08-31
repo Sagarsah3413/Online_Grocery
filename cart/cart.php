@@ -15,6 +15,7 @@
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
+    <div id="info">Our services are limited within Rajbiraj,Nepal only till now. <br>|| हाम्रा सेवाहरू राजविराज, नेपाल भित्र सीमित छन् ||</div>
     <table>
         <tr>
             <th>your product</th>
