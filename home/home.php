@@ -38,11 +38,6 @@
     <div id="product">
         
         <?php require_once '../shared/slider.php' ?>
-        <style>
-            div#image{
-                width:100%;
-            }
-        </style>
         <h3><a href="<?php echo $sharedfolder; ?>../groceries/groceries.php?subcat=<?php echo urlencode('all') ?>">groceries</a></h3>
         <div class="groceries">
             <div class="allsub">

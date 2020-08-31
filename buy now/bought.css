@@ -54,9 +54,12 @@ section div {
     margin: 30px auto;
     padding: 10px;
     border-radius: 12px;
-    background-color: rgb(250,101,1);
+    background-color: rgb(255,124,0);
     font-size: 40px;
     color: rgb(255,255,255);
+}
+section div#load {
+    background-color: rgb(26, 255, 1);
 }
 
 section div:hover

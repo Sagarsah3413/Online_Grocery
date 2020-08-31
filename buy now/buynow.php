@@ -37,7 +37,7 @@
 
                 <p>
                     <label for="address">Address :</label>
-                    <input class="escape" type="text" name="address" onclick="choose(this.id);" id="add" autocomplete="off" />
+                    <input class="escape" placeholder="Rajbiraj,Saptari,Nepal" type="text" name="address" onclick="choose(this.id);" id="add" autocomplete="off" />
                     <span id="loc" class="under"></span>
                 </p>
                 <p>
