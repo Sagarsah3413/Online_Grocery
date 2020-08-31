@@ -60,6 +60,7 @@ section div {
 }
 section div#load {
     background-color: rgb(26, 255, 1);
+    font-size: 35px;
 }
 
 section div:hover
@@ -98,6 +99,9 @@ section div a {
 @media only screen and (max-width:655px) {
     section div {
         font-size: 25px;
+    }
+    section div#load{
+        font-size: 21px;
     }
 }
 
