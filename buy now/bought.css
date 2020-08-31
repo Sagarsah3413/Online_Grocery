@@ -17,8 +17,6 @@ body {
     background-color: #eeeeee;
 }
 
-
-
 section {
     margin: 90px auto;
     /* border: 3px dashed rgb(139, 100, 100); */
@@ -41,9 +39,8 @@ section h2 {
     font-weight: 400;
 }
 
- span
-{
-    color: rgb(250,101,1);
+span {
+    color: rgb(250, 101, 1);
     font-style: oblique;
     font-weight: 600;
     text-transform: uppercase;
@@ -54,13 +51,12 @@ section div {
     margin: 30px auto;
     padding: 10px;
     border-radius: 12px;
-    background-color: rgb(250,101,1);
+    background-color: rgb(250, 101, 1);
     font-size: 40px;
-    color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
 }
 
-section div:hover
-{
+section div:hover {
     transform: scale(1.2);
     transition: all 400ms;
 }
@@ -80,20 +76,14 @@ section div a {
 
 @media only screen and (max-width:900px) {
     section {
-        margin: 90px auto;
-        border: 3px dashed rgb(139, 100, 100);
-        border-radius: 12px;
         width: 77%;
         padding: 17px 20px;
-        text-align: center;
-        background-color: rgb(190, 135, 135);
     }
 }
 
 @media only screen and (max-width:755px) {
     section h2 {
         line-height: 35px;
-        color: #5de7e0ab;
         font-size: 22px;
     }
 }
