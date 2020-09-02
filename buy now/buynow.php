@@ -11,11 +11,14 @@
     <link rel="stylesheet" href="../stylesheet/footer.css">
     <link rel="stylesheet" href="buynow.css">
     <link rel="icon" href="../home/images/logo.png">
+    <!-- <script src="location.js"></script> -->
     <title>Buy Now</title>
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
-        <h3 class="kind">kindly enter your details</h3>
+        <h3 class="kind">kindly enter your details<br/>
+            Allow location for better 
+        </h3>
         <section id="body">
             <form onsubmit="return verify();" action="bought.php" method="POST" id="formm">
             <div id="info">Our services are limited within Rajbiraj,Nepal only till now. <br>|| हाम्रा सेवाहरू राजविराज, नेपाल भित्र सीमित छन् ||</div>

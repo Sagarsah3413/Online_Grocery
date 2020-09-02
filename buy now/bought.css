@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
+    font-family: 'Exo';
     /* color: wheat; */
 }
 
@@ -17,11 +17,8 @@ body {
     background-color: #eeeeee;
 }
 
-
-
 section {
     margin: 90px auto;
-    /* border: 3px dashed rgb(139, 100, 100); */
     border-radius: 12px;
     width: 60%;
     padding: 1px;
@@ -41,9 +38,8 @@ section h2 {
     font-weight: 400;
 }
 
- span
-{
-    color: rgb(250,101,1);
+span {
+    color: rgb(250, 101, 1);
     font-style: oblique;
     font-weight: 600;
     text-transform: uppercase;
@@ -54,17 +50,17 @@ section div {
     margin: 30px auto;
     padding: 10px;
     border-radius: 12px;
-    background-color: rgb(255,124,0);
+    background-color: rgb(255, 124, 0);
     font-size: 40px;
-    color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
 }
+
 section div#load {
     background-color: rgb(26, 255, 1);
     font-size: 35px;
 }
 
-section div:hover
-{
+section div:hover {
     transform: scale(1.2);
     transition: all 400ms;
 }
@@ -74,6 +70,60 @@ section div a {
     color: inherit;
     display: inline-block;
     width: 100%;
+}
+
+aside {
+    padding: 50px 0px;
+    background-color: #c6f0a4;
+}
+
+aside section {
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+aside section div {
+    text-align: left;
+    width: auto;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px 15px;
+    font-size: 30px;
+    background-color: #6eca22;
+    cursor: pointer;
+}
+
+aside section div:hover {
+    transform: none;
+    transition: none;
+}
+
+table {
+    width: 100%;
+    /* margin-bottom: 80px; */
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 35px;
+}
+
+td {
+    font-size: 30px;
+    padding: 0px 10px;
+}
+
+th,
+td {
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 1px solid #200d0d;
+    width: 50%;
 }
 
 @media only screen and (max-width:1100px) {
@@ -94,13 +144,23 @@ section div a {
         line-height: 35px;
         font-size: 22px;
     }
+    /* here */
+    th {
+        font-size: 26px;
+    }
+    td {
+        font-size: 24px;
+    }
+    aside section div {
+        font-size: 22px;
+    }
 }
 
 @media only screen and (max-width:655px) {
     section div {
         font-size: 25px;
     }
-    section div#load{
+    section div#load {
         font-size: 21px;
     }
 }
@@ -125,5 +185,16 @@ section div a {
     section h2 {
         line-height: 29px;
         font-size: 18px;
+    }
+    /* here */
+    th {
+        font-size: 20px;
+    }
+    td {
+        font-size: 18px;
+        padding: 0px 2.5px;
+    }
+    aside section div {
+        font-size: 15px;
     }
 }

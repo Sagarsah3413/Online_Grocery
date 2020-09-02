@@ -1,12 +1,17 @@
 let form = document.getElementById('formm');
 let productlist = document.createElement('input');
 let quantitylist = document.createElement('input');
+// let coordinateinput = document.createElement('input');
 
 productlist.setAttribute('name', 'product');
 quantitylist.setAttribute('name', 'quantity');
+// coordinateinput.setAttribute('name', 'location');
 
 productlist.setAttribute('value', '');
 quantitylist.setAttribute('value', '');
+// coordinateinput.setAttribute('value', '');
+// coordinateinput.setAttribute('type', 'text');
+
 let fav = new Object;
 let index = [];
 if (sessionStorage.getItem('fav') != null) {
@@ -67,11 +72,14 @@ function verify() {
 
     quantitylist.value = quantityinput;
     productlist.value = productinput;
+    // coordinateinput.value = `Latitude:${crds.latitude} Longitude:${crds.longitude} [${crds.latitude} ${crds.longitude}]`;
     quantitylist.style.display = 'none';
     productlist.style.display = 'none';
+    // coordinateinput.style.display = 'none';
 
     form.appendChild(productlist);
     form.appendChild(quantitylist);
+    // form.appendChild(coordinateinput);
 
     sessionStorage.clear();
     return true;

@@ -7,7 +7,7 @@ if(isset($_GET['value']))
     $value = $_GET['value'];
     // echo $value;
     // return;
-    $query = "SELECT * FROM `products` WHERE `product name` LIKE '%$value%';";
+    $query = "SELECT * FROM `products` WHERE `product name` LIKE '%$value%' AND `available` = 1;";
     $data = $dbconnection -> query($query);
     $iterate = $data -> num_rows;
     $suggestion = [];

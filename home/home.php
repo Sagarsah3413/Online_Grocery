@@ -91,6 +91,8 @@
                 $query = "select * from products WHERE `productid` In (1,259,263,302,278);";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
+                    if(!$row['available'])
+                        continue;
                     ?>
                 <div class='items'> 
                     <div>
@@ -131,6 +133,8 @@
                 $query = "select * from products WHERE `productid` In (343,346,347,348,126);";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
+                    if(!$row['available'])
+                        continue;
                     ?>
                 <div class='items'> 
                     <div>
@@ -182,6 +186,8 @@
                 $query = "select * from products WHERE `productid` In (463,466,488,448,543);";
                 $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
+                    if(!$row['available'])
+                        continue;
                     ?>
                 <div class='items'> 
                     <div>
@@ -226,6 +232,8 @@
                 <?php                
                 $query = "select * from products WHERE `productid` In (188,147,184,436,442);";
                 while($row = $data -> fetch_assoc()) {
+                    if(!$row['available'])
+                        continue;
                     ?>
                 <div class='items'> 
                     <div>
