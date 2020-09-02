@@ -121,6 +121,7 @@ td {
 th,
 td {
     font-weight: 500;
+    text-transform: capitalize;
     border: 1px solid #200d0d;
     width: 50%;
 }
@@ -141,6 +142,16 @@ td {
 @media only screen and (max-width:755px) {
     section h2 {
         line-height: 35px;
+        font-size: 22px;
+    }
+    /* here */
+    th {
+        font-size: 26px;
+    }
+    td {
+        font-size: 24px;
+    }
+    aside section div {
         font-size: 22px;
     }
 }
@@ -174,5 +185,16 @@ td {
     section h2 {
         line-height: 29px;
         font-size: 18px;
+    }
+    /* here */
+    th {
+        font-size: 20px;
+    }
+    td {
+        font-size: 18px;
+        padding: 0px 2.5px;
+    }
+    aside section div {
+        font-size: 15px;
     }
 }
