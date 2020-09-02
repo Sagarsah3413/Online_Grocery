@@ -1,4 +1,6 @@
+
 <?php
+ob_start();
 require_once './tcpdf/tcpdf.php';
 
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -32,15 +34,6 @@ $pdf->setFont('dejavusans', '', 14, '', true);
 
 $pdf->AddPage();
 
-?><?php
-$html = <<<EOD
-<h1 style="text-decoration:none;background-color:#CC0000;color:black;">Demonstrating pdf with php</h1>
-<p>In this simple example i show how to generate pdf documents using TCPDF</p>
-EOD;
-// echo $html;
-$pdf->writeHTML($html);
-$pdf->Output('test.pdf', 'D');
-
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +52,17 @@ $pdf->Output('test.pdf', 'D');
 </head>
 <body>
 
+<?php
+    $html = <<<EOD
+    <h1 style="text-decoration:none;background-color:#CC0000;color:black;">Demonstrating pdf with php</h1>
+    <p>In this simple example</p>
+    EOD;
+    // echo $html;
+    $pdf->writeHTML($html);
+    echo __DIR__;
+    $pdf->Output(__DIR__ . '/test.pdf', 'F');
+
+?>
     <?php echo 'hwfejw' ?>
 </body>
 </html>
