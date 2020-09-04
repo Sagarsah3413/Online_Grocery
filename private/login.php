@@ -6,17 +6,17 @@ if($_POST)
     $pass="password";
     setcookie("username",$user, time() + (86400 * 30), "/");
     setcookie("userpass", $pass, time() + (86400 * 30), "/");
-    if(password_verify($_POST['password'],$pass))
+    if($_POST['password']===$pass && $_POST['email']===$user)
     {
         $accept = true;
     }
     else
     {
-        echo "<script>alert('invalid password');</script>";
+        echo "<script>alert('invalid email or password');</script>";
     }
     if($accept)
     {
-            header("Location: private/report.php");
+            header("Location: report.php");
     }
 }
 ?>
@@ -37,7 +37,7 @@ if($_POST)
                 <div class="top">
                     <img src="images/Img2.png" alt="">
                 </div>
-                <form onsubmit="return verify();" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                     <p class="txt">Login Here<span><img src="images/Img0.png" alt=""></span></p>
                                          
                     <div class="input">
