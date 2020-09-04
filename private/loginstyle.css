@@ -18,7 +18,7 @@ body {
 .head {
     height: 100%;
     width: 100%;
-    background-image: url("../Images/Img1.jpg");
+    background-image: url("images/Img1.jpg");
     background-position-x: center;
     background-position-y: center;
     background-attachment: fixed;
@@ -102,7 +102,6 @@ p.txt span {
 
 div.input input.radio {
     display: inline;
-    width: auto;
 }
 
 div.input input.radio,
