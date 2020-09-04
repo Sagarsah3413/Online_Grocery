@@ -85,7 +85,7 @@ td span {
     margin: 12px 0px;
 }
 
-div#info{
+div#info {
     width: 50%;
     margin: 3% auto;
     display: flex;
@@ -97,6 +97,7 @@ th {
     color: rgb(100, 75, 75);
     text-transform: capitalize;
 }
+
 div#total {
     width: 100%;
     text-align: right;
@@ -150,9 +151,14 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-@media only screen and (max-width:1172px)
-{
-    div#total div{
+
+/* th:nth-child(1),
+td:nth-child(1) {
+    width: 45%;
+} */
+
+@media only screen and (max-width:1172px) {
+    div#total div {
         font-size: 32px;
         width: 40%;
     }
@@ -160,13 +166,13 @@ input[type=number] {
         border-radius: 35px;
         font-size: 34px;
     }
-    div#info{
+    div#info {
         font-size: 23px;
     }
 }
-@media only screen and (max-width:950px)
-{
-    div#total div{
+
+@media only screen and (max-width:950px) {
+    div#total div {
         font-size: 30px;
         width: 45%;
     }
@@ -174,13 +180,12 @@ input[type=number] {
         width: 30%;
         font-size: 32px;
     }
-    
-    div#info{
+    div#info {
         font-size: 21px;
     }
 }
-@media only screen and (max-width:800px)
-{    
+
+@media only screen and (max-width:800px) {
     article div {
         width: 35%;
         border-radius: 30px;
@@ -188,18 +193,16 @@ input[type=number] {
         padding: 3px;
         letter-spacing: 0px;
     }
-    div#total div{
+    div#total div {
         font-size: 27px;
         width: 55%;
     }
     table th {
         font-size: 1.5em;
     }
-    
     td {
         font-size: 1.4em;
     }
-    
     td input,
     td button {
         font-size: 2em;
@@ -209,7 +212,6 @@ input[type=number] {
         margin: 0px 2px;
         width: 45%;
     }
-    
     td button {
         width: 20%;
     }
@@ -217,36 +219,32 @@ input[type=number] {
         width: 110px;
         height: 110px;
     }
-    td:nth-child(2){
+    td:nth-child(2) {
         padding: 0px;
     }
-    table{
+    table {
         table-layout: auto;
     }
-    
-    div#info{
+    div#info {
         font-size: 19px;
     }
 }
 
-@media only screen and (max-width:600px)
-{    
+@media only screen and (max-width:600px) {
     article div {
         border-radius: 20px;
         font-size: 23px;
     }
-    div#total div{
+    div#total div {
         font-size: 21px;
         width: 65%;
     }
     table th {
         font-size: 1.3em;
     }
-    
     td {
         font-size: 1em;
     }
-    
     td input,
     td button {
         font-size: 1.9em;
@@ -258,29 +256,26 @@ input[type=number] {
     td button {
         width: 20%;
     }
-    
-    div#info{
+    div#info {
         font-size: 17px;
     }
 }
-@media only screen and (max-width:400px)
-{    
+
+@media only screen and (max-width:400px) {
     article div {
         width: 43%;
         border-radius: 14px;
         font-size: 17px;
     }
-    div#total div{
+    div#total div {
         font-size: 19px;
     }
     table th {
         font-size: 1.1em;
     }
-    
     td {
         font-size: 0.9em;
     }
-    
     td input,
     td button {
         font-size: 1.7em;
@@ -294,23 +289,21 @@ input[type=number] {
     td button {
         width: 20%;
     }
-    div#info{
+    div#info {
         font-size: 15px;
     }
 }
-@media only screen and (max-width:350px)
-{    
+
+@media only screen and (max-width:350px) {
     table th {
         font-size: 0.7em;
     }
-    div#total div{
+    div#total div {
         font-size: 28px;
     }
-    
     td {
         font-size: 9px;
     }
-    
     td input,
     td button {
         font-size: 1.5em;

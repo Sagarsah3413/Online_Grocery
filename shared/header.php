@@ -6,6 +6,7 @@
             <span></span>
             <span></span>
             <span></span>
+            <label>Catagories</label>
         </span>
         <nav class="content" id="menu" style="display: none;">
             <section class="relative">
@@ -64,6 +65,7 @@
         <span id="carticon" class="headtext">
             <span id="index">0</span>
             <img src="<?php echo $sharedfolder ?>../home/images/cart.png" alt="">
+            <label>My Items</label>
         </span>
         <nav id="cartmenu" style="display: none;">
             <section>
