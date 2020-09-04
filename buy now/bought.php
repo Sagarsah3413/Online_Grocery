@@ -43,8 +43,8 @@
     }
     $totalsav = $total;
     
-    mysqli_close($dbconnection);
-    require '../shared/writing.php';
+    // mysqli_close($dbconnection);
+    // require '../shared/writing.php';
 
     $query = "SELECT * FROM `customer` WHERE `number`={$_POST['contact']}";
     $data = $dbconnection -> query($query);
@@ -94,6 +94,108 @@
     // $discount = 0;
     // $totalsav = 90;
 
+    // $query = "SELECT * FROM `products` WHERE `productid` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23);";
+    $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
+                
+    $data = $dbconnection-> query($query);
+    $index = 0;
+    $table = '';
+    $style = '<style>
+                table {
+                    width: 100%;
+                    table-layout: auto;
+                    border-collapse: collapse;
+                }
+                
+                thead tr td {
+                    text-align: center;
+                    font-size: 37px;
+                }
+                
+                td {
+                    font-size: 32px;
+                    height:80px;
+                    
+                }
+                
+                thead,
+                td {
+                    text-transform: capitalize;
+                    border: 0.5px solid #200d0d;
+                    
+                }
+                
+            </style>';
+    $overhead = '<div style="font-size:20px;color:#6eca22;">Customer name: '.$_POST['name'].'</div>';
+    $overhead .= '<div style="font-size:20px;color:#6eca22;">Contact number: '.$_POST['contact'].'</div>';
+    $overhead .= '<div style="font-size:20px;color:#6eca22;">Address to deliver: '.$_POST['address'].'</div>';
+
+    $table .= '<table style="table-layout: fixed;">
+                <thead>
+                    <tr style="background-color: #34ca9d;">
+                    <td style="text-align: center;width:46%;">Item</td>
+                    <td style="text-align: center;width:18%;">Rate</td>
+                    <td style="text-align: center;width:18%;">Quantity</td>
+                    <td style="text-align: center;width:18%;">Total</td>
+                    </tr>
+                </thead>';
+    while ($row = $data -> fetch_assoc()) {
+        $table .= '<tr>
+                        <td style="width:46%;">'.($index+1).'. '.$row["product name"].'</td>
+                        <td style="width:18%;">Rs.'.$row["price"].'</td>
+                        <td style="width:18%;">'.$productquantity[$index].'</td>
+                        <td style="width:18%;">Rs.'. $row['price']*$productquantity[$index] .'</td>
+                    </tr>';
+        $index++;
+    }
+    $table .= '</table>';
+    $footer = '';
+    if($discount>0)
+    {
+        $footer .= '<div style="color:#ff0000;text-align:right;font-size:23px;">Total Price: Rs.'.$totalsav.'</div>';
+        $footer .= '<div style="color:#95cc13;text-align:right;font-size:23px;">Discount: Rs.'.$discount.'</div>';
+        $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
+    }else
+    {
+        $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
+    }
+    
+
+    //pdf reader
+    require_once './tcpdf/tcpdf.php';
+
+    $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+    
+    // $pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING, array(0, 6, 255), array(0, 64, 128));
+    $pdf->setFooterData(array(0,64,0), array(0,64,128));
+    
+    $pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+    $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+
+    // set default monospaced font
+    $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+    
+    $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+    
+    // set auto page breaks
+    $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+    
+    // set image scale factor
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    
+    
+    // set default font subsetting mode
+    $pdf->setFont('courierB', '', 14, '', true);
+
+    $pdf->AddPage();
+    $content = '<html><head>'.$style.'</head><body>'.$overhead.$table.$footer.'</body></html>';
+    $pdf->writeHTML($content, true, false, false, false, '');
+    
+    $name = $_POST['name'].$_POST['contact'];
+    $pdf->Output(__DIR__ . '/pdfs/'.$name.'.pdf', 'F');
+
 ?>
 
 
@@ -106,7 +208,7 @@
     <title>ORDER</title>
     <link rel="stylesheet" href="bought.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-
+    
 </head>
 <body>
 
@@ -128,30 +230,11 @@
 
     <aside>
         <section>
-        <div>To keep a record of your order screenshot this table.</div>
+        <div><a href="pdfs/<?php echo $name; ?>.pdf" download>Click to download digital bill</a></div>
         </section>
-        <table>
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-            </tr>
-            <?php
-                $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
-                
-                $data = $dbconnection-> query($query);
-                $index = 0;
-            while ($row = $data -> fetch_assoc()) {
-            ?>
-            <tr>
-                <td><?php echo $row['product name']; ?></td>
-                <td><?php echo $productquantity[$index]; ?></td>
-            </tr>
-            <?php
-            $index++;
-            }
-            ?>
-           
-        </table>
+        <?php 
+        // echo $style;
+         echo $table; ?>
     </aside>
 </body>
 </html>

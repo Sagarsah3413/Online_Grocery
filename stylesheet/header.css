@@ -28,6 +28,7 @@ header {
     position: sticky;
     top: 0px;
     z-index: 4;
+    padding-bottom: 22px;
 }
 
 aside {
@@ -138,6 +139,21 @@ header div.fill span#open {
     border-radius: 50%;
     background-color: blue;
     transition: 0.3s ease-in-out all;
+    position: relative;
+}
+
+header div.fill span#open label,
+header div.cart span#carticon label {
+    position: absolute;
+    top: 100%;
+    color: aliceblue;
+    left: 0px;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 4px;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
 }
 
 header div.fill span#open:hover {
@@ -542,11 +558,16 @@ div#search ul li:hover {
     header div.fill span#open span {
         height: 2px;
     }
+    header div.fill span#open label,
+    header div.cart span#carticon label {
+        font-size: 10px;
+    }
 }
 
 @media only screen and (max-width:350px) {
     header {
         padding: 13px;
+        padding-bottom: 20px;
     }
 }
 
