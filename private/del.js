@@ -22,6 +22,11 @@ for(let i=0;i<arr.length;i++)
             arr[i].checked=false;
         }
     });
+    arr[i].parentElement.parentElement.children[1].firstElementChild.addEventListener('click', function(){
+        if(arr[i].parentElement.parentElement.children[1].firstElementChild.checked==false){
+            arr[i].checked=false;
+        }
+    });
 }
 form.addEventListener('submit',function(){
     for (let i = 0; i < arr.length; i++) {
