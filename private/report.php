@@ -1,3 +1,12 @@
+<?php
+
+
+if(isset($_COOKIE['userid']) && $_COOKIE['userpass'] !== 'password')
+{
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
