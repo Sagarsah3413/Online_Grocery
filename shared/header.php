@@ -42,6 +42,16 @@
                         <li><a href="<?php echo $sharedfolder; ?>../health and care/health.php?subcat=<?php echo urlencode('baby care products') ?>">baby care products</a></li>
                     </ul>
                 </div>
+                <!-- <div><span class="sidemenu dropdown">Stationary</span>
+                    <ul>
+                        <li><a href="<?php //echo $sharedfolder; ?>../stationary/stationary.php?subcat=<?php //echo urlencode('instrument and copy') ?>">instrument and copy</a></li>
+                    </ul>
+                </div> -->
+                <div>
+                    <span class="sidemenu dropdown">
+                    <a href="<?php echo $sharedfolder; ?>../stationary/stationary.php?subcat=<?php echo urlencode('instrument and copy') ?>">Stationary</a> 
+                    </span>
+                </div>               
                 <div><span class="sidemenu"> <a href="../about/about.php">About us</a> </span></div>
             </section>
         </nav>

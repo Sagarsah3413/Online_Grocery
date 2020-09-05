@@ -6,7 +6,8 @@
     else
     {
         foreach($_COOKIE as $index => $value)
-        setcookie( $index , '', time() - 84600);
-        header('Location: login.php');
+            setcookie($index , '', time() - (84600 * 30), '/');
+
+        // header('Location: login.php');
     }
  ?>

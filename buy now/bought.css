@@ -144,6 +144,9 @@ td:nth-child(1) {
     section {
         width: 77%;
         padding: 17px 20px;
+        /* here */
+        margin-bottom: 0px;
+        padding-bottom: 5px;
     }
 }
 
@@ -152,7 +155,6 @@ td:nth-child(1) {
         line-height: 35px;
         font-size: 22px;
     }
-    /* here */
     thead {
         font-size: 26px;
     }
@@ -179,6 +181,9 @@ td:nth-child(1) {
     }
     section {
         margin: 31px auto;
+        /* here */
+        margin-bottom: 0px;
+        padding-bottom: 2px;
     }
     section div {
         width: 60%;
@@ -194,7 +199,6 @@ td:nth-child(1) {
         line-height: 29px;
         font-size: 18px;
     }
-    /* here */
     thead {
         font-size: 20px;
     }

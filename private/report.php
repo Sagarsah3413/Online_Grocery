@@ -1,19 +1,14 @@
 <?php
 
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$dbname = 'grocers';
-
-$dbconnection = mysqli_connect($dbhost,$dbuser, $dbpass, $dbname);
-
+require '../shared/database.php';
 if(!($_COOKIE['username'] && $_COOKIE['userpass']))
 {
     mysqli_close($dbconnection);
     header("Location: login.php");
 }
 
-if(('admin' !== $_COOKIE['username']) || $_COOKIE['userpass'] !== 'password')
+
+if($_COOKIE['username'] !== 'admin' || $_COOKIE['userpass'] !== 'password')
 {
     mysqli_close($dbconnection);
     header("Location: login.php");
@@ -57,7 +52,7 @@ if(('admin' !== $_COOKIE['username']) || $_COOKIE['userpass'] !== 'password')
         </tr>
     </tbody>
     <?php
-        $sqlquery = "SELECT * FROM `orders` WHERE (`delivered`=0);";
+        $sqlquery = "SELECT * FROM `orders` WHERE `delivered` = 0;";
         $data = $dbconnection -> query($sqlquery);
         while($row = $data -> fetch_assoc()) {
     ?>
