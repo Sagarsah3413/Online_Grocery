@@ -26,8 +26,8 @@ for(let i=0;i<arr.length;i++)
 form.addEventListener('submit',function(){
     for (let i = 0; i < arr.length; i++) {
         orderid.push(arr[i].parentElement.parentElement.firstElementChild.id);
-        pack.push(Number(arr[i].checked));
-        deliver.push(Number(arr[i].parentElement.parentElement.children[1].firstElementChild.checked));
+        deliver.push(Number(arr[i].checked));
+        pack.push(Number(arr[i].parentElement.parentElement.children[1].firstElementChild.checked));
     }
 
     orderid = orderid.join(',');
