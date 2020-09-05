@@ -229,8 +229,9 @@
             </div>
             <h3>our popular items</h3>
             <div class="grid">
-                <?php                
+                <?php
                 $query = "select * from products WHERE `productid` In (188,147,184,436,442);";
+                $data = $dbconnection -> query($query);
                 while($row = $data -> fetch_assoc()) {
                     if(!$row['available'])
                         continue;
