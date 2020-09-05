@@ -1,117 +1,117 @@
 <?php require '../shared/database.php'; ?><?php
-//     if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
-//         exit;
-//     }
+    if(!(isset($_POST['submit']) && $_POST['submit'] === 'submit')){
+        exit;
+    }
 
-//     function take($sum) {
-//         for($i=0;$i<6;$i++)
-//             if($sum<500*($i+1))
-//             return($i*5);
-//         return(30);
-//     }
+    function take($sum) {
+        for($i=0;$i<6;$i++)
+            if($sum<500*($i+1))
+            return($i*5);
+        return(30);
+    }
 
-//     $to = 'onlinebazzar07@gmail.com';
-//     $subject = 'My subject';
-//     // $header = 'From: ';
-//     
-
-//     $mailbody='';
-//     $productquantity = '';
-//     $productid = '';
-
-//     $productid = explode(',', $_POST['product']);
-//     $productquantity = explode(',', $_POST['quantity']);
-
-
-//     $customer = [];
-//     $customer['name'] = 'Customer name is: ' . $_POST['name'];
-//     $customer['number'] = 'Customer contact number is: '.  $_POST['contact'];
-//     $customer['email'] = 'Customer EmailId is: '. $_POST['email'];
-//     $list = '';
-
-//     $index = 0;$total=0;
-//     $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
-//     $data = $dbconnection-> query($query);
-//     $bill = "\r\n\r\n";
-//     $bill = "Id\tName\tQuantity\tRate\tTotal\r\n";
-//     while($row = $data -> fetch_assoc())
-//     {
-//         $bill .= $row['productid'] . '. ';
-//         $bill .= $row['product name'] . "\t";
-//         $bill .= $productquantity[$index] . "\t";
-        
-//         $list .= "<{$row['product name']}--[{$productquantity[$index]}]>";
-//         $bill .= $row['price'] . "\t";
-//         $total += $row['price']*floatval($productquantity[$index]); 
-//         $bill .= $row['price']*floatval($productquantity[$index]) . "\r\n";
-//         $index++;
-//     }
-//     $totalsav = $total;
+    $to = 'onlinebazzar07@gmail.com';
+    $subject = 'My subject';
+    $header = 'From: ';
     
-//     // mysqli_close($dbconnection);
-//     // require '../shared/writing.php';
 
-//     $query = "SELECT * FROM `customer` WHERE `number`={$_POST['contact']}";
-//     $data = $dbconnection -> query($query);
-//     $history = $data -> num_rows;
-    
-//     if($history > 0)
-//     {
-//         $row = $data -> fetch_assoc();
-//         $total -= take($total);
+    $mailbody='';
+    $productquantity = '';
+    $productid = '';
 
-//         $freq = floatval($row['buying']) + 1;
-//         $index += floatval($row['quantity']);
+    $productid = explode(',', $_POST['product']);
+    $productquantity = explode(',', $_POST['quantity']);
+
+
+    $customer = [];
+    $customer['name'] = 'Customer name is: ' . $_POST['name'];
+    $customer['number'] = 'Customer contact number is: '.  $_POST['contact'];
+    $customer['email'] = 'Customer EmailId is: '. $_POST['email'];
+    $list = '';
+
+    $index = 0;$total=0;
+    $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
+    $data = $dbconnection-> query($query);
+    $bill = "\r\n\r\n";
+    $bill = "Id\tName\tQuantity\tRate\tTotal\r\n";
+    while($row = $data -> fetch_assoc())
+    {
+        $bill .= $row['productid'] . '. ';
+        $bill .= $row['product name'] . "\t";
+        $bill .= $productquantity[$index] . "\t";
         
-//         $hold = $totalsav + floatval($row['total']);
-//         $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$hold' WHERE `customer`.`customerid` = {$row['customerid']}; ";
-//         $dbconnection -> query($query);
-
-//     }elseif($history <= 0){
-        
-//         $total -= take($total);
-//         $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
-//         $dbconnection -> query($query);
-//     }
-//     $landmark = ($_POST['landmark']) ? $_POST['landmark'] : '';
-//     $query = "INSERT INTO `orders` (`name`, `number`, `address`, `product`, `total`, `packed`, `delivered`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '".$_POST['address']."<$landmark>"."', '$list', '$total', '0', '0');";
-//     $dbconnection -> query($query);
-
-//     $discount = take($totalsav);
-
-
-//     $bill .= "\r\n";
-//     $bill .= "Grand Total: $total" . "\r\n\r\n";
-//     $customer['product'] = $bill;
+        $list .= "<{$row['product name']}--[{$productquantity[$index]}]>";
+        $bill .= $row['price'] . "\t";
+        $total += $row['price']*floatval($productquantity[$index]); 
+        $bill .= $row['price']*floatval($productquantity[$index]) . "\r\n";
+        $index++;
+    }
+    $totalsav = $total;
     
-//     $customer['address'] = 'Delivered at address: '. $_POST['address'];
-//     if($_POST['landmark'])
-//         $customer['landmark'] = 'Landmark near: '. $_POST['landmark'];
+    // mysqli_close($dbconnection);
+    // require '../shared/writing.php';
 
-//     $header.=$_POST['email'];
-//     foreach ($customer as $key => $value) {
-//         $mailbody.= $value;
-//         $mailbody.= "\r\n";
-//     }
-//     if($totalsav > 2999)
-//         $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
+    $query = "SELECT * FROM `customer` WHERE `number`={$_POST['contact']}";
+    $data = $dbconnection -> query($query);
+    $history = $data -> num_rows;
+    
+    if($history > 0)
+    {
+        $row = $data -> fetch_assoc();
+        $total -= take($total);
+
+        $freq = floatval($row['buying']) + 1;
+        $index += floatval($row['quantity']);
+        
+        $hold = $totalsav + floatval($row['total']);
+        $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$hold' WHERE `customer`.`customerid` = {$row['customerid']}; ";
+        $dbconnection -> query($query);
+
+    }elseif($history <= 0){
+        
+        $total -= take($total);
+        $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
+        $dbconnection -> query($query);
+    }
+    $landmark = ($_POST['landmark']) ? $_POST['landmark'] : '';
+    $query = "INSERT INTO `orders` (`name`, `number`, `address`, `product`, `total`, `packed`, `delivered`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '".$_POST['address']."<$landmark>"."', '$list', '$total', '0', '0');";
+    $dbconnection -> query($query);
+
+    $discount = take($totalsav);
+
+
+    $bill .= "\r\n";
+    $bill .= "Grand Total: $total" . "\r\n\r\n";
+    $customer['product'] = $bill;
+    
+    $customer['address'] = 'Delivered at address: '. $_POST['address'];
+    if($_POST['landmark'])
+        $customer['landmark'] = 'Landmark near: '. $_POST['landmark'];
+
+    $header.=$_POST['email'];
+    foreach ($customer as $key => $value) {
+        $mailbody.= $value;
+        $mailbody.= "\r\n";
+    }
+    if($totalsav > 2999)
+        $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
     // mail($to,$subject,$mailbody,$header);
 
-    $total = 79;
-    $discount = 0;
-    $totalsav = 90;
+    // $total = 79;
+    // $discount = 0;
+    // $totalsav = 90;
 
     // here
-    // if(!empty($_POST['email']))
-    // {
-    //     $headers = 'From: onlinebazzar07@gamil.com' . "\r\n" .
-    //     'Reply-To: onlinebazzar07@gamil.com' . "\r\n" .
-    //     'X-Mailer: PHP/' . phpversion();
-    //     $to = $_POST['email'];
-    //     $subject = 'Order from onlinebazzar.co';
-    //     $mailbody = "Your order Rs.$total has been placed and will be delivered within 1-2hrs. Thank you for shopping with onlinebazzar.co .";
-    //     mail($to,$subject,$mailbody,$header);
-    // }
+    if(!empty($_POST['email']))
+    {
+        $header = 'From: onlinebazzar07@gamil.com' . "\r\n" .
+        'Reply-To: onlinebazzar07@gamil.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+        $to = $_POST['email'];
+        $subject = 'Order from onlinebazzar.co';
+        $mailbody = "Your order Rs.$total has been placed and will be delivered within 1-2hrs. Thank you for shopping with onlinebazzar.co .";
+        // mail($to,$subject,$mailbody,$header);
+    }
 
 
     

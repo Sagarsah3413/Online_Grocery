@@ -21,6 +21,9 @@
         <?php require_once '../shared/slider.php'; ?>
 
         <?php
+        // here
+        if(!(isset($_GET['subcat']) && $_GET['subcat'] === 'all'))
+            exit;
         $query = "SELECT * FROM `products` WHERE `subcatid` = '9' ORDER BY `product name` ASC;";  
         $data = $dbconnection->query($query);
         ?>
