@@ -2,6 +2,7 @@
     if(!$_COOKIE)
     {
         echo "Bhag Bhosdike";
+        echo "<br><button><a href='login.php'>Idhar click karr</a></button>";
     }
     else
     {
