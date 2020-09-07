@@ -8,7 +8,7 @@ if(!($_COOKIE['username'] && $_COOKIE['userpass']))
 }
 
 
-if($_COOKIE['username'] !== 'admin' || $_COOKIE['userpass'] !== 'password')
+if($_COOKIE['username'] !== 'paparanjeet' || $_COOKIE['userpass'] !== 'omshantikimakabhosda')
 {
     mysqli_close($dbconnection);
     header("Location: login.php");
@@ -24,6 +24,7 @@ if($_COOKIE['username'] !== 'admin' || $_COOKIE['userpass'] !== 'password')
         $index=0;
         while($row = $data -> fetch_assoc()){
             $sqlquery="UPDATE `orders` SET `packed` = '$pack[$index]', `delivered` = '$deliver[$index]' WHERE `orders`.`orderid` = $orderid[$index]";
+            echo "UPDATE `orders` SET `packed` = '$pack[$index]', `delivered` = '$deliver[$index]' WHERE `orders`.`orderid` = $orderid[$index]";
             $dbconnection -> query($sqlquery);
             $index++;
         }

@@ -2,8 +2,8 @@
 $accept= false;
 if(isset($_POST['button']) && $_POST['button'] === 'submit')
 {
-    $user="admin";
-    $pass="password";
+    $user="paparanjeet";
+    $pass="omshantikimakabhosda";
     if($_POST['password'] === $pass && $_POST['email']===$user)
     {
         setcookie("username",$user, time() + (86400), "/");
