@@ -59,6 +59,7 @@
     $history = $data -> num_rows;
 
     
+    $discount = take($totalsav);
     if($history > 0)
     {
         $row = $data -> fetch_assoc();
@@ -68,17 +69,16 @@
         $index += floatval($row['quantity']);
         
         $hold = $totalsav + floatval($row['total']);
-        $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$hold' WHERE `customer`.`customerid` = {$row['customerid']}; ";
+        $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$hold',`discount` = '".($discount+floatval($row['discount']))."' WHERE `customer`.`customerid` = {$row['customerid']}; ";
         $dbconnection -> query($query);
 
     }elseif($history <= 0){
         
         $total -= take($total);
-        $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('".addslashes($_POST['name'])."', '".addslashes($_POST['contact'])."', '".addslashes($_POST['email'])."', '1', $index, $totalsav);";
+        $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`,`discount`) VALUES ('".addslashes($_POST['name'])."', '".addslashes($_POST['contact'])."', '".addslashes($_POST['email'])."', '1', $index, $totalsav,$discount);";
         $dbconnection -> query($query);
     }
     
-    $discount = take($totalsav);
     
     $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
 
