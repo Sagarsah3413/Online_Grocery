@@ -7,7 +7,7 @@
         for($i=0;$i<6;$i++)
             if($sum<500*($i+1))
             return($i*5);
-        return(30);
+        return(0);
     }
 
     $to = 'onlinebazzar07@gmail.com';
@@ -27,12 +27,15 @@
     $customer['name'] = 'Customer name is: ' . $_POST['name'];
     $customer['number'] = 'Customer contact number is: '.  $_POST['contact'];
     $customer['email'] = 'Customer EmailId is: '. $_POST['email'];
+    
+    $customer['location'] = 'Customer Location is :'. $_POST['location'];
     $list = '';
 
     $index = 0;$total=0;
     $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
     $data = $dbconnection-> query($query);
     $bill = "\r\n\r\n";
+    $list = '';
     $bill = "Id\tName\tQuantity\tRate\tTotal\r\n";
     while($row = $data -> fetch_assoc())
     {
@@ -54,6 +57,7 @@
     $query = "SELECT * FROM `customer` WHERE `number`={$_POST['contact']}";
     $data = $dbconnection -> query($query);
     $history = $data -> num_rows;
+
     
     if($history > 0)
     {
@@ -70,14 +74,18 @@
     }elseif($history <= 0){
         
         $total -= take($total);
-        $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '{$_POST['email']}', '1', $index, $totalsav);";
+        $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`) VALUES ('".addslashes($_POST['name'])."', '".addslashes($_POST['contact'])."', '".addslashes($_POST['email'])."', '1', $index, $totalsav);";
         $dbconnection -> query($query);
     }
-    $landmark = ($_POST['landmark']) ? $_POST['landmark'] : '';
-    $query = "INSERT INTO `orders` (`name`, `number`, `address`, `product`, `total`, `packed`, `delivered`) VALUES ('{$_POST['name']}', '{$_POST['contact']}', '".$_POST['address']."<$landmark>"."', '$list', '$total', '0', '0');";
-    $dbconnection -> query($query);
-
+    
     $discount = take($totalsav);
+    
+    $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
+
+    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", FALSE, FALSE);';
+    $value = $dbconnection -> query($query);
+    
+
 
 
     $bill .= "\r\n";
@@ -93,15 +101,16 @@
         $mailbody.= $value;
         $mailbody.= "\r\n";
     }
+    
     if($totalsav > 2999)
-        $mail .= "GIFT DE DENA ISS WALE CUSTOMER KO";
+        $mailbody .= "GIFT DE DENA ISS WALE CUSTOMER KO";
     // mail($to,$subject,$mailbody,$header);
 
     // $total = 79;
     // $discount = 0;
     // $totalsav = 90;
 
-    // here
+    
     if(!empty($_POST['email']))
     {
         $header = 'From: onlinebazzar07@gamil.com' . "\r\n" .
@@ -237,7 +246,19 @@
 
     <section>
         <h1>Thank you for shopping with us.</h1>
-        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$total</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> will be <span> delivered to your doorsteps soon</span>.</h1>
+        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$total</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> 
+         will be <span> delivered to your doorsteps soon</span>.</h1>
+        <!-- <h1><span style="color: #0b0c3f;">Scroll to the buttom of page to see your order.</span></h1> -->
+    </section>
+    <aside>
+        <section>
+            <div><a href="pdfs/<?php echo $name; ?>.pdf" download>Click to download digital bill</a></div>
+        </section>
+    <?php
+        echo $table; ?>
+    </aside>
+    
+    <section>
         <?php
         if($totalsav > 2999){
             echo "<h1 style='font-weight:700'>Congratulations! You earned  giveaway reward.</h1>";
@@ -250,14 +271,7 @@
         <!-- <div id="load"><a href="#" download>Save your Order</a></div> -->
         <div><a href="../home/home.php">Back to home</a></div>
     </section>
+    
 
-    <aside>
-        <section>
-        <div><a href="pdfs/<?php echo $name; ?>.pdf" download>Click to download digital bill</a></div>
-        </section>
-        <?php 
-        // echo $style;
-         echo $table; ?>
-    </aside>
 </body>
 </html>

@@ -16,12 +16,14 @@ h3.kind {
     padding: 1%;
     letter-spacing: 2px;
 }
-div#info{
+
+div#info {
     margin: auto;
     display: flex;
     font-size: 20px;
-    color: rgb(255,0,0);
+    color: rgb(255, 0, 0);
 }
+
 section#body {
     margin-left: 30%;
 }
@@ -63,6 +65,11 @@ section form#formm p span#Username {
     margin-left: 116px;
 }
 
+section form#formm div.order {
+    text-align: left;
+    padding-left: 16%;
+}
+
 .click {
     cursor: pointer;
 }
@@ -78,9 +85,15 @@ body span.under {
 
 div.order {
     text-align: center;
+    overflow: auto;
 }
 
-div.order button {
+div.order div {
+    display: inline-block;
+}
+
+div.order button,
+div.order div {
     margin: 2%;
     padding: 1%;
     font-size: 30px;
@@ -92,7 +105,8 @@ div.order button {
     cursor: pointer;
 }
 
-div.order button:hover {
+div.order button:hover,
+div.order div#use:hover {
     transform: scale(1.1);
 }
 
@@ -122,6 +136,29 @@ h5 {
     opacity: 0.8;
 }
 
+
+/* here */
+
+div.order div#use {
+    background-color: #e2294d;
+}
+
+div.order.lock {
+    padding: 0px 10px;
+    font-size: 26px;
+}
+
+.change {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+section form#formm div.order#message {
+    text-align: left;
+    padding-left: 5%;
+    width: 54%;
+}
+
 @media only screen and (max-width:1200px) {
     section#body {
         width: 50%;
@@ -136,6 +173,16 @@ h5 {
     }
     h5 {
         font-size: 50px;
+    }
+    section form#formm div.order,
+    section form#formm div.order#message {
+        text-align: center;
+        padding: 1% 5%;
+    }
+    section form#formm div.order#message {
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -169,6 +216,10 @@ h5 {
     }
     h5 {
         font-size: 21px;
+    }
+    /* here */
+    div.order.lock {
+        font-size: 20px;
     }
 }
 

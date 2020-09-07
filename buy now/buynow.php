@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../stylesheet/footer.css">
     <link rel="stylesheet" href="buynow.css">
     <link rel="icon" href="../home/images/logo.png">
-    <!-- <script src="location.js"></script> -->
     <title>Buy Now</title>
 </head>
 <body>
@@ -21,7 +20,7 @@
         </h3>
         <section id="body">
             <form onsubmit="return verify();" action="bought.php" method="POST" id="formm">
-            <div id="info">Our services are limited within Rajbiraj,Nepal only till now. <br>|| हाम्रा सेवाहरू राजविराज, नेपाल भित्र सीमित छन् ||</div>
+                <div id="info">Our services are limited within Rajbiraj,Nepal only till now. <br>|| हाम्रा सेवाहरू राजविराज, नेपाल भित्र सीमित छन् ||</div>
                 <p>
                     <label for="name">Name :</label>
                     <input class="escape" type="text" name="name" onclick="choose(this.id);" id="uname" autocomplete="off" />
@@ -38,6 +37,11 @@
                     <input class="escape" placeholder="Optional" name="email" onclick="choose(this.id);" id="mail" autocomplete="off" />
                     <span id="gmail" class="under"></span>
                 </p>
+                <div class="order lock" id="message">Start Location/GPS then click below button to deliver to current location.</div>
+                <div class="order">
+                    <div id="use">Use location</div>
+                        <script src="location.js"></script>
+                </div>
 
                 <p>
                     <label for="address">Address :</label>
@@ -53,6 +57,7 @@
 
             </form>  
         </section>
+        <div class="order lock" id="message"></div>
         <div class="order">
             <button form="formm" value="submit" name="submit">order now</button>
             <span id="less" class="under"></span>
