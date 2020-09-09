@@ -10,6 +10,10 @@ function getcoords(pos) {
     message.innerHTML = 'Your order will be delivered to your CURRENT LOCATION after completing order.';
     message.style.color = '#f50000';
     message.style.fontWeight = '600';
+    use.style.backgroundColor = '#15F224';
+    use.style.color = '#142B2B';
+    use.style.border = '1px solid black';
+    use.innerHTML = 'Location Found';
 };
 
 function error() {

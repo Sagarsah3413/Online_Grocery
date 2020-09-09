@@ -69,11 +69,11 @@
         $index += floatval($row['quantity']);
         
         $hold = $totalsav + floatval($row['total']);
+        //non discounted
         $query = "UPDATE `customer` SET `buying` = '$freq', `quantity` = '$index', `total` = '$hold',`discount` = '".($discount+floatval($row['discount']))."' WHERE `customer`.`customerid` = {$row['customerid']}; ";
         $dbconnection -> query($query);
 
     }elseif($history <= 0){
-        
         $total -= take($total);
         $query = "INSERT INTO `customer` (`name`, `number`, `email`, `buying`, `quantity`, `total`,`discount`) VALUES ('".addslashes($_POST['name'])."', '".addslashes($_POST['contact'])."', '".addslashes($_POST['email'])."', '1', $index, $totalsav,$discount);";
         $dbconnection -> query($query);
@@ -81,7 +81,7 @@
     
     
     $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
-
+    //discounted
     $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", FALSE, FALSE);';
     $value = $dbconnection -> query($query);
     
@@ -127,70 +127,70 @@
 
 
     // $query = "SELECT * FROM `products` WHERE `productid` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23);";
-    // $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
-                
-    // $data = $dbconnection-> query($query);
-    // $index = 0;
-    // $table = '';
-    // $style = '<style>
-    //             table {
-    //                 width: 100%;
-    //                 table-layout: auto;
-    //                 border-collapse: collapse;
-    //             }
-                
-    //             thead tr td {
-    //                 text-align: center;
-    //                 font-size: 37px;
-    //             }
-                
-    //             td {
-    //                 font-size: 32px;
-    //                 height:80px;
-                    
-    //             }
-                
-    //             thead,
-    //             td {
-    //                 text-transform: capitalize;
-    //                 border: 0.5px solid #200d0d;
-                    
-    //             }
-                
-    //         </style>';
-    // $overhead = '<div style="font-size:20px;color:#6eca22;">Customer name: '.$_POST['name'].'</div>';
-    // $overhead .= '<div style="font-size:20px;color:#6eca22;">Contact number: '.$_POST['contact'].'</div>';
-    // $overhead .= '<div style="font-size:20px;color:#6eca22;">Address to deliver: '.$_POST['address'].'</div>';
+    $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
 
-    // $table .= '<table style="table-layout: fixed;">
-    //             <thead>
-    //                 <tr style="background-color: #34ca9d;">
-    //                 <td style="text-align: center;width:46%;">Item</td>
-    //                 <td style="text-align: center;width:18%;">Rate</td>
-    //                 <td style="text-align: center;width:18%;">Quantity</td>
-    //                 <td style="text-align: center;width:18%;">Total</td>
-    //                 </tr>
-    //             </thead>';
-    // while ($row = $data -> fetch_assoc()) {
-    //     $table .= '<tr>
-    //                     <td style="width:46%;">'.($index+1).'. '.$row["product name"].'</td>
-    //                     <td style="width:18%;">Rs.'.$row["price"].'</td>
-    //                     <td style="width:18%;">'.$productquantity[$index].'</td>
-    //                     <td style="width:18%;">Rs.'. $row['price']*$productquantity[$index] .'</td>
-    //                 </tr>';
-    //     $index++;
-    // }
-    // $table .= '</table>';
-    // $footer = '';
-    // if($discount>0)
-    // {
-    //     $footer .= '<div style="color:#ff0000;text-align:right;font-size:23px;">Total Price: Rs.'.$totalsav.'</div>';
-    //     $footer .= '<div style="color:#95cc13;text-align:right;font-size:23px;">Discount: Rs.'.$discount.'</div>';
-    //     $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
-    // }else
-    // {
-    //     $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
-    // }
+    $data = $dbconnection-> query($query);
+    $index = 0;
+    $table = '';
+    $style = '<style>
+                table {
+                    width: 100%;
+                    table-layout: auto;
+                    border-collapse: collapse;
+                }
+                
+                thead tr td {
+                    text-align: center;
+                    font-size: 37px;
+                }
+                
+                td {
+                    font-size: 32px;
+                    height:80px;
+                    
+                }
+                
+                thead,
+                td {
+                    text-transform: capitalize;
+                    border: 0.5px solid #200d0d;
+                    
+                }
+                
+            </style>';
+    $overhead = '<div style="font-size:20px;color:#6eca22;">Customer name: '.$_POST['name'].'</div>';
+    $overhead .= '<div style="font-size:20px;color:#6eca22;">Contact number: '.$_POST['contact'].'</div>';
+    $overhead .= '<div style="font-size:20px;color:#6eca22;">Address to deliver: '.$_POST['address'].'</div>';
+
+    $table .= '<table style="table-layout: fixed;">
+                <thead>
+                    <tr style="background-color: #34ca9d;">
+                    <td style="text-align: center;width:46%;">Item</td>
+                    <td style="text-align: center;width:18%;">Rate</td>
+                    <td style="text-align: center;width:18%;">Quantity</td>
+                    <td style="text-align: center;width:18%;">Total</td>
+                    </tr>
+                </thead>';
+    while ($row = $data -> fetch_assoc()) {
+        $table .= '<tr>
+                        <td style="width:46%;">'.($index+1).'. '.$row["product name"].'</td>
+                        <td style="width:18%;">Rs.'.$row["price"].'</td>
+                        <td style="width:18%;">'.$productquantity[$index].'</td>
+                        <td style="width:18%;">Rs.'. $row['price']*$productquantity[$index] .'</td>
+                    </tr>';
+        $index++;
+    }
+    $table .= '</table>';
+    $footer = '';
+    if($discount>0)
+    {
+        $footer .= '<div style="color:#ff0000;text-align:right;font-size:23px;">Total Price: Rs.'.$totalsav.'</div>';
+        $footer .= '<div style="color:#95cc13;text-align:right;font-size:23px;">Discount: Rs.'.$discount.'</div>';
+        $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
+    }else
+    {
+        $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
+    }
     
 
     //pdf reader

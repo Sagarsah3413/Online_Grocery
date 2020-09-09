@@ -25,7 +25,6 @@
                     <label for="name">Name :</label>
                     <input class="escape" type="text" name="name" onclick="choose(this.id);" id="uname" autocomplete="off" />
                     <span id="username" class="under"></span>
-
                 </p>
                 <p>
                     <label for="number">Contact No. :</label>
@@ -42,7 +41,6 @@
                     <div id="use">Use location</div>
                         <script src="location.js"></script>
                 </div>
-
                 <p>
                     <label for="address">Address :</label>
                     <input class="escape" placeholder="Rajbiraj,Saptari,Nepal" type="text" name="address" onclick="choose(this.id);" id="add" autocomplete="off" />
@@ -53,9 +51,7 @@
                     <input class="escape" placeholder="Optional" type="text" name="landmark" onclick="choose(this.id);" id="land" autocomplete="off" />
                     <span id="mark" class="under"></span>
                 </p>
-
-
-            </form>  
+            </form>
         </section>
         <div class="order lock" id="message"></div>
         <div class="order">
