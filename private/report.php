@@ -13,8 +13,7 @@ if($_COOKIE['username'] !== 'paparanjeet' || $_COOKIE['userpass'] !== 'omshantik
     mysqli_close($dbconnection);
     header("Location: login.php");
 }
- ?>
-<?php
+    $accept = false;
     if($_POST){
         $orderid = explode(',', $_POST['orderid']);
         $pack = explode(',', $_POST['pack']);
@@ -24,10 +23,15 @@ if($_COOKIE['username'] !== 'paparanjeet' || $_COOKIE['userpass'] !== 'omshantik
         $index=0;
         while($row = $data -> fetch_assoc()){
             $sqlquery="UPDATE `orders` SET `packed` = '$pack[$index]', `delivered` = '$deliver[$index]' WHERE `orders`.`orderid` = $orderid[$index]";
-            echo "UPDATE `orders` SET `packed` = '$pack[$index]', `delivered` = '$deliver[$index]' WHERE `orders`.`orderid` = $orderid[$index]";
             $dbconnection -> query($sqlquery);
             $index++;
         }
+        $accept = true;
+    }
+    if($accept)
+    {
+        mysqli_close($dbconnection);
+        header("Location: " . $_SERVER['PHP_SELF']);
     }
 ?>
 
