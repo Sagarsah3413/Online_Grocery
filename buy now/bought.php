@@ -30,6 +30,7 @@
 
 
     $index = 0;$total=0;
+    $stationary = 0; $cosmetic = 0; $groceries = 0;
     $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
     $data = $dbconnection-> query($query);
     $bill = "\r\n\r\n";
@@ -84,7 +85,7 @@
     
     $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
 
-    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", FALSE, FALSE);';
+    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`,`groceries`,`stationary`,`cosmetic` `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", NULL, NULL, NULL, FALSE, FALSE);';
     $value = $dbconnection -> query($query);
 
 
