@@ -1,20 +1,20 @@
 <?php
 
 require '../shared/database.php';
-if(!($_COOKIE['username'] && $_COOKIE['userpass']))
-{
-    mysqli_close($dbconnection);
-    header("Location: login.php");
-}
+// if(!($_COOKIE['username'] && $_COOKIE['userpass']))
+// {
+//     mysqli_close($dbconnection);
+//     header("Location: login.php");
+// }
 
 
-if($_COOKIE['username'] !== 'paparanjeet' || $_COOKIE['userpass'] !== 'omshantikimakabhosda')
-{
-    mysqli_close($dbconnection);
-    header("Location: login.php");
-}
+// if($_COOKIE['username'] !== 'paparanjeet' || $_COOKIE['userpass'] !== 'omshantikimakabhosda')
+// {
+//     mysqli_close($dbconnection);
+//     header("Location: login.php");
+// }
     $accept = false;
-    if($_POST){
+    if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
         $orderid = explode(',', $_POST['orderid']);
         $pack = explode(',', $_POST['pack']);
         $deliver = explode(',', $_POST['deliver']);
