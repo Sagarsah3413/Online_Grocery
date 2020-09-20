@@ -16,6 +16,8 @@
     $mailbody='';
     $productquantity = '';
     $productid = '';
+    // here
+    $forbidden = ['<','>'];
 
     $productid = explode(',', $_POST['product']);
     $productquantity = explode(',', $_POST['quantity']);
@@ -83,8 +85,8 @@
     }
 
     $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
-
-    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", FALSE, FALSE);';
+    // here
+    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'. str_replace($forbidden,'|',addslashes($_POST['address']))."<".str_replace($forbidden,'|',addslashes($landmark)).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", FALSE, FALSE);';
     $value = $dbconnection -> query($query);
 
 
