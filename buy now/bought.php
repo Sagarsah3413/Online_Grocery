@@ -30,7 +30,6 @@
 
 
     $index = 0;$total=0;
-    $stationary = 0; $cosmetic = 0; $groceries = 0;
     $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
     $data = $dbconnection-> query($query);
     $bill = "\r\n\r\n";
@@ -82,10 +81,10 @@
     {
         $landmark = $_POST['landmark'];
     }
-    
+
     $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
 
-    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`,`groceries`,`stationary`,`cosmetic` `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", NULL, NULL, NULL, FALSE, FALSE);';
+    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", FALSE, FALSE);';
     $value = $dbconnection -> query($query);
 
 
@@ -104,7 +103,7 @@
     }
     if($totalsav > 2999)
         $mailbody .= "GIFT DE DENA ISS WALE CUSTOMER KO";
-    //  mail($to,$subject,$mailbody);
+     mail($to,$subject,$mailbody);
      
     if(!empty($_POST['email']))
     {
@@ -134,11 +133,10 @@
                 
                 thead tr td {
                     text-align: center;
-                    font-size: 37px;
+                    
                 }
                 
                 td {
-                    font-size: 32px;
                     height:80px;
                     
                 }
@@ -149,47 +147,59 @@
                     border: 0.5px solid #200d0d;
                     
                 }
-                
             </style>';
-    $overhead = '<div style="font-size:20px;color:#6eca22;">Customer name: '.$_POST['name'].'</div>';
-    $overhead .= '<div style="font-size:20px;color:#6eca22;">Contact number: '.$_POST['contact'].'</div>';
-    $overhead .= '<div style="font-size:20px;color:#6eca22;">Address to deliver: '.$_POST['address'].'</div>';
+    $logo = '<div style="text-align:left;"><img style="width:170px;height:auto;" src="../home/images/logo.png"><br>Your Order-></div>';
 
     $table .= '<table style="table-layout: fixed;">
                 <thead>
                     <tr style="background-color: #34ca9d;">
-                    <td style="text-align: center;">Item</td>
-                    <!--<td style="text-align: center;">Rate</td>-->
-                    <!--<td style="text-align: center;">Quantity</td>-->
-                    <td style="text-align: center;">Total</td>
+                    <td style="text-align: center;width:60%;">Item</td>
+                    <td style="text-align: center;width:15%;">Rate</td>
+                    <td style="text-align: center;width:10%;">Qnty.</td>
+                    <td style="text-align: center;width:15%;">Total</td>
                     </tr>
                 </thead>';
     while ($row = $data -> fetch_assoc()) {
         $table .= '<tr>
-                        <td style="width:50%;">'.($index+1).'. '.$row["product name"].'</td>
-                        <!--<td style="width:18%;">Rs.'.$row["price"].'</td>-->
-                        <!--<td style="width:18%;">'.$productquantity[$index].'</td>-->
-                        <td style="width:50%;">Rs.'. $row['price']*$productquantity[$index] .'</td>
+                        <td style="width:60%;">'.($index+1).'. '.$row["product name"].'</td>
+                        <td style="width:15%;">Rs.'.$row["price"].'</td>
+                        <td style="width:10%;">'.$productquantity[$index].'</td>
+                        <td style="width:15%;">Rs.'. $row['price']*$productquantity[$index] .'</td>
                     </tr>';
         $index++;
     }
     $table .= '</table>';
+
     $footer = '';
+    $overhead = '';
+
     if($discount>0)
     {
-        $footer .= '<div style="color:#ff0000;text-align:right;font-size:23px;">Total Price: Rs.'.$totalsav.'</div>';
-        $footer .= '<div style="color:#95cc13;text-align:right;font-size:23px;">Discount: Rs.'.$discount.'</div>';
-        $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
+        $overhead .= '<div style="color:#ff0000;text-align:right;font-size:23px;">Price: Rs.'.$totalsav.'</div>';
+        $overhead .= '<div style="color:#95cc13;text-align:right;font-size:23px;">Additional Discount: Rs.'.$discount.'</div>';
+        $overhead .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
     }else
     {
-        $footer .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
+        $overhead .= '<div style="color:#cc9216;text-align:right;font-size:23px;">Grand Total: Rs.'.$total.'</div>';
     }
+    if($totalsav > 2999){
+        $overhead .= '<div style="color:#ff0000;text-align:right;font-size:25px;">Your have earned a surprise gift on shopping of above Rs.3000.
+        <br>Gift will be sent with delivery.</div>';
+    }
+
+    $footer .= '<div style="font-size:20px;color:#6eca22;">Customer name: '.$_POST['name'].'</div>';
+    $footer .= '<div style="font-size:20px;color:#6eca22;">Contact number: '.$_POST['contact'].'</div>';
+    $footer .= '<div style="font-size:20px;color:#6eca22;">Address to deliver: '.$_POST['address'].'</div>';
+    $footer .= '<hr>';
+
+    $footer .= '<div style="color:#cc9216;text-align:center;font-size:23px;">Thank you for shopping with onlinebazzar.co</div>';
+    $footer .= '<div style="font-size:18px;">Website :<span style="color:#275b94;text-decoration:underline;">www.onlinebazzar.co</span></div>';
+    $footer .= '<div style="font-size:18px;">Follow us at: <span style="color:#275b94;text-decoration:underline;">https://www.facebook.com/onlinebazzar.co</span></div>';
     
-    $footer .= '<div style="color:#cc9216;text-align:center;font-size:23px;">Thank you for shopping with us.</div>';
-    
+    $footer.= '<div style="font-size:18px;">For any query<br>Contact us: 9815739061<br>Email us: <span style="color:#275b94;text-decoration:underline;">onlinebazzar07@gmail.com</span></div>';
 
     //pdf reader
-    
+
     require_once './tcpdf/tcpdf.php';
 
     $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -218,7 +228,7 @@
     $pdf->setFont('courierB', '', 14, '', true);
 
     $pdf->AddPage();
-    $content = '<html><head>'.$style.'</head><body>'.$overhead.$table.$footer.'</body></html>';
+    $content = '<html><head>'.$style.'</head><body>'.$logo.$table.$overhead.'<hr>'.$footer.'</body></html>';
     $pdf->writeHTML($content, true, false, false, false, '');
     
     $name = $_POST['name'].$_POST['contact'];
@@ -242,7 +252,7 @@
 <body>
     <section>
         <h1>Thank you for shopping with us.</h1>
-        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$total</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Discount: $discount, Initial price: $totalsav)</span>"; } ?> 
+        <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$total</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Additional Discount: $discount, Initial price: $totalsav)</span>"; } ?> 
          will be <span> delivered to your doorsteps soon</span>.</h1>
     </section>
     <aside>
@@ -251,7 +261,26 @@
             <!-- <div>Screenshot the page to keep a copy</div> -->
         </section>
     <?php
-        echo $table; ?>
+        //echo $table; ?>
+        <table>
+            <thead>
+                <td>Product</td>
+                <td>Quantity</td>
+                <td>Total</td>
+            </thead>
+            <?php
+            $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";    
+            $data = $dbconnection-> query($query);
+            $index = 0;
+            ?>
+            <?php while($row = $data -> fetch_assoc()){ ?>
+            <tr>
+                <td><?php echo ($index+1).". ".$row['product name']; ?></td>
+                <td><?php echo $productquantity[$index]; ?></td>
+                <td>Rs.<?php echo $row['price']*$productquantity[$index]; ?></td>
+            </tr>
+            <?php $index++; } ?>
+        </table>
     </aside>
     
     <section>
