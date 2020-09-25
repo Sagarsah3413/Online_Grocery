@@ -9,6 +9,7 @@
             return($i*5);
         return(0);
     }
+    require './catagory.php';
 
     $to = 'onlinebazzar07@gmail.com';
     $subject = 'My subject';
@@ -16,6 +17,7 @@
     $mailbody='';
     $productquantity = '';
     $productid = '';
+    
 
     $productid = explode(',', $_POST['product']);
     $productquantity = explode(',', $_POST['quantity']);
@@ -28,6 +30,7 @@
     
     $customer['location'] = 'Customer Location is :'. $_POST['location'];
 
+    $forbidden = ['<','>'];
 
     $index = 0;$total=0;
     $query = "SELECT * FROM `products` WHERE `productid` IN ({$_POST['product']});";
@@ -41,6 +44,7 @@
         $bill .= $row['product name'] . "\t";
         $bill .= $productquantity[$index] . "\t";
         $list .= "<{$row['product name']}--[{$productquantity[$index]}]>";
+        $catagory[$row['subcatid']] += $row['wholeprice'] * $productquantity[$index];
         
         $bill .= $row['price'] . "\t";
         $total += $row['price']*floatval($productquantity[$index]); 
@@ -48,9 +52,7 @@
         $index++;
     }
     $totalsav = $total;
-    
-    
-
+    require './divide.php';
 
     $query = "SELECT * FROM `customer` WHERE `number`={$_POST['contact']}";
     $data = $dbconnection -> query($query);
@@ -77,14 +79,14 @@
         $dbconnection -> query($query);
     }
     $landmark = '';
-    if($_POST['landmark'])
-    {
+    if($_POST['landmark']){
         $landmark = $_POST['landmark'];
     }
 
     $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
+    $query = "INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `$group[0]`, `$group[1]`, `$group[2]`, `packed`, `delivered`) VALUES (NULL,".'"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'. str_replace($forbidden,'|',addslashes($_POST['address']))."<".str_replace($forbidden,'|',addslashes($landmark)).",{$_POST['location']}>".'", "'.addslashes($list).'", "'.$totalsav.'","'.$discount.'",'."{$separate[$group[0]]},{$separate[$group[1]]},{$separate[$group[2]]}".', FALSE, FALSE);';
+    echo htmlentities($query);
 
-    $query = 'INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `packed`, `delivered`) VALUES (NULL,"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'.addslashes($_POST['address'])."<".addslashes($landmark).">".'", "'.addslashes($list).'", "'.$total.'","'.$discount.'", FALSE, FALSE);';
     $value = $dbconnection -> query($query);
 
 
@@ -103,7 +105,7 @@
     }
     if($totalsav > 2999)
         $mailbody .= "GIFT DE DENA ISS WALE CUSTOMER KO";
-     mail($to,$subject,$mailbody);
+    mail($to,$subject,$mailbody);
      
     if(!empty($_POST['email']))
     {
