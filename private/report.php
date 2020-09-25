@@ -62,7 +62,7 @@ require '../shared/database.php';
         while($row = $data -> fetch_assoc()) {
     ?>
     <tr>
-        <td id="<?php echo $row['orderid'] ?>"><?php echo $row['name']; ?></td>
+        <td id="<?php echo $row['orderid'] ?>"><a href="order.php?<?php echo "orderid={$row['orderid']}"; ?>"><?php echo $row['name']; ?></a></td>
     <?php
         if ($row['packed'])
         echo "<td><input type='checkbox' name='' checked></td>";
