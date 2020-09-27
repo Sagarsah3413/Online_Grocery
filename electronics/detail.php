@@ -1,3 +1,7 @@
+<?php
+require '../shared/database.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronics</title>
     <link rel="stylesheet" href="electro.css">
+    <link rel="stylesheet" href="../stylesheet/header.css">
+    <link rel="stylesheet" href="../stylesheet/footer.css">
 </head>
 <body>
     
