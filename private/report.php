@@ -55,7 +55,7 @@ require '../shared/database.php';
             <th>Packed</th>
             <th>Delivered</th>
         </tr>
-    </tbody>
+        </tbody>
     <?php
         $sqlquery = "SELECT * FROM `orders` WHERE `delivered` = 0;";
         $data = $dbconnection -> query($sqlquery);
