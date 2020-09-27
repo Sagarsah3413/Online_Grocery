@@ -48,3 +48,91 @@ div.container div.child#describe h3 {
     padding: 4px 0px 5px 24px;
     letter-spacing: 2px;
 }
+div#image {
+    position: relative;
+    height: 502px;
+    margin: auto;
+    margin-top: 3%;
+    overflow: hidden;
+    width: 70%;
+}
+
+#slider {
+    height: 502px;
+    display: flex;
+    padding: 0px;
+    transition: 0.3s;
+    position: relative;
+}
+
+#slider img {
+    min-width: 100%;
+    width: 100%;
+}
+#prev {
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 45%;
+    opacity: 0.4;
+}
+
+#next {
+    position: absolute;
+    z-index: 2;
+    top: 45%;
+    right: 0px;
+    opacity: 0.4;
+}
+
+#next:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#prev:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+@media only screen and (max-width:730px) {
+    #slider {
+        height: 390px;
+    }
+    div#image {
+        height: 390px;
+    }
+    i#prev img,
+    i#next img {
+        width: 40px;
+    }
+    div#image {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #slider {
+        height: 280px;
+    }
+    div#image {
+        height: 280px;
+    }
+    i#prev img,
+    i#next img {
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    #slider {
+        height: 200px;
+    }
+    div#image {
+        height: 200px;
+    }
+    i#prev img,
+    i#next img {
+        width: 20px;
+    }
+}
