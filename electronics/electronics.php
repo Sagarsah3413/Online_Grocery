@@ -45,4 +45,5 @@ $sharedfolder='../shared/';
     </div>
     <?php require_once'../shared/footer.php'; ?>
 </body>
+<script src="swipe.js"></script>
 </html>

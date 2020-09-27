@@ -1,5 +1,6 @@
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
+let slider=document.getElementById('slider');
+slider.addEventListener('touchstart', handleTouchStart, false);
+slider.addEventListener('touchmove', handleTouchMove, false);
 
 var xDown = null;
 var yDown = null;
@@ -28,17 +29,20 @@ function handleTouchMove(evt) {
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) { /*most significant*/
         if (xDiff > 0) {
+            alert('left');
             /* left swipe */
         } else {
+            alert('right');
             /* right swipe */
         }
-    } else {
-        if (yDiff > 0) {
-            /* up swipe */
-        } else {
-            /* down swipe */
-        }
     }
+    //  else {
+    //     if (yDiff > 0) {
+    //         /* up swipe */
+    //     } else {
+    //         /* down swipe */
+    //     }
+    // }
     /* reset values */
     xDown = null;
     yDown = null;
