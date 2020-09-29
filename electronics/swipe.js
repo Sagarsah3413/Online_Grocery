@@ -15,7 +15,7 @@ window.addEventListener('resize', () => {
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
 container.style.height = height + 'px';
-container.style.transform = 'translateX(' + (-width * count) + 'px';
+container.style.transform = 'translateX(' + (-width * (count-1)) + 'px';
 function fwd() {
     if (count >= images.length - 1)
         return;
