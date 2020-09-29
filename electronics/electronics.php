@@ -27,10 +27,9 @@ $sharedfolder='../shared/';
                 <img src="<?php echo $sharedfolder; ?>../home/images/snacks.png" alt="">
                 <img src="<?php echo $sharedfolder; ?>../home/images/groc2.jpeg" alt="">
                 <img src="<?php echo $sharedfolder; ?>../home/images/groc3.jpeg" alt="">
-                <img src="<?php echo $sharedfolder; ?>../home/images/snacks.png" alt="">
-                <img src="<?php echo $sharedfolder; ?>../home/images/groc2.jpeg" alt="">
             </div>
         </div>
+        <h2 id="tag"></h2>
         <div class="child" id="name">
             <h1 id="title">Title of product</h1>
             <div id="price"><span class="rate">Rs.40000</span><span class="cross">Rs.30000</span></div>
@@ -46,4 +45,5 @@ $sharedfolder='../shared/';
     <?php require_once'../shared/footer.php'; ?>
 </body>
 <script src="swipe.js"></script>
+<script src="detail.js"></script>
 </html>

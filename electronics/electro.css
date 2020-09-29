@@ -48,6 +48,7 @@ div.container div.child#describe h3 {
     padding: 4px 0px 5px 24px;
     letter-spacing: 2px;
 }
+
 div#image {
     position: relative;
     height: 502px;
@@ -55,6 +56,11 @@ div#image {
     margin-top: 3%;
     overflow: hidden;
     width: 70%;
+}
+
+h2#tag {
+    text-align: center;
+    font-weight: 600;
 }
 
 #slider {
@@ -69,6 +75,7 @@ div#image {
     min-width: 100%;
     width: 100%;
 }
+
 #prev {
     position: absolute;
     z-index: 2;
