@@ -3,10 +3,10 @@ let tag = document.getElementById('tag');
 let current = 1;
 let quantity = document.getElementById('slider').children.length;
 
-tag.innerHTML = `${count}/${quantity}`;
+tag.innerHTML = `${count+1}/${quantity}`;
 
 function fraction() {
-    tag.innerHTML = `${count}/${quantity}`;
+    tag.innerHTML = `${count+1}/${quantity}`;
 }
 
 let increase = () => {
