@@ -3,7 +3,7 @@ let container = document.querySelector('#slider');
 let images = document.querySelectorAll('#slider img');
 let prev = document.getElementById('prev');
 let next = document.getElementById('next');
-let count = 1;
+let count = 0;
 let width = images[0].clientWidth;
 let height = images[0].clientHeight;
 //vaiablelist end
@@ -15,13 +15,15 @@ window.addEventListener('resize', () => {
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
 container.style.height = height + 'px';
-container.style.transform = 'translateX(' + (-width * (count-1)) + 'px';
+container.style.transform = 'translateX(' + (-width * count) + 'px';
+
 function fwd() {
     if (count >= images.length - 1)
         return;
     container.style.transition = "transform 0.3s ease-in-out";
     count++;
     container.style.transform = 'translateX(' + (-width * count) + 'px';
+    fraction();
 }
 
 function pre() {
@@ -30,6 +32,7 @@ function pre() {
     container.style.transition = "transform 0.3s ease-in-out";
     count--;
     container.style.transform = 'translateX(' + (-width * count) + 'px';
+    fraction();
 }
 next.addEventListener('click', () => {
     fwd();
@@ -68,10 +71,10 @@ function handleTouchMove(evt) {
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) { /*most significant*/
         if (xDiff > 7) {
-           fwd();
+            fwd();
             /* left swipe */
-        } 
-        if (xDiff <-7){
+        }
+        if (xDiff < -7) {
             pre();
             /* right swipe */
         }
