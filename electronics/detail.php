@@ -54,10 +54,24 @@ $descriptioncount=count($description);
                 <?php } ?>
             </div>
         </div>
-        <h2 id="tag"></h2>
-        <div class="child" id="name">
-            <h1 id="title"><?php echo $row['product name'] ?></h1>
-            <div id="price"><span class="rate">Rs.<?php echo $row['price']; ?></span><span class="cross">Rs.<?php echo $row['mprice']; ?></span></div>
+        <div class="child grid" id="name">
+            <div class='items'>
+                <h2 id="tag"></h2>
+                <h1 id="title"><?php echo $row['product name'] ?></h1>
+                <div id="price">Rs.<span class="rate"><?php echo $row['price'];?></span><span class="cross">Rs.<?php echo $row['mprice']; ?></span></div>
+                <div class='cart' id="<?php echo $row['productid'] ?>">
+                    <article>
+                        <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
+                        Quantity 
+                        <input type="number" min="0" value="0">
+                        <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
+                    </article>
+                    <p>
+                        <img class="plus" src='../home/images/cart.png' alt='cart'> 
+                        <span class="addcart">Add To Cart</span>
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="child" id="describe">
             <h2>Details</h2>
@@ -71,4 +85,5 @@ $descriptioncount=count($description);
 </body>
 <script src="swipe.js"></script>
 <script src="detail.js"></script>
+<script src="../shared/add.js"></script>
 </html>

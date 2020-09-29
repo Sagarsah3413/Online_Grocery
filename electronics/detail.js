@@ -1,12 +1,12 @@
 let tag = document.getElementById('tag');
 
 let current = 1;
-let quantity = document.getElementById('slider').children.length;
+let num = document.getElementById('slider').children.length;
 
-tag.innerHTML = `${count+1}/${quantity}`;
+tag.innerHTML = `${count+1}/${num}`;
 
 function fraction() {
-    tag.innerHTML = `${count+1}/${quantity}`;
+    tag.innerHTML = `${count+1}/${num}`;
 }
 
 let increase = () => {
@@ -15,6 +15,6 @@ let increase = () => {
 }
 
 let decrease = () => {
-    if (current > quantity)
+    if (current > num)
         current--;
 }

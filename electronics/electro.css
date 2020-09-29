@@ -19,7 +19,7 @@ div.container div.child#name h1#title {
 }
 
 div.container div.child#name div#price span {
-    margin: 0px 30px;
+    margin: 0px 30px 0px 0px;
     font-size: 1.2em;
 }
 
@@ -101,6 +101,106 @@ h2#tag {
     cursor: pointer;
     opacity: 1;
 }
+div.grid div.items p {
+    margin: 1% 2%;
+}
+
+div.grid div.items p {
+    letter-spacing: 1px;
+}
+
+div.grid div.items p span.cross {
+    font-weight: normal;
+    text-decoration-line: line-through;
+    text-decoration-color: red;
+    margin-left: 5%;
+}
+
+div.grid div.items img {
+    height: auto;
+    width: 110%;
+}
+
+div.grid div.items div.img:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+    overflow: hidden;
+}
+
+div.grid div.items div.cart p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+div.grid div.items div.cart p img {
+    height: 40px;
+    width: 40px;
+}
+div.cart{
+    margin-top: 20px;
+}
+
+div.grid div.items div.cart p:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+    cursor: pointer;
+}
+
+div.grid div.items div.cart article {
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+div.grid div.items div.cart article span.control {
+    display: inline-block;
+    margin: 0px 8px;
+}
+
+div.grid div.items div.cart article span.control:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+div.grid div.items article span {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+div.grid div.items article input {
+    margin: auto 2%;
+    font-size: 21px;
+    line-height: 26px;
+    border-radius: 4px;
+    border-width: 0px;
+    text-align: center;
+    width: 2em;
+    background-color: rgb(250, 101, 1);
+    color: aliceblue;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 @media only screen and (max-width:730px) {
     #slider {
@@ -141,5 +241,33 @@ h2#tag {
     i#prev img,
     i#next img {
         width: 20px;
+    }
+}
+@media only screen and (max-width:470px) {
+    div.grid div.items div.cart article {
+        font-size: 18px;
+    }
+    div.grid div.items div.cart img {
+        height: 25px;
+        width: 25px;
+    }
+    div.grid div.items article input {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    div.grid div.items div.cart article span.control {
+        display: inline-block;
+        margin: 0px 3px;
+    }
+}
+
+@media only screen and (max-width:380px) {
+    div.grid div.items div.cart p {
+        font-size: 12px;
+    }
+    div.grid div.items div.cart article {
+        font-size: 13px;
     }
 }
