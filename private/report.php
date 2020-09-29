@@ -14,7 +14,6 @@ require '../shared/database.php';
 //     header("Location: login.php");
 // }
     $accept = false;
-    // here
     if(!empty($_POST['orderid']) && $_POST['submit'] == 'submit'){
         $orderid = explode(',', $_POST['orderid']);
         $pack = explode(',', $_POST['pack']);
