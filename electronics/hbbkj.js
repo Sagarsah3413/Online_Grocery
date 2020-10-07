@@ -16,7 +16,6 @@ window.addEventListener('resize', () => {
 })
 container.style.height = height + 'px';
 container.style.transform = 'translateX(' + (-width * count) + 'px';
-
 function fwd() {
     if (count >= images.length - 1)
         return;
@@ -43,11 +42,9 @@ prev.addEventListener('click', () => {
 
 container.addEventListener('touchstart', handleTouchStart, false);
 container.addEventListener('touchmove', handleTouchMove, false);
-container.addEventListener('touchend', change, false);
 
 var xDown = null;
 var yDown = null;
-var chx, chy;
 
 function getTouches(evt) {
     return evt.touches || // browser API
@@ -64,30 +61,31 @@ function handleTouchMove(evt) {
     if (!xDown || !yDown) {
         return;
     }
-    var xUp, yUp, xDiff, yDiff;
-    xUp = evt.touches[0].clientX;
-    yUp = evt.touches[0].clientY;
-    width = images[0].clientWidth;
-    xDiff = xDown - xUp;
-    if (xDiff > width || xDiff < -width)
-        chx = width;
-    else
-        chx = xDiff;
-    yDiff = yDown - yUp;
-    chy = yDiff;
-    // if (Math.abs(chx) > Math.abs(chy))
-    // container.style.transform = 'translateX(' + (-width*(count)-chx) + 'px';
 
-}
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
 
-function change(evt) {
-    if (!xDown || !yDown) {
-        return;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) { /*most significant*/
+        if (xDiff > 7) {
+           fwd();
+            /* left swipe */
+        } 
+        if (xDiff <-7){
+            pre();
+            /* right swipe */
+        }
     }
-    if (Math.abs(chx) > Math.abs(chy)) {
-        if (chx > 0) fwd();
-        else pre();
-    }
+    //  else {
+    //     if (yDiff > 0) {
+    //         /* up swipe */
+    //     } else {
+    //         /* down swipe */
+    //     }
+    // }
+    /* reset values */
     xDown = null;
     yDown = null;
-}
+};
