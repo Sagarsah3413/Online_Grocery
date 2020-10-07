@@ -54,7 +54,7 @@ function getTouches(evt) {
 }
 
 function handleTouchStart(evt) {
-    var firstTouch = getTouches(evt)[0];
+    const firstTouch = getTouches(evt)[0];
     xDown = firstTouch.clientX;
     yDown = firstTouch.clientY;
 }
@@ -63,42 +63,26 @@ function handleTouchMove(evt) {
     if (!xDown || !yDown) {
         return;
     }
-    // console.log(xDown);
-    // console.log(yDown);
     var xUp,yUp,xDiff,yDiff;
-    for(let i=0;i<evt.touches.length;i++)
-    {
-    xUp = evt.touches[i].clientX;
-    yUp = evt.touches[i].clientY;
-    // console.log(xUp);
-    // console.log(width);
+    xUp = evt.touches[0].clientX;
+    yUp = evt.touches[0].clientY;
     width = images[0].clientWidth;
     xDiff = xDown - xUp;
-    if(xDiff>width)
-    chx=-width;
-    else if(xDiff<-width)
-    chx=-width;
+    if(xDiff>width||xDiff<-width)
+    chx=width;
     else 
     chx=xDiff;
     yDiff = yDown - yUp;
     chy=yDiff;
-    console.log(xDiff);
-    console.log(chx);
-    console.log(count);
-    container.style.transform = 'translateX(' + (width*count+chx) + 'px';
-    // xDown = null;
-    // yDown = null;
-}
+    // if (Math.abs(chx) > Math.abs(chy))
+    // container.style.transform = 'translateX(' + (-width*(count)-chx) + 'px';
 
-// xDown = null;
-// yDown = null;
-};
+}
 function change(evt){
     if (!xDown || !yDown) {
         return;
     }
-    if (Math.abs(chx) > Math.abs(chy)) { /*most significant*/
-        console.log('vjagcu');
+    if (Math.abs(chx) > Math.abs(chy)) { 
         if (chx > 0) fwd();
         else pre();
     }
