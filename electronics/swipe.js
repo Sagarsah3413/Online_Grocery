@@ -13,10 +13,8 @@ let height = images[0].clientHeight;
 // slidee width setting
 
 let padding = null;
-console.log(images);
 for (let i = 0; i < images.length; i++) {
     images[i].addEventListener('load', () => {
-        console.log(images[i].clientWidth);
         setimagewidth(i);
     });
 };
