@@ -47,7 +47,7 @@ $descriptioncount=count($description);
             </i>
             <div id="slider">
                 <?php
-                for ($i=0; $i < $imagecount; $i++) { ?>
+                for ($i=1; $i < $imagecount; $i++) { ?>
 
                 <img src="<?php echo $sharedfolder; ?>../productimg/<?php echo $images[$i] ?>" alt="">
                 
