@@ -31,7 +31,7 @@ $descriptioncount=count($description);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Each Electronics</title>
-    <link rel="stylesheet" href="electro.css">
+    <link rel="stylesheet" href="detail.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
 </head>
@@ -49,7 +49,7 @@ $descriptioncount=count($description);
                 <?php
                 for ($i=0; $i < $imagecount; $i++) { ?>
 
-                <img src="<?php echo $sharedfolder; ?>../home/images/<?php echo $images[$i] ?>" alt="">
+                <img src="<?php echo $sharedfolder; ?>../productimg/<?php echo $images[$i] ?>" alt="">
                 
                 <?php } ?>
             </div>
@@ -58,7 +58,7 @@ $descriptioncount=count($description);
             <div class='items'>
                 <h2 id="tag"></h2>
                 <h1 id="title"><?php echo $row['product name'] ?></h1>
-                <div id="price">Rs.<span class="rate"><?php echo $row['price'];?></span><span class="cross">Rs.<?php echo $row['mprice']; ?></span></div>
+                <div id="price">Rs.<span class="rate"><?php echo $row['price'];?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs.<?php echo $row['mprice']; ?></span> <?php } ?></div>
                 <div class='cart' id="<?php echo $row['productid'] ?>">
                     <article>
                         <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>

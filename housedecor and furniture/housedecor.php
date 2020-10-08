@@ -1,10 +1,9 @@
 <?php
-require '../shared/database.php';
-require '../shared/function.php';
-$sharedfolder='../shared/';
+    require_once '../shared/database.php';
+    $sharedfolder='../shared/';
     $offset = 0;
     
-    $query = "SELECT * FROM `subcat` WHERE `type` = 'electronics';";
+    $query = "SELECT * FROM `subcat` WHERE `type` = 'housedecor and furnitures';";
     $data = $dbconnection -> query($query);
 
     if(isset($_GET['subcat'])){
@@ -15,7 +14,6 @@ $sharedfolder='../shared/';
         }
     }
     
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,17 +23,18 @@ $sharedfolder='../shared/';
     <link rel="stylesheet" href="../stylesheet/product.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
-    <link rel="stylesheet" href="electro.css">
-    <title>Electronics</title>
+    <link rel="icon" href="../home/images/logo.png">
+    <title>Stationary</title>
 </head>
 <body>
     <?php require_once'../shared/header.php'; ?>
     <div id="product">
         <?php require_once '../shared/slider.php'; ?>
-        
+
         <?php
-        if(isset($_GET['subcat']) && $_GET['subcat'] == 'all')
+        if(isset($_GET['subcat']) && $_GET['subcat'] == 'clock')
         {
+            
             foreach ($subcat as $key => $value) {
                 $query = "SELECT * FROM `products` WHERE `subcatid` = $value ORDER BY `product name` ASC;";  
                 $data = $dbconnection->query($query);
@@ -46,11 +45,10 @@ $sharedfolder='../shared/';
                     <?php while($row = $data->fetch_assoc()){ 
                         if(!$row['available'])
                             continue;
-                        
                         ?>
                     <div class="items">
                         <div>
-                            <img class="plus" src='../productimg/<?php echo explode(",", $row['image'])[0]; ?>' alt='product pic'>
+                            <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
                         </div>
                         <h4><?php echo $row['product name']; ?></h4>
                         <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
@@ -65,54 +63,18 @@ $sharedfolder='../shared/';
                                 <img class="plus" src='../home/images/cart.png' alt='cart'> 
                                 <span class="addcart">Add To Cart</span>
                             </p>
-                            <section><a href="detail.php?productid=<?php echo $row['productid']; ?>">View Details<span class="">i</span></a></section>
                         </div>
                     </div>
                     <?php } ?>
                 </div>
                 <?php
             }
-        }elseif (isset($_GET['subcat']) && isset($subcat[$show])) {
-            $query = "SELECT * FROM `products` WHERE `subcatid` = {$subcat[$show]} ORDER BY `product name` ASC;";
-            $data = $dbconnection->query($query);
-
+        }
         ?>
-
-        <h3><?php echo $show; ?></h3>
-
-        <div class="grid">
-            <?php while($row = $data->fetch_assoc()){ 
-                if(!$row['available'])
-                    continue;
-                
-                ?>
-                <div class="items">
-                    <div>
-                        <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
-                    </div>
-                    <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article>
-                            <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
-                            Quantity 
-                            <input type="number" min="0" value="0">
-                            <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
-                        </article>
-                        <p>
-                            <img class="plus" src='../home/images/cart.png' alt='cart'> 
-                            <span class="addcart">Add To Cart</span>
-                        </p>
-                        <section><a href="detail.php?productid=<?php echo $row['productid']; ?>">View Details<span class="">i</span></a></section>
-                    </div>
-                </div>
-            <?php } ?>
-        </div>
-        <?php } ?>
         
     </div>
     <?php require_once'../shared/footer.php'; ?>
 </body>
-    <script src="../shared/add.js"></script>
-    <script src="../shared/slider.js"></script>
+<script src="../shared/add.js"></script>
+<script src="../shared/slider.js"></script>
 </html>

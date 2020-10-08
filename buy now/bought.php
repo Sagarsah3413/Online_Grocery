@@ -85,7 +85,6 @@
 
     $landmark = (!empty($_POST['landmark'])) ? $_POST['landmark'] : '';
     $query = "INSERT INTO `orders` (`orderid`, `name`, `number`, `address`, `product`, `total`, `discount`, `$group[0]`, `$group[1]`, `$group[2]`, `packed`, `delivered`) VALUES (NULL,".'"'.addslashes($_POST['name']).'", "'.addslashes($_POST['contact']).'", "'. str_replace($forbidden,'|',addslashes($_POST['address']))."<".str_replace($forbidden,'|',addslashes($landmark)).",{$_POST['location']}>".'", "'.addslashes($list).'", "'.$totalsav.'","'.$discount.'",'."{$separate[$group[0]]},{$separate[$group[1]]},{$separate[$group[2]]}".', FALSE, FALSE);';
-    echo htmlentities($query);
 
     $value = $dbconnection -> query($query);
 
@@ -105,7 +104,7 @@
     }
     if($totalsav > 2999)
         $mailbody .= "GIFT DE DENA ISS WALE CUSTOMER KO";
-    mail($to,$subject,$mailbody);
+     mail($to,$subject,$mailbody);
      
     if(!empty($_POST['email']))
     {
@@ -256,6 +255,12 @@
         <h1>Thank you for shopping with us.</h1>
         <h1>Your order of <?php echo "<span style='color:rgb(250,101,1)' 'font-weight:600'> Rs.$total</span>"; ?><?php if($discount){ echo "<span style='color:rgb(250,101,1)' 'font-weight:600'>(Additional Discount: $discount, Initial price: $totalsav)</span>"; } ?> 
          will be <span> delivered to your doorsteps soon</span>.</h1>
+         <?php
+        if($totalsav > 2999){
+            echo "<h1 style='font-weight:700;color:#ff0000;text-decoration:underline;text-decoration-color:#ff0000;'>Congratulations! You earned a surprise reward!!</h1>";
+            
+        }
+        ?>
     </section>
     <aside>
         <section>
@@ -286,11 +291,6 @@
     </aside>
     
     <section>
-        <?php
-        if($totalsav > 2999){
-            echo "<h1 style='font-weight:700'>Congratulations! You earned  giveaway reward.</h1>";
-        }
-        ?>
         <h2>On shopping of <span> Rs.500 and above </span>
             get reward up to <span> Rs.50</span> .<br/>
             On shopping of <span> Rs.3000</span>  and above get <span> EXCITING GIVEAWAYS...!!!</span><br/>

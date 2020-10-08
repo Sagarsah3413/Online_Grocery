@@ -69,11 +69,14 @@ h2#tag {
     padding: 0px;
     transition: 0.3s;
     position: relative;
+    justify-content: start;
 }
 
 #slider img {
-    min-width: 100%;
-    width: 100%;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    background-color: white;
 }
 
 #prev {
