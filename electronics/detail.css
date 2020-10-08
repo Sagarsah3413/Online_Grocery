@@ -64,18 +64,19 @@ h2#tag {
 }
 
 #slider {
-	height: 502px;
-	display: flex;
-	padding: 0px;
-	transition: 0.3s;
-	position: relative;
-	justify-content: center;
-	background-color: white;
+    height: 502px;
+    display: flex;
+    padding: 0px;
+    transition: 0.3s;
+    position: relative;
+    justify-content: start;
 }
+
 #slider img {
     width: auto;
-    height:100%;
-    max-width:100%;
+    height: 100%;
+    max-width: 100%;
+    background-color: white;
 }
 
 #prev {

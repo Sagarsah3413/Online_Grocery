@@ -4,13 +4,30 @@ let images = document.querySelectorAll('#slider img');
 let prev = document.getElementById('prev');
 let next = document.getElementById('next');
 let count = 0;
-let width = images[0].clientWidth;
+// let width = images[0].clientWidth;
+let width = container.clientWidth;
 let height = images[0].clientHeight;
+
 //vaiablelist end
+
+// slidee width setting
+
+let padding = null;
+console.log(images);
+for (let i = 0; i < images.length; i++) {
+    images[i].addEventListener('load', () => {
+        console.log(images[i].clientWidth);
+        setimagewidth(i);
+    });
+};
 
 //slider setting
 window.addEventListener('resize', () => {
-    width = images[0].clientWidth;
+    width = container.clientWidth;
+    for (let i = 0; i < images.length; i++) {
+        images[i].style.padding = `0px`;
+        setimagewidth(i);
+    }
     container.style.transition = "none";
     container.style.transform = 'translateX(' + (-width * count) + 'px';
 })
@@ -40,6 +57,12 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => {
     pre();
 });
+
+
+function setimagewidth(i) {
+    padding = (width - images[i].clientWidth) / 2;
+    images[i].style.padding = `0px ${padding}px`;
+}
 
 container.addEventListener('touchstart', handleTouchStart, false);
 container.addEventListener('touchmove', handleTouchMove, false);
