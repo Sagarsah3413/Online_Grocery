@@ -54,7 +54,6 @@ $descriptioncount=count($description);
                 <?php } ?>
             </div>
         </div>
-        <script src="offset.js"></script>
         <div class="child grid" id="name">
             <div class='items'>
                 <h2 id="tag"></h2>

@@ -69,16 +69,10 @@ h2#tag {
     padding: 0px;
     transition: 0.3s;
     position: relative;
-    justify-content: start;
 }
 
 #slider img {
-    /* width: auto;
-    max-width: 100%; */
-    height: 100%;
-    /* background-color: white; */
-    /* box-sizing: border-box; */
-    /* display: block; */
+    min-width: 100%;
 }
 
 #prev {
@@ -106,9 +100,8 @@ h2#tag {
     cursor: pointer;
     opacity: 1;
 }
-
 div.grid div.items p {
-    /* margin: 1% 2%; */
+    margin: 1% 2%;
 }
 
 div.grid div.items p {
@@ -124,7 +117,7 @@ div.grid div.items p span.cross {
 
 div.grid div.items img {
     height: auto;
-    /*width: 110%;*/
+    width: 110%;
 }
 
 div.grid div.items div.img:hover {
@@ -139,20 +132,15 @@ div.grid div.items div.cart p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: 30px;
 }
 
 div.grid div.items div.cart p img {
     height: 40px;
     width: 40px;
 }
-
-div.container div.cart {
-    margin-top: 0px;
-    font-size: 30px;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: 25px 0px;
-    box-sizing: border-box;
+div.cart{
+    margin-top: 20px;
 }
 
 div.grid div.items div.cart p:hover {
@@ -167,10 +155,11 @@ div.grid div.items div.cart article {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 40px;
 }
 
 div.grid div.items div.cart article span.control {
-    display: inline-flex;
+    display: inline-block;
     margin: 0px 8px;
 }
 
@@ -196,26 +185,6 @@ div.grid div.items article input {
     color: aliceblue;
 }
 
-div.grid div.items div.cart section {
-    padding-bottom: 10px;
-    letter-spacing: 2px;
-    color: #f00001;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-div.grid div.items div.cart section span {
-    border: 1px solid black;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    font-weight: 600;
-    border-radius: 50%;
-    opacity: 0.5;
-    text-align: center;
-    letter-spacing: 0px;
-}
-
 
 /* Chrome, Safari, Edge, Opera */
 
@@ -234,10 +203,10 @@ input[type=number] {
 
 @media only screen and (max-width:730px) {
     #slider {
-        height: 390px;
+        height: 365px;
     }
     div#image {
-        height: 390px;
+        height: 365px;
     }
     i#prev img,
     i#next img {
@@ -250,10 +219,10 @@ input[type=number] {
 
 @media only screen and (max-width:500px) {
     #slider {
-        height: 280px;
+        height: 250px;
     }
     div#image {
-        height: 280px;
+        height: 250px;
     }
     i#prev img,
     i#next img {
@@ -263,27 +232,26 @@ input[type=number] {
 
 @media only screen and (max-width:350px) {
     #slider {
-        height: 200px;
+        height: 175px;
     }
     div#image {
-        height: 200px;
+        height: 175px;
     }
     i#prev img,
     i#next img {
         width: 20px;
     }
 }
-
 @media only screen and (max-width:470px) {
+    div.grid div.items div.cart article {
+        font-size: 18px;
+    }
     div.grid div.items div.cart img {
         height: 25px;
         width: 25px;
     }
     div.grid div.items article input {
         font-size: 16px;
-    }
-    div.container div.cart {
-        font-size: 23px;
     }
 }
 
@@ -295,13 +263,10 @@ input[type=number] {
 }
 
 @media only screen and (max-width:380px) {
-    /* div.grid div.items div.cart p {
+    div.grid div.items div.cart p {
         font-size: 12px;
     }
     div.grid div.items div.cart article {
         font-size: 13px;
-    } */
-    div.container div.cart {
-        font-size: 18px;
     }
 }
