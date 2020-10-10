@@ -73,6 +73,7 @@ h2#tag {
 
 #slider img {
     min-width: 100%;
+    width: 100%;
 }
 
 #prev {
@@ -100,6 +101,7 @@ h2#tag {
     cursor: pointer;
     opacity: 1;
 }
+
 div.grid div.items p {
     margin: 1% 2%;
 }
@@ -139,7 +141,8 @@ div.grid div.items div.cart p img {
     height: 40px;
     width: 40px;
 }
-div.cart{
+
+div.cart {
     margin-top: 20px;
 }
 
@@ -242,6 +245,7 @@ input[type=number] {
         width: 20px;
     }
 }
+
 @media only screen and (max-width:470px) {
     div.grid div.items div.cart article {
         font-size: 18px;
