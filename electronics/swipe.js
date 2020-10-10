@@ -4,24 +4,23 @@ let images = document.querySelectorAll('#slider img');
 let prev = document.getElementById('prev');
 let next = document.getElementById('next');
 let count = 0;
-// let width = images[0].clientWidth;
-width = container.clientWidth;
+let width = images[0].clientWidth;
 let height = images[0].clientHeight;
-
 //vaiablelist end
-
 
 //slider setting
 window.addEventListener('resize', () => {
-    width = container.clientWidth;
-    for (let i = 0; i < images.length; i++) {
-        images[i].style.padding = `0px`;
-        setimagewidth(i);
-    }
+    width = images[0].clientWidth;
     container.style.transition = "none";
     container.style.transform = 'translateX(' + (-width * count) + 'px';
-});
+    if(screen.width<1095)
+    container.style.height =container.parentElement.style.height= (screen.width)*.95/1.9 + 'px';
+    if(screen.width>730)
+    container.parentElement.style.height= container.style.height = (screen.width)*.7/1.9 + 'px';
+    });
 container.style.height = height + 'px';
+if(screen.width<1095)
+    container.style.height = (screen.width)*.95/1.9 + 'px';
 container.style.transform = 'translateX(' + (-width * count) + 'px';
 
 function fwd() {
