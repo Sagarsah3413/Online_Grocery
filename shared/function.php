@@ -11,5 +11,27 @@ function string_in($string, $start, $end){
         $ini += strlen($end);
     }
     return $inner;
-}
-?>
+};
+
+function eachproduct(&$rowdata,$urldata){
+    ?>
+    <div class="items">
+        <div>
+            <img class="plus" src='<?php echo $urldata.'/productimg/'.$rowdata['image'];  ?>' alt='product pic'>
+        </div>
+        <h4><?php echo $rowdata['product name']; ?></h4>
+        <p>Rs <span class="rate"><?php echo $rowdata['price']; ?></span> <?php if(!empty($rowdata['mprice'])){ ?> <span class="cross">Rs <?php echo $rowdata['mprice']; ?></span> <?php } ?></p>
+        <div class='cart' id="<?php echo $rowdata['productid'] ?>">
+            <article>
+                <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
+                Quantity 
+                <input type="number" min="0" value="0">
+                <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
+            </article>
+            <p>
+                <img class="plus" src='../home/images/cart.png' alt='cart'> 
+                <span class="addcart">Add To Cart</span>
+            </p>
+        </div>
+    </div>    
+<?php } ?>

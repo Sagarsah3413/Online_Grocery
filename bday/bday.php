@@ -1,7 +1,8 @@
 <?php
     require_once '../shared/database.php';
-    $sharedfolder='../shared/';
+    require_once '../shared/function.php';
     $url = 'https://onlinebazzar.co';
+    $sharedfolder='../shared/';
     $offset = 0;
     
     $query = "SELECT * FROM `subcat` WHERE `type` = 'birthday and party';";
@@ -45,34 +46,15 @@
                     <?php while($row = $data->fetch_assoc()){ 
                         if(!$row['available'])
                             continue;
+                        eachproduct($row,$url);
                         ?>
-                    <div class="items">
-                        <div>
-                            <!-- <img class="plus" src='../productimg/<?php //echo $row['image']; ?>' alt='product pic'> -->
-                            <img class="plus" src='<?php echo $url.'/productimg/'. $row['image']; ?>' alt='product pic'>
-                        </div>
-                        <h4><?php echo $row['product name']; ?></h4>
-                        <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
-                        <div class='cart' id="<?php echo $row['productid'] ?>">
-                            <article>
-                                <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
-                                Quantity 
-                                <input type="number" min="0" value="0">
-                                <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
-                            </article>
-                            <p>
-                                <img class="plus" src='../home/images/cart.png' alt='cart'> 
-                                <span class="addcart">Add To Cart</span>
-                            </p>
-                        </div>
-                    </div>
                     <?php } ?>
                 </div>
                 <?php
             }
         }elseif (isset($_GET['subcat']) && isset($subcat[$show])) {
             
-            $query = "SELECT * FROM `products` WHERE `subcatid` = {$subcat[$show]} ORDER BY `product name` ASC;";  
+            $query = "SELECT `productid`,`product name`,`image`,`price`,`mprice`,`available` FROM `products` WHERE `subcatid` = {$subcat[$show]} ORDER BY `product name` ASC;";  
             $data = $dbconnection->query($query);
         ?>
 
@@ -82,26 +64,8 @@
             <?php while($row = $data->fetch_assoc()){ 
                 if(!$row['available'])
                     continue;
+                eachproduct($row,$url);
                 ?>
-                <div class="items">
-                    <div>
-                        <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
-                    </div>
-                    <h4><?php echo $row['product name']; ?></h4>
-                    <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
-                    <div class='cart' id="<?php echo $row['productid'] ?>">
-                        <article>
-                            <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
-                            Quantity 
-                            <input type="number" min="0" value="0">
-                            <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
-                        </article>
-                        <p>
-                            <img class="plus" src='../home/images/cart.png' alt='cart'> 
-                            <span class="addcart">Add To Cart</span>
-                        </p>
-                    </div>
-                </div>
             <?php } ?>
         </div>
         <?php } ?>
