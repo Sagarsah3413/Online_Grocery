@@ -15,7 +15,6 @@
             $subcat[$row['subcatname']] = $row['subcatid'];
         }
     }
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +45,10 @@
                     <?php while($row = $data->fetch_assoc()){ 
                         if(!$row['available'])
                             continue;
-                        eachproduct($row,$url);
+                        if($row['description'])
+                            fordetailproduct($row,$url,$sharedfolder);
+                        else
+                            eachproduct($row,$url);
                         ?>
                     <?php } ?>
                 </div>
@@ -54,7 +56,8 @@
             }
         }elseif (isset($_GET['subcat']) && isset($subcat[$show])) {
             
-            $query = "SELECT * FROM `products` WHERE `subcatid` = {$subcat[$show]} ORDER BY `product name` ASC;";  
+            $query = "SELECT * FROM `products` WHERE `subcatid` = {$subcat[$show]} ORDER BY `product name` ASC;"; 
+            
             $data = $dbconnection->query($query);
         ?>
 
@@ -64,7 +67,10 @@
             <?php while($row = $data->fetch_assoc()){ 
                 if(!$row['available'])
                     continue;
-                eachproduct($row,$url);
+                    if($row['description'])
+                fordetailproduct($row,$url,$sharedfolder);
+                else
+                    eachproduct($row,$url);
                 ?>
             <?php } ?>
         </div>

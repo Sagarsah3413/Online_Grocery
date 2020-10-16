@@ -15,7 +15,7 @@
     
     while($row = $data -> fetch_assoc())
     {
-        $array[$row['productid']] = $row['image'];
+        $array[$row['productid']] = explode(',',$row['image'])[0];
     }
     echo json_encode($array);
 ?>

@@ -146,6 +146,10 @@ div.cart {
     margin-top: 20px;
 }
 
+div.grid div.items div.cart {
+    overflow-x: hidden;
+}
+
 div.grid div.items div.cart p:hover {
     transform: scale(1.1);
     transition: 300ms;

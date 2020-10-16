@@ -126,6 +126,26 @@ div.grid div.items article input {
     color: aliceblue;
 }
 
+div.grid div.items div.cart section {
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    color: #f00001;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+div.grid div.items div.cart section span {
+    border: 1px solid black;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+    opacity: 0.5;
+    text-align: center;
+    letter-spacing: 0px;
+}
+
 
 /* Chrome, Safari, Edge, Opera */
 
