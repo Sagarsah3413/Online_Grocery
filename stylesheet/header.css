@@ -24,7 +24,7 @@ header {
     padding: 15px 20px;
     box-sizing: border-box;
     align-items: center;
-    background-color: rgb(13, 31, 53);
+    background-color: rgb(40, 116, 240);
     position: sticky;
     top: 0px;
     z-index: 4;
@@ -221,7 +221,7 @@ header div.fill nav#menu span#close span.two {
 
 header div.fill nav#menu section,
 header div.cart nav#cartmenu section {
-    background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
+    background-color: rgb(40, 116, 240);
     height: 100vh;
     width: 430px;
     overflow-x: hidden;
@@ -247,7 +247,8 @@ header div.fill nav#menu section div ul li {
     list-style: none;
     text-transform: capitalize;
     white-space: nowrap;
-    color: rgb(250, 101, 1);
+    color: rgb(0,0,0);
+    font-weight: 500;
 }
 
 header div.fill nav#menu section div ul li a {
@@ -520,7 +521,7 @@ div#search ul li:hover {
 @media only screen and (max-width:410px) {
     header div.fill nav#menu section,
     header div.cart nav#cartmenu section {
-        background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
+        background-color: rgb(40, 116, 240);
         height: 100vh;
         width: 100%;
         overflow-x: hidden;

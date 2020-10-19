@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
+    background-color: rgb(252,252,252);
 }
 
 * {
@@ -20,6 +20,14 @@ div#product h3 {
     font-size: 40px;
     text-align: center;
     margin-top: 5%;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: lighter;
+}
+
+div#product h3 a
+{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300; 
 }
 
 body div.grid {
@@ -43,19 +51,32 @@ div.grid div.items h4 {
     font-size: 20px;
     text-transform: capitalize;
     overflow-wrap: break-word;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 550;
 }
 
 div.grid div.items p {
-    font-weight: bolder;
     margin: 1% 2%;
 }
 
 div.grid div.items p {
     letter-spacing: 1px;
+    font-weight: bold;
+}
+
+div.grid div.items p span.addcart
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 550;
+}
+
+div.grid div.items p span.rate
+{
+    font-weight: bold;
 }
 
 div.grid div.items p span.cross {
-    font-weight: normal;
+    font-weight: bold;
     text-decoration-line: line-through;
     text-decoration-color: red;
     margin-left: 5%;
