@@ -21,6 +21,7 @@ if($row['type']!='electronics')
 $images=explode(',',$row['image']);
 $imagecount=count($images);
 
+$init = ($imagecount==1) ? 0 : 1;
 $description=string_in($row['description'],'<','>');
 $descriptioncount=count($description);
 
@@ -31,7 +32,7 @@ $descriptioncount=count($description);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Each Electronics</title>
-    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="../stylesheet/detail.css">
     <link rel="stylesheet" href="../stylesheet/header.css">
     <link rel="stylesheet" href="../stylesheet/footer.css">
 </head>
@@ -47,7 +48,7 @@ $descriptioncount=count($description);
             </i>
             <div id="slider">
                 <?php
-                for ($i=1; $i < $imagecount; $i++) { ?>
+                for ($i=$init; $i < $imagecount; $i++) { ?>
 
                 <img src="<?php echo $sharedfolder; ?>../productimg/<?php echo $images[$i] ?>" alt="">
                 

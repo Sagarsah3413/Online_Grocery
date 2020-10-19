@@ -33,6 +33,7 @@
                         <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('house cleaning products') ?>">house cleaning products</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('pooja products') ?>">pooja products</a></li>
                         <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('home appliances') ?>">home appliances</a></li>
+                        <li><a href="<?php echo $sharedfolder; ?>../household/household.php?subcat=<?php echo urlencode('kitchen and dining') ?>">kitchen appliances </a></li>
                     </ul>
                 </div>
                 <div><span class="sidemenu dropdown">health and care</span>

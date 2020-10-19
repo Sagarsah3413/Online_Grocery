@@ -28,8 +28,7 @@ ajax.onreadystatechange = function() {
             identity = data[i].parentElement.id;
 
             if (retrive[identity] !== null) {
-                // if (retrive[identity] === null)
-
+                console.log(retrive)
                 data[i].src = `${web}productimg/${retrive[identity]}`;
             } else {
                 data[i].src = '';
