@@ -15,7 +15,6 @@
             $subcat[$row['subcatname']] = $row['subcatid'];
         }
     }
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">

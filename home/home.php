@@ -100,7 +100,36 @@
                 <?php } ?>
             </div>
         </div>
-        
+        <!-- here -->
+        <h3><a href="<?php echo $sharedfolder; ?>../electronics/electronics.php?subcat=<?php echo urlencode('tv') ?>">Television Electronics</a></h3>
+        <div class="fruits">
+            <div class="all fortwo">
+                <div class="fruit1 vege">
+                    <figcaption class="text">
+                        <a href="<?php echo $sharedfolder; ?>../electronics/electronics.php?subcat=<?php echo urlencode('tv') ?>">LED TV</a>
+                    </figcaption>
+                    <a href="<?php echo $sharedfolder; ?>../electronics/electronics.php?subcat=<?php echo urlencode('tv') ?>"><img src="https://onlinebazzar.co/home/images/led.jpg"  alt="fruits"></a>
+                </div>
+                <div class="fruit1 vege">
+                    <figcaption class="text">
+                        <a href="<?php echo $sharedfolder; ?>../electronics/electronics.php?subcat=<?php echo urlencode('tv') ?>">Smart LED TV</a>
+                    </figcaption>
+                    <a href="<?php echo $sharedfolder; ?>../electronics/electronics.php?subcat=<?php echo urlencode('tv') ?>"><img src="https://onlinebazzar.co/home/images/smart.jpg"  alt="fruits"></a>
+                </div>
+            </div>
+            <h3>our popular items</h3>
+            <div class="grid">
+                <?php
+                $query = "select * from products WHERE `productid` In (733,734,736,737);";
+                $data = $dbconnection -> query($query);
+                while($row = $data -> fetch_assoc()) {
+                    if(!$row['available'])
+                        continue;
+                    fordetailproduct($row,$url,$sharedfolder);
+                    ?>
+                <?php } ?>
+            </div>
+        </div>
         <h3><a href="<?php echo $sharedfolder; ?>../vegetables/vegetables.php?subcat=<?php echo urlencode('all') ?>">vegetables</a></h3>
         <div class="vegetables">
             <div class="veggies fortwo">

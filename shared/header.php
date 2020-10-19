@@ -55,6 +55,11 @@
                 </div>
                 <div>
                     <span class="sidemenu dropdown">
+                    <a href="<?php echo $sharedfolder; ?>../electronics/electronics.php?subcat=<?php echo urlencode('tv') ?>">Television</a> 
+                    </span>
+                </div>
+                <div>
+                    <span class="sidemenu dropdown">
                     <a href="<?php echo $sharedfolder; ?>../bday/bday.php?subcat=<?php echo urlencode('all')?>">Birthday, Party and Occasion</a> 
                     </span>
                 </div>

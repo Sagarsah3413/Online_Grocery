@@ -20,3 +20,9 @@ stationary = "   "  "
 
 for every order
 profit = total - discount - stationary - grocers - bakery - ...
+
+
+
+# view table
+
+CREATE TABLE `grocers`.`view` ( `viewid` INT(4) NOT NULL , `productid` INT(4) NULL , `details` VARCHAR(600) NULL , `services` VARCHAR(600) NULL , `specifications` VARCHAR(600) NULL , `description` VARCHAR(600) NULL , PRIMARY KEY (`viewid`));
