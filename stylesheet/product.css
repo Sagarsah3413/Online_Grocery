@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(252,252,252);
+    background-color: rgb(252, 252, 252);
 }
 
 * {
@@ -24,10 +24,9 @@ div#product h3 {
     font-weight: lighter;
 }
 
-div#product h3 a
-{
+div#product h3 a {
     font-family: 'Sansita Swashed', cursive;
-    font-weight: 300; 
+    font-weight: 300;
 }
 
 body div.grid {
@@ -64,14 +63,12 @@ div.grid div.items p {
     font-weight: bold;
 }
 
-div.grid div.items p span.addcart
-{
+div.grid div.items p span.addcart {
     font-family: 'Oswald', sans-serif;
     font-weight: 550;
 }
 
-div.grid div.items p span.rate
-{
+div.grid div.items p span.rate {
     font-weight: bold;
 }
 
@@ -80,6 +77,8 @@ div.grid div.items p span.cross {
     text-decoration-line: line-through;
     text-decoration-color: red;
     margin-left: 5%;
+    /* here */
+    white-space: nowrap;
 }
 
 div.grid div.items img {

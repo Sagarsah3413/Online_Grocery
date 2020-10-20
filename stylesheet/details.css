@@ -4,7 +4,11 @@
 }
 
 body {
-    background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228));
+    /* background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228)); */
+}
+
+body {
+    background-color: aliceblue;
 }
 
 div.container div.child#slider {
@@ -30,21 +34,30 @@ div.container div.child#name div#price span.cross {
 }
 
 div.container div.child#name h1#title,
-div.container div.child#name div#price {
+div.container div.child#name div#price,
+article.servetitle {
     text-align: center;
 }
 
-div.container div.child#describe {
+div.container div.child.describe,
+ul.keypoints,
+article.leftbold,
+ul.eachservice,
+.describe,
+div.general {
     box-sizing: border-box;
-    padding: 20px;
+    margin: 30px 50px;
 }
 
-div.container div.child#describe h2 {
+
+/* upar neche ka padding margin equal rakhna */
+
+div.container div.child.describe h2 {
     font-size: 2em;
     letter-spacing: 5px;
 }
 
-div.container div.child#describe h3 {
+div.container div.child.describe h3 {
     padding: 4px 0px 5px 24px;
     letter-spacing: 2px;
 }
@@ -103,6 +116,10 @@ h2#tag {
 }
 
 div.grid div.items p {
+    margin: 1% 2%;
+}
+
+div.grid div.items p {
     letter-spacing: 1px;
 }
 
@@ -111,13 +128,11 @@ div.grid div.items p span.cross {
     text-decoration-line: line-through;
     text-decoration-color: red;
     margin-left: 5%;
-    white-space: nowrap;
-    /* here */
 }
 
 div.grid div.items img {
     height: auto;
-    /*width: 110%;*/
+    width: 110%;
 }
 
 div.grid div.items div.img:hover {
@@ -132,6 +147,7 @@ div.grid div.items div.cart p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: 30px;
 }
 
 div.grid div.items div.cart p img {
@@ -139,13 +155,12 @@ div.grid div.items div.cart p img {
     width: 40px;
 }
 
-div.container div.cart {
-    margin-top: 0px;
-    font-size: 30px;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: 25px 0px;
-    box-sizing: border-box;
+div.cart {
+    margin-top: 20px;
+}
+
+div.grid div.items div.cart {
+    overflow-x: hidden;
 }
 
 div.grid div.items div.cart p:hover {
@@ -160,10 +175,11 @@ div.grid div.items div.cart article {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 40px;
 }
 
 div.grid div.items div.cart article span.control {
-    display: inline-flex;
+    display: inline-block;
     margin: 0px 8px;
 }
 
@@ -189,24 +205,63 @@ div.grid div.items article input {
     color: aliceblue;
 }
 
-div.grid div.items div.cart section {
+article.leftbold {
     padding-bottom: 10px;
-    letter-spacing: 2px;
-    color: #f00001;
-    font-weight: 600;
-    cursor: pointer;
+    font-size: 30px;
 }
 
-div.grid div.items div.cart section span {
-    border: 1px solid black;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    font-weight: 600;
-    border-radius: 50%;
-    opacity: 0.5;
-    text-align: center;
-    letter-spacing: 0px;
+ul.keypoints {
+    list-style-position: outside;
+    list-style-type: circle;
+}
+
+ul.keypoints li {
+    line-height: 2em;
+}
+
+article.servetitle {
+    font-size: 2em;
+}
+
+ul.eachservice {
+    list-style-position: outside;
+}
+
+ul.eachservice li {}
+
+ul.eachservice li div {
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+}
+
+ul.eachservice li div a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    color: blue;
+}
+
+div.describe {
+    line-height: 1.5em;
+}
+
+div.general {
+    border: 1px ridge rgba(172, 87, 87, 0.623);
+    padding: 15px;
+}
+
+div.general div.specifyeach {
+    display: grid;
+    margin: 40px 0px;
+    grid-gap: 50px;
+    grid-template-columns: 10% 90%;
+}
+
+div.general div.specifyeach div.specifyleft {
+    color: rgba(24, 107, 179, 0.603);
+}
+
+div.general div.specifyeach div.specifyright {
+    color: rgba(17, 38, 56, 0.815);
 }
 
 
@@ -227,10 +282,10 @@ input[type=number] {
 
 @media only screen and (max-width:730px) {
     #slider {
-        height: 390px;
+        height: 365px;
     }
     div#image {
-        height: 390px;
+        height: 365px;
     }
     i#prev img,
     i#next img {
@@ -243,10 +298,10 @@ input[type=number] {
 
 @media only screen and (max-width:500px) {
     #slider {
-        height: 280px;
+        height: 250px;
     }
     div#image {
-        height: 280px;
+        height: 250px;
     }
     i#prev img,
     i#next img {
@@ -256,10 +311,10 @@ input[type=number] {
 
 @media only screen and (max-width:350px) {
     #slider {
-        height: 200px;
+        height: 175px;
     }
     div#image {
-        height: 200px;
+        height: 175px;
     }
     i#prev img,
     i#next img {
@@ -268,15 +323,15 @@ input[type=number] {
 }
 
 @media only screen and (max-width:470px) {
+    div.grid div.items div.cart article {
+        font-size: 18px;
+    }
     div.grid div.items div.cart img {
         height: 25px;
         width: 25px;
     }
     div.grid div.items article input {
         font-size: 16px;
-    }
-    div.container div.cart {
-        font-size: 23px;
     }
 }
 
@@ -288,13 +343,10 @@ input[type=number] {
 }
 
 @media only screen and (max-width:380px) {
-    /* div.grid div.items div.cart p {
+    div.grid div.items div.cart p {
         font-size: 12px;
     }
     div.grid div.items div.cart article {
         font-size: 13px;
-    } */
-    div.container div.cart {
-        font-size: 18px;
     }
 }
