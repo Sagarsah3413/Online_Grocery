@@ -15,7 +15,7 @@ if($data->num_rows != 1)
     exit;
 
 $row=$data->fetch_assoc();
-if($row['type']!='electronics')
+if(!$row['description'])
     exit;
 
 $images=explode(',',$row['image']);

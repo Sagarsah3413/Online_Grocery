@@ -25,6 +25,8 @@ $init = ($imagecount==1) ? 0 : 1;
 $description=string_in($row['description'],'<','>');
 $descriptioncount=count($description);
 
+$productname=$row['product name'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,14 +76,17 @@ $descriptioncount=count($description);
                 </div>
             </div>
         </div>
-        <div class="child describe">
+        <!-- <div class="child describe">
             <h2>Details</h2>
             <?php
+            //do not re initialize this variable to reverse the effects
+            $descriptioncount=0;
             for ($i=0; $i < $descriptioncount; $i++) {?>
                 <h3>&#8627; <?php echo $description[$i]; ?></h3>
             <?php } ?>
-        </div>
+        </div> -->
     </div>
+    
     <?php
     $query="SELECT * FROM `view` where `productid`=$productid;";
     $data=$dbconnection->query($query);
@@ -92,40 +97,48 @@ $descriptioncount=count($description);
 	$row=$data->fetch_assoc();
 	$keypoint=string_in($row['details'],'<','>');
     ?>
-	<article class="leftbold">Key Features</article>
+	<article class="leftbold">Key Features of <?php echo $productname; ?></article>
     <ul class="keypoints">
 		<?php
 		foreach ($keypoint as $index => $value)
 		{ ?>
 		<li><?php echo $value; ?></li>
 		<?php } ?>
-	</ul>
+    </ul>
+    
+    <?php if($row['tinydescribe']){ ?>
+    <div class="tinydescribe describe">
+        <?php echo $row['tinydescribe']; ?>
+    </div>
+    <?php } ?>
+    
 	<article class="servetitle">Services</article>
-	<ul class="eachservice">
-
+	<dl class="eachservice">
 	<?php $services=explode('|',$row['services']); ?>
-	<?php
-	foreach ($services as $key => $value) { ?>
-		<li>
-			<?php
-			$init=string_in($value,'[',']');
-			
-			if(empty($init)){
-				echo $value;
-				continue;
-			}else{
-				$init=$init[0];
-				$value=str_replace('['.$init.']','',$value);
-				echo $value;
-				echo "<div>$init</div>";
-			}
-			?>
-		<?php } ?>
-		</li>
-	</ul>
+    <?php
+    $index='';
+    foreach ($services as $key => $value) {
+        $init=string_in($value,'[',']');
+
+        if(empty($init)){
+            $index=$value;
+            $init='';
+        }else{
+            $init=$init[0];
+            $index=str_replace('['.$init.']','',$value);
+        }
+        ?>
+        <dt>
+            <?php echo $index; ?>
+        </dt>
+        <?php if($init) { ?>
+        <dd><?php echo $init; ?></dd>
+        <?php } ?>
+    <?php } ?>
+	</dl>
 	
 	<article class="leftbold">Description</article>
-	<div class="describe">
+	<div class="describe description">
 		<?php echo $row['description']; ?>
 	</div>
 	
@@ -133,16 +146,16 @@ $descriptioncount=count($description);
 
 	<?php $specify=string_in($row['specifications'],'<','>'); ?>
 	<div class="general">
-	<h1>General</h1>
+	<h1>Specifications  for <?php echo $productname; ?></h1>
+    <ul class="describe">
 	<?php foreach ($specify as $key => $value) { 
 		$init=explode('|',$value);
 	?>
-		<div class="specifyeach">
-			<div class="specifyleft"><?php echo $init[0]; ?></div>
-			<div class="specifyright"><?php echo $init[1]; ?></div>
-		</div>
-	<?php } ?>
-	</div>
+        <li><?php echo $init[0]; ?></li>
+        <dd><?php echo $init[1]; ?></dd>
+        <?php } ?>
+    </ul>
+    </div>
 	<?php require_once'../shared/footer.php'; ?>
 </body>
 <script src="swipe.js"></script>

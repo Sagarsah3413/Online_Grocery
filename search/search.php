@@ -1,6 +1,8 @@
 <?php
     $sharedfolder='../shared/';
     require_once '../shared/database.php';
+    require_once '../shared/function.php';
+    $url='https://www.onlinebazzar.co';
     $accept = 0;
     if(isset($_GET['value']) && !empty($_GET['value']))
     {
@@ -32,28 +34,12 @@
             while($row = $data -> fetch_assoc()) {
                 if(!$row['available'])
                     continue;
+                if(!$row['description'])
+                    eachproduct($row,$url);
+                else
+                    fordetailproduct($row,$url,$sharedfolder);
             ?>
-            <div class='items'> 
-                <div>
-                    <img class="plus" src='../productimg/<?php echo $row['image']; ?>' alt='product pic'>
-                </div>
-                <h4><?php echo $row['product name']; ?></h4>
-                <p>Rs <span class="rate"><?php echo $row['price']; ?></span> <?php if(!empty($row['mprice'])){ ?> <span class="cross">Rs <?php echo $row['mprice']; ?></span> <?php } ?></p>
-                <div class="cart" id="<?php echo $row['productid'] ?>">
-                    <article>
-                        <span class="control"><img class="plus" src="../home/images/minus.png" alt=""></span>
-                        Quantity 
-                        <input type="number" min="0" value="0">
-                        <span class="control"><img class="plus" src="../home/images/plus.png" alt=""></span>
-                    </article>
-                    <p>
-                        <img class="plus" src='../home/images/cart.png' alt='cart'> 
-                        <span class="addcart">Add To Cart</span>
-                    </p>
-                </div>
-            </div>
             <?php }}; $dbconnection -> close();?>
-            
         </div>
     </div>
 </body>

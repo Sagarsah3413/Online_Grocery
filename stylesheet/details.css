@@ -7,6 +7,11 @@ body {
     /* background-image: linear-gradient(-90deg, rgb(162, 233, 224), rgb(135, 175, 228)); */
 }
 
+article,
+div.general h1 {
+    text-transform: capitalize;
+}
+
 body {
     background-color: aliceblue;
 }
@@ -42,7 +47,7 @@ article.servetitle {
 div.container div.child.describe,
 ul.keypoints,
 article.leftbold,
-ul.eachservice,
+dl.eachservice,
 .describe,
 div.general {
     box-sizing: border-box;
@@ -223,18 +228,16 @@ article.servetitle {
     font-size: 2em;
 }
 
-ul.eachservice {
+dl.eachservice {
     list-style-position: outside;
 }
 
-ul.eachservice li {}
-
-ul.eachservice li div {
-    /* border-top: 1px solid black;
-    border-bottom: 1px solid black; */
+dl.eachservice dt,
+dl.eachservice dd {
+    margin: 5px 0px;
 }
 
-ul.eachservice li div a {
+dl.eachservice a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     color: blue;
@@ -244,12 +247,48 @@ div.describe {
     line-height: 1.5em;
 }
 
+div.description img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
 div.general {
     border: 1px ridge rgba(172, 87, 87, 0.623);
     padding: 15px;
 }
 
-div.general div.specifyeach {
+div.general ul {
+    list-style: none;
+}
+
+div.general ul li {
+    color: rgba(18, 112, 124, 0.623);
+}
+
+div.general ul dd {
+    margin-bottom: 10px;
+}
+
+div.general h1 {
+    font-size: 1.2em;
+}
+
+div.general ul li::before {
+    /* marker wala hai ye */
+    color: rgb(0, 0, 0);
+    content: "\2022";
+    font-family: 'Verdana';
+    margin-left: -1.5em;
+    width: 22px;
+    display: inline-block;
+}
+
+
+/* for grid view */
+
+
+/* div.general div.specifyeach {
     display: grid;
     margin: 40px 0px;
     grid-gap: 50px;
@@ -262,7 +301,7 @@ div.general div.specifyeach div.specifyleft {
 
 div.general div.specifyeach div.specifyright {
     color: rgba(17, 38, 56, 0.815);
-}
+} */
 
 
 /* Chrome, Safari, Edge, Opera */

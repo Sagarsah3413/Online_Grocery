@@ -61,14 +61,16 @@ div.grid div.items p {
 div.grid div.items p {
     letter-spacing: 1px;
     font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 div.grid div.items p span.addcart {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 550;
 }
 
 div.grid div.items p span.rate {
+    font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
 }
 
@@ -77,8 +79,8 @@ div.grid div.items p span.cross {
     text-decoration-line: line-through;
     text-decoration-color: red;
     margin-left: 5%;
-    /* here */
     white-space: nowrap;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 div.grid div.items img {
@@ -144,26 +146,6 @@ div.grid div.items article input {
     width: 2em;
     background-color: rgb(250, 101, 1);
     color: aliceblue;
-}
-
-div.grid div.items div.cart section {
-    padding-bottom: 10px;
-    letter-spacing: 2px;
-    color: #f00001;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-div.grid div.items div.cart section span {
-    border: 1px solid black;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    font-weight: 600;
-    border-radius: 50%;
-    opacity: 0.5;
-    text-align: center;
-    letter-spacing: 0px;
 }
 
 
